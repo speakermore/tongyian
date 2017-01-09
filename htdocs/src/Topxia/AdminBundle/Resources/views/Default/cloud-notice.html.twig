@@ -40,7 +40,7 @@
         <h2> {{'站长公告'|trans}}</h2>
           <ul class="alert-list">
           {% for notice in notices %}
-            <li class="glyphicon glyphicon-bell" style="color:#fed032;font-size:16px;"><a href="{{'http://www.kmbdqn.com'}}" style="margin-left:22px;" target="_blank">{{'有问题请联系管理员''}}<span>{{notice.createdTime|date("Y-m-d H:i:s")}}</span></a></li>
+            <li class="glyphicon glyphicon-bell" style="color:#fed032;font-size:16px;"><a href="{{'http://www.kmbdqn.com'}}" style="margin-left:22px;" target="_blank">{{'有问题请联系管理员'}}<span>{{notice.createdTime|date("Y-m-d H:i:s")}}</span></a></li>
           {% endfor %}
           </ul>
       </div>

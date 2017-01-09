@@ -894,7 +894,7 @@ class CourseController extends CourseBaseController
         $capacity = $client->getCapacity();
 
         if (empty($capacity['capacity'])) {
-            throw new \RuntimeException('请联系EduSoho官方购买直播教室，然后才能开启直播功能！');
+            throw new \RuntimeException('请联系kmbdqn官方购买直播教室，然后才能开启直播功能！');
         }
 
         return true;

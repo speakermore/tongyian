@@ -229,7 +229,16 @@ admin_user:
     defaults: { _controller: TopxiaAdminBundle:User:index }
     permissions: [admin_user_manage]
 
+newadmin_user:
+    pattern:  /1111
+    defaults: { _controller: TopxiaAdminBundle:User:index }
+    permissions: [newadmin_user_manage]
+
 admin_user_create:
+    pattern:  /user/create
+    defaults: { _controller: TopxiaAdminBundle:User:create }
+
+newadmin_user_create:
     pattern:  /user/create
     defaults: { _controller: TopxiaAdminBundle:User:create }
 
@@ -258,7 +267,16 @@ admin_user_show:
     defaults: { _controller: TopxiaAdminBundle:User:show }
     permissions: [admin]
 
+newadmin_user_show:
+    pattern:  /user/{id}
+    defaults: { _controller: TopxiaAdminBundle:User:show }
+    permissions: [newadmin]
+
 admin_user_edit:
+    pattern:  /user/{id}/edit
+    defaults: { _controller: TopxiaAdminBundle:User:edit }
+
+newadmin_user_edit:
     pattern:  /user/{id}/edit
     defaults: { _controller: TopxiaAdminBundle:User:edit }
 
@@ -277,6 +295,10 @@ admin_user_unlock:
     methods:  [POST]
 
 admin_user_roles:
+    pattern:  /user/{id}/roles
+    defaults: { _controller: TopxiaAdminBundle:User:roles }
+
+newadmin_user_roles:
     pattern:  /user/{id}/roles
     defaults: { _controller: TopxiaAdminBundle:User:roles }
 

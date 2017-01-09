@@ -2,6 +2,22 @@ homepage:
     pattern:  /
     defaults: { _controller: TopxiaWebBundle:Default:index }
 
+homepage_forward_school:
+    pattern: /school/{id}
+    defaults: { _controller: TopxiaWebBundle:Default:forwardIndex }
+
+homepage_add_school:
+    pattern: /add/school/{id}
+    defaults: { _controller: TopxiaWebBundle:Default:addSchool }
+
+homepage_update_school:
+    pattern: /update/school/{id}
+    defaults: { _controller: TopxiaWebBundle:Default:updateSchool }
+
+homepage_delete_school:
+    pattern: /delete/school/{id}
+    defaults: { _controller: TopxiaWebBundle:Default:deleteSchool }
+
 switch_language:
     pattern: /switch/language
     defaults: { _controller: TopxiaWebBundle:Default:translate }
@@ -13,6 +29,22 @@ homepage_category:
 live_jump:
     pattern: /live/jump
     defaults: { _controller: TopxiaWebBundle:Default:jump }
+
+student_add:
+    pattern:  /add/student/{id}
+    defaults: { _controller: TopxiaWebBundle:Students:addStudent }
+
+student_update:
+    pattern:  /update/student/{id}
+    defaults: { _controller: TopxiaWebBundle:Students:updateStudent }
+
+schoolAuth_add:
+    pattern:  /add/schoolAuth/{id}
+    defaults: { _controller: TopxiaWebBundle:schoolAuth:addSchoolAuth }
+
+schoolAuth_update:
+    pattern:  /update/schoolAuth/{id}
+    defaults: { _controller: TopxiaWebBundle:schoolAuth:updateSchoolAuth }
 
 login:
     pattern:  /login

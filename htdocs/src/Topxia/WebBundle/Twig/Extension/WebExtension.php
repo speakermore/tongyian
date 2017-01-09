@@ -190,7 +190,7 @@ class WebExtension extends \Twig_Extension
         $config = array(
             'appId'     => $key,
             'timestamp' => time(),
-            'nonceStr'  => uniqid($prefix = "edusoho"),
+            'nonceStr'  => uniqid($prefix = "kmbdqn"),
             'jsApiList' => array('onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQZone', 'onMenuShareQQ')
         );
 

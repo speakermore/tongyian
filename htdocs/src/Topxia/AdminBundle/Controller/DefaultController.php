@@ -89,7 +89,7 @@ class DefaultController extends BaseController
 
     public function indexAction(Request $request)
     {
-        return $this->render('TopxiaAdminBundle:Default:index.html.twig');
+        return $this->render('TopxiaAdminBundle:Default:newindex.html.twig');
     }
 
     public function noticeAction(Request $request)
@@ -124,10 +124,10 @@ class DefaultController extends BaseController
     {
         $site  = $this->getSettingService()->get('site');
         $user  = $this->getCurrentUser();
-        $token = CurlToolkit::request('POST', "http://www.edusoho.com/question/get/token", array());
+        $token = CurlToolkit::request('POST', "http://www.kmbdqn.com/question/get/token", array());
         $site  = array('name' => $site['name'], 'url' => $site['url'], 'token' => $token, 'username' => $user->nickname);
         $site  = urlencode(http_build_query($site));
-        return $this->redirect("http://www.edusoho.com/question?site=".$site."");
+        return $this->redirect("http://www.kmbdqn.com/question?site=".$site."");
     }
 
     public function inspectAction(Request $request)
@@ -195,7 +195,7 @@ class DefaultController extends BaseController
 
     private function getNoticesFromOpen()
     {
-        $url = "http://open.edusoho.com/api/v1/context/notice";
+        $url = "http://open.kmbdqn.com/api/v1/context/notice";
         return CurlToolkit::request('GET', $url);
     }
 

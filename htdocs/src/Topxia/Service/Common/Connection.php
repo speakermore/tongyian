@@ -17,6 +17,12 @@ class Connection extends DoctrineConnection
         return parent::insert($tableExpression, $data, $types);
     }
 
+    public function delete($tableExpression, array $data, array $types = array())
+    {
+        $this->checkFieldNames(array_keys($data));
+        return parent::delete($tableExpression, $data, $types);
+    }
+
     public function checkFieldNames($names)
     {
         foreach ($names as $name) {

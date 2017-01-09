@@ -110,6 +110,7 @@ class CourseManageController extends BaseController
         ));
     }
 
+    /*课程上传图片方法*/
     public function pictureAction(Request $request, $id)
     {
         $course = $this->getCourseService()->tryManageCourse($id);
@@ -118,7 +119,7 @@ class CourseManageController extends BaseController
             'course' => $course
         ));
     }
-
+    /*相关方法同上一方法*/
     public function pictureCropAction(Request $request, $id)
     {
         $course = $this->getCourseService()->tryManageCourse($id);

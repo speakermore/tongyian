@@ -61,4 +61,9 @@ class UserProvider implements UserProviderInterface
     {
         return ServiceKernel::instance()->createService('Org:Org.OrgService');
     }
+
+    protected function getDefaultsService()
+    {
+        return ServiceKernel::instance()->createService('Defaults:DefaultsService');
+    }
 }
