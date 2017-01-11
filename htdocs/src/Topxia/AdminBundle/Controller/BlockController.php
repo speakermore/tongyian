@@ -171,6 +171,7 @@ class BlockController extends BaseController
         ));
     }
 
+    /*首面缩略图相关内容修改方法*/
     public function visualEditAction(Request $request, $blockTemplateId)
     {
         $user = $this->getCurrentUser();
@@ -307,7 +308,9 @@ class BlockController extends BaseController
             return $this->createJsonResponse(array('success' => false, 'message' => $this->trans('不允许设置为已存在的其他编码值')));
         }
     }
-
+    /*
+    *图片上传方法
+    */
     public function uploadAction(Request $request, $blockId)
     {
         $response = array();

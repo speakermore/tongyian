@@ -865,7 +865,7 @@ class UserServiceImpl extends BaseService implements UserService
 
         return $userProfile;
     }
-
+    /*更新学生信息*/
     public function updateUserProfileByStudents($id, $fields)
     {
         $user = $this->getUser($id);
@@ -1821,7 +1821,7 @@ class UserServiceImpl extends BaseService implements UserService
     {
         return $this->createDao('User.UserDao');
     }
-
+    
     protected function getProfileDao()
     {
         return $this->createDao('User.UserProfileDao');

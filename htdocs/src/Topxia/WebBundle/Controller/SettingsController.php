@@ -22,7 +22,7 @@ class SettingsController extends BaseController
         $profile['title'] = $user['title'];
 
         if ($request->getMethod() == 'POST') {
-            $profile = $request->request->get('profile');
+            $profile = $request->request->get('userses');
 
             if (!((strlen($user['verifiedMobile']) > 0) && (isset($profile['mobile'])))) {
                 if($profile['role_id']!=1){

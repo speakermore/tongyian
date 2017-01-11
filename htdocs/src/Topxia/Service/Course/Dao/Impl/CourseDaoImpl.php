@@ -8,6 +8,7 @@ use Topxia\Service\Course\Dao\CourseDao;
 class CourseDaoImpl extends BaseDao implements CourseDao
 {
     protected $table = 'course';
+    protected $twoTable = 'schools';
 
     public function getCourse($id)
     {
@@ -18,6 +19,40 @@ class CourseDaoImpl extends BaseDao implements CourseDao
             return $that->getConnection()->fetchAssoc($sql, array($id)) ?: null;
         });
     }
+
+    /*根据人群分类ID查询课程列表
+    *  (status="published" 表示发布的课程)
+    */
+    public function findCoursesByPopulationClassify($id)
+    {
+        $that = $this;
+
+        return $this->fetchCached("populationClassify:{$id}", $id, function ($id) use ($that) {
+            $sql = "SELECT c.id, c.middlePicture, c.title, s.chineseName, c.subtitle FROM {$that->getTable()} c, {$that->twoTable} s WHERE c.school_id=s.id AND c.status='published' AND populationClassify = ? ORDER BY c.createdTime DESC  LIMIT 5";
+            return $that->getConnection()->fetchAll($sql, array($id)) ?: null;
+        });
+    }
+
+    /*根据创建时间来查询课程(首页推荐课程默认)*/
+    public function findCoursesByTime()
+    {
+        $that = $this;
+
+        $sql = "SELECT c.id, c.middlePicture, c.title, s.chineseName, c.subtitle FROM {$that->getTable()} c, {$that->twoTable} s WHERE c.school_id=s.id AND c.status='published' ORDER BY c.createdTime DESC  LIMIT 6";
+        return $that->getConnection()->fetchAll($sql) ?: null;
+        
+    }
+
+    /*根据学校ID查询课程列表
+    public function findCoursesBySchool_id($school_id)
+    {
+        $that = $this;
+
+        return $this->fetchCached("school_id:{$school_id}", $school_id, function ($school_id) use ($that) {
+            $sql = "SELECT * FROM {$that->getTable()} WHERE school_id = ?  LIMIT 10";
+            return $that->getConnection()->fetchAll($sql, array($school_id)) ?: null;
+        });
+    }*/
 
     public function findCoursesByIds(array $ids)
     {
@@ -241,6 +276,10 @@ class CourseDaoImpl extends BaseDao implements CourseDao
             unset($conditions['status']);
         }
 
+        if (empty($conditions['school_id'])) {
+            unset($conditions['school_id']);
+        }
+
         if (empty($conditions['categoryIds'])) {
             unset($conditions['categoryIds']);
         }
@@ -286,7 +325,8 @@ class CourseDaoImpl extends BaseDao implements CourseDao
             ->andWhere('locked = :locked')
             ->andWhere('lessonNum > :lessonNumGT')
             ->andWhere('orgCode = :orgCode')
-            ->andWhere('orgCode LIKE :likeOrgCode');
+            ->andWhere('orgCode LIKE :likeOrgCode')
+            ->andWhere('school_id = :school_id');
 
         if (isset($conditions['tagIds'])) {
             $tagIds = $conditions['tagIds'];

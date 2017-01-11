@@ -1,0 +1,362 @@
+{% extends 'TopxiaWebBundle::old-layout.html.twig' %}
+
+{% block keywords %}{{ setting('site.seo_keywords') }}{% endblock %}
+{% block description %}{{ setting('site.seo_description') }}{% endblock %}
+
+{% set bodyClass = 'homepage' %}
+{% set siteNav = '/' %}
+{% set script_controller = 'index' %}
+{% set _target_path = path('homepage') %}
+
+{% set currentTheme = current_theme() %}
+{% set themeConfig = isEditColor|default(false) ? currentTheme.config : currentTheme.config %}
+{% set allConfig = currentTheme.allConfig %}
+
+{% set isIndex = true %}
+{% set consultDisplay = true %}
+
+{% block full_content %}
+    {#首页缩略图{% cache 'jianmo/home/top/banner' 600 %}
+      {{ block_show('jianmo:home_top_banner') }}
+    {% endcache %}#}
+  <body>
+   <div class="container">
+   		<header class="row">
+			<div class="col-md-3"><img src="assets/img/index/tongyanglogo.jpg" /></div>
+			<div class="col-md-4 down-10">
+				<form action="#" class="form-inline" role="form">
+					<div class="form-group">
+						<div class="input-group">
+							<input class="form-control" type="text" placeholder="Search.." autocomplete="off"  />
+							<div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-5 down-10">
+				<div class="row">
+					<div class="col-md-4">
+				<form action="#" class="form-horizontal" rola="form">
+					<div class="form-group">
+						<div class="input-group">
+							<select class="form-control">
+								<option value="切换城市">----切换城市----</option>
+									{% for city in citys %}
+										<option value="{{city.id}}">{{ city.name|default('') }}</option>
+									{% endfor %}
+							</select>
+						</div>
+					</div>
+				</form>
+				</div>
+				<div class="col-md-4">会员登录</div>
+				<div class="col-md-4">收藏夹</div>
+				</div>
+			</div>
+		</header>
+		<div id="course-digest">
+				<div id="course-menu" class="row shadow">
+					<div id="course-digest-title" class="col-md-3 background-red">
+						<i class="glyphicon glyphicon-th-large font-color-white">课程分类</i>
+					</div>
+					<div id="course-nav" class="col-md-6">
+						<i class="glyphicon glyphicon-home">首页</i>
+						<i class="glyphicon glyphicon-list-alt">文章资讯</i>
+						<i class="glyphicon glyphicon-gift">学校分类</i>
+					</div>
+					<div class="col-md-2"><img src="assets/img/index/customer-course.jpg" />定制课程</div>
+			</div>
+				<div id="course-adv" class="row shadow down-10">
+					<dl id="digset-list" class="col-md-3">
+						<dt>学历文凭</dt>
+						<dd>Education</dd>
+						<dt>职业技能</dt>
+						<dd>Vocational Skill</dd>
+						<dt>出国留学</dt>
+						<dd>Study Abroad</dd>
+						<dt>课外辅导</dt>
+						<dd>Tutorship</dd>
+						<dt>才艺专长</dt>
+						<dd>Art Training</dd>
+						<dt>企业管理</dt>
+						<dd>Business Managerment</dd>
+					</dl>
+					<div class="col-md-9"><img src="assets/img/index/adv1.jpg" /></div>
+				</div>
+				<div id="tongyan-policy" class="row down-10 shadow">
+				<div class="col-md-6"><img src="assets/img/index/mywords.jpg" /></div>
+				<div id="tongyan-info" class="col-md-6">
+					<div class="tongyan-title1"><strong>文章</strong>资讯→</div>
+					<div class="row">
+					<ul type="square" class="col-md-4">
+						<li>学校资讯</li>
+						{% for sca in SCarticle %}
+							<li><span><a class="link-dark" href="{{ path('article_detail', {id:sca.id}) }}">{{ sca.title }}</a></span></li>
+						{% endfor %}
+					</ul>
+					<ul type="square" class="col-md-4">
+						<li>推荐资讯</li>
+						{% for rea in Rearticle %}
+							<li><span><a class="link-dark" href="{{ path('article_detail', {id:rea.id}) }}">{{ rea.title }}</a></span></li>
+						{% endfor %}
+					</ul>
+					<ul type="square" class="col-md-4">
+						<li>同言资讯</li>
+						{% for tya in TYarticle %}
+							<li><span><a class="link-dark" href="{{ path('article_detail', {id:tya.id}) }}">{{ tya.title }}</a></span></li>
+						{% endfor %}
+					</ul>
+					</div>
+				</div>
+			</div>
+				<article id="tongyan-recommend" class="row down-10">
+					<header class="col-md-12 channel-header shadow">
+						<em>同言推荐</em>
+						<em>Recommend</em>
+					</header>
+					<div id="tongyan-recommend-list" class="col-md-12 shadow down-10" >
+						<div class="tongyan-title1"><strong>课程</strong>推荐→</div>
+						<div class="row">
+						{% for dfCourses in DFcourses %}
+						<ul class="col-md-2">
+							<li><a class="link-dark" href="{{ path('course_show', {id:dfCourses.id}) }}" target="_blank">{{ lazy_img(filepath(dfCourses.middlePicture, 'course.png'), 'img-responsive', dfCourses.title) }}</a></li>
+							<li class="bolder"><a class="link-dark" href="{{ path('course_show', {id:dfCourses.id}) }}" target="_blank">{{ dfCourses.title|default('') }}</a></li>
+							<li class="grey">{{ dfCourses.chineseName|default('') }}</li>
+							<li class="grey"><a class="link-dark" href="{{ path('course_show', {id:dfCourses.id}) }}" target="_blank"><i class="glyphicon glyphicon-time"></i>{{ dfCourses.subtitle|default('') }}</a></li>
+							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+						</ul>
+						{% endfor %}
+						</div>
+					</div>
+				</article>
+				<article id="tongyan-school-recommend" class="row shadow down-10">
+					<div class="col-md-12 tongyan-title1"><strong>名校</strong>推荐→</div>
+					<div class="col-md-12">
+					{% for schools in Schools %}
+						<ul class="col-md-2">
+						<li><a class="link-dark" href="{{ path('homepage_forward_school', {id:schools.id}) }}">{{ lazy_img(filepath(schools.largePicture, 'course.png'), 'img-responsive', schools.id|default('')) }}</a></li>
+						</ul>
+					{% endfor %}
+					</div>
+				</article>
+				<article id="tongyan-teacher-recommend" class="row shadow down-10">
+				<div class="col-md-12 tongyan-title1"><strong>名师</strong>推荐→</div>
+				<div class="row">
+					{% for teachers in Teachers %}
+					<ul class="col-md-2">
+						<li><a class="link-dark" href="{{ path('user_show', {id:teachers.id}) }}">{{ lazy_img(filepath(teachers.mediumAvatar, 'course.png'), 'img-responsive', teachers.title|default('')) }}</a></li>
+						<li class="grey"><a class="link-dark" href="{{ path('user_show', {id:teachers.id}) }}"><em class="black">{{ teachers.nickname|default('') }}</em>&nbsp;</a></li>
+						<li class="grey"><a class="link-dark" href="{{ path('user_show', {id:teachers.id}) }}"><i class="glyphicon glyphicon-time"></i>{{ teachers.title|default('') }}</a></li>
+						<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+					</ul>
+					{% endfor %}
+					</div>
+				</article>
+				<article id="your-choice" class="row down-10">
+					<header class="col-md-12 channel-header shadow">
+						<em>你来选择</em>
+						<em>Choice</em>
+					</header>
+					<div id="choice-menu" class="col-md-12 flex-box">
+						<div><i class="glyphicon glyphicon-pencil red"></i>初中生</div>
+						<div><i class="glyphicon glyphicon-book red"></i>高中生</div>
+						<div><i class="glyphicon glyphicon-bookmark red"></i>大学生</div>
+						<div><i class="glyphicon glyphicon-tags red"></i>职场人员</div>
+					</div>
+					<script>
+						var divs=document.querySelectorAll("#choice-menu div");
+						for(var i=0;i<divs.length;i++){
+							divs[i].onmouseout=function(){
+								this.firstChild.style.color="#e83227";
+							}
+							divs[i].onmouseover=function(){
+								this.firstChild.style.color="#fff";
+							}
+						}
+					</script>
+					<div id="educational-list" class="col-md-12 shadow down-10">
+						<div class="row">
+						<header class="col-md-1">学历文凭</header>
+						{% for pcCourses in PCcourses %}
+						<ul class="col-md-2">
+							<li><a class="link-dark" href="{{ path('course_show', {id:pcCourses.id}) }}" target="_blank">{{ lazy_img(filepath(pcCourses.middlePicture, 'course.png'), 'img-responsive', pcCourses.title) }}</a></li>
+							<li class="bolder"><a class="link-dark" href="{{ path('course_show', {id:pcCourses.id}) }}" target="_blank">{{ pcCourses.title|default('') }}</a></li>
+							<li class="grey">{{ pcCourses.chineseName|default('') }}</li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i><a class="link-dark" href="{{ path('course_show', {id:pcCourses.id}) }}" target="_blank">{{ pcCourses.subtitle|default('') }}</a></li>
+							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+						</ul>
+						{% endfor %}
+						</div>
+					</div>
+					<div id="educational-list" class="col-md-12 shadow down-10">
+						<div class="row">
+						<header class="col-md-1">职业技能</header>
+						<ul class="col-md-2">
+							<li><img src="assets/img/index/sample.jpg" /></li>
+							<li class="bolder">xxxx课程</li>
+							<li class="grey">xxxx机构</li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
+							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+						</ul>
+						<ul class="col-md-2">
+							<li><img src="assets/img/index/sample.jpg" /></li>
+							<li class="bolder">xxxx课程</li>
+							<li class="grey">xxxx机构</li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
+							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+						</ul>
+						<ul class="col-md-2">
+							<li><img src="assets/img/index/sample.jpg" /></li>
+							<li class="bolder">xxxx课程</li>
+							<li class="grey">xxxx机构</li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
+							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+						</ul>
+						<ul class="col-md-2">
+							<li><img src="assets/img/index/sample.jpg" /></li>
+							<li class="bolder">xxxx课程</li>
+							<li class="grey">xxxx机构</li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
+							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+						</ul>
+						<ul class="col-md-2">
+							<li><img src="assets/img/index/sample.jpg" /></li>
+							<li class="bolder">xxxx课程</li>
+							<li class="grey">xxxx机构</li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
+							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+						</ul>
+						</div>
+					</div>
+					<div id="educational-list" class="col-md-12 shadow down-10">
+						<div class="row">
+						<header class="col-md-1">出国留学</header>
+						<ul class="col-md-2">
+							<li><img src="assets/img/index/sample.jpg" /></li>
+							<li class="bolder">xxxx课程</li>
+							<li class="grey">xxxx机构</li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
+							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+						</ul>
+						<ul class="col-md-2">
+							<li><img src="assets/img/index/sample.jpg" /></li>
+							<li class="bolder">xxxx课程</li>
+							<li class="grey">xxxx机构</li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
+							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+						</ul>
+						<ul class="col-md-2">
+							<li><img src="assets/img/index/sample.jpg" /></li>
+							<li class="bolder">xxxx课程</li>
+							<li class="grey">xxxx机构</li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
+							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+						</ul>
+						<ul class="col-md-2">
+							<li><img src="assets/img/index/sample.jpg" /></li>
+							<li class="bolder">xxxx课程</li>
+							<li class="grey">xxxx机构</li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
+							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+						</ul>
+						<ul class="col-md-2">
+							<li><img src="assets/img/index/sample.jpg" /></li>
+							<li class="bolder">xxxx课程</li>
+							<li class="grey">xxxx机构</li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
+							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+						</ul>
+						</div>
+					</div>
+					<div id="educational-list" class="col-md-12 shadow down-10">
+						<div class="row">
+						<header class="col-md-1">课外辅导</header>
+						<ul class="col-md-2">
+							<li><img src="assets/img/index/sample.jpg" /></li>
+							<li class="bolder">xxxx课程</li>
+							<li class="grey">xxxx机构</li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
+							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+						</ul>
+						<ul class="col-md-2">
+							<li><img src="assets/img/index/sample.jpg" /></li>
+							<li class="bolder">xxxx课程</li>
+							<li class="grey">xxxx机构</li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
+							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+						</ul>
+						<ul class="col-md-2">
+							<li><img src="assets/img/index/sample.jpg" /></li>
+							<li class="bolder">xxxx课程</li>
+							<li class="grey">xxxx机构</li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
+							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+						</ul>
+						<ul class="col-md-2">
+							<li><img src="assets/img/index/sample.jpg" /></li>
+							<li class="bolder">xxxx课程</li>
+							<li class="grey">xxxx机构</li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
+							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+						</ul>
+						<ul class="col-md-2">
+							<li><img src="assets/img/index/sample.jpg" /></li>
+							<li class="bolder">xxxx课程</li>
+							<li class="grey">xxxx机构</li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
+							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+						</ul>
+						</div>
+					</div>
+					<div id="educational-list" class="col-md-12 shadow down-10">
+						<div class="row">
+						<header class="col-md-1">才艺专长</header>
+						<ul class="col-md-2">
+							<li><img src="assets/img/index/sample.jpg" /></li>
+							<li class="bolder">xxxx课程</li>
+							<li class="grey">xxxx机构</li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
+							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+						</ul>
+						<ul class="col-md-2">
+							<li><img src="assets/img/index/sample.jpg" /></li>
+							<li class="bolder">xxxx课程</li>
+							<li class="grey">xxxx机构</li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
+							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+						</ul>
+						<ul class="col-md-2">
+							<li><img src="assets/img/index/sample.jpg" /></li>
+							<li class="bolder">xxxx课程</li>
+							<li class="grey">xxxx机构</li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
+							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+						</ul>
+						<ul class="col-md-2">
+							<li><img src="assets/img/index/sample.jpg" /></li>
+							<li class="bolder">xxxx课程</li>
+							<li class="grey">xxxx机构</li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
+							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+						</ul>
+						<ul class="col-md-2">
+							<li><img src="assets/img/index/sample.jpg" /></li>
+							<li class="bolder">xxxx课程</li>
+							<li class="grey">xxxx机构</li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
+							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+						</ul>
+						</div>
+					</div>
+				</article>
+			</div>
+   </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+{% endblock %}
+

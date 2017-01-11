@@ -2,14 +2,96 @@
 
 namespace Topxia\WebBundle\Controller;
 
+use Topxia\Common\Paginator;
 use Topxia\Common\ArrayToolkit;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Topxia\Service\Defaults\Impl\DefaultsServiceImpl;
+use Topxia\Service\Schools\Impl\SchoolsServiceImpl;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class DefaultController extends BaseController
 {
     public function indexAction(Request $request)
     {
+        /*加service*/
+        //培训机构
+        //$crowd_classification = $this->getCrowdClassificationService()->findAll();
+        //学校0,培训机构1
+        //$school = $this->getSchoolsService()->findAll(0);
+
+        //学校推荐
+        $school = $this->getSchoolsService()->findSchoolByNewTime();
+
+        $citys = $this->getCityService()->findCityBySchoolIdOrSchoolAll(null);
+        //获得默认初中生课程方法
+        $PCcourses = $this->getCourseService()->findCoursesByPopulationClassify(0);
+
+        //获得默认推荐根据课程创建时间显示方法
+        $DFcourses = $this->getCourseService()->findCoursesByTime();
+
+        //首页学校资讯
+        $categoryIds = array(1);
+        $start = 0;
+        $limit = 5;
+        $SCarticle = $this->getArticleService()->findArticlesByCategoryIds($categoryIds, $start, $limit);
+
+        $categoryIds = array(2);
+        $TYarticle = $this->getArticleService()->findArticlesByCategoryIds($categoryIds, $start, $limit);
+
+        $categoryIds = array(3);
+        $Rearticle = $this->getArticleService()->findArticlesByCategoryIds($categoryIds, $start, $limit);
+
+        /*教师数据*/
+        $conditions = array(
+            'roles'  => 'ROLE_TEACHER',
+            'locked' => 0
+        );
+
+        $paginator = new Paginator(
+            $this->get('request'),
+            $this->getUserService()->searchUserCount($conditions),
+            6
+        );
+        //$teachersCount = $this->getUserService()->searchUserCount($conditions);
+        $teachers = $this->getUserService()->searchUsers(
+            $conditions,
+            array(
+                'promoted', 'DESC',
+                'promotedSeq', 'ASC',
+                'promotedTime', 'DESC',
+                'createdTime', 'DESC'
+            ),
+            $paginator->getOffsetCount(),
+            $paginator->getPerPageCount()
+        );
+
+
+        $user = $this->getCurrentUser();
+
+        if (!empty($user['id'])) {
+            $this->getBatchNotificationService()->checkoutBatchNotification($user['id']);
+        }
+
+        //$friendlyLinks = $this->getNavigationService()->getOpenedNavigationsTreeByType('friendlyLink');
+       
+        return $this->render('TopxiaWebBundle:Default:old-index.html.twig', array(
+            'Schools' => $school,
+            'citys' => $citys,
+            'PCcourses' => $PCcourses,
+            'DFcourses' => $DFcourses,
+            'SCarticle' => $SCarticle,
+            'TYarticle' => $TYarticle,
+            'Rearticle' => $Rearticle,
+            'Teachers' => $teachers
+            //'crowd_classification' => $crowd_classification
+            //'friendlyLinks' => $friendlyLinks
+            ));
+    }
+
+    public function forwardIndexAction(Request $request, $id)
+    {
+        //$aa = $id;
         $user = $this->getCurrentUser();
 
         if (!empty($user['id'])) {
@@ -17,7 +99,86 @@ class DefaultController extends BaseController
         }
 
         $friendlyLinks = $this->getNavigationService()->getOpenedNavigationsTreeByType('friendlyLink');
-        return $this->render('TopxiaWebBundle:Default:index.html.twig', array('friendlyLinks' => $friendlyLinks));
+        return $this->render('TopxiaWebBundle:Default:index.html.twig', array('friendlyLinks' => $friendlyLinks, 'school_id' => $id));
+    }
+
+    public function addSchoolAction(Request $request, $id)
+    {
+        $user = $this->getCurrentUser();
+
+        // if (!empty($user['id'])) {
+        //     $this->getBatchNotificationService()->checkoutBatchNotification($user['id']);
+        // }
+         //省份
+        $province = $this->getProvinceService()->findAll();
+        //城市
+        $city = $this->getCityService()->findAll();
+         //学校
+        //$school = $this->getSchoolsService()->getSchool($id);
+        if ($request->getMethod() == 'POST') {
+            $school = $request->request->get('schools');
+
+            $school_id = $this->getSchoolsService()->addSchool($id, $school);
+          
+            $this->setFlashMessage('success', $this->getServiceKernel()->trans('基础信息保存成功。'));
+             
+            return $this->redirect($this->generateUrl('homepage'));
+        }
+        return $this->render('TopxiaWebBundle:School:add-school.html.twig', array(
+            'province' => $province,
+            'city' => $city,
+            'schools' => $school,
+            'user' => $user
+            ));
+    }
+
+    public function updateSchoolAction(Request $request, $id)
+    {
+        $user = $this->getCurrentUser();
+
+        // if (!empty($user['id'])) {
+        //     $this->getBatchNotificationService()->checkoutBatchNotification($user['id']);
+        // }
+         //学校
+        $school = $this->getSchoolsService()->getSchool($id);
+        if($school['province_id'] != null && $school['city_id'] != null){
+            //省份
+            $province = $this->getProvinceService()->getProvince($school['province_id']);
+            //城市
+            $city = $this->getCityService()->getCityById($school['city_id']);
+        }
+
+        $provinces = $this->getProvinceService()->findAll();
+
+        $citys = $this->getCityService()->findAll();
+        if ($request->getMethod() == 'POST') {
+            $school = $request->request->get('schools');
+
+            $school_id = $this->getSchoolsService()->updateSchool($id, $school);
+          
+            $this->setFlashMessage('success', $this->getServiceKernel()->trans('基础信息更新成功。'));
+             
+            return $this->redirect($this->generateUrl('homepage'));
+        }
+        return $this->render('TopxiaWebBundle:School:update-school.html.twig', array(
+            'province' => $province,
+            'city' => $city,
+            'provinces' => $provinces,
+            'citys' => $citys,
+            'schools' => $school,
+            'user' => $user
+            ));
+    }
+
+    public function deleteSchoolAction(Request $request, $id)
+    {
+          //学校
+        //$school = $this->getSchoolsService()->getSchool($id);
+        $affected = $this->getSchoolsService()->deleteSchool($id);
+        if ($affected <= 0) {
+            $this->setFlashMessage('danger', $this->getServiceKernel()->trans('删除学校信息成功。'));
+        }
+        return $this->redirect($this->generateUrl('homepage'));
     }
 
     public function userlearningAction()
@@ -256,5 +417,35 @@ class DefaultController extends BaseController
     private function getBlacklistService()
     {
         return $this->getServiceKernel()->createService('User.BlacklistService');
+    }
+
+    protected function getCrowdClassificationService()
+    {
+        return $this->getServiceKernel()->createService('CrowdClassification.CrowdClassificationService');
+    }
+
+    protected function getSchoolsService()
+    {
+        return $this->getServiceKernel()->createService('Schools.SchoolsService');
+    }
+
+    protected function getProvinceService()
+    {
+        return $this->getServiceKernel()->createService('Province.ProvinceService');
+    }
+
+    protected function getCityService()
+    {
+        return $this->getServiceKernel()->createService('City.CityService');
+    }
+
+    protected function getArticleService()
+    {
+        return $this->getServiceKernel()->createService('Article.ArticleService');
+    }
+
+    protected function getUserService()
+    {
+        return $this->getServiceKernel()->createService('User.UserService');
     }
 }

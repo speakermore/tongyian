@@ -123,7 +123,7 @@
                 "type": "text",
                 "default":[
                     {
-                        "value": "网校功能强大"
+                        "value": "网校功能强"
                     }
                 ]
             },
@@ -260,7 +260,7 @@
                 "type": "text",
                 "default": [
                     {
-                        "value": "我是王鑫"
+                        "value": "我是XX"
                     }
                 ]
             },
@@ -407,7 +407,7 @@
                 "type": "link",
                 "default": [
                     {
-                        "value": "ES官网",
+                        "value": "官网",
                         "href": "http:\/\/www.kmbdqn.com\/",
                         "target": "_blank"
                     },

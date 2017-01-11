@@ -35,7 +35,7 @@ parameters:
         - title: ""
           count: "4"
           code: "recommend-classroom"
-          defaultTitle: "推荐班级"
+          defaultTitle: "推荐学校"
           subTitle: ""
           background: ""
           defaultSubTitle: "班级化学习体系，给你更多的课程相关服务。"

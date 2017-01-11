@@ -32,7 +32,7 @@
               <div class="control-text">{{ profile.truename }}</div>
             {% else %}
             	<div class="col-md-7 controls radios">
-              	<input type="text" id="profile_truename" name="profile[truename]" class="form-control" data-widget-cid="widget-1" data-explain="" value="{{ profile.truename|default('') }}">
+              	<input type="text" id="profile_truename" name="userses[truename]" class="form-control" data-widget-cid="widget-1" data-explain="" value="{{ profile.truename|default('') }}">
               	<div class="help-block" style="display:none;"></div>
             	</div>
             {% endif %}
@@ -42,9 +42,9 @@
 						<label class="col-md-2 control-label">{{'性别'|trans}}</label>
 						<div class="col-md-7 controls radios">
 							<div id="profile_gender">
-								<input type="radio" id="profile_gender_0" name="profile[gender]" required="required" value="male" {% if profile.gender == 'male' %}checked="checked"{% endif %}>
+								<input type="radio" id="profile_gender_0" name="userses[gender]" required="required" value="male" {% if profile.gender == 'male' %}checked="checked"{% endif %}>
 								<label for="profile_gender_0" class="required">{{'男'|trans}}</label>
-								<input type="radio" id="profile_gender_1" name="profile[gender]" required="required" value="female" {% if profile.gender == 'female' %}checked="checked"{% endif %}>
+								<input type="radio" id="profile_gender_1" name="userses[gender]" required="required" value="female" {% if profile.gender == 'female' %}checked="checked"{% endif %}>
 								<label for="profile_gender_1" class="required">{{'女'|trans}}</label>
 							</div>
 						</div>
@@ -58,7 +58,7 @@
               </div>
             {% else %}
               <div class="col-md-7 controls radios">
-                <input type="text" id="profile_idcard" name="profile[idcard]" class="form-control" value="{{ profile.idcard|default('') }}">
+                <input type="text" id="profile_idcard" name="userses[idcard]" class="form-control" value="{{ profile.idcard|default('') }}">
                 <div class="help-block" style="display:none;"></div>
               </div>
             {% endif %}
@@ -78,7 +78,7 @@
 						<div class="form-group">
 							<label for="profile_mobile" class="col-md-2 control-label">{{'手机号码'|trans}}</label>
 							<div class="col-md-7 controls">
-								<input type="text" id="profile_mobile" name="profile[mobile]" class="form-control" data-widget-cid="widget-5" data-explain="" value="{{ profile.mobile|default('') }}">
+								<input type="text" id="profile_mobile" name="userses[mobile]" class="form-control" data-widget-cid="widget-5" data-explain="" value="{{ profile.mobile|default('') }}">
 
 								<div class="help-block" style="display:none"></div>
 							</div>
@@ -101,7 +101,7 @@
 					<div class="form-group form-forIam-group form-notStudent-group">
 						<label class="col-md-2 control-label">{{'身高'|trans}}</label>
 						<div class="col-md-7 controls">
-							<input type="text" id="profile_height" name="profile[height]" class="form-control" value="{{ profile.height|default('') }}">
+							<input type="text" id="profile_height" name="userses[height]" class="form-control" value="{{ profile.height|default('') }}">
 							<div class="help-block" style="display:none;"></div>
 						</div>
 					</div>
@@ -111,7 +111,7 @@
 					<div class="form-group form-forIam-group form-notStudent-group">
 						<label class="col-md-2 control-label">{{'体重'|trans}}</label>
 						<div class="col-md-7 controls">
-							<input type="text" id="profile_weight" name="profile[weight]" class="form-control" value="{{ profile.weight|default('') }}">
+							<input type="text" id="profile_weight" name="userses[weight]" class="form-control" value="{{ profile.weight|default('') }}">
 							<div class="help-block" style="display:none;"></div>
 						</div>
 					</div>
@@ -119,7 +119,7 @@
 					<div class="form-group form-forIam-group form-notStudent-group">
 						<label class="col-md-2 control-label">{{'毕业学校'|trans}}</label>
 						<div class="col-md-7 controls">
-							<input type="text" id="profile_graduateSchool" name="profile[graduateSchool]" class="form-control" value="{{ profile.graduateSchool|default('') }}">
+							<input type="text" id="profile_graduateSchool" name="userses[graduateSchool]" class="form-control" value="{{ profile.graduateSchool|default('') }}">
 							<div class="help-block" style="display:none;"></div>
 						</div>
 					</div>
@@ -127,7 +127,7 @@
 					<div class="form-group form-forIam-group form-notStudent-group">
 						<label class="col-md-2 control-label">{{'毕业考试分数'|trans}}</label>
 						<div class="col-md-7 controls">
-							<input type="text" id="profile_graduationTestScores" name="profile[graduationTestScores]" class="form-control" value="{{ profile.graduationTestScores|default('') }}">
+							<input type="text" id="profile_graduationTestScores" name="userses[graduationTestScores]" class="form-control" value="{{ profile.graduationTestScores|default('') }}">
 							<div class="help-block" style="display:none;"></div>
 						</div>
 					</div>
@@ -135,7 +135,7 @@
 					<div class="form-group form-forIam-group form-notStudent-group">
 						<label class="col-md-2 control-label">{{'监护人姓名'|trans}}</label>
 						<div class="col-md-7 controls">
-							<input type="text" id="profile_guardianName" name="profile[guardianName]" class="form-control" value="{{ profile.guardianName|default('') }}">
+							<input type="text" id="profile_guardianName" name="userses[guardianName]" class="form-control" value="{{ profile.guardianName|default('') }}">
 							<div class="help-block" style="display:none;"></div>
 						</div>
 					</div>
@@ -143,7 +143,7 @@
 					<div class="form-group form-forIam-group form-notStudent-group">
 						<label class="col-md-2 control-label">{{'监护人联系方式'|trans}}</label>
 						<div class="col-md-7 controls">
-							<input type="text" id="profile_guardianPhone" name="profile[guardianPhone]" class="form-control" value="{{ profile.guardianPhone|default('') }}">
+							<input type="text" id="profile_guardianPhone" name="userses[guardianPhone]" class="form-control" value="{{ profile.guardianPhone|default('') }}">
 							<div class="help-block" style="display:none;"></div>
 						</div>
 					</div>
@@ -151,7 +151,7 @@
 					<div class="form-group form-forIam-group form-notStudent-group">
 						<label class="col-md-2 control-label">{{'准考证号码'|trans}}</label>
 						<div class="col-md-7 controls">
-							<input type="text" id="profile_admissionTicketNumber" name="profile[admissionTicketNumber]" class="form-control" value="{{ profile.admissionTicketNumber|default('') }}">
+							<input type="text" id="profile_admissionTicketNumber" name="userses[admissionTicketNumber]" class="form-control" value="{{ profile.admissionTicketNumber|default('') }}">
 							<div class="help-block" style="display:none;"></div>
 						</div>
 					</div>
@@ -160,7 +160,7 @@
 					<div class="form-group form-forIam-group form-notStudent-group">
 						<label class="col-md-2 control-label">{{'所报学校'|trans}}</label>
 						<div class="col-md-7 controls">
-							<input type="text" id="profile_reportedSchool" name="profile[reportedSchool]" class="form-control" value="{{ profile.reportedSchool|default('') }}">
+							<input type="text" id="profile_reportedSchool" name="userses[reportedSchool]" class="form-control" value="{{ profile.reportedSchool|default('') }}">
 							<div class="help-block" style="display:none;"></div>
 						</div>
 					</div>
@@ -169,7 +169,7 @@
 					<div class="form-group form-forIam-group form-notStudent-group">
 						<label class="col-md-2 control-label">{{'所报课程'|trans}}</label>
 						<div class="col-md-7 controls">
-							<input type="text" id="profile_reportedClass" name="profile[reportedClass]" class="form-control" value="{{ profile.reportedClass|default('') }}">
+							<input type="text" id="profile_reportedClass" name="userses[reportedClass]" class="form-control" value="{{ profile.reportedClass|default('') }}">
 							<div class="help-block" style="display:none;"></div>
 						</div>
 					</div>
@@ -180,7 +180,7 @@
 					<div class="form-group form-forIam-group form-notStudent-group">
 						<label class="col-md-2 control-label">{{'公司'|trans}}</label>
 						<div class="col-md-7 controls">
-							<input type="text" id="profile_company" name="profile[company]" class="form-control" value="{{ profile.company|default('') }}">
+							<input type="text" id="profile_company" name="userses[company]" class="form-control" value="{{ profile.company|default('') }}">
 							<div class="help-block" style="display:none;"></div>
 						</div>
 					</div>
@@ -188,7 +188,7 @@
 					<div class="form-group form-forIam-group form-notStudent-group">
 						<label class="col-md-2 control-label">{{'职业'|trans}}</label>
 						<div class="col-md-7 controls">
-							<input type="text" id="profile_job" name="profile[job]" class="form-control" value="{{ profile.job|default('') }}">
+							<input type="text" id="profile_job" name="userses[job]" class="form-control" value="{{ profile.job|default('') }}">
 							<div class="help-block" style="display:none;"></div>
 						</div>
 					</div>
@@ -198,7 +198,7 @@
 					<div class="form-group form-forIam-group form-notStudent-group">
 						<label class="col-md-2 control-label">{{'民族'|trans}}</label>
 						<div class="col-md-7 controls">
-							<input type="text" id="profile_nation" name="profile[nation]" class="form-control" value="{{ profile.nation|default('') }}">
+							<input type="text" id="profile_nation" name="userses[nation]" class="form-control" value="{{ profile.nation|default('') }}">
 							<div class="help-block" style="display:none;"></div>
 						</div>
 					</div>
@@ -206,7 +206,7 @@
 					<div class="form-group">
 						<label class="col-md-2 control-label">{{'头衔'|trans}}</label>
 						<div class="col-md-7 controls">
-							<input type="text" id="profile_title" name="profile[title]" class="form-control" value="{{ profile.title|default('') }}">
+							<input type="text" id="profile_title" name="userses[title]" class="form-control" value="{{ profile.title|default('') }}">
 							<div class="help-block" style="display:none;"></div>
 						</div>
 					</div>
@@ -214,7 +214,7 @@
 					<div class="form-group">
 						<label class="col-md-2 control-label">{{'个人签名'|trans}}</label>
 						<div class="col-md-7 controls">
-							<textarea type="text" rows="4" maxlength="80" id="profile_signature" name="profile[signature]" class="form-control">{{ profile.signature|default('') }}</textarea>
+							<textarea type="text" rows="4" maxlength="80" id="profile_signature" name="userses[signature]" class="form-control">{{ profile.signature|default('') }}</textarea>
 							<div class="help-block" style="display:none;"></div>
 						</div>
 					</div>
@@ -222,14 +222,14 @@
 					<div class="form-group">
 						<label class="col-md-2 control-label">{{'自我介绍'|trans}}</label>
 						<div class="col-md-7 controls">
-							<textarea name="profile[about]" rows="10" id="profile_about" class="form-control" data-image-upload-url="{{ path('editor_upload', {token:upload_token('user')}) }}">{{ profile.about|default('') }}</textarea>
+							<textarea name="userses[about]" rows="10" id="profile_about" class="form-control" data-image-upload-url="{{ path('editor_upload', {token:upload_token('user')}) }}">{{ profile.about|default('') }}</textarea>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<label class="col-md-2 control-label">{{'个人主页'|trans}}</label>
 						<div class="col-md-7 controls">
-							<input type="text" id="profile_site" name="profile[site]" class="form-control" data-widget-cid="widget-4" data-explain="" value="{{ profile.site|default('') }}">
+							<input type="text" id="profile_site" name="userses[site]" class="form-control" data-widget-cid="widget-4" data-explain="" value="{{ profile.site|default('') }}">
 							<div class="help-block" style="display:none;"></div>
 						</div>
 					</div>
@@ -239,28 +239,28 @@
 							<label for="weibo">{{'微博'|trans}}</label>
 						</div>
 						<div class="col-md-7 controls">
-							<input type="text" id="weibo" name="profile[weibo]" class="form-control" data-widget-cid="widget-3" data-explain="" value="{{ profile.weibo|default('') }}">
+							<input type="text" id="weibo" name="userses[weibo]" class="form-control" data-widget-cid="widget-3" data-explain="" value="{{ profile.weibo|default('') }}">
 							<div class="help-block" style="display:none;"></div>
 						</div>
-						<div class="col-md-2 controls mts"><input type="checkbox" name="profile[isWeiboPublic]" {% if profile.isWeiboPublic %}checked="checked" {% endif %}/>{{'公开'|trans}}</div>
+						<div class="col-md-2 controls mts"><input type="checkbox" name="userses[isWeiboPublic]" {% if profile.isWeiboPublic %}checked="checked" {% endif %}/>{{'公开'|trans}}</div>
 					</div>
 
 					<div class="form-group">
 						<label class="col-md-2 control-label">{{'微信'|trans}}</label>
 						<div class="col-md-7 controls">
-							<input type="text" id="profile_weixin" name="profile[weixin]" class="form-control" value="{{ profile.weixin|default('') }}">
+							<input type="text" id="profile_weixin" name="userses[weixin]" class="form-control" value="{{ profile.weixin|default('') }}">
 							<div class="help-block" style="display:none;"></div>
 						</div>
-						<div class="col-md-2 controls mts"><input type="checkbox" name="profile[isWeixinPublic]" {% if profile.isWeixinPublic %}checked="checked" {% endif %}/>{{'公开'|trans}}</div>
+						<div class="col-md-2 controls mts"><input type="checkbox" name="userses[isWeixinPublic]" {% if profile.isWeixinPublic %}checked="checked" {% endif %}/>{{'公开'|trans}}</div>
 					</div>
 
 					<div class="form-group">
 						<label for="profile_qq" class="col-md-2 control-label">QQ</label>
 						<div class="col-md-7 controls">
-							<input type="text" id="profile_qq" name="profile[qq]" class="form-control" data-widget-cid="widget-2" data-explain="" value="{{ profile.qq|default('') }}">
+							<input type="text" id="profile_qq" name="userses[qq]" class="form-control" data-widget-cid="widget-2" data-explain="" value="{{ profile.qq|default('') }}">
 							<div class="help-block" style="display:none;"></div>
 						</div>
-						<div class="col-md-2 controls mts"><input type="checkbox" name="profile[isQQPublic]" {% if profile.isQQPublic %}checked="checked"{% endif %}/>{{'公开'|trans}}</div>
+						<div class="col-md-2 controls mts"><input type="checkbox" name="userses[isQQPublic]" {% if profile.isQQPublic %}checked="checked"{% endif %}/>{{'公开'|trans}}</div>
 					</div>
 
 
@@ -272,7 +272,7 @@
 					<div class="form-group">
 						<label for="{{field.fieldName}}" class="col-md-2 control-label">{{field.title}}</label>
 						<div class="col-md-7 controls">
-							<textarea id="{{field.fieldName}}" name="profile[{{field.fieldName}}]" class="{{field.type}} form-control">{{ profile[field.fieldName]|default('') }}</textarea>
+							<textarea id="{{field.fieldName}}" name="userses[{{field.fieldName}}]" class="{{field.type}} form-control">{{ profile[field.fieldName]|default('') }}</textarea>
 							<div class="help-block" style="display:none;"></div>
 						</div>
 					</div>
@@ -280,7 +280,7 @@
 					<div class="form-group">
 						<label for="{{field.fieldName}}" class="col-md-2 control-label">{{field.title}}</label>
 						<div class="col-md-7 controls">
-							<input type="text" id="{{field.fieldName}}" placeholder="{{'最大值为9位整数'|trans}}" name="profile[{{field.fieldName}}]" class="{{field.type}} form-control"  value="{{ profile[field.fieldName]|default('') }}">
+							<input type="text" id="{{field.fieldName}}" placeholder="{{'最大值为9位整数'|trans}}" name="userses[{{field.fieldName}}]" class="{{field.type}} form-control"  value="{{ profile[field.fieldName]|default('') }}">
 							<div class="help-block" style="display:none;"></div>
 						</div>
 					</div>
@@ -288,7 +288,7 @@
 					<div class="form-group">
 						<label for="{{field.fieldName}}" class="col-md-2 control-label">{{field.title}}</label>
 						<div class="col-md-7 controls">
-							<input type="text" id="{{field.fieldName}}" placeholder="{{'保留到2位小数'|trans}}" name="profile[{{field.fieldName}}]" class="{{field.type}} form-control"  value="{{ profile[field.fieldName]|default('') }}">
+							<input type="text" id="{{field.fieldName}}" placeholder="{{'保留到2位小数'|trans}}" name="userses[{{field.fieldName}}]" class="{{field.type}} form-control"  value="{{ profile[field.fieldName]|default('') }}">
 							<div class="help-block" style="display:none;"></div>
 						</div>
 					</div>
@@ -296,7 +296,7 @@
 					<div class="form-group">
 						<label for="{{field.fieldName}}" class="col-md-2 control-label">{{field.title}}</label>
 						<div class="col-md-7 controls">
-							<input type="text" id="{{field.fieldName}}" name="profile[{{field.fieldName}}]" class="{{field.type}} form-control" value="{% if profile[field.fieldName] %}{{profile[field.fieldName]}}{% endif %}">
+							<input type="text" id="{{field.fieldName}}" name="userses[{{field.fieldName}}]" class="{{field.type}} form-control" value="{% if profile[field.fieldName] %}{{profile[field.fieldName]}}{% endif %}">
 							<div class="help-block" style="display:none;"></div>
 						</div>
 					</div>
@@ -304,7 +304,7 @@
 					<div class="form-group">
 						<label for="{{field.fieldName}}" class="col-md-2 control-label">{{field.title}}</label>
 						<div class="col-md-7 controls">
-							<input type="text" id="{{field.fieldName}}" name="profile[{{field.fieldName}}]" class="form-control" value="{{ profile[field.fieldName]|default('') }}">
+							<input type="text" id="{{field.fieldName}}" name="userses[{{field.fieldName}}]" class="form-control" value="{{ profile[field.fieldName]|default('') }}">
 							<div class="help-block" style="display:none;"></div>
 						</div>
 					</div>
@@ -317,7 +317,7 @@
 							<button id="profile-save-btn" data-submiting-text="{{'正在保存'|trans}}" type="submit" class="btn btn-primary">{{'保存'|trans}}</button>
 						</div>
 					</div>
-					<input type="hidden" id="profile_role_id" name="profile[role_id]" value="{{ profile.role_id|default('') }}">
+					<input type="hidden" id="profile_role_id" name="userses[role_id]" value="{{ profile.role_id|default('') }}">
 					<input type="hidden" name="_csrf_token" value="{{ csrf_token('site') }}">
 			</form>
 

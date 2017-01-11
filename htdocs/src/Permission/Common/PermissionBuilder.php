@@ -11,6 +11,7 @@ use Topxia\Service\Common\ServiceKernel;
 class PermissionBuilder
 {
     private $position = 'admin';
+    private $newposition = 'newadmin';
 
     private static $builder;
     private        $cached = array();
@@ -217,9 +218,11 @@ class PermissionBuilder
     {
         $configPaths = array();
         $position    = $this->position;
+        $newposition = $this->newposition;
 
         $rootDir = realpath(__DIR__ . '/../../../');
 
+        /*Finder组件通过一个直观而流畅的接口来寻找文件和目录*/
         $finder = new Finder();
         $finder->directories()->depth('== 0');
 
@@ -229,8 +232,14 @@ class PermissionBuilder
 
         foreach ($finder as $dir) {
             $filepath = $dir->getRealPath() . "/menus_{$position}.yml";
+            /*加了新的后台配置路径*/
+            $newfilepath = $dir->getRealPath() . "/menus_{$newposition}.yml";
             if (file_exists($filepath)) {
                 $configPaths[] = $filepath;
+            }
+            /*判断方法*/
+            if (file_exists($newfilepath)) {
+                $configPaths[] = $newfilepath;
             }
         }
 
@@ -285,6 +294,7 @@ class PermissionBuilder
         }
 
         $environment = ServiceKernel::instance()->getEnvironment();
+        //$cacheFile   = "../app/cache/" . $environment . "/menus_cache_" . $this->newposition . ".php";
         $cacheFile   = "../app/cache/" . $environment . "/menus_cache_" . $this->position . ".php";
         if ($environment != "dev" && file_exists($cacheFile)) {
             $this->cached['getOriginPermissions'] = include $cacheFile;
