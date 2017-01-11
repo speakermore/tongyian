@@ -63,10 +63,20 @@ with {class:'panel-col'} %}#} {% block heading %}学生报名学校更新{% endb
 <div class="form-group form-forIam-group form-notStudent-group">
     <label class="col-md-2 control-label">{{'联系方式'|trans}}</label>
     <div class="col-md-7 controls">
+        <input type="text" id="student_phone" name="student[phone]" class="form-control" value="{{ student.phone|default('') }}"
+        />
+        <div class="help-block" style="display:none;"></div>
+    </div>
+</div>
+
+{#身份证号码#}
+<div class="form-group form-forIam-group form-notStudent-group">
+    <label class="col-md-2 control-label">{{'身份证号码'|trans}}</label>
+    <div class="col-md-7 controls">
         <input type="text" id="student_IDcards" name="student[IDcards]" class="form-control" value="{{ student.IDcards|default('') }}"
         />
         <div class="help-block" style="display:none;"></div>
-</div>
+    </div>
 </div>
 
 {#毕业学校#}

@@ -1,6 +1,6 @@
 admin:
     pattern:  /
-    defaults: { _controller: TopxiaAdminBundle:Default:index }
+    defaults: { _controller: TopxiaAdminBundle:Default:index } 
 
 admin_inspect:
     pattern:  /inspect
@@ -73,7 +73,6 @@ admin_opencourse_analysis_conversion:
 admin_opencourse_analysis_conversion_result:
     pattern:  /opencourse/{courseId}/analysis/conversion/result
     defaults: { _controller: TopxiaAdminBundle:OpenCourseAnalysis:conversionResult }
-
 
 admin_content:
     pattern:  /content
@@ -229,16 +228,7 @@ admin_user:
     defaults: { _controller: TopxiaAdminBundle:User:index }
     permissions: [admin_user_manage]
 
-newadmin_user:
-    pattern:  /1111
-    defaults: { _controller: TopxiaAdminBundle:User:index }
-    permissions: [newadmin_user_manage]
-
 admin_user_create:
-    pattern:  /user/create
-    defaults: { _controller: TopxiaAdminBundle:User:create }
-
-newadmin_user_create:
     pattern:  /user/create
     defaults: { _controller: TopxiaAdminBundle:User:create }
 
@@ -267,16 +257,7 @@ admin_user_show:
     defaults: { _controller: TopxiaAdminBundle:User:show }
     permissions: [admin]
 
-newadmin_user_show:
-    pattern:  /user/{id}
-    defaults: { _controller: TopxiaAdminBundle:User:show }
-    permissions: [newadmin]
-
 admin_user_edit:
-    pattern:  /user/{id}/edit
-    defaults: { _controller: TopxiaAdminBundle:User:edit }
-
-newadmin_user_edit:
     pattern:  /user/{id}/edit
     defaults: { _controller: TopxiaAdminBundle:User:edit }
 
@@ -295,10 +276,6 @@ admin_user_unlock:
     methods:  [POST]
 
 admin_user_roles:
-    pattern:  /user/{id}/roles
-    defaults: { _controller: TopxiaAdminBundle:User:roles }
-
-newadmin_user_roles:
     pattern:  /user/{id}/roles
     defaults: { _controller: TopxiaAdminBundle:User:roles }
 
@@ -1909,3 +1886,122 @@ admin_cloud_attachment_render:
     pattern: /cloud_attachment/render
     defaults: { _controller: TopxiaAdminBundle:CloudAttachment:render }
     permissions: [admin_cloud_attachment_manage]
+
+
+
+#后台管理员路由配置#
+newadmin:
+    pattern:  /newadmin
+    defaults: { _controller: TopxiaAdminBundle:Default:newIndex }  
+
+newadmin_whole:
+    pattern:  /whole
+    defaults: { _controller: TopxiaAdminBundle:Background:index }
+    permissions: [newadmin_whole_manage]
+
+newadmin_whole_show:
+    pattern:  /whole/{id}
+    defaults: { _controller: TopxiaAdminBundle:Background:show }
+    permissions: [newadmin]
+
+newadmin_whole_roles:
+    pattern:  /whole/{id}/roles
+    defaults: { _controller: TopxiaAdminBundle:Background:roles }
+
+newadmin_site:
+    pattern:  /site
+    defaults: { _controller: TopxiaAdminBundle:Background:site }
+    permissions: [newadmin_site_setting]
+
+newadmin_team:
+    pattern:  /team
+    defaults: { _controller: TopxiaAdminBundle:Background:team }
+    permissions: [newadmin_team_manager]
+
+newadmin_pay:
+    pattern:  /pay
+    defaults: { _controller: TopxiaAdminBundle:Background:pay }
+    permissions: [newadmin_pay_platform]
+
+#学生#
+newadmin_enroll:
+    pattern:  /enroll
+    defaults: { _controller: TopxiaAdminBundle:Background:enroll }
+    permissions: [newadmin_enroll_message]
+
+newadmin_customization:
+    pattern:  /customization
+    defaults: { _controller: TopxiaAdminBundle:Background:customization }
+    permissions: [newadmin_customization_manager]
+
+newadmin_audition:
+    pattern:  /audition
+    defaults: { _controller: TopxiaAdminBundle:Background:audition }
+    permissions: [newadmin_audition_manager]
+
+newadmin_leaveSchool:
+    pattern:  /leaveSchool
+    defaults: { _controller: TopxiaAdminBundle:Background:leaveSchool }
+    permissions: [newadmin_leaveSchool_manager]
+
+newadmin_forSchool:
+    pattern:  /forSchool
+    defaults: { _controller: TopxiaAdminBundle:Background:forSchool }
+    permissions: [newadmin_foSchool_manager]
+
+#学校#
+newadmin_registersc:
+    pattern:  /registersc
+    defaults: { _controller: TopxiaAdminBundle:Background:registersc }
+    permissions: [newadmin_registersc_manager]
+
+newadmin_authentication:
+    pattern:  /authenticationsc
+    defaults: { _controller: TopxiaAdminBundle:Background:authentication }
+    permissions: [newadmin_authentication_manager]
+
+newadmin_messagesc:
+    pattern:  /messagesc
+    defaults: { _controller: TopxiaAdminBundle:Background:messagesc }
+    permissions: [newadmin_messagesc_school]
+
+newadmin_coursesc:
+    pattern:  /coursesc
+    defaults: { _controller: TopxiaAdminBundle:Background:coursesc }
+    permissions: [newadmin_coursesc_manager]
+
+newadmin_articlesc:
+    pattern:  /articlesc
+    defaults: { _controller: TopxiaAdminBundle:Background:articlesc }
+    permissions: [newadmin_articlesc_manager]
+
+#统计#
+newadmin_schoolst:
+    pattern:  /schoolst
+    defaults: { _controller: TopxiaAdminBundle:Background:schoolst }
+    permissions: [newadmin_schoolst_statistics]
+
+newadmin_enrollstat:
+    pattern:  /enrollstat
+    defaults: { _controller: TopxiaAdminBundle:Background:enrollstat }
+    permissions: [newadmin_enrollstat_statistics]
+
+newadmin_auditionstat:
+    pattern:  /auditionstat
+    defaults: { _controller: TopxiaAdminBundle:Background:auditionstat }
+    permissions: [newadmin_auditionstat_statistics]
+
+newadmin_customizationstat:
+    pattern:  /customizationstat
+    defaults: { _controller: TopxiaAdminBundle:Background:customizationstat }
+    permissions: [newadmin_customizationstat_statistics]
+
+newadmin_leaveSchoolstat:
+    pattern:  /leaveSchoolstat
+    defaults: { _controller: TopxiaAdminBundle:Background:leaveSchoolstat }
+    permissions: [newadmin_leaveSchoolstat_statistics]
+
+newadmin_forSchoolstat:
+    pattern:  /forSchoolstat
+    defaults: { _controller: TopxiaAdminBundle:Background:forSchoolstat }
+    permissions: [newadmin_forSchoolstat_statistics]
