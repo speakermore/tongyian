@@ -10,4 +10,6 @@ interface StudentsService
    public function updateStudent($id, $student);
 
    public function deleteStudent($id);
+
+   public function findStudents($school_id);
 }

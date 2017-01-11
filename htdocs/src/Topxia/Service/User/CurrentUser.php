@@ -137,6 +137,11 @@ class CurrentUser implements AdvancedUserInterface, EquatableInterface, \ArrayAc
         return $this->locale;
     }
 
+    public function getSchoolid()
+    {
+        return $this->schoolId;
+    }
+
     public function isEqualTo(UserInterface $user)
     {
         if ($this->email !== $user->getUsername()) {

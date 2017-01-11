@@ -47,4 +47,14 @@ class StudentsDaoImpl extends BaseDao implements StudentsDao
     {
         
     }
+
+    public function findStudents($school_id)
+    {
+        $that = $this;
+        return $this->fetchCached("school_id:{$school_id}", $school_id, function ($school_id) use ($that) {
+            $sql = "SELECT name,phone,IDcards,reportedCourse,createTime FROM {$this->table} WHERE school_id = ? ORDER BY createTime LIMIT 10";
+            return $this->getConnection()->fetchAll($sql, array($school_id)) ? : array();
+        }
+        );
+    }
 }

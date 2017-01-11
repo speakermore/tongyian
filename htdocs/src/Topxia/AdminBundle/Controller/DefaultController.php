@@ -89,6 +89,11 @@ class DefaultController extends BaseController
 
     public function indexAction(Request $request)
     {
+        return $this->render('TopxiaAdminBundle:Default:index.html.twig');
+    }
+
+    public function newIndexAction(Request $request)
+    {
         return $this->render('TopxiaAdminBundle:Default:newindex.html.twig');
     }
 

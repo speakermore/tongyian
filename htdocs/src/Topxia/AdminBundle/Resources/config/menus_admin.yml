@@ -360,23 +360,23 @@ admin:
                                     router_name: admin_article_category_create
                                     mode: modal
                                     group: topBtn
-                admin_operation_group:
-                    name: 小组管理
-                    children:
-                        admin_operation_group_manage:
-                            name: 小组管理
-                            disable: true
-                            router_name: admin_group
-                            children:
-                                admin_operation_group_create:
-                                    name: 创建小组
-                                    router_name: group_add
-                                    group: topBtn
-                                    blank: 1
-                        admin_operation_group_thread:
-                            name: 话题管理
-                            disable: true
-                            router_name: admin_groupThread
+                #admin_operation_group:
+                   # name: 小组管理
+                   # children:
+                   #     admin_operation_group_manage:
+                   #         name: 小组管理
+                   #         disable: true
+                   #         router_name: admin_group
+                   #         children:
+                   #             admin_operation_group_create:
+                    #                name: 创建小组
+                   #                 router_name: group_add
+                   #                 group: topBtn
+                 #                   blank: 1
+                 #       admin_operation_group_thread:
+                  #          name: 话题管理
+                 #           disable: true
+                  #          router_name: admin_groupThread
                 admin_operation_invite:
                     name: 邀请管理
                     children:
@@ -511,7 +511,92 @@ admin:
                             router_params:
                                 targetType: course
                                 status: created
-       
+        #admin_app:
+            #name: 教育云
+            #visable: (not (setting('copyright.thirdCopyright', false) == 1) and not is_without_network()) #第三方授权和无网情况下不显示教育云
+            #children:
+                #admin_my_cloud:
+                    #name: 账户概览
+                    #children:
+                        #admin_my_cloud_overview:
+                            #name: 账户概览
+                            #disable: true
+                #admin_cloud_video_setting:
+                    #name: 云视频设置
+                    #router_name: admin_setting_cloud_video
+                    #children:
+                        #admin_setting_cloud_video:
+                            #name: 云视频设置
+                            #disable: true
+                #admin_edu_cloud_sms:
+                    #name: 云短信设置
+                    #children:
+                        #admin_edu_cloud_sms_setting:
+                            #name: 云短信设置
+                            #router_name: admin_edu_cloud_sms
+                            #disable: true
+                # admin_edu_cloud_email:
+                #     name: 云邮件设置
+                #     children:
+                #         admin_edu_cloud_email_seeting:
+                #             name: 云邮件设置
+                #             router_name: admin_edu_cloud_email
+                #admin_edu_cloud_search_setting:
+                    #name: 云搜索设置
+                    #children:
+                        #admin_edu_cloud_search:
+                           # name: 云搜索
+                #            disable: true
+                #admin_app_im:
+                #   name: 即时聊天设置
+                #   children:
+                        #admin_app_im_setting:
+                           # name: 即时聊天设置
+                            #router_name: admin_app_im
+                           # disable: true
+               # admin_setting_cloud_attachment:
+                    #name: 云附件设置
+                   # children:
+                       # admin_edu_cloud_attachment:
+                          #  name: 云附件设置
+                           # disable: true
+                #admin_app_center_show:
+                   # name: 应用
+                   # router_name: admin_app_center
+                    #router_params:
+                     #   postStatus: all
+                   # children:
+                       # admin_app_center:
+                         #   name: 应用中心
+                       #     router_name: admin_app_center
+                        #    disable: true
+                        #    router_params:
+                         #       postStatus: all
+                       # admin_app_installed:
+                        #    name: 已购项目
+                       #     disable: true
+                        #    router_params:
+                       #         postStatus: all
+                       # admin_app_upgrades:
+                      #      name: 更新
+                      #      class: app-upgrade
+                     #       disable: true
+                     #   admin_app_logs:
+                        #    name: 更新日志
+                      #      disable: true
+               # admin_cloud_attachment_manage:
+                 #   name: 云附件
+                 #   children:
+                 #       admin_cloud_attachment:
+                   #         name: 云附件
+                   #         disable: true
+               # admin_setting_cloud:
+               #     name: 授权信息
+                #    children:
+                  #      admin_setting_my_cloud:
+                  #          name: 授权信息
+                    #        router_name: admin_setting_cloud
+                      #      disable: true
         admin_system:
             name: 系统
             router_name: admin_setting_site
@@ -524,9 +609,9 @@ admin:
                             name: 基础信息
                             router_name: admin_setting_site
                             disable: true
-                        admin_setting_theme:
-                            name: 主题
-                            disable: true
+                        #admin_setting_theme:
+                        #    name: 主题
+                         #   disable: true
                         admin_setting_mailer:
                             name: 邮件服务器设置
                             disable: true
@@ -599,12 +684,12 @@ admin:
                         admin_article_setting:
                             name: 资讯
                             disable: true
-                        admin_group_set:
-                            name: 小组
-                            disable: true
-                        admin_invite_set:
-                            name: '邀请码设置'
-                            disable: true
+                        #admin_group_set:
+                           # name: 小组
+                           # disable: true
+                        #admin_invite_set:
+                          #  name: '邀请码设置'
+                          #  disable: true
                 admin_setting_finance:
                     name: 账务设置
                     children:
