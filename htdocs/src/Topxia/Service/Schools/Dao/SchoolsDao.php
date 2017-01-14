@@ -5,6 +5,8 @@ interface SchoolsDao
 {
     public function findAll($institutionsType);
 
+    public function findAllByNum($number);
+
     public function findSchoolByNewTime();
 
     public function findSchoolByCity($city_id);

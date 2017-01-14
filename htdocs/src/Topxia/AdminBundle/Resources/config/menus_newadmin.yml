@@ -104,12 +104,6 @@ newadmin:
                         newadmin_authentication:
                             name: 认证管理
                             disable: true
-                newadmin_messagesc_school:
-                    name: 学校信息管理
-                    children:
-                        newadmin_messagesc:
-                            name: 学校信息管理
-                            disable: true
                 newadmin_coursesc_manager:
                     name: 课程信息管理
                     children:

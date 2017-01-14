@@ -1,22 +1,19 @@
 {% extends 'TopxiaAdminBundle::new-layout.html.twig' %}
 
 {% set menu = 'newadmin_registersc' %}
-{% block title %}更新学校{% endblock %}
-{% set script_controller= 'school/update-schools' %}
+{% block title %}添加学校{% endblock %}
+{% set script_controller= 'school/add-schools'%} 
 {% block main %}
-  <div class="well well-sm">
-    <form id="update-schools-form" class="form-horizontal" method="post">
-   
-
+<div class="well well-sm">
+<form id="add-schools-form" class="form-horizontal" method="post">
+    
     <div class="form-group">
-        <label class="col-md-2 control-label">更新学校信息</label>
+        <label class="col-md-2 control-label">添加学校信息</label>
         <div class="col-md-7 controls radios">
             <div class="help-block" style="display:none;"></div>
 </div>
 </div>
-
- {{ web_macro.flash_messages() }}
-
+{{ web_macro.flash_messages() }}
 {#中文名称#}
 <div class="form-group">
     <label class="col-md-2 control-label">{{'中文名称'|trans}}</label>
@@ -88,9 +85,6 @@
     <label for="3" class="col-md-2 control-label">{{'省份'|trans}}</label>
     <div class="col-md-7 controls">
         <select id="schools_province_id" name="schools[province_id]" class="form-control" data-widget-cid="widget-2" data-explain="">
-                               {% if province %}
-                               <option value="{{ province.id }}" selected="selected">{{ province.name|default('') }}</option>
-                               {% endif %}
                                {% for pro in provinces %}
                                <option value="{{ pro.id }}">
                                    {{ pro.name|default('') }}
@@ -106,9 +100,6 @@
     <label for="3" class="col-md-2 control-label">{{'城市'|trans}}</label>
     <div class="col-md-7 controls">
         <select id="schools_city_id" name="schools[city_id]" class="form-control" data-widget-cid="widget-2" data-explain="">
-                               {% if city %}
-                               <option value="{{ city.id }}" selected="selected">{{ city.name|default('') }}</option>
-                               {% endif %}
                                {% for ct in citys %}
                                <option value="{{ct.id }}">
                                    {{ ct.name|default('') }}
@@ -121,12 +112,12 @@
 
 <div class="row">
     <div class="col-md-7 col-md-offset-2">
-        <button id="schools-update-btn" data-submiting-text="{{'正在更新'|trans}}" type="submit" class="btn btn-primary">{{'更新'|trans}}</button>
+        <button id="schools-save-btn" data-submiting-text="{{'正在保存'|trans}}" type="submit" class="btn btn-primary">{{'保存'|trans}}</button>
     </div>
 </div>
 <input type="hidden" id="schools_id" name="schools[id]" value="{{ schools.id|default('') }}">
 <input type="hidden" name="_csrf_token" value="{{ csrf_token('site') }}">
 </form>
-  </div>
 
+</div>
 {% endblock %}

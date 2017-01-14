@@ -11,6 +11,7 @@ define(function(require, exports, module) {
 
         uploader.on('uploadSuccess', function(file, response ) {
             var url = $("#upload-picture-btn").data("gotoUrl");
+
             $('#modal').load(url);
             Notify.success(Translator.trans('上传成功！'), 1);
             

@@ -91,19 +91,19 @@
 					<ul type="square" class="col-md-4">
 						<li>学校资讯</li>
 						{% for sca in SCarticle %}
-							<li><span><a class="link-dark" href="{{ path('article_detail', {id:sca.id}) }}">{{ sca.title }}</a></span></li>
+							<li><span><a class="link-dark" href="{{ path('article_detail', {id:sca.id}) }}">{{ sca.title|slice(0, 10) }}</a></span></li>
 						{% endfor %}
 					</ul>
 					<ul type="square" class="col-md-4">
 						<li>推荐资讯</li>
 						{% for rea in Rearticle %}
-							<li><span><a class="link-dark" href="{{ path('article_detail', {id:rea.id}) }}">{{ rea.title }}</a></span></li>
+							<li><span><a class="link-dark" href="{{ path('article_detail', {id:rea.id}) }}">{{ rea.title|slice(0, 10) }}</a></span></li>
 						{% endfor %}
 					</ul>
 					<ul type="square" class="col-md-4">
 						<li>同言资讯</li>
 						{% for tya in TYarticle %}
-							<li><span><a class="link-dark" href="{{ path('article_detail', {id:tya.id}) }}">{{ tya.title }}</a></span></li>
+							<li><span><a class="link-dark" href="{{ path('article_detail', {id:tya.id}) }}">{{ tya.title|slice(0, 10) }}</a></span></li>
 						{% endfor %}
 					</ul>
 					</div>

@@ -17,6 +17,11 @@ class SchoolsServiceImpl extends BaseService implements SchoolsService
         return $this->getSchoolsDao()->findAll($institutionsType);
     }
 
+    public function findAllByNum($number)
+    {
+        return $this->getSchoolsDao()->findAllByNum($number);
+    }
+
     public function findSchoolByNewTime()
     {
         return $this->getSchoolsDao()->findSchoolByNewTime();

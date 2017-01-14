@@ -19,6 +19,12 @@ class SchoolsDaoImpl extends BaseDao implements SchoolsDao
         );
     }
 
+    public function findAllByNum($number)
+    {
+            $sql = "SELECT * FROM {$this->table} LIMIT $number";
+            return $this->getConnection()->fetchAll($sql, array($number)) ? : array();  
+    }
+
     /*首页加载根据最新的时间显示6所学校或机构*/
     public function findSchoolByNewTime()
     { 

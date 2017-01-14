@@ -1950,6 +1950,11 @@ newadmin_forSchool:
     permissions: [newadmin_foSchool_manager]
 
 #学校#
+newadmin_school_show:
+    pattern:  newadmin/{id}/school/show
+    defaults: { _controller: TopxiaAdminBundle:Background:schoolShow }
+    permissions: [admin]
+
 newadmin_registersc:
     pattern:  /registersc
     defaults: { _controller: TopxiaAdminBundle:Background:registersc }
