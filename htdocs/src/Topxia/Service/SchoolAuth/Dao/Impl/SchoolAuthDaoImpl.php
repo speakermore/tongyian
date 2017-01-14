@@ -75,5 +75,6 @@ class SchoolAuthDaoImpl extends BaseDao implements SchoolAuthDao
         }
 
         return $this->getSchoolAuth($id);
-    } 
+    }
+
 }

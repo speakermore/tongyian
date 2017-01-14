@@ -14,4 +14,5 @@ interface SchoolAuthService
     public function deleteSchoolAuth($id);
 
     public function updateSchoolAuth($id, $fields);
+
 }
