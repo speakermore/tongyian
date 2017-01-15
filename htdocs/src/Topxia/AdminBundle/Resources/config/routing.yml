@@ -2010,3 +2010,62 @@ newadmin_forSchoolstat:
     pattern:  /forSchoolstat
     defaults: { _controller: TopxiaAdminBundle:Background:forSchoolstat }
     permissions: [newadmin_forSchoolstat_statistics]
+
+
+#学校认证上传路由#
+newadmin_school_uploadCer:
+    pattern:  /newadmin/school/{id}/uploadCer
+    defaults: { _controller: TopxiaAdminBundle:Background:uploadCer }
+
+newadmin_school_uploadCer_crop:
+    pattern:  /newadmin/school/{id}/uploadCer/crop
+    defaults: { _controller: TopxiaAdminBundle:Background:uploadCerCrop }
+
+newadmin_school_uploadLis:
+    pattern:  /newadmin/school/{id}/uploadLis
+    defaults: { _controller: TopxiaAdminBundle:Background:uploadLis }
+
+newadmin_school_uploadLis_crop:
+    pattern:  /newadmin/school/{id}/uploadLis/crop
+    defaults: { _controller: TopxiaAdminBundle:Background:uploadLisCrop }
+
+newadmin_school_uploadPer:
+    pattern:  /newadmin/school/{id}/uploadPer
+    defaults: { _controller: TopxiaAdminBundle:Background:uploadPer }
+
+newadmin_school_uploadPer_crop:
+    pattern:  /newadmin/school/{id}/uploadPer/crop
+    defaults: { _controller: TopxiaAdminBundle:Background:uploadPerCrop }
+
+newadmin_school_uploadAnn:
+    pattern:  /newadmin/school/{id}/uploadAnn
+    defaults: { _controller: TopxiaAdminBundle:Background:uploadAnn }
+
+newadmin_school_uploadAnn_crop:
+    pattern:  /newadmin/school/{id}/uploadAnn/crop
+    defaults: { _controller: TopxiaAdminBundle:Background:uploadAnnCrop }
+
+newadmin_school_uploadApp:
+    pattern:  /newadmin/school/{id}/uploadApp
+    defaults: { _controller: TopxiaAdminBundle:Background:uploadApp }
+
+newadmin_school_uploadApp_crop:
+    pattern:  /newadmin/school/{id}/uploadApp/crop
+    defaults: { _controller: TopxiaAdminBundle:Background:uploadAppCrop }
+
+newadmin_school_uploadBus:
+    pattern:  /newadmin/school/{id}/uploadBus
+    defaults: { _controller: TopxiaAdminBundle:Background:uploadBus }
+
+newadmin_school_uploadBus_crop:
+    pattern:  /newadmin/school/{id}/uploadBus/crop
+    defaults: { _controller: TopxiaAdminBundle:Background:uploadBusCrop }
+
+newadmin_school_uploadSpe:
+    pattern:  /newadmin/school/{id}/uploadSpe
+    defaults: { _controller: TopxiaAdminBundle:Background:uploadSpe }
+
+newadmin_school_uploadSpe_crop:
+    pattern:  /newadmin/school/{id}/uploadSpe/crop
+    defaults: { _controller: TopxiaAdminBundle:Background:uploadSpeCrop }
+

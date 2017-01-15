@@ -15,7 +15,7 @@ with {class:'panel-col'} %}#} {% block heading %}添加学校认证信息表{% e
 <div class="form-group">
     <label class="col-md-2 control-label">{{'民办非企业登记证书'|trans}}</label>
     <div class="col-md-7 controls radios">
-       
+        <a href="#modal" data-toggle="modal" data-url="{{path('newadmin_school_uploadCer', {id: user.id})}}" class="btn btn-default btn-sm">查看</a>
         <input type="text" id="schoolAuth_registerCertificate" name="schoolAuth[registerCertificate]" class="form-control" data-widget-cid="widget-1"
             data-explain="" value="{{ schoolAuth.registerCertificate|default('') }}" />
         <div class="help-block" style="display:none;"></div>

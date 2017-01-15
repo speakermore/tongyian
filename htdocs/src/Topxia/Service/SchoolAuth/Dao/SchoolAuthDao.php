@@ -14,4 +14,5 @@ interface SchoolAuthDao
     public function deleteSchoolAuth($id);
 
     public function updateSchoolAuth($id, $fields);
+
 }
