@@ -134,6 +134,16 @@ class DefaultController extends BaseController
 
     public function updateSchoolAction(Request $request, $id)
     {
+        if ($request->getMethod() == 'POST') {
+            $school = $request->request->get('schools');
+
+            $school_id = $this->getSchoolsService()->updateSchool($id, $school);
+          
+            $this->setFlashMessage('success', $this->getServiceKernel()->trans('基础信息更新成功。'));
+             
+            return $this->redirect($this->generateUrl('homepage'));
+        }
+        
         $user = $this->getCurrentUser();
 
         // if (!empty($user['id'])) {
@@ -151,15 +161,7 @@ class DefaultController extends BaseController
         $provinces = $this->getProvinceService()->findAll();
 
         $citys = $this->getCityService()->findAll();
-        if ($request->getMethod() == 'POST') {
-            $school = $request->request->get('schools');
-
-            $school_id = $this->getSchoolsService()->updateSchool($id, $school);
-          
-            $this->setFlashMessage('success', $this->getServiceKernel()->trans('基础信息更新成功。'));
-             
-            return $this->redirect($this->generateUrl('homepage'));
-        }
+        
         return $this->render('TopxiaWebBundle:School:update-school.html.twig', array(
             'province' => $province,
             'city' => $city,

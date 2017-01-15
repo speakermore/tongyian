@@ -1,14 +1,11 @@
-{% extends 'TopxiaAdminBundle::new-layout.html.twig' %}
+{% extends 'TopxiaWebBundle:Settings:layout.html.twig' %} {% block title %}添加学校认证信息表{% endblock %} {% set script_controller=
+'schoolAuth/add-schoolAuth' %} {#{% set side_nav = 'schools' %}#} {% block main %} {#左侧菜单{% embed "TopxiaWebBundle:Bootstrap:panel.html.twig"
+with {class:'panel-col'} %}#} {% block heading %}添加学校认证信息表{% endblock %} {% block body %}
 
-{% set menu = 'newadmin_authentication' %}
-{% block title %}更新学校认证信息表{% endblock %}
-{% set script_controller='schoolAuth/update-schoolAuth' %} 
-{% block main %}
-  <div class="well well-sm">
-  <form id="update-schoolAuth-form" class="form-horizontal" method="post">
+<form id="add-schoolAuth-form" class="form-horizontal" method="post">
 
     <div class="form-group">
-        <label class="col-md-2 control-label">更新学校认证信息表</label>
+        <label class="col-md-2 control-label">添加学校认证信息表</label>
         <div class="col-md-7 controls radios">
             <div class="help-block" style="display:none;"></div>
 </div>
@@ -18,7 +15,7 @@
 <div class="form-group">
     <label class="col-md-2 control-label">{{'民办非企业登记证书'|trans}}</label>
     <div class="col-md-7 controls radios">
-       <a href="#modal" data-toggle="modal" data-url="/admin/user/15" class="btn btn-default btn-sm">查看</a>
+       
         <input type="text" id="schoolAuth_registerCertificate" name="schoolAuth[registerCertificate]" class="form-control" data-widget-cid="widget-1"
             data-explain="" value="{{ schoolAuth.registerCertificate|default('') }}" />
         <div class="help-block" style="display:none;"></div>
@@ -87,13 +84,12 @@
 
 <div class="row">
     <div class="col-md-7 col-md-offset-2">
-        <button id="schoolAuth-update-btn" data-submiting-text="{{'正在更新'|trans}}" type="submit" class="btn btn-primary">{{'更新'|trans}}</button>
+        <button id="schoolAuth-save-btn" data-submiting-text="{{'正在保存'|trans}}" type="submit" class="btn btn-primary">{{'保存'|trans}}</button>
     </div>
 </div>
 <input type="hidden" id="schoolAuth_id" name="schoolAuth[school_id]" value="{{ school_id|default(0) }}">
 <input type="hidden" id="schoolAuth_type" name="schoolAuth[type]" value="{{ schoolAuth.type|default(0) }}">
 <input type="hidden" name="_csrf_token" value="{{ csrf_token('site') }}">
 </form>
-  </div>
 
-{% endblock %}
+{% endblock %} {% endblock %}

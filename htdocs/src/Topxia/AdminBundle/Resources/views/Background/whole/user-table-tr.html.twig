@@ -1,4 +1,4 @@
-{% import 'TopxiaAdminBundle::macro.html.twig' as admin_macro %}
+{% import 'TopxiaAdminBundle::new-macro.html.twig' as admin_macro %}
 <tr id="user-table-tr-{{ user.id }}">
   {% include 'OrgBundle:Org/Parts:table-body-checkbox.html.twig' %}
   <td>
@@ -69,7 +69,7 @@
   </td>
   <td>
     <div class="btn-group">
-      <a href="#modal" data-toggle="modal" data-url="{{ path('newadmin_whole_show', {id:user.id}) }}" data-url="" class="btn btn-default btn-sm">查看</a>
+      <a href="#modal" data-toggle="modal" data-url="{{ path('newadmin_whole_show', {id:user.id}) }}" class="btn btn-default btn-sm">查看</a>
       {% include 'PermissionBundle:Templates:new-group-button.html.twig' with {parentCode: 'newadmin_whole_manage', group:'groupButton', user: user} %}
     </div>
   </td>

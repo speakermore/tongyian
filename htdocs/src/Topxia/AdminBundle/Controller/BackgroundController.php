@@ -562,21 +562,117 @@ class BackgroundController extends BaseController
     }
 
     /*3.学校部分*/
+
     public function registerscAction(Request $request)
     {
-        return $this->render('TopxiaAdminBundle:Background:school/registersc.html.twig', array(
+        $user = $this->getCurrentUser();
+        $id = $user->getSchoolid();
+
+        if ($request->getMethod() == 'POST') {
+            $school = $request->request->get('schools');
+
+            if($school['id'] !=0 && $school['id'] != null){
+                $school_id = $this->getSchoolsService()->updateSchool($id, $school);
+          
+                $this->setFlashMessage('success', $this->getServiceKernel()->trans('基础信息更新成功。'));
+             
+                return $this->redirect($this->generateUrl('newadmin_registersc'));
+            }else{
+                $school_id = $this->getSchoolsService()->addSchool($id, $school);
+          
+                $this->setFlashMessage('success', $this->getServiceKernel()->trans('基础信息保存成功。'));
+             
+                return $this->redirect($this->generateUrl('newadmin_registersc'));
+            }
+        }
+        
+         //学校
+        $school = $this->getSchoolsService()->getSchool($id);
+        if($school['province_id'] != null && $school['city_id'] != null){
+            //省份
+            $province = $this->getProvinceService()->getProvince($school['province_id']);
+            //城市
+            $city = $this->getCityService()->getCityById($school['city_id']);
+        }
+
+        $provinces = $this->getProvinceService()->findAll();
+
+        $citys = $this->getCityService()->findAll();
+        
+        if($school!=null){
+             return $this->render('TopxiaAdminBundle:Background:school/registersc.html.twig', array(
+            'province' => $province,
+            'city' => $city,
+            'provinces' => $provinces,
+            'citys' => $citys,
+            'schools' => $school,
+            'user' => $user
             ));
+        }else{
+             return $this->render('TopxiaAdminBundle:Background:school/registersc-add.html.twig', array(
+            'province' => $province,
+            'city' => $city,
+            'provinces' => $provinces,
+            'citys' => $citys,
+            'schools' => $school,
+            'user' => $user
+            ));
+        }
+       
     }
 
     public function authenticationAction(Request $request)
     {
-        return $this->render('TopxiaAdminBundle:Background:school/authentication.html.twig', array(
+        $user = $this->getCurrentUser();
+        $id = $user->getSchoolid();
+        if ($request->getMethod() == 'POST') {
+            $schoolAuth = $request->request->get('schoolAuth');
+
+            $this->getSchoolAuthService()->addSchoolAuth($id, $schoolAuth);
+
+            //$birthday = date("Y-m-d", $student['birthday']);
+          
+            $this->setFlashMessage('success', $this->getServiceKernel()->trans('基础信息保存成功。'));
+             
+            return $this->redirect($this->generateUrl('homepage'));
+
+
+
+            $schoolAuth = $request->request->get('schoolAuth');
+
+            $this->getSchoolAuthService()->updateSchoolAuth($id, $schoolAuth);
+          
+            $this->setFlashMessage('success', $this->getServiceKernel()->trans('基础信息更新成功。'));
+             
+            return $this->redirect($this->generateUrl('homepage'));
+        }
+
+        $schoolAuth = $this->getSchoolAuthService()->getSchoolAuth($id);
+        if($schoolAuth != null){
+             return $this->render('TopxiaWebBundle:Background:school/authentication.html.html.twig', array(
+                'schoolAuth' => $schoolAuth,
+                'school_id'  => $schoolAuth['school_id']
             ));
+        }else{
+             return $this->render('TopxiaAdminBundle:Background:school/authentication-add.html.twig', array(
+                'school_id' => $id 
+                ));
+        } 
     }
 
     public function messagescAction(Request $request)
     {
+        $schools = $this->getSchoolsService()->findAllByNum(20);
         return $this->render('TopxiaAdminBundle:Background:school/messagesc.html.twig', array(
+            'schools' => $schools
+            ));
+    }
+
+    public function schoolShowAction(Request $request, $id)
+    {
+        $school = $this->getSchoolsService()->getSchool($id);
+        return $this->render('TopxiaAdminBundle:Background:school/schoolshow.html.twig', array(
+            'school' => $school
             ));
     }
 
@@ -626,6 +722,18 @@ class BackgroundController extends BaseController
     {
         return $this->render('TopxiaAdminBundle:Background:statistics/forSchoolstat.html.twig', array(
             ));
+    }
+
+    public function deleteAction(Request $request, $id)
+    {
+        $this->getFileService()->deleteFile($id);
+
+        return $this->createNewJsonResponse(true);
+    }
+
+    public function uploadAction(Request $request)
+    {
+        return $this->render('TopxiaAdminBundle:File:upload-modal.html.twig');
     }
 
     protected function getStudentsService()
@@ -698,18 +806,6 @@ class BackgroundController extends BaseController
         return $this->getServiceKernel()->createService('Org:Org.OrgService');
     }
 
-     public function deleteAction(Request $request, $id)
-    {
-        $this->getFileService()->deleteFile($id);
-
-        return $this->createNewJsonResponse(true);
-    }
-
-    public function uploadAction(Request $request)
-    {
-        return $this->render('TopxiaAdminBundle:File:upload-modal.html.twig');
-    }
-
     protected function getMessageService()
     {
         return $this->getServiceKernel()->createService('User.MessageService');
@@ -718,6 +814,26 @@ class BackgroundController extends BaseController
     protected function getUserService()
     {
         return $this->getServiceKernel()->createService('User.UserService');
+    }
+
+    protected function getSchoolsService()
+    {
+        return $this->getServiceKernel()->createService('Schools.SchoolsService');
+    }
+
+    protected function getProvinceService()
+    {
+        return $this->getServiceKernel()->createService('Province.ProvinceService');
+    }
+
+    protected function getCityService()
+    {
+        return $this->getServiceKernel()->createService('City.CityService');
+    }
+
+    protected function getSchoolAuthService()
+    {
+        return $this->getServiceKernel()->createService('SchoolAuth.SchoolAuthService');
     }
 
 }
