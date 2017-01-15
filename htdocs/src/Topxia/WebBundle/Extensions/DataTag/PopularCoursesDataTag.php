@@ -48,6 +48,10 @@ class PopularCoursesDataTag extends CourseBaseDataTag implements DataTag
         if (!isset($arguments["type"])) {
             $arguments['type'] = 'hitNum';
         }
+         //加学校ID
+        if(!empty($arguments['school_id'])){
+            $conditions['school_id'] = $arguments['school_id'];
+        }
 
         $courses = $this->getCourseService()->searchCourses($conditions, $arguments['type'], 0, $arguments['count']);
 

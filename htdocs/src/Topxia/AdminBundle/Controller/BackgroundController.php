@@ -625,27 +625,27 @@ class BackgroundController extends BaseController
     {
         $user = $this->getCurrentUser();
         $id = $user->getSchoolid();
-        if ($request->getMethod() == 'POST') {
-            $schoolAuth = $request->request->get('schoolAuth');
+        // if ($request->getMethod() == 'POST') {
+        //     $schoolAuth = $request->request->get('schoolAuth');
 
-            $this->getSchoolAuthService()->addSchoolAuth($id, $schoolAuth);
+        //     $this->getSchoolAuthService()->addSchoolAuth($id, $schoolAuth);
 
-            //$birthday = date("Y-m-d", $student['birthday']);
+        //     //$birthday = date("Y-m-d", $student['birthday']);
           
-            $this->setFlashMessage('success', $this->getServiceKernel()->trans('基础信息保存成功。'));
+        //     $this->setFlashMessage('success', $this->getServiceKernel()->trans('基础信息保存成功。'));
              
-            return $this->redirect($this->generateUrl('homepage'));
+        //     return $this->redirect($this->generateUrl('homepage'));
 
 
 
-            $schoolAuth = $request->request->get('schoolAuth');
+        //     $schoolAuth = $request->request->get('schoolAuth');
 
-            $this->getSchoolAuthService()->updateSchoolAuth($id, $schoolAuth);
+        //     $this->getSchoolAuthService()->updateSchoolAuth($id, $schoolAuth);
           
-            $this->setFlashMessage('success', $this->getServiceKernel()->trans('基础信息更新成功。'));
+        //     $this->setFlashMessage('success', $this->getServiceKernel()->trans('基础信息更新成功。'));
              
-            return $this->redirect($this->generateUrl('homepage'));
-        }
+        //     return $this->redirect($this->generateUrl('homepage'));
+        // }
 
         $schoolAuth = $this->getSchoolAuthService()->getSchoolAuthBySchoolId($id);
         // if($schoolAuth != null){

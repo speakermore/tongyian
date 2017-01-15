@@ -41,7 +41,7 @@ class PermissionBuilder
         $permissionBuilder = PermissionBuilder::instance();
         $originPermissions = $permissionBuilder->getOriginPermissions();
 
-        if (in_array('ROLE_SUPER_ADMIN', $roles)) {
+        if (in_array('ROLE_SUPER_ADMIN', $roles) || in_array('ROLE_ADMIN', $roles) ) {
             $permissions = $originPermissions;
         }else{
             $roleService = ServiceKernel::instance()->createService('Permission:Role.RoleService');

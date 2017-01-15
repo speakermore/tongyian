@@ -4,7 +4,7 @@
   {% set categoryId = config.categoryId|default(0) %}
   {% set orderBy = config.orderBy|default('latest')%}
   {% if orderBy == 'latest'%}
-    {% set courses = data('LatestCourses',{'count':count, 'categoryId':categoryId}}) %}
+    {% set courses = data('LatestCourses',{'count':count, 'categoryId':categoryId, 'school_id':school_id}) %}
   {% elseif orderBy == 'recommendedSeq'%}
     {% set courses = data('RecommendCourses',{'count':count, 'categoryId':categoryId}) %}
   {% elseif orderBy == 'studentNum'%}
@@ -50,6 +50,7 @@
         <a href="javascript:;" class="btn btn-default {% if (orderBy|default('recommendedSeq') == 'recommendedSeq') %} active {% endif %}js-course-filter" data-url="{{path('homepage_category',{categoryId : categoryId|default(0), orderBy : 'recommendedSeq'}) }}" data-type='course'>
           {{'推荐'|trans}}
         </a>
+         <a href="#modal" data-toggle="modal" data-url="{{ path('student_add', {id: school_id}) }}" class="btn btn-default btn-sm" >我要报名该所学校</a>
       </div>
     </div>
     <div class="course-list">
