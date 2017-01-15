@@ -38,6 +38,10 @@ class RecommendCoursesDataTag extends CourseBaseDataTag implements DataTag
         if (!empty($arguments['type'])) {
             $conditions['type'] = $arguments['type'];
         }
+         //加学校ID
+        if(!empty($arguments['school_id'])){
+            $conditions['school_id'] = $arguments['school_id'];
+        }
         
         $courses = $this->getCourseService()->searchCourses($conditions,'recommendedSeq', 0, $arguments['count']);
         $fillCoursesCount = $arguments['count'] - count($courses);

@@ -105,7 +105,7 @@ class DefaultController extends BaseController
     public function addSchoolAction(Request $request, $id)
     {
         $user = $this->getCurrentUser();
-
+        
         // if (!empty($user['id'])) {
         //     $this->getBatchNotificationService()->checkoutBatchNotification($user['id']);
         // }

@@ -1,6 +1,10 @@
-{% extends 'TopxiaWebBundle:Settings:layout.html.twig' %} {% block title %}添加学校认证信息表{% endblock %} {% set script_controller=
-'schoolAuth/add-schoolAuth' %} {#{% set side_nav = 'schools' %}#} {% block main %} {#左侧菜单{% embed "TopxiaWebBundle:Bootstrap:panel.html.twig"
-with {class:'panel-col'} %}#} {% block heading %}添加学校认证信息表{% endblock %} {% block body %}
+{% extends 'TopxiaWebBundle:Settings:layout.html.twig' %}
+{% block title %}添加学校认证信息表{% endblock %}
+{% set script_controller='schoolAuth/add-schoolAuth' %} {#{% set side_nav = 'schools' %}#} 
+{% block main %} {#左侧菜单{% embed "TopxiaWebBundle:Bootstrap:panel.html.twig"
+with {class:'panel-col'} %}#} 
+{% block heading %}添加学校认证信息表{% endblock %} 
+{% block body %}
 
 <form id="add-schoolAuth-form" class="form-horizontal" method="post">
 
