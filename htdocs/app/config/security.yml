@@ -42,7 +42,7 @@ security:
         main:
             pattern:    /.*
             form_login:
-                login_path: login
+                login_path: login_background
                 check_path: login_check
                 use_referer: true
                 failure_handler: topxia.authentication.failure_handler
@@ -70,5 +70,6 @@ security:
         - { path: ^/admin/upgrade, role: ROLE_BACKEND }
         - { path: ^/admin/optimize, role: ROLE_BACKEND }
         - { path: ^/admin, role: ROLE_BACKEND }
+        - { path: ^/admin/newadmin, role: ROLE_BACKEND }
         - { path: /.*, role: IS_AUTHENTICATED_ANONYMOUSLY }
         #- { path: ^/_internal, roles: IS_AUTHENTICATED_ANONYMOUSLY, ip: 127.0.0.1 }
