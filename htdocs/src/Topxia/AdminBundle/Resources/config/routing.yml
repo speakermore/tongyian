@@ -2069,3 +2069,13 @@ newadmin_school_uploadSpe_crop:
     pattern:  /newadmin/school/{id}/uploadSpe/crop
     defaults: { _controller: TopxiaAdminBundle:Background:uploadSpeCrop }
 
+newadmin_school_uploadSch:
+    pattern:  /newadmin/school/{id}/uploadSch
+    defaults: { _controller: TopxiaAdminBundle:Background:uploadSch }
+
+newadmin_school_uploadSch_crop:
+    pattern:  /newadmin/school/{id}/uploadSch/crop
+    defaults: { _controller: TopxiaAdminBundle:Background:uploadSchCrop }
+
+
+

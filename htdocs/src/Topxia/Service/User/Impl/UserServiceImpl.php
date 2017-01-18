@@ -1807,6 +1807,12 @@ class UserServiceImpl extends BaseService implements UserService
         return $this->getUserPayAgreementDao()->deleteUserPayAgreements($id);
     }
 
+    public function updateUser($id, $user)
+    {
+         $user = UserSerialize:: serialize($user);
+         $this->getUserDao()->updateUser($id, $user);
+    }
+
     protected function getFriendDao()
     {
         return $this->createDao("User.FriendDao");
@@ -1956,4 +1962,5 @@ class UserSerialize
 
         return $user;
     }
+
 }

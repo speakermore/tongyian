@@ -530,7 +530,7 @@ class BackgroundController extends BaseController
     /*2.学生部分*/
     public function enrollAction(Request $request)
     {
-        $school_id = $this->getCurrentUser()->getSchoolid();
+        $school_id = $this->getCurrentUser()->getSchoolId();
         $students = $this->getStudentsService()->findStudents($school_id);
         return $this->render('TopxiaAdminBundle:Background:student/enroll.html.twig', array(
             'students' => $students
@@ -565,24 +565,28 @@ class BackgroundController extends BaseController
 
     public function registerscAction(Request $request)
     {
-        $user = $this->getCurrentUser();
-        $id = $user->getSchoolid();
+        $user = $this -> getCurrentUser();
+        $id = $user -> getSchoolId();
 
         if ($request->getMethod() == 'POST') {
             $school = $request->request->get('schools');
 
             if($school['id'] !=0 && $school['id'] != null){
-                $school_id = $this->getSchoolsService()->updateSchool($id, $school);
-          
+                $school = $this->getSchoolsService()->updateSchool($id, $school);
+                $newUser = $this->getUserService()->getUser($user['id']);
+                $newUser['schoolId'] = $school['id'];
+                $this->getUserService()->updateUser($newUser['id'], $newUser);
                 $this->setFlashMessage('success', $this->getServiceKernel()->trans('基础信息更新成功。'));
              
-                return $this->redirect($this->generateUrl('newadmin_registersc'));
+                return $this->redirect($this->generateUrl('newadmin'));
             }else{
-                $school_id = $this->getSchoolsService()->addSchool($id, $school);
-          
+                $school = $this->getSchoolsService()->addSchool($id, $school);
+                $newUser = $this->getUserService()->getUser($user['id']);
+                $newUser['schoolId'] = $school['id'];
+                $this->getUserService()->updateUser($user->getId(), $user);
                 $this->setFlashMessage('success', $this->getServiceKernel()->trans('基础信息保存成功。'));
              
-                return $this->redirect($this->generateUrl('newadmin_registersc'));
+                return $this->redirect($this->generateUrl('newadmin'));
             }
         }
         
@@ -599,7 +603,7 @@ class BackgroundController extends BaseController
 
         $citys = $this->getCityService()->findAll();
         
-        if($school!=null){
+        if($school != null ){
              return $this->render('TopxiaAdminBundle:Background:school/registersc.html.twig', array(
             'province' => $province,
             'city' => $city,
@@ -624,7 +628,7 @@ class BackgroundController extends BaseController
     public function authenticationAction(Request $request)
     {
         $user = $this->getCurrentUser();
-        $id = $user->getSchoolid();
+        $id = $user->getSchoolId();
         // if ($request->getMethod() == 'POST') {
         //     $schoolAuth = $request->request->get('schoolAuth');
 
@@ -742,7 +746,7 @@ class BackgroundController extends BaseController
     {
        //$user = $this->getUserService()->getUser($id);
         //$user = $this->getCurrentUser();
-        $school_id = $this->getCurrentUser()->getSchoolid();
+        $school_id = $this->getCurrentUser()->getSchoolId();
         $fileId = $request->getSession()->get("fileId");
         list($pictureUrl, $naturalSize, $scaledSize) = $this->getFileService()->getImgFileMetaInfo($fileId, 700, 300);
         // if ($request->getMethod() == 'POST') {
@@ -780,7 +784,7 @@ class BackgroundController extends BaseController
     public function uploadLisCropAction(Request $request)
     {
       
-        $school_id = $this->getCurrentUser()->getSchoolid();
+        $school_id = $this->getCurrentUser()->getSchoolId();
         $fileId = $request->getSession()->get("fileId");
         list($pictureUrl, $naturalSize, $scaledSize) = $this->getFileService()->getImgFileMetaInfo($fileId, 700, 300);
         $schoolAuth = $this->getSchoolAuthService()->getSchoolAuthBySchoolId($school_id);
@@ -806,7 +810,7 @@ class BackgroundController extends BaseController
     public function uploadPerCropAction(Request $request)
     {
       
-        $school_id = $this->getCurrentUser()->getSchoolid();
+        $school_id = $this->getCurrentUser()->getSchoolId();
         $fileId = $request->getSession()->get("fileId");
         list($pictureUrl, $naturalSize, $scaledSize) = $this->getFileService()->getImgFileMetaInfo($fileId, 700, 300);
         $schoolAuth = $this->getSchoolAuthService()->getSchoolAuthBySchoolId($school_id);
@@ -832,7 +836,7 @@ class BackgroundController extends BaseController
     public function uploadAnnCropAction(Request $request)
     {
       
-        $school_id = $this->getCurrentUser()->getSchoolid();
+        $school_id = $this->getCurrentUser()->getSchoolId();
         $fileId = $request->getSession()->get("fileId");
         list($pictureUrl, $naturalSize, $scaledSize) = $this->getFileService()->getImgFileMetaInfo($fileId, 700, 300);
         $schoolAuth = $this->getSchoolAuthService()->getSchoolAuthBySchoolId($school_id);
@@ -858,7 +862,7 @@ class BackgroundController extends BaseController
     public function uploadAppCropAction(Request $request)
     {
       
-        $school_id = $this->getCurrentUser()->getSchoolid();
+        $school_id = $this->getCurrentUser()->getSchoolId();
         $fileId = $request->getSession()->get("fileId");
         list($pictureUrl, $naturalSize, $scaledSize) = $this->getFileService()->getImgFileMetaInfo($fileId, 700, 300);
         $schoolAuth = $this->getSchoolAuthService()->getSchoolAuthBySchoolId($school_id);
@@ -884,7 +888,7 @@ class BackgroundController extends BaseController
     public function uploadBusCropAction(Request $request)
     {
       
-        $school_id = $this->getCurrentUser()->getSchoolid();
+        $school_id = $this->getCurrentUser()->getSchoolId();
         $fileId = $request->getSession()->get("fileId");
         list($pictureUrl, $naturalSize, $scaledSize) = $this->getFileService()->getImgFileMetaInfo($fileId, 700, 300);
         $schoolAuth = $this->getSchoolAuthService()->getSchoolAuthBySchoolId($school_id);
@@ -910,7 +914,7 @@ class BackgroundController extends BaseController
     public function uploadSpeCropAction(Request $request)
     {
       
-        $school_id = $this->getCurrentUser()->getSchoolid();
+        $school_id = $this->getCurrentUser()->getSchoolId();
         $fileId = $request->getSession()->get("fileId");
         list($pictureUrl, $naturalSize, $scaledSize) = $this->getFileService()->getImgFileMetaInfo($fileId, 700, 300);
         $schoolAuth = $this->getSchoolAuthService()->getSchoolAuthBySchoolId($school_id);
@@ -918,6 +922,32 @@ class BackgroundController extends BaseController
         $this->getSchoolAuthService()->updateSchoolAuth($schoolAuth['id'], $schoolAuth);
         
         return $this->render('TopxiaAdminBundle:Background:school/upload-authSpe-crop.html.twig', array(
+            'pictureUrl'  => $pictureUrl,
+            'naturalSize' => $naturalSize,
+            'scaledSize'  => $scaledSize,
+            'school_id'   => $school_id
+        ));
+    }
+
+    public function uploadSchAction(Request $request, $id)
+    {  
+        //学校
+        $school = $this->getSchoolsService()->getSchool($id);
+        return $this->render('TopxiaAdminBundle:Background:school/upload-picSch.html.twig', array(
+            'school' => $school
+            ));
+    }
+
+    public function uploadSchCropAction(Request $request)
+    {
+        $school_id = $this->getCurrentUser()->getSchoolId();
+        $fileId = $request->getSession()->get("fileId");
+        list($pictureUrl, $naturalSize, $scaledSize) = $this->getFileService()->getImgFileMetaInfo($fileId, 700, 300);
+        $school = $this->getSchoolsService()->getSchool($school_id);
+        $school['largePicture']  =  empty($pictureUrl) ? $school['largePicture'] : $pictureUrl ;
+        $this->getSchoolsService()->updateSchool($school_id, $school);
+        
+        return $this->render('TopxiaAdminBundle:Background:school/upload-picSch-crop.html.twig', array(
             'pictureUrl'  => $pictureUrl,
             'naturalSize' => $naturalSize,
             'scaledSize'  => $scaledSize,

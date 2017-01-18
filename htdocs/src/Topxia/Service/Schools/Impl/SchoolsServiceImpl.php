@@ -60,6 +60,10 @@ class SchoolsServiceImpl extends BaseService implements SchoolsService
         $school['province_id']            = empty($fields['province_id']) ? 1 : $fields['province_id'];
         $school['city_id']                = empty($fields['city_id']) ? 1 : $fields['city_id'];
         $school['status']                 = empty($fields['status']) ? 1 : $fields['status'];
+        $school['smallPicture']           = empty($fields['smallPicture']) ? '' : $fields['smallPicture'];
+        $school['middlePicture']          = empty($fields['middlePicture']) ? '' : $fields['middlePicture'];
+        $school['largePicture']           = empty($fields['largePicture']) ? '' : $fields['largePicture'];
+
         $school['createTime']             = time();
         if (!empty($fields['campusHumanities'])) {
             $school['campusHumanities'] = $this->purifyHtml($fields['campusHumanities']);
@@ -102,6 +106,11 @@ class SchoolsServiceImpl extends BaseService implements SchoolsService
         $school['abbreviation']           = empty($fields['abbreviation']) ? '' : $fields['abbreviation'];
         $school['type']                   = empty($fields['type']) ? '' : $fields['type'];
         $school['schoolAddress']          = empty($fields['schoolAddress']) ? '' : $fields['schoolAddress'];
+
+        $school['smallPicture']           = empty($fields['smallPicture']) ? '' : $fields['smallPicture'];
+        $school['middlePicture']          = empty($fields['middlePicture']) ? '' : $fields['middlePicture'];
+        $school['largePicture']           = empty($fields['largePicture']) ? '' : $fields['largePicture'];
+
         $school['province_id']            = empty($fields['province_id']) ? 1 : $fields['province_id'];
         $school['city_id']                = empty($fields['city_id']) ? 1 : $fields['city_id'];
         $school['updateTime']             = time();
