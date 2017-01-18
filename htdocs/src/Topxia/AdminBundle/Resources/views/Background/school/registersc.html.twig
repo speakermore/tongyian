@@ -17,6 +17,16 @@
 
  {{ web_macro.flash_messages() }}
 
+{#学校图片#}
+<div class="form-group">
+    <label class="col-md-2 control-label">{{'学校图片'|trans}}</label>
+    <div class="col-md-7 controls radios">
+        <img src="{{ filepath(schools.largePicture, 'avatar.png') }}" width="120" height="100"/>
+        <a href="#modal" data-toggle="modal" data-url="{{ path('newadmin_school_uploadSch', {id: schools.id}) }}" class="btn btn-default btn-sm">查看/上传图片</a>
+        <div class="help-block" style="display:none;"></div>
+</div>
+</div>
+
 {#中文名称#}
 <div class="form-group">
     <label class="col-md-2 control-label">{{'中文名称'|trans}}</label>

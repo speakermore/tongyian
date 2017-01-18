@@ -10,7 +10,6 @@ class CurrentUser implements AdvancedUserInterface, EquatableInterface, \ArrayAc
 {
     protected $data;
     protected $permissions;
-
     protected $rootOrgId = 1;
 
     protected $rootOrgCode = '1.';
@@ -137,7 +136,13 @@ class CurrentUser implements AdvancedUserInterface, EquatableInterface, \ArrayAc
         return $this->locale;
     }
 
-    public function getSchoolid()
+    //  public function setSchoolId($schoolId)
+    //  {
+    //      $this->schoolId = $schoolId;
+    //      return $this;
+    //  }
+
+    public function getSchoolId()
     {
         return $this->schoolId;
     }
@@ -239,6 +244,7 @@ class CurrentUser implements AdvancedUserInterface, EquatableInterface, \ArrayAc
             $user['orgId']   = $this->rootOrgId;
             $user['orgCode'] = $this->rootOrgCode;
         }
+
         $this->data = $user;
 
         return $this;

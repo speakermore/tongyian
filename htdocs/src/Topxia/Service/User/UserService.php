@@ -276,4 +276,6 @@ interface UserService
     public function updateUserLocale($id, $locale);
 
     public function changeAvatarFromImgUrl($userId, $imgUrl);
+
+    public function updateUser($id, $user);
 }
