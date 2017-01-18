@@ -17,14 +17,7 @@ class RegisterController extends BaseController
         $user   = $this->getCurrentUser();
 
         if ($user->isLogin()) {
-             if (in_array('ROLE_SUPER_ADMIN', $user->getRoles())){
-                return $this->createMessageResponse('info', $this->getServiceKernel()->trans('你已经登录了'), null, 3000, $this->generateUrl('admin'));
-            }else if(in_array('ROLE_ADMIN', $user->getRoles())){
-                return $this->createMessageResponse('info', $this->getServiceKernel()->trans('你已经登录了'), null, 3000, $this->generateUrl('newadmin'));
-            }else{
-                return $this->createMessageResponse('info', $this->getServiceKernel()->trans('你已经登录了'), null, 3000, $this->generateUrl('homepage'));
-            }
-            // return $this->createMessageResponse('info', $this->getServiceKernel()->trans('你已经登录了'), null, 3000, $this->getTargetPath($request));
+            return $this->createMessageResponse('info', $this->getServiceKernel()->trans('你已经登录了'), null, 3000, $this->getTargetPath($request));
         }
 
         $registerEnable = $this->getAuthService()->isRegisterEnabled();
@@ -109,7 +102,6 @@ class RegisterController extends BaseController
             $inviteCode = $fields['inviteCode'];
         }
 
-        $_target_path = $this->getTargetPath($request);
         return $this->render("TopxiaWebBundle:Register:index.html.twig", array(
             'inviteCode'        => $inviteCode,
             'isRegisterEnabled' => $registerEnable,

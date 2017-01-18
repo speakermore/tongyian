@@ -366,9 +366,6 @@ class DefaultController extends BaseController
         return $this->redirect($targetPath);
     }
 
-    
-
-
     protected function getSettingService()
     {
         return $this->getServiceKernel()->createService('System.SettingService');
