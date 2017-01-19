@@ -24,8 +24,15 @@ class DefaultController extends BaseController
         $school = $this->getSchoolsService()->findSchoolByNewTime();
 
         $citys = $this->getCityService()->findCityBySchoolIdOrSchoolAll(null);
-        //获得默认初中生课程方法
+
+        //获得默认初中生课程方法(学历文凭)
         $PCcourses = $this->getCourseService()->findCoursesByPopulationClassify(0);
+        //获得课程方法
+        $VScourses = $this->getCourseService()->findCoursesByPopulationClassify(1);
+        //获得课程方法
+        $SAcourses = $this->getCourseService()->findCoursesByPopulationClassify(2);
+        //获得课程方法
+        $Tucourses = $this->getCourseService()->findCoursesByPopulationClassify(3);
 
         //获得默认推荐根据课程创建时间显示方法
         $DFcourses = $this->getCourseService()->findCoursesByTime();
@@ -72,20 +79,23 @@ class DefaultController extends BaseController
         if (!empty($user['id'])) {
             $this->getBatchNotificationService()->checkoutBatchNotification($user['id']);
         }
-
+         $friendlyLinks = $this->getNavigationService()->getOpenedNavigationsTreeByType('friendlyLink');
         //$friendlyLinks = $this->getNavigationService()->getOpenedNavigationsTreeByType('friendlyLink');
        
         return $this->render('TopxiaWebBundle:Default:old-index.html.twig', array(
-            'Schools' => $school,
-            'citys' => $citys,
+            'Schools'   => $school,
+            'citys'     => $citys,
             'PCcourses' => $PCcourses,
             'DFcourses' => $DFcourses,
             'SCarticle' => $SCarticle,
             'TYarticle' => $TYarticle,
             'Rearticle' => $Rearticle,
-            'Teachers' => $teachers
+            'Teachers'  => $teachers,
+            'VScourses' => $VScourses,
+            'SAcourses' => $SAcourses,
+            'Tucourses' => $Tucourses,
             //'crowd_classification' => $crowd_classification
-            //'friendlyLinks' => $friendlyLinks
+            'friendlyLinks' => $friendlyLinks
             ));
     }
 
@@ -365,6 +375,9 @@ class DefaultController extends BaseController
 
         return $this->redirect($targetPath);
     }
+
+    
+
 
     protected function getSettingService()
     {
