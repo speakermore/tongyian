@@ -21,7 +21,7 @@ class SchoolsDaoImpl extends BaseDao implements SchoolsDao
 
     public function findAllByNum($number)
     {
-            $sql = "SELECT * FROM {$this->table} LIMIT $number";
+            $sql = "SELECT * FROM {$this->table} LIMIT {$number}";
             return $this->getConnection()->fetchAll($sql, array($number)) ? : array();  
     }
 

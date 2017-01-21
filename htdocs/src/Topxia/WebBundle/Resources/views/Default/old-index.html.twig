@@ -15,6 +15,7 @@
 {% set isIndex = true %}
 {% set consultDisplay = true %}
 
+
 {% block full_content %}
     {#首页缩略图{% cache 'jianmo/home/top/banner' 600 %}
       {{ block_show('jianmo:home_top_banner') }}
@@ -49,7 +50,7 @@
 					</div>
 				</form>
 				</div>
-				<div class="col-md-4">会员登录</div>
+				<div class="col-md-4"><a href="{{ path('login_background') }}">{{'会员登录'|trans}}</a></div>
 				<div class="col-md-4">收藏夹</div>
 				</div>
 			</div>
@@ -123,23 +124,27 @@
 							<li class="bolder"><a class="link-dark" href="{{ path('course_show', {id:dfCourses.id}) }}" target="_blank">{{ dfCourses.title|default('') }}</a></li>
 							<li class="grey">{{ dfCourses.chineseName|default('') }}</li>
 							<li class="grey"><a class="link-dark" href="{{ path('course_show', {id:dfCourses.id}) }}" target="_blank"><i class="glyphicon glyphicon-time"></i>{{ dfCourses.subtitle|default('') }}</a></li>
-							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+							{#<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>#}
 						</ul>
 						{% endfor %}
 						</div>
 					</div>
 				</article>
-				<article id="tongyan-school-recommend" class="row shadow down-10">
+				<article id="tongyan-school-recommend" class="row down-10">
+					<div id="tongyan-recommend-list" class="col-md-12 shadow down-10" >
 					<div class="col-md-12 tongyan-title1"><strong>名校</strong>推荐→</div>
-					<div class="col-md-12">
+				
+					<div class="row">
 					{% for schools in Schools %}
 						<ul class="col-md-2">
 						<li><a class="link-dark" href="{{ path('homepage_forward_school', {id:schools.id}) }}">{{ lazy_img(filepath(schools.largePicture, 'course.png'), 'img-responsive', schools.id|default('')) }}</a></li>
 						</ul>
 					{% endfor %}
 					</div>
+					</div>
 				</article>
-				<article id="tongyan-teacher-recommend" class="row shadow down-10">
+				<article id="tongyan-teacher-recommend" class="row down-10">
+				<div id="tongyan-recommend-list" class="col-md-12 shadow down-10" >
 				<div class="col-md-12 tongyan-title1"><strong>名师</strong>推荐→</div>
 				<div class="row">
 					{% for teachers in Teachers %}
@@ -147,10 +152,11 @@
 						<li><a class="link-dark" href="{{ path('user_show', {id:teachers.id}) }}">{{ lazy_img(filepath(teachers.mediumAvatar, 'course.png'), 'img-responsive', teachers.title|default('')) }}</a></li>
 						<li class="grey"><a class="link-dark" href="{{ path('user_show', {id:teachers.id}) }}"><em class="black">{{ teachers.nickname|default('') }}</em>&nbsp;</a></li>
 						<li class="grey"><a class="link-dark" href="{{ path('user_show', {id:teachers.id}) }}"><i class="glyphicon glyphicon-time"></i>{{ teachers.title|default('') }}</a></li>
-						<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+						{#<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>#}
 					</ul>
 					{% endfor %}
-					</div>
+				</div>
+				</div>
 				</article>
 				<article id="your-choice" class="row down-10">
 					<header class="col-md-12 channel-header shadow">
@@ -179,11 +185,11 @@
 						<header class="col-md-1">学历文凭</header>
 						{% for pcCourses in PCcourses %}
 						<ul class="col-md-2">
-							<li><a class="link-dark" href="{{ path('course_show', {id:pcCourses.id}) }}" target="_blank">{{ lazy_img(filepath(pcCourses.middlePicture, 'course.png'), 'img-responsive', pcCourses.title) }}</a></li>
+							<li class="down-10"><a class="link-dark" href="{{ path('course_show', {id:pcCourses.id}) }}" target="_blank">{{ lazy_img(filepath(pcCourses.middlePicture, 'course.png'), 'img-responsive', pcCourses.title) }}</a></li>
 							<li class="bolder"><a class="link-dark" href="{{ path('course_show', {id:pcCourses.id}) }}" target="_blank">{{ pcCourses.title|default('') }}</a></li>
 							<li class="grey">{{ pcCourses.chineseName|default('') }}</li>
 							<li class="grey"><i class="glyphicon glyphicon-time"></i><a class="link-dark" href="{{ path('course_show', {id:pcCourses.id}) }}" target="_blank">{{ pcCourses.subtitle|default('') }}</a></li>
-							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+							<!--<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>-->
 						</ul>
 						{% endfor %}
 						</div>
@@ -191,172 +197,75 @@
 					<div id="educational-list" class="col-md-12 shadow down-10">
 						<div class="row">
 						<header class="col-md-1">职业技能</header>
+						{% for vsCourses in VScourses %}
 						<ul class="col-md-2">
-							<li><img src="assets/img/index/sample.jpg" /></li>
-							<li class="bolder">xxxx课程</li>
-							<li class="grey">xxxx机构</li>
-							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
-							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+							<li class="down-10"><a class="link-dark" href="{{ path('course_show', {id:vsCourses.id}) }}" target="_blank">{{ lazy_img(filepath(vsCourses.middlePicture, 'course.png'), 'img-responsive', vsCourses.title) }}</a></li>
+							<li class="bolder"><a class="link-dark" href="{{ path('course_show', {id:vsCourses.id}) }}" target="_blank">{{ vsCourses.title|default('') }}</a></li>
+							<li class="grey">{{ vsCourses.chineseName|default('') }}</li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i><a class="link-dark" href="{{ path('course_show', {id:vsCourses.id}) }}" target="_blank">{{ vsCourses.subtitle|default('') }}</a></li>
+							<!--<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>-->
 						</ul>
-						<ul class="col-md-2">
-							<li><img src="assets/img/index/sample.jpg" /></li>
-							<li class="bolder">xxxx课程</li>
-							<li class="grey">xxxx机构</li>
-							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
-							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
-						</ul>
-						<ul class="col-md-2">
-							<li><img src="assets/img/index/sample.jpg" /></li>
-							<li class="bolder">xxxx课程</li>
-							<li class="grey">xxxx机构</li>
-							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
-							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
-						</ul>
-						<ul class="col-md-2">
-							<li><img src="assets/img/index/sample.jpg" /></li>
-							<li class="bolder">xxxx课程</li>
-							<li class="grey">xxxx机构</li>
-							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
-							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
-						</ul>
-						<ul class="col-md-2">
-							<li><img src="assets/img/index/sample.jpg" /></li>
-							<li class="bolder">xxxx课程</li>
-							<li class="grey">xxxx机构</li>
-							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
-							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
-						</ul>
+						{% endfor %}
 						</div>
 					</div>
 					<div id="educational-list" class="col-md-12 shadow down-10">
 						<div class="row">
 						<header class="col-md-1">出国留学</header>
+						{% for saCourses in SAcourses %}
 						<ul class="col-md-2">
-							<li><img src="assets/img/index/sample.jpg" /></li>
-							<li class="bolder">xxxx课程</li>
-							<li class="grey">xxxx机构</li>
-							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
-							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+							<li class="down-10"><a class="link-dark" href="{{ path('course_show', {id:saCourses.id}) }}" target="_blank">{{ lazy_img(filepath(saCourses.middlePicture, 'course.png'), 'img-responsive', saCourses.title) }}</a></li>
+							<li class="bolder"><a class="link-dark" href="{{ path('course_show', {id:saCourses.id}) }}" target="_blank">{{ saCourses.title|default('') }}</a></li>
+							<li class="grey">{{ saCourses.chineseName|default('') }}</li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i><a class="link-dark" href="{{ path('course_show', {id:saCourses.id}) }}" target="_blank">{{ saCourses.subtitle|default('') }}</a></li>
+							<!--<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>-->
 						</ul>
-						<ul class="col-md-2">
-							<li><img src="assets/img/index/sample.jpg" /></li>
-							<li class="bolder">xxxx课程</li>
-							<li class="grey">xxxx机构</li>
-							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
-							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
-						</ul>
-						<ul class="col-md-2">
-							<li><img src="assets/img/index/sample.jpg" /></li>
-							<li class="bolder">xxxx课程</li>
-							<li class="grey">xxxx机构</li>
-							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
-							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
-						</ul>
-						<ul class="col-md-2">
-							<li><img src="assets/img/index/sample.jpg" /></li>
-							<li class="bolder">xxxx课程</li>
-							<li class="grey">xxxx机构</li>
-							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
-							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
-						</ul>
-						<ul class="col-md-2">
-							<li><img src="assets/img/index/sample.jpg" /></li>
-							<li class="bolder">xxxx课程</li>
-							<li class="grey">xxxx机构</li>
-							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
-							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
-						</ul>
+						{% endfor %}
 						</div>
 					</div>
 					<div id="educational-list" class="col-md-12 shadow down-10">
 						<div class="row">
 						<header class="col-md-1">课外辅导</header>
+					    {% for tuCourses in Tucourses %}
 						<ul class="col-md-2">
-							<li><img src="assets/img/index/sample.jpg" /></li>
-							<li class="bolder">xxxx课程</li>
-							<li class="grey">xxxx机构</li>
-							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
-							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+							<li class="down-10"><a class="link-dark" href="{{ path('course_show', {id:tuCourses.id}) }}" target="_blank">{{ lazy_img(filepath(tuCourses.middlePicture, 'course.png'), 'img-responsive', tuCourses.title) }}</a></li>
+							<li class="bolder"><a class="link-dark" href="{{ path('course_show', {id:tuCourses.id}) }}" target="_blank">{{ tuCourses.title|default('') }}</a></li>
+							<li class="grey">{{ tuCourses.chineseName|default('') }}</li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i><a class="link-dark" href="{{ path('course_show', {id:tuCourses.id}) }}" target="_blank">{{ tuCourses.subtitle|default('') }}</a></li>
+							<!--<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>-->
 						</ul>
-						<ul class="col-md-2">
-							<li><img src="assets/img/index/sample.jpg" /></li>
-							<li class="bolder">xxxx课程</li>
-							<li class="grey">xxxx机构</li>
-							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
-							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
-						</ul>
-						<ul class="col-md-2">
-							<li><img src="assets/img/index/sample.jpg" /></li>
-							<li class="bolder">xxxx课程</li>
-							<li class="grey">xxxx机构</li>
-							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
-							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
-						</ul>
-						<ul class="col-md-2">
-							<li><img src="assets/img/index/sample.jpg" /></li>
-							<li class="bolder">xxxx课程</li>
-							<li class="grey">xxxx机构</li>
-							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
-							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
-						</ul>
-						<ul class="col-md-2">
-							<li><img src="assets/img/index/sample.jpg" /></li>
-							<li class="bolder">xxxx课程</li>
-							<li class="grey">xxxx机构</li>
-							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
-							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
-						</ul>
+						{% endfor %}
 						</div>
 					</div>
 					<div id="educational-list" class="col-md-12 shadow down-10">
 						<div class="row">
 						<header class="col-md-1">才艺专长</header>
+						{% for vsCourses in VScourses %}
 						<ul class="col-md-2">
-							<li><img src="assets/img/index/sample.jpg" /></li>
-							<li class="bolder">xxxx课程</li>
-							<li class="grey">xxxx机构</li>
-							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
-							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+							<li class="down-10"><a class="link-dark" href="{{ path('course_show', {id:vsCourses.id}) }}" target="_blank">{{ lazy_img(filepath(vsCourses.middlePicture, 'course.png'), 'img-responsive', vsCourses.title) }}</a></li>
+							<li class="bolder"><a class="link-dark" href="{{ path('course_show', {id:vsCourses.id}) }}" target="_blank">{{ vsCourses.title|default('') }}</a></li>
+							<li class="grey">{{ vsCourses.chineseName|default('') }}</li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i><a class="link-dark" href="{{ path('course_show', {id:vsCourses.id}) }}" target="_blank">{{ vsCourses.subtitle|default('') }}</a></li>
+							<!--<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>-->
 						</ul>
-						<ul class="col-md-2">
-							<li><img src="assets/img/index/sample.jpg" /></li>
-							<li class="bolder">xxxx课程</li>
-							<li class="grey">xxxx机构</li>
-							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
-							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
-						</ul>
-						<ul class="col-md-2">
-							<li><img src="assets/img/index/sample.jpg" /></li>
-							<li class="bolder">xxxx课程</li>
-							<li class="grey">xxxx机构</li>
-							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
-							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
-						</ul>
-						<ul class="col-md-2">
-							<li><img src="assets/img/index/sample.jpg" /></li>
-							<li class="bolder">xxxx课程</li>
-							<li class="grey">xxxx机构</li>
-							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
-							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
-						</ul>
-						<ul class="col-md-2">
-							<li><img src="assets/img/index/sample.jpg" /></li>
-							<li class="bolder">xxxx课程</li>
-							<li class="grey">xxxx机构</li>
-							<li class="grey"><i class="glyphicon glyphicon-time"></i>300分钟，每课时45分钟</li>
-							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
-						</ul>
+						{% endfor %}
 						</div>
 					</div>
 				</article>
 			</div>
    </div>
+   {% for config in themeConfig.blocks.left|default([]) %}
+      {% set code = config.code %}
+      {% set category = config.categoryId|default(0) ? data('Category', {categoryId: config.categoryId})  : null %}
+      {% if code == 'friend-link' %}
+         {% include 'TopxiaWebBundle:Default:' ~ code ~ '.html.twig' with {friendlyLinks:friendlyLinks} %}
+      {% endif %}
+    {% endfor %}
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="assets/js/bootstrap.min.js"></script>
   </body>
 </html>
-
+ 
 {% endblock %}
 

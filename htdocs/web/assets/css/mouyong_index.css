@@ -7,6 +7,7 @@
 			li{
 				/*取消li前面的图标*/
 				list-style: none;
+				font-size: 14px;
 			}
 			em{
 				/*取消em的斜体*/
@@ -82,7 +83,7 @@
 			}
 			#digset-list{
 				border: 2px solid black;
-				font-size: 18px;
+				font-size: 22px;
 				margin-top: 5px;
 				padding:10px 20px 10px 20px;
 			}

@@ -16,7 +16,7 @@ class LogoutSuccessHandler extends DefaultLogoutSuccessHandler
             if ($this->isMicroMessenger($request) && $this->isWeixinEnabled()) {
                 $goto = "homepage";
             } else {
-                $goto = "login";
+                $goto = "login_background";
             }
         }
 

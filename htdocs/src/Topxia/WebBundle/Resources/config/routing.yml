@@ -46,6 +46,14 @@ schoolAuth_update:
     pattern:  /update/schoolAuth/{id}
     defaults: { _controller: TopxiaWebBundle:schoolAuth:updateSchoolAuth }
 
+login_background:
+    pattern:  /login/background
+    defaults: { _controller: TopxiaWebBundle:Login:background }
+
+login_background_admin:
+    pattern:  /login/background/
+    defaults: { _controller: TopxiaWebBundle:Login:backgroundAdmin }
+
 login:
     pattern:  /login
     defaults: { _controller: TopxiaWebBundle:Login:index }
