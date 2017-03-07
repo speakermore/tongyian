@@ -156,5 +156,3 @@ newadmin:
                         newadmin_forSchoolstat:
                             name: 换校统计
                             disable: true
-
-

@@ -38,6 +38,11 @@ class UserServiceImpl extends BaseService implements UserService
         return $simple;
     }
 
+    public function findUserBySchoolId($id)
+    {
+        return $this->getUserDao()->findUserBySchoolId($id);
+    }
+
     public function findUsersCountByLessThanCreatedTime($endTime)
     {
         return $this->getUserDao()->findUsersCountByLessThanCreatedTime($endTime);

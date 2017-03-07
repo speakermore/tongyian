@@ -3,9 +3,11 @@ namespace Topxia\AdminBundle\Controller;
 
 use Topxia\Common\Paginator;
 use Topxia\Common\ArrayToolkit;
+use Topxia\Common\StringToolkit;
 use Topxia\Service\Common\MailFactory;
 use Topxia\WebBundle\DataDict\UserRoleDict;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class BackgroundController extends BaseController
 {
@@ -684,9 +686,60 @@ class BackgroundController extends BaseController
             ));
     }
 
+    public function studentShowAction(Request $request, $id)
+    {
+        $student = $this->getStudentsService()->getStudent($id);
+        return $this->render('TopxiaAdminBundle:Background:student/studentshow.html.twig', array(
+            'student' => $student
+            ));
+    }
+
     public function coursescAction(Request $request)
     {
+        if ($request->getMethod() == 'POST') {
+            $id = $request->request->get('id');
+            $name = $request->request->get('name');
+            $level = $request->request->get('level');
+            $deleteId = $request->request->get('deleteId');
+
+            $j = 0;//需要被删除的检索级别的Id下标
+            for ($i = 0; $i < count($name); $i++) {
+			$iid = 0;
+			$ilevel = 0;
+			$ideleteLevelId = 0;
+			    try {
+				    $iid = (int)$id[$i];
+				    $ilevel = (int)$level[$i];
+			    } catch (\Exception $e) {
+				    throw $e;
+			    }
+                $entityLevel = array();
+                $entityLevel['id'] = $iid;
+                $entityLevel['name'] = $name[$i]; 
+                $entityLevel['level'] = $ilevel;
+			    $entityLevel['next'] = $i;
+			    if($entityLevel['id'] == 0){//添加操作
+				    $this->getLevelService()->addLevel($entityLevel);
+			    }else if($entityLevel['id'] == -1){//删除操作
+				    try {
+					    $ideleteLevelId = (int)$deleteId[$j++];
+					    $entityLevel['id'] = $ideleteLevelId;
+                        $this->getLevelService()->deleteLevel($entityLevel['id'], $entityLevel);
+				    } catch (\Exception $e) {
+					    throw $e;
+				    }
+			    }else{//更新操作
+                    $this->getLevelService()->updateLevel($entityLevel['id'], $entityLevel);
+			    }
+	        }
+		//$coursetype = $this->getLevelService()->findAll();
+        //$this->setFlashMessage('success', $this->getServiceKernel()->trans('基础信息保存成功。'));
+            return $this->redirect($this->generateUrl('newadmin_registersc'));
+        }
+        $coursetype = $this->getLevelService()->findAll();
         return $this->render('TopxiaAdminBundle:Background:school/coursesc.html.twig', array(
+            'tmpSize' => count($coursetype),
+            'list' => $coursetype
             ));
     }
 
@@ -695,6 +748,7 @@ class BackgroundController extends BaseController
         return $this->render('TopxiaAdminBundle:Background:school/articlesc.html.twig', array(
             ));
     }
+
     /*5.统计部分*/
     public function schoolstAction(Request $request)
     {
@@ -704,8 +758,24 @@ class BackgroundController extends BaseController
 
     public function enrollstatAction(Request $request)
     {
+        if ($request->getMethod() == 'POST') {
+            $id = $request->request->get('id');
+            $name = $request->request->get('name');
+            $level = $request->request->get('level');
+            }
+        $user  = $this->getCurrentUser();
+        $students = $this->getStudentsService()->findStudentsByTeacher($user['id']);
+        //$students = $this->getStudentsService()->findStudentsByTeacher(0);
         return $this->render('TopxiaAdminBundle:Background:statistics/enrollstat.html.twig', array(
+            'students' => $students
             ));
+    }
+
+    public function dataViewAction(Request $request, $studentId)
+    {
+        $student = $this->getStudentsService()->getStudent($studentId);
+
+         return new Response('<pre>'.StringToolkit::jsonPettry(StringToolkit::jsonEncode($student)).'</pre>');
     }
 
     public function auditionstatAction(Request $request)
@@ -1065,6 +1135,11 @@ class BackgroundController extends BaseController
     protected function getSchoolAuthService()
     {
         return $this->getServiceKernel()->createService('SchoolAuth.SchoolAuthService');
+    }
+
+    protected function getLevelService()
+    {
+        return $this->getServiceKernel()->createService('Level.LevelService');
     }
 
 }

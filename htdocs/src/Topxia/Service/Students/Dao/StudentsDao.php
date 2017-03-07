@@ -12,4 +12,8 @@ interface StudentsDao
   public function deleteStudent($id);
 
   public function findStudents($school_id);
+
+  public function findStudentsByTeacher($id);
+
+  public function findTeachersByIds(array $ids);
 }

@@ -6,6 +6,8 @@ interface UserDao
 {
     public function getUser($id, $lock = false);
 
+    public function findUserBySchoolId($id);
+
     public function findUserByEmail($email);
 
     public function findUserByNickname($nickname);

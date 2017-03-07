@@ -1,5 +1,6 @@
-{% extends 'TopxiaWebBundle:Settings:layout.html.twig' %} {% block title %}学生报名学校更新{% endblock %} {% set script_controller=
-'students/update-student' %}{#{% set side_nav = 'schools' %}#} {% block main %} {#左侧菜单{% embed "TopxiaWebBundle:Bootstrap:panel.html.twig"
+{% extends 'TopxiaWebBundle:Settings:layout.html.twig' %} {% block title %}学生报名学校更新{% endblock %} 
+{% set script_controller ='students/update-student' %}{#{% set side_nav = 'schools' %}#} 
+{% block main %} {#左侧菜单{% embed "TopxiaWebBundle:Bootstrap:panel.html.twig"
 with {class:'panel-col'} %}#} {% block heading %}学生报名学校更新{% endblock %} {% block body %}
 
 <form id="update-student-form" class="form-horizontal" method="post">

@@ -30,7 +30,6 @@
   {% block stylesheets %}
     {% set currentTheme = current_theme() %}
     {% include 'TopxiaWebBundle:Default:stylesheet.html.twig' with {config: currentTheme, isEditColor: isEditColor|default(false)} %}
-
   {% endblock %}
 
   <!--[if lt IE 9]>

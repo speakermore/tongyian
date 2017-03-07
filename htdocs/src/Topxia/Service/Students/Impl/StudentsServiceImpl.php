@@ -33,10 +33,13 @@ class StudentsServiceImpl extends BaseService implements StudentsService
         $students['address']     =   empty($student['address'])?'':$student['address'];
         $students['guardianName']     =   empty($student['guardianName'])?'':$student['guardianName'];
         $students['guardianPhone']     =   empty($student['guardianPhone'])?'':$student['guardianPhone'];
-        $students['reportedSchool']     =   empty($student['reportedSchool'])?'':$student['reportedSchool'];
-        $students['reportedCourse']     =   empty($student['reportedCourse'])?'':$student['reportedCourse'];
+        $students['reportedSchool']     =   empty($student['reportedSchool'])?0:$student['reportedSchool'];
+        $students['reportedCourse']     =   empty($student['reportedCourse'])?0:$student['reportedCourse'];
         $students['school_id']     =   $id;
         $students['status']     =   empty($student['status'])? 0:$student['status'];
+        $students['recommendTeacher']     =   empty($student['recommendTeacher'])? 0:$student['recommendTeacher'];
+        $students['userId']     =   empty($student['userId'])? 0:$student['userId'];
+        $students['courseId']     =   empty($student['courseId'])? 0:$student['courseId'];
         $students['createTime'] = time();
        
         return $this->getStudentsDao()->addStudent($id, $students);
@@ -59,9 +62,13 @@ class StudentsServiceImpl extends BaseService implements StudentsService
         $students['address']     =   empty($student['address'])?'':$student['address'];
         $students['guardianName']     =   empty($student['guardianName'])?'':$student['guardianName'];
         $students['guardianPhone']     =   empty($student['guardianPhone'])?'':$student['guardianPhone'];
-        $students['reportedSchool']     =   empty($student['reportedSchool'])?'':$student['reportedSchool'];
-        $students['reportedCourse']     =   empty($student['reportedCourse'])?'':$student['reportedCourse'];
+        $students['reportedSchool']     =   empty($student['reportedSchool'])?0:$student['reportedSchool'];
+        $students['reportedCourse']     =   empty($student['reportedCourse'])?0:$student['reportedCourse'];
         $students['school_id']     =   $id;
+        $students['recommendTeacher']     =   empty($student['recommendTeacher'])? 0:$student['recommendTeacher'];
+        $students['userId']     =   empty($student['userId'])? 0:$student['userId'];
+        $students['courseId']     =   empty($student['courseId'])? 0:$student['courseId'];
+        $students['status']     =   empty($student['status'])? 0:$student['status'];
         $students['updateTime'] = time();
        
         return $this->getStudentsDao()->updateStudent($id, $students);
@@ -84,6 +91,16 @@ class StudentsServiceImpl extends BaseService implements StudentsService
     public function findStudents($school_id)
     {
         return $this->getStudentsDao()->findStudents($school_id);
+    }
+
+    public function findStudentsByTeacher($id)
+    {
+        return $this->getStudentsDao()->findStudentsByTeacher($id);
+    }
+
+    public function findTeachersByIds(array $ids)
+    {
+        return $this->getStudentsDao()->findTeachersByIds($ids);
     }
 
 }

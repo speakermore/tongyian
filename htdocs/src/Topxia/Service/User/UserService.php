@@ -18,6 +18,8 @@ interface UserService
 
     public function getUserByEmail($email);
 
+    public function findUserBySchoolId($id);
+
     public function findUsersByIds(array $id);
 
     public function findUserProfilesByIds(array $ids);
