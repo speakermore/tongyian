@@ -43,16 +43,16 @@ class CourseDaoImpl extends BaseDao implements CourseDao
         
     }
 
-    /*根据学校ID查询课程列表
-    public function findCoursesBySchool_id($school_id)
+    /*根据学校ID查询课程列表*/
+    public function findCoursesBySchoolId($school_id)
     {
         $that = $this;
 
         return $this->fetchCached("school_id:{$school_id}", $school_id, function ($school_id) use ($that) {
-            $sql = "SELECT * FROM {$that->getTable()} WHERE school_id = ?  LIMIT 10";
+            $sql = "SELECT * FROM {$that->getTable()} WHERE school_id = ? AND status='published'";
             return $that->getConnection()->fetchAll($sql, array($school_id)) ?: null;
         });
-    }*/
+    }
 
     public function findCoursesByIds(array $ids)
     {

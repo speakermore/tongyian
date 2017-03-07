@@ -14,11 +14,15 @@ class DefaultController extends BaseController
 {
     public function indexAction(Request $request)
     {
+        $user = $this->getCurrentUser();
         /*加service*/
         //培训机构
         //$crowd_classification = $this->getCrowdClassificationService()->findAll();
         //学校0,培训机构1
         //$school = $this->getSchoolsService()->findAll(0);
+
+        //课程分类
+        $list = $this->getLevelService()->findAll();
 
         //学校推荐
         $school = $this->getSchoolsService()->findSchoolByNewTime();
@@ -83,6 +87,8 @@ class DefaultController extends BaseController
         //$friendlyLinks = $this->getNavigationService()->getOpenedNavigationsTreeByType('friendlyLink');
        
         return $this->render('TopxiaWebBundle:Default:old-index.html.twig', array(
+            'user'      => $user,
+            'list'      => $list,
             'Schools'   => $school,
             'citys'     => $citys,
             'PCcourses' => $PCcourses,
@@ -462,5 +468,10 @@ class DefaultController extends BaseController
     protected function getUserService()
     {
         return $this->getServiceKernel()->createService('User.UserService');
+    }
+
+    protected function getLevelService()
+    {
+        return $this->getServiceKernel()->createService('Level.LevelService');
     }
 }

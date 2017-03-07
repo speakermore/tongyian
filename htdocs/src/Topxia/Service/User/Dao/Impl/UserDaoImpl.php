@@ -8,6 +8,7 @@ use Topxia\Service\User\Dao\UserDao;
 class UserDaoImpl extends BaseDao implements UserDao
 {
     protected $table = 'user';
+    protected $tableTwo = 'user_profile';
 
     public function getUser($id, $lock = false)
     {
@@ -28,6 +29,14 @@ class UserDaoImpl extends BaseDao implements UserDao
         }
 
         );
+    }
+
+    public function findUserBySchoolId($id)
+    {
+        $that = $this;
+        $sql    = "SELECT u.id,up.truename,u.nickname FROM `user` AS u, `user_profile` AS up WHERE u.id=up.id AND u.schoolId = ? AND u.roles LIKE '%RECRUIT%' LIMIT 20 ";
+        $result = $that->getConnection()->fetchAll($sql, array($id));
+        return $result;
     }
 
     public function findUserByEmail($email)

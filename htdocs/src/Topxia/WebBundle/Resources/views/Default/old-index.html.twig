@@ -12,8 +12,8 @@
 {% set themeConfig = isEditColor|default(false) ? currentTheme.config : currentTheme.config %}
 {% set allConfig = currentTheme.allConfig %}
 
-{% set isIndex = true %}
-{% set consultDisplay = true %}
+{#{% set isIndex = true %}
+{% set consultDisplay = true %}#}
 
 
 {% block full_content %}
@@ -50,7 +50,14 @@
 					</div>
 				</form>
 				</div>
-				<div class="col-md-4"><a href="{{ path('login_background') }}">{{'会员登录'|trans}}</a></div>
+				<div class="col-md-4">
+					{% if user and user.id != 0 %}
+						<a href="{{ path('newadmin') }}">{{'欢迎您'|trans}}{{ user.nickname|default('')}}</a>
+						<a href="{{ path('logout')}}">{{'注销'|trans}}</a>
+					{% else %}
+						<a href="{{ path('login_background') }}">{{'会员登录'|trans}}</a>
+					{% endif %}
+				</div>
 				<div class="col-md-4">收藏夹</div>
 				</div>
 			</div>
@@ -58,7 +65,9 @@
 		<div id="course-digest">
 				<div id="course-menu" class="row shadow">
 					<div id="course-digest-title" class="col-md-3 background-red">
+						
 						<i class="glyphicon glyphicon-th-large font-color-white">课程分类</i>
+						
 					</div>
 					<div id="course-nav" class="col-md-6">
 						<i class="glyphicon glyphicon-home">首页</i>
@@ -67,8 +76,40 @@
 					</div>
 					<div class="col-md-2"><img src="assets/img/index/customer-course.jpg" />定制课程</div>
 			</div>
-				<div id="course-adv" class="row shadow down-10">
-					<dl id="digset-list" class="col-md-3">
+				
+				<div id="course-adv" class="row shadow down-10 dropdown">
+					<a id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="#">
+    				全部课程 <span class="caret"></span>
+  					</a>
+					<dl id="digset-list" class="col-md-3 dropdown-menu" role="menu" aria-labelledby="dLabel">
+						{% if list %}
+					{% set isUl = 1 %}
+					{% for level in list %}
+						{% if isUl < level.level %}
+							{% set isUl = level.level %}
+								<dt class="mysubmenu">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ '更多.. ' }}</a>
+								<dl class="dropdown-menu1">
+								<dt><a  href="#">{{ level.name|default('') }}</a></dt>
+								<dd></dd>
+						{% elseif isUl == level.level %}
+							<dt>{{ level.name|default('') }}</dt>
+							<dd></dd>
+						{% elseif isUl > level.level and isUl - level.level == 1 %}
+							{% set isUl = level.level %}
+							</dl></dt>
+							<dt>{{ level.name|default('') }}</dt>
+							<dd></dd>
+						{% elseif isUl > level.level and isUl - level.level == 2 %}
+							{% set isUl = level.level %}
+							</dl></dt>
+							</dl></dt>
+							<dt>{{ level.name|default('') }}</dt>
+							<dd></dd>
+						{% endif %}
+					{% endfor %}
+					</dl>
+					{% else %}
 						<dt>学历文凭</dt>
 						<dd>Education</dd>
 						<dt>职业技能</dt>
@@ -82,7 +123,8 @@
 						<dt>企业管理</dt>
 						<dd>Business Managerment</dd>
 					</dl>
-					<div class="col-md-9"><img src="assets/img/index/adv1.jpg" /></div>
+					{% endif %}
+					{#<div class="col-md-9"><img src="assets/img/index/adv1.jpg" /></div>#}
 				</div>
 				<div id="tongyan-policy" class="row down-10 shadow">
 				<div class="col-md-6"><img src="assets/img/index/mywords.jpg" /></div>
@@ -260,10 +302,20 @@
          {% include 'TopxiaWebBundle:Default:' ~ code ~ '.html.twig' with {friendlyLinks:friendlyLinks} %}
       {% endif %}
     {% endfor %}
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    
+   
+	{#<script>
+    $(document).ready(function() {
+        $( '.mysubmenu' ).hover(
+            function(){
+              $(this).children('.dropdown-menu1').slideDown(300);
+            },
+            function(){
+              $(this).children('.dropdown-menu1').slideUp(300);
+            }
+        );
+    }); // end ready
+    </script>#}
   </body>
 </html>
  

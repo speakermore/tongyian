@@ -1955,6 +1955,11 @@ newadmin_school_show:
     defaults: { _controller: TopxiaAdminBundle:Background:schoolShow }
     permissions: [admin]
 
+newadmin_student_show:
+    pattern:  newadmin/{id}/student/show
+    defaults: { _controller: TopxiaAdminBundle:Background:studentShow }
+    permissions: [admin]
+
 newadmin_registersc:
     pattern:  /registersc
     defaults: { _controller: TopxiaAdminBundle:Background:registersc }
@@ -1990,6 +1995,10 @@ newadmin_enrollstat:
     pattern:  /enrollstat
     defaults: { _controller: TopxiaAdminBundle:Background:enrollstat }
     permissions: [newadmin_enrollstat_statistics]
+
+newadmin_student_view_data:
+    pattern:  /student/{studentId}/data/view
+    defaults: { _controller: TopxiaAdminBundle:Background:dataView }
 
 newadmin_auditionstat:
     pattern:  /auditionstat
@@ -2076,6 +2085,3 @@ newadmin_school_uploadSch:
 newadmin_school_uploadSch_crop:
     pattern:  /newadmin/school/{id}/uploadSch/crop
     defaults: { _controller: TopxiaAdminBundle:Background:uploadSchCrop }
-
-
-

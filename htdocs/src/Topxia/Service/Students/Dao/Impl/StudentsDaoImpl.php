@@ -57,4 +57,33 @@ class StudentsDaoImpl extends BaseDao implements StudentsDao
         }
         );
     }
+
+    public function findStudentsByTeacher($id)
+    {
+        $that = $this;
+        return $this->fetchCached("recommendTeacher:{$id}", $id, function ($id) use ($that) {
+            $sql = "SELECT * FROM {$this->table} WHERE recommendTeacher = ? ORDER BY createTime LIMIT 10";
+            return $this->getConnection()->fetchAll($sql, array($id)) ? : array();
+            }
+        );
+    }
+
+    public function findTeachersByIds(array $ids)
+    {
+        if (empty($ids)) {
+            return array();
+        }
+
+        $marks = str_repeat('?,', count($ids) - 1).'?';
+
+        $that = $this;
+        $keys = implode(',', $ids);
+        return $this->fetchCached("ids:{$keys}", $marks, $ids, function ($marks, $ids) use ($that) {
+            $sql = "SELECT * FROM {$that->getTable()} WHERE id IN ({$marks});";
+
+            return $that->getConnection()->fetchAll($sql, $ids);
+        }
+
+        );
+    }
 }

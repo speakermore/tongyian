@@ -2,18 +2,20 @@
 namespace Topxia\WebBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\File\File;
-use Topxia\Component\OAuthClient\OAuthClientFactory;
 
 class StudentsController extends BaseController
 {
     public function addStudentAction(Request $request, $id)
     {
-        if ($request->getMethod() == 'POST') {
+         if ($request->getMethod() == 'POST') {
             $student = $request->request->get('student');
-
-            $this->getStudentsService()->addStudent($id, $student);
-
+            $value = $request->request->get('reportedCourse');
+            if (!empty($value)) {
+                foreach ($value as $key => $va) {
+                    $student['reportedCourse'] = (int)$va;
+                    $this->getStudentsService()->addStudent($student['school_id'], $student);
+                }
+            }
             //$birthday = date("Y-m-d", $student['birthday']);
           
             $this->setFlashMessage('success', $this->getServiceKernel()->trans('基础信息保存成功。'));
@@ -21,14 +23,44 @@ class StudentsController extends BaseController
             return $this->redirect($this->generateUrl('homepage'));
         }
 
-        $school = $this->getSchoolsService()->getSchool($id);
+        $user = $this->getCurrentUser();
 
-        //$schools = $this->getSchoolsService()->findAll(0);
+        if ($user->isLogin()) {
+             $school = $this->getSchoolsService()->getSchool($id);
+             /*查询招生老师*/
+             $teacher = $this->getUserService()->findUserBySchoolId($id);
+             if($teacher == null)
+             {
+                 /*查询所有学校招生老师*/
+                 $teacher = $this->getUserService()->findUserBySchoolId(0);
+             }
+             $userId = $user['id'];
+             $userProfile = $this->getUserService()->getUserProfile($userId);
+             $conditions = array();
+             $conditions['status'] = 'published';
+             $conditions['parentId'] = 0;
+             $conditions['school_id'] = $id;
+             $arguments = array();
+             $arguments['count'] = 12;
+             $arguments['categoryId'] = 0;
+             $arguments['school_id'] = $id; 
+             $courses = $this->getCourseService()->searchCourses($conditions,'latest', 0, $arguments['count']);
 
-        return $this->render('TopxiaWebBundle:Student:add-student.html.twig', array(
-            'school_id' => $id,
-            'school' => $school
-            ));
+             //$course = $this->getCoursesService()->findCoursesBySchoolId($id);
+
+             //$schools = $this->getSchoolsService()->findAll(0);
+
+            return $this->render('TopxiaWebBundle:Student:add-student.html.twig', array(
+                'school_id' => $id,
+                'school' => $school,
+                'teacher' => $teacher,
+                'courses' => $courses,
+                'userProfile' => $userProfile,
+                'user' => $user
+                ));
+        }else{
+            return $this->redirect($this->generateUrl('login_background'));
+        } 
     }
 
     public function updateStudentAction(Request $request, $id)
@@ -69,6 +101,16 @@ class StudentsController extends BaseController
     protected function getStudentsService()
     {
         return $this->getServiceKernel()->createService('Students.StudentsService');
+    }
+
+    protected function getCourseService()
+    {
+        return $this->getServiceKernel()->createService('Course.CourseService');
+    }
+
+    protected function getUserService()
+    {
+        return $this->getServiceKernel()->createService('User.UserService');
     }
 
 }

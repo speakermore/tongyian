@@ -8,6 +8,8 @@ interface CourseDao
 
     public function getCourse($id);
 
+    public function findCoursesBySchoolId($schoolId);
+
     public function findCoursesByPopulationClassify($id);
 
     public function findCoursesByTime();

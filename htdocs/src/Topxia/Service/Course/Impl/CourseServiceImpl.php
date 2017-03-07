@@ -12,6 +12,10 @@ use Topxia\Common\Exception\ResourceNotFoundException;
 
 class CourseServiceImpl extends BaseService implements CourseService
 {
+    public function findCoursesBySchoolId($schoolId)
+    {
+        return $this->getCourseDao()->findCoursesBySchoolId($schoolId);
+    }
 
     public function findCoursesByPopulationClassify($id)
     {
