@@ -1744,7 +1744,7 @@ a.link-muted {
   height: 80px;
 }
 body {
-  background: #f5f8fa;
+  background: #fff;
   word-wrap: break-word;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -2099,7 +2099,7 @@ select:-webkit-autofill {
 .nav > li.nav-more .open.active > a,
 .nav > li.nav-more .open > a:hover,
 .nav > li.nav-more .open > a:focus {
-  background: #e50011 !important;
+  background: #fb081a !important;
   color: #fff !important;
 }
 .navbar-user {
@@ -3023,10 +3023,10 @@ fieldset[disabled] a.btn {
   word-break: break-all;
 }
 .section-gray {
-  background-color: #f5f8fa !important;
+  background-color: #fff !important;
 }
 .section-gray .text-line h5 > span {
-  background-color: #f5f8fa !important;
+  background-color: #fff !important;
 }
 .section-wihte {
   background-color: #fff !important;
@@ -4486,7 +4486,7 @@ a.homework-essay-textarea-pack-up {
   border: none;
 }
 .study-plan-form .phase-name-box:focus {
-  background: #24a159;
+  background: #fb081a;
 }
 .study-plan-form .checkbox {
   padding-left: 70px;
@@ -4497,7 +4497,7 @@ a.homework-essay-textarea-pack-up {
   vertical-align: middle;
 }
 .course-bar {
-  border: 1px solid #f5f8fa;
+  border: 1px solid #fff;
   background-color: #fff;
   color: #919191;
   padding: 5px 15px;
@@ -4519,7 +4519,7 @@ a.homework-essay-textarea-pack-up {
   color: #e28327;
 }
 .course-bar.shift {
-  border: 1px dashed #f5f8fa;
+  border: 1px dashed #fff;
   background-color: #fafafa;
 }
 .panel-fixed {
@@ -4995,7 +4995,7 @@ a.homework-essay-textarea-pack-up {
   }
 }
 .text-line.gray h5 > span {
-  background: #f5f8fa;
+  background: #fff;
 }
 .text-line.small {
   padding: 10px 0;
@@ -5314,7 +5314,7 @@ a.homework-essay-textarea-pack-up {
 .pager > li > a:hover,
 .pager > li > a:focus,
 .pager > li > a.active {
-  background-color: #e8e8e8;
+  background-color: #fb081a;
 }
 .pager .disabled > a,
 .pager .disabled > a:hover,
@@ -5829,7 +5829,7 @@ textarea.form-control-o {
 .btn-default.focus,
 .btn-default.active {
   color: #fff;
-  background-color: #e50011;
+  background-color: #fb081a;
 }
 .btn-primary {
   border-color: #e83227;
@@ -5841,7 +5841,7 @@ textarea.form-control-o {
 .btn-primary.focus,
 .btn-primary.active {
   color: #fff;
-  background-color: #37a967;
+  background-color: #fb081a;
 }
 .btn-success {
   border-color: #56bb2b;
@@ -5853,7 +5853,7 @@ textarea.form-control-o {
 .btn-success.focus,
 .btn-success.active {
   color: #fff;
-  background-color: #5ac32d;
+  background-color: #fb081a;
 }
 .btn-info {
   border-color: #0ba1e4;
@@ -8569,7 +8569,7 @@ textarea {
 }
 .dynamic-section {
   padding-bottom: 20px;
-  background: #f5f8fa;
+  background: #fff;
 }
 .index-group {
   padding-bottom: 3px;
@@ -8687,7 +8687,7 @@ textarea {
 }
 .es-friend-link {
   border-top: 1px solid #e1e8ed;
-  background-color: #f5f8fa;
+  background-color: #fff;
   padding: 20px 0;
 }
 @media (max-width: 767px) {
@@ -11285,7 +11285,7 @@ textarea {
   z-index: 1;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-  background-color: #f5f8fa;
+  background-color: #fff;
   padding: 20px 10px;
 }
 @media (max-width: 767px) {
@@ -12400,11 +12400,11 @@ textarea {
   position: relative;
   min-height: 200px;
   overflow: hidden;
-  background: #f5f8fa url('../img/mobile/mobile_texture.jpg') top center;
+  background: #fff url('../img/mobile/mobile_texture.jpg') top center;
 }
 @media (max-width: 767px) {
   .es-mobile .mobile-third {
-    background: #f5f8fa;
+    background: #fff;
     text-align: center;
   }
 }
@@ -13238,7 +13238,7 @@ textarea {
   padding: 20px 30px;
   color: #fff;
   border-color: #fff;
-  border-bottom: 1px solid #F5F8FA;
+  border-bottom: 1px solid #fff;
 }
 .mark-questions-modal .modal-header .close {
   margin-top: -25px;
@@ -13268,7 +13268,7 @@ textarea {
   color: #616161;
   line-height: 40px;
   text-align: left;
-  background-color: #F5F8FA;
+  background-color: #fff;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
@@ -13334,7 +13334,7 @@ textarea {
   -moz-border-radius: 4px;
   border-radius: 4px;
   cursor: default;
-  background-color: #f5f8fa;
+  background-color: #fff;
 }
 .mark-questions-modal .question-stem-fill-blank {
   color: #313131;
