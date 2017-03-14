@@ -86,6 +86,7 @@
 				font-size: 22px;
 				margin-top: 5px;
 				padding:10px 20px 10px 20px;
+				background: rgba(255, 255, 255, 0.7);
 			}
 			#digset-list dt{
 				margin-top: 10px;
@@ -165,7 +166,7 @@
 				width:75px;
 				height:240px;
 				display: block;
-				background-color: #df5352;
+				background-color: #e50011;
 				color:#fff;
 				text-align: center;
 				font-size: 40px;
@@ -180,7 +181,7 @@
 				justify-content: center;
 			}
 			.shadow{
-				box-shadow: 3px 3px 6px #ababab;
+				box-shadow: 3px 3px 6px #f5f5f5;
 			}
 			.bolder{
 				font-weight: bolder;
