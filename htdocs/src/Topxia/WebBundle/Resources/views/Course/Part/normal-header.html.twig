@@ -99,6 +99,9 @@
           <label>{{'价格'|trans}}</label>
           {% include 'TopxiaWebBundle:Course:Widget/course-price.html.twig' with {shows: ['price', 'discount']} %}
         </p>
+        <p>
+        <a href="#modal" data-toggle="modal" data-url="{{ path('student_add', {id: course.school_id})  }}" class="btn btn-default  js-course-filter" >{{'我要报名该所学校'|trans}}</a>
+        </p>
         {% if course.discountId > 0 %}
           <p class="old-price hidden-sm">
             <label>{{'原价'|trans}}</label>

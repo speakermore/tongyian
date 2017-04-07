@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 测试edusoho
+Source Server         : edusoho
 Source Server Version : 50538
 Source Host           : localhost:3306
 Source Database       : edusoho
@@ -10,13 +10,13 @@ Target Server Type    : MYSQL
 Target Server Version : 50538
 File Encoding         : 65001
 
-Date: 2017-03-02 10:05:12
+Date: 2017-04-07 18:18:07
 */
 
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
--- Table structure for `announcement`
+-- Table structure for announcement
 -- ----------------------------
 DROP TABLE IF EXISTS `announcement`;
 CREATE TABLE `announcement` (
@@ -41,7 +41,7 @@ CREATE TABLE `announcement` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `announcement_bak`
+-- Table structure for announcement_bak
 -- ----------------------------
 DROP TABLE IF EXISTS `announcement_bak`;
 CREATE TABLE `announcement_bak` (
@@ -60,7 +60,7 @@ CREATE TABLE `announcement_bak` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `article`
+-- Table structure for article
 -- ----------------------------
 DROP TABLE IF EXISTS `article`;
 CREATE TABLE `article` (
@@ -108,11 +108,11 @@ INSERT INTO `article` VALUES ('10', '互联网+，让教育拥抱明天', '3', '
 INSERT INTO `article` VALUES ('11', '老魏说 ：定义在线教育的服务标准', '1', '||', '茄葩', '', '1434020003', '<p>老魏（魏建强）个子不高，微憨的面孔看不出一丝温州人该有的精明。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>如果他不出声的话。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>他说话有些嚅嗫，但时有惊人之语，譬如&ldquo;平台就是&lsquo;劣币驱逐良币&rsquo;的过程&rdquo;、&ldquo;教育有三个层次：知识传递、技能传授、道德养成&rdquo;。如果恰巧这时手上有一支烟，那么他的观点能犀利更多。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>站在位于善缘街1号的北京分公司办公室往北望，不到500米就是中关村创业大街。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>前不久，国务院总理李克强刚造访过那里。&ldquo;大众创新，万众创业&rdquo;的热潮在方寸之地奔涌升腾，向全国蔓延开去。被裹挟其中，本就红火的在线教育愈发不可收拾。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>老魏身在局中，但处在一个微妙的位置。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>就像善缘街1号，靠近热潮中心，能借势造势；但又保持一定距离，看清热潮涌动下的波诡云谲。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>他始终很清醒。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>被团队推着出来二次创业</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>老魏做技术出身。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>还在2003年的时候，老魏就创办了一家公司做SaaS（software as a service，软件即服务，茄葩注） 。那时还没有SaaS的概念，企业也不放心把数据交付给第三方平台，于是2006年这家公司就倒闭了。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>老魏掌握的技术很多是从开源软件中学到的，而美国是开源思想的肇始地。带着朝圣般的虔诚，他在初次创业失败后加入了一家知名的美资企业做项目。但后来发现，美国人做项目也不见得周全规划，常常是往大了做，做出规模就行。他心中的&ldquo;圣殿&rdquo;轰然倒塌。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>告别美企，老魏先后加入杭州19楼和天阙科技，均担任技术总监。在这个岗位上，他整合技术团队，理顺产品流程，带着一批有想法的年轻人日夜奋战，帮助公司实现跨越式发展。但最终,老魏发现他所做的并不是自己喜欢做的事情。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>他手底下的团队想和他出来单干。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>老魏开始犹豫。第一次创业失败的经历让他怀疑自己不适合创业，因为除了技术，他别无所长，所以他宁愿寻找下一个雇主，也完全没有另立山头的想法。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>但团队里的年轻人天天游说他一起去创业，老魏越来越招架不住。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&ldquo;他们都觉得我行，我为什么觉得自己不行?&rdquo;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>2011年4月，老魏的离职申请没有获批，他顶住老板软硬兼施的压力，带着3个人做出了好知网，一个知识分享社区。2012年，老魏正式离职。自诩为&ldquo;看过猪跑&rdquo;的他，深谙互联网公司的运作手段。于是活学活用，为好知网带来了大流量，但苦于无法变现。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&ldquo;我们没有教育内容资源，也没有to C的市场能力，唯一不缺的是产品技术实力。既然如此，为什么不发挥我们的优势呢？&rdquo;。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>2012年5月，阔知科技成立；2013年，上线，为培训机构、企业、学校提供在线教育的基础服务，比如一整套的网校解决方案。而自2012年起，国内在线教育开始蓬勃发展；尤其是进入2013年后，在大量风投和私募基金的推动下，新开办的教育网站一度以平均每天2.6家的速度诞生。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>以网校解决方案切入市场赶上了这波风口。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&ldquo;起初没有做大的想法，觉得能养活五六个人的团队就不错了，没想到一炮而红&rdquo;。每三天更新一个版本的速度，口碑传播效应的累积，使得围聚在身边的用户群体越来越大。截至2015年5月，已有超过14000家教育机构在使用的产品，其中不乏上市教育企业的身影。公司也从最初的五六人发展为70多人，连续两年实现营收和获利增长。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>老魏的二次创业有了不错的开局。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>要定义在线教育的服务标准</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>现有的业务主要包括两方面，教育云和开源网络课堂。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>开源网络课堂是一个网校组织，通过线上教学可以让机构更好地适应开源系统，并根据用户的提议更好地满足他们的需求。开源网络课堂的代码是开源的，但是服务不开源，通过给机构提供高附加值的服务来实现营收。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>而教育云是团队独家研发出来的一个云平台，在这里可以充分实现云计算、存储等功能，可以为机构至少减少90%的硬件成本，简单、高效、性价比高是用户选择的普遍原因。在茄葩记者此前的走访中，包括美团云在内不少提供云服务的机构都把教育云视为潜在的竞争对手。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&ldquo;这是一个伪命题&ldquo;，老魏说，&rdquo;教育是需要经营的，我们花了4年时间才打磨出这款产品，并且只专注于教育领域，而其他提供云服务的公司是覆盖多行业的&ldquo;。老魏很自信，他认为自家的教育云在性价比、功能、应用的可行性方面，都处在行业前列。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>目前，教育云只针对既有用户中的商业用户开放。在支撑自身业务的基础上，逐渐向所有非商业用户开放，直至完全面向市场。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>但想要做的不止于此，老魏对在线教育有自己的理解。他认为教育有三个层次，知识传递、技能传授和道德养成，道德养成穿插在第一层次和第二层次当中。已经能在技术上实现知识传递层面的教育需求，接下来要构建服务标准化，满足教育更高层次的需求。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>他以电子商务为例来解释服务的重要性。淘宝和京东等平台提供的多是实物商品，且实现了数据标准化、服务流程化，人们接受程度很高。而在线教育提供的是虚拟商品，先购&ldquo;物&rdquo;后服务，所以对服务的要求非常高。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&ldquo;当前的在线教育没有好的数据标准和服务体系去支撑，就想把既有的录播、直播、短信、文档、问答等形式都当成服务手段之一，再慢慢定义一些服务，比如说7天退款、一对一答疑、定期直播答疑、线下活动、认证证书、就业指导、进度跟踪等。把这些服务定义出来，进而标准化，就有利于培训机构沉淀和组织团队，用有效的管理模式去提供服务。而对用户来说，通过服务的量化实现教育产品的刻画，他就会对在线教育提供的服务有一个具体的认识，更容易接受、消费。&rdquo;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>的目标是每个细分领域都会有与之配套的服务手段，教育机构根据自身特点和规模自由搭配。老魏一点儿也不担心这件事做不成，&ldquo;我们是一个开源组织，拥有庞大的技术生态链，会有很多人加入进来实现它。&rdquo;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>事实上，已经在最近推出的&ldquo;ES班级二期&rdquo;功能中进行了服务标准化的尝试。在这个被老魏定义为&ldquo;国内首个提供了系统化学习、个性化学习、学习过程跟踪管理的一整套强大的互动学习功能&rdquo;中，教学服务被固化下来，包括学习计划指导、24小时阅卷点评、24小时作业批改、提问必答、一对一在线答疑、班级活动和就业指导。老师可以根据实际情况选择班级所能提供的服务内容，其中的学习计划、试卷阅卷点评、作业批改、提问回答、班级活动都可以在线完成。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&ldquo;我们想让定义的服务成为市场上的标准&rdquo;，老魏强调。这才是他要下的棋，教育云不过是整盘棋的一个先手。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>打造一个在未来二十年都有事可做的公司</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>标准不是那么好建立的，和渠道合作在所难免。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>老魏介绍说，会采用低价策略，和渠道合作迅速铺满在线成人教育市场。铺满以后，微小型机构继续用低价去和腾讯课堂、淘宝教育、百度传课等平台竞争，为这部分用户提供一般性服务作为支撑。而对剩下的掌握20%市场份额的大中型机构提供定制化服务，的主要盈利也来源于此。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&ldquo;微小型机构即使一开始没有自有品牌，依靠平台谋生；等它发展好了，也会有脱离平台自立门户的需要，这时候就成了他们的出路&rdquo;。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>老魏直言不讳，真正要做的还是平台。在他眼中，腾讯课堂、淘宝教育、百度传课等平台，是属于知识传递层次的，还无法实现技能传授等高层次需求，最后生源仍然会被机构导回去。因为教育最重的一块是服务，而服务由机构提供。一旦定义了服务标准，就将成为机构不可或缺的一环。&ldquo;谁掌握了机构，谁才是强势的玩家&rdquo;。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>他冷静地看着2015年以来的在线教育平台大战：前新东方执行总裁陈向东创办的O2O学习服务电商平台跟谁学创下A轮融资5000万美元的新纪录；YY旗下100教育未来两年要烧10亿投入在线教育平台建设；移动互联网教育产品导购平台决胜网推出决胜通帮助中小机构实现网络营销；而真正平台出身的淘宝教育则宣称要在未来一年帮助至少一万家线下教育机构向线上转型&hellip;&hellip;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&ldquo;他们扮演的都是开路者的角色，让互联网教育能覆盖到那些传统教育覆盖不到的人群，让更多人接触并认识到在线教育，这是非常无畏，非常了不起的。&rdquo;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>老魏想做成一家在未来二十年都有事可做的公司，为了这个目标他婉拒了一些财务投资和并购邀约。&ldquo;拿了上市公司的钱就要站队，无形中砍掉了一大半市场份额，无异于自废武功；而很多财务投资机构不理解我们的商业模式，钱进来了反而对发展不利&rdquo;。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>他有拒绝的底气，早就实现盈利，今年的营收按当前发展也能预期完成。在去年5月拿到的天使投资至今一分钱也没有&ldquo;烧&rdquo;。他不想被资本推着走，吹完泡泡就散了，而是想踏踏实实做好计划的事，努力实现个人价值和公司价值，给社会留下点真正有用的东西。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>为什么是二十年？我问老魏。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&ldquo;因为二十年后我就要退休了啊！&rdquo;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>老魏1977年生人。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>在人生的头一个二十年，他接触了计算机和互联网。还在太原上大学的时候，和室友凑30元钱去网吧用586计算机上一个小时的网，对他来说就是最幸福的事。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>在人生的第二个二十年，他选择互联网创业。等再回太原和同学聚会，觥筹交错间，昔日同窗对他一把年纪还折腾创业不能理解。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>老魏说，他不在乎别人的看法，他就是喜欢做技术。</p>\r\n', '', '', '', 'published', '33', '0', '0', '1', '0', '0', '1', '1434020054', '1481252927', '1', '1.');
 INSERT INTO `article` VALUES ('12', '职业教育如何“互联网+”', '3', '||', '', '', '1434020075', '<p>5月10日，首届&ldquo;职业教育活动周&rdquo;在北京举行了全国启动仪式，克强总理的重要批示也指出：加快发展现代职业教育，是发挥我国巨大人力优势、促进大众创业、万众创新的战略之举。国务院副总理刘延东则进一步指出：技术技能筑牢强国基石，职业教育成就出彩人生，要大力发展职业教育，将其摆在经济社会发展和教育综合改革的突出位置、优先支持，加快构建现代职业教育体系。这是国家加快发展现代职业教育的又一重大举措。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>&ldquo;互联网+</strong><strong>&ldquo;融合传统企业&nbsp;</strong><strong>需要大量专业人才</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>影响职业教育的因素有社会、政治、经济、文化、教育等多个方面，其中经济是在影响职业教育的主要因素。经济因素则主要有：GDP增长状况、经济发展水平、经济发展模式、市场的理性化程度、产业结构、企业结构、劳动力市场模式、劳动力失业状况等几个方面。在产业结构方面，现代职业教育制度的建立，规模的大量扩充，以及现代意义上的职业教育课程的建立，在很大程度上得益于工业革命。工业革命使得产业结构由农业为主转向了以工业为主，才使得现代职业教育的发展成为可能。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>当前正处于全产业的转型升级大时代，在互联网+战略的推动下，工业4.0正在让生产车间发生着巨大的变化，数据化、智能化、连接化、信息化是将来生产制造车间的主流技术。这同时也对从业职工有了更高的要求，总体上中国的生产制造正在生产智造迈进，这也是第三次工业革命的主要的内容。譬如，机器人技术、人工智能以及3D打印在接下来也会成为工业生产的主流，虽然这几项技术会让从业人员越来越，但对从业人员的技术要求也越来越高，从业人员必须懂的机器人工作原理及流程、人机交互以及3D建模等技术。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>简单来讲，未来劳动密集型企业已经越来越少，取而代之的是精工作业，需要大量的职业教育培训机构培养更多的具备高等技术的人才。这一点，我在《&ldquo;互联网+&rdquo;未来发展十大趋势》中也提到过，职业教育在互联网+时代会是一个大的热门，服务于企业转型升级的中间商将需要大量的懂互联网能具体操作的人才，这个人才缺口将会非常的巨大，有非常可观的市场。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>当前职业教育的几种类型</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>根据相关数据统计，目前已知的融资在天使到C轮之间职业培训类的教育项目在180家以上，跟广义上的在线教育项目相似，目前职业培训基本模式都为工具类、平台类、网校类等几种。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>工具类：工具类是以一个教学工具为出发点的职业教育，即针对某一种职业或者该职业的细分领域做一个工具类的APP。由于操作简单且能满足精准人群的需求，可以在短时间内累积大量用户，譬如有道词典等就是这一类教育。工具类职业教育的特点是小而轻盈，迭代渐进，容易成功，同时达到用户量之后也可以扩展为平台。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>平台类：现在来看，平台型在线教育是各种在线教育发展的主流，不管任何种类的职业教育最终都会成为一个平台。平台可以累积大量的两端用户，也是传统教育进行在线教育试水的首选。平台类的特点是大而通吃，布局未来，缺点是投入大、风险大，需要快速积聚大量的资源。2014倒闭的在线教育机构中，相当一部分是平台型。目前来看，BAT等网络巨头布局的在线教育都是平台型。同时，大型的平台无法针对细分领域进行服务，而小的机构却能够灵活的针对学员实际情况进行反应。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>网校：网校的特点在于，只要具备上网条件即可以在任何时间、任何地点接入互联网，自主地选择学习内容。相对于面授教育而言，网络教育最大限度地突破了教育的时空限制，是师生分离、非面对面组织的教学活动，是一种跨学校、跨地区的教育体制和教学模式。网校可以融合工具类以及平台型等各种类型，在教学对象上也可以是B2B或者B2C等，形式相对比较灵活，同时内容一般比较丰富。网校有综合教育类也有垂直教育类，其中职业教育最受欢迎。据网校平台搭建商数据显示，垂直职业教育更容易吸收学员和留住学员。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>职业教育如何把握&ldquo;互联网+</strong><strong>&rdquo;时代</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>从当前经济发展以及教育的大背景来看，以往的职业培训已经不适合&ldquo;互联网+&rdquo;时代。一方面是教学内容上，传统职业教育的内容无法更好的适应当前行业的转型职业人才的需求;另一方面是教学形式上，即便是一些在线职业教育也仍旧沿袭过去的教育方式，对于培训出技术过硬的学生的专业人才的帮助不是很大。这就使得，大部分参与职业培训的人员都无法直接在企业内上岗，仍旧需要在岗培训很久才能真正入职。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&ldquo;互联网+&rdquo;时代下的的职业教育应该如何做?其实也没有太难，职业培训一方面是通过培训让某些人具备从事某个职业的技巧，另一方面是让企业能够找到引入就能工作的职业人才。基于以上两个方面，要做职业培训至少要做到以下几点：</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>首先要了解市场与需求。你要做的是广义上的职业培训还是某个领域的垂直培训，市场有多大，要为哪些人提供哪些服务，是否能了解这部分人的刚性以及隐性需求。</p>\r\n\r\n<p>其次，搞明白做职业教育需要的资源有哪些。你所把握的资源有哪些，没有的资源通过什么方式如何去获取等等，不要去做只有idea而其他一切条件都不具备的无意义的创业。</p>\r\n\r\n<p>第三，在了解市场、明白用户人群、拥有一定资源的基础上，进一步了解整个产业链的情况。从上游、中游、下游等各环节寻找还没有人做或者所有人都做的不好的点，然后以这个点为突破口做一些有些改变的事，一定是能够解决用户痛点的事。</p>\r\n\r\n<p>第四，本质上都是做电商。在模式方面，还要明白无论你是网校模式，做平台还是靠工具来满足用户的某个点，在本质上最终要做的还是电商，但是前期首先要积累足够的用户，不然什么模式都是白扯。</p>\r\n\r\n<p>第五，除了以上几点，职业教育要尽量与企业直接关联。与企业的衔接越紧密越好，甚至可以由企业的人为学生授课，职业教育的供应链与价值链能否延长乃至下沉到企业内部，是职业教育能否做成功关键。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>从现在主流职业培训教学模式上，基本上体现的是O2O、资源、职业体系等几个关键词。当然更重要的是要做到教学内容符合实际，其实职业培训已经是当前互联网及传统企业都离不开的工作内容。要进一步做好职业培训，还要求将来的职业教育最基本要做到人才梯度、培训体系、产品理念、线下线上O2O渠道等几方面的建设与研究，这也算是&ldquo;互联网+&rdquo;时代对职业教育乃至教育全行业的一个更高标准的要求。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>未来的&ldquo;互联网+教育&rdquo;，会向智慧教育的方向发展，大数据、云计算、人工智能、虚拟现实等都将让在线教育的形式更加多元化与人性化。这同时也要求从事职业教育等在线教育的人也要具备更高的技能。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>以此，不管社会发展到什么时代，职业教育都会是各行业刚需。</p>\r\n', '', '', '', 'published', '26', '0', '1', '0', '0', '0', '1', '1434020102', '1484823187', '1', '1.');
 INSERT INTO `article` VALUES ('13', '用互联网+的思维探索教育的未来', '3', '||', '', '', '1434020115', '<p>想象一下，一个北京公司白领在上班的地铁上，通过手机上了一堂美国普林斯顿大学的企业管理课，一个西藏偏远牧区的孩子蹲在电脑前，听北京黄城根小学的老师讲授音乐课&hellip;&hellip;这是什么？这就是&ldquo;互联网+教育&rdquo;的理想场景，不分国界、不分老幼，随时随地接触全球最好的教育资源。如今，它正在破土而出、蓄势待发。它带来变革、带来冲击，也带来更多新的希望。</p>\r\n\r\n<p><strong>对传统的冲击</strong></p>\r\n\r\n<p>&ldquo;互联网+教育&rdquo;将会打破既有教育体系。在古代，由于师资力量有限，接受教育成为&ldquo;官二代&rdquo;&ldquo;富二代&rdquo;等少数人的专利和特权，绝大多数平民百姓一辈子也没有触摸笔墨的机会，所谓&ldquo;万般皆下品，唯有读书高&rdquo;。近代以来，全球大多数国家开始普及义务教育，学习开始进入寻常百姓家，大部分人能够接受九年的正规学校教育。互联网时代，教育完全突破时空限制，一根网线和一台终端就可以链接全世界的教育课件，全民教育和终身教育成为现实。无论何地，人们都可以利用碎片化的时间从互联网获得教育，是真正意义的&ldquo;活到老，学到老&rdquo;，&ldquo;受教育年限&rdquo;的概念将逐渐消失。</p>\r\n\r\n<p>&ldquo;互联网+教育&rdquo;将重新定义学校和老师。互联网时代，以信息为载体的优质教育资源不再聚集和局限在有限的几所学校，而是可以近乎无成本地均匀分布在每个学校，届时&ldquo;名师&rdquo;的定语不再是学校，&ldquo;择校&rdquo;这个词将会消失。同时，传统教育体制下，教师是学生学习知识的全部世界。&ldquo;互联网+教育&rdquo;环境下，教师更多的是作为一扇可以观看外面风景的窗口。如何引导学生从&ldquo;知之者&rdquo;变成&ldquo;好之者&rdquo;，更进一步变成&ldquo;乐之者&rdquo;将是教师的主要作用。</p>\r\n\r\n<p><strong>认识的误区</strong></p>\r\n\r\n<p>有人认为，&ldquo;互联网+教育&rdquo;就是未来教育的全部，在互联网上可以得到所有课堂上的知识，这是把教育简单地等同于知识的灌输。爱因斯坦说：&ldquo;学校的目标始终应当是：青年人在离开学校时，是作为一个和谐的人，而不是作为一个专家。&rdquo;互联网可以&ldquo;教之以事&rdquo;，却不能&ldquo;喻诸德也&rdquo;，遑论培养高尚的情操和完整的人格。特别是对于义务教育阶段的中小学生，老师面对面情感交流的意义尤为重要，其作用&ldquo;身教重于言传&rdquo;，这显然是单凭互联网无法做到的，线上线下相结合是未来教育的必然。</p>\r\n\r\n<p>有人认为，&ldquo;互联网+教育&rdquo;就是提了好多年的教育信息化，不过是新瓶装旧酒而已。应该看到，不同于之前的教育信息化或者教育互联网，&ldquo;互联网+教育&rdquo;不是简单地把互联网套在传统教育的躯壳上，而是把互联网的理念浇灌和渗透到教育的最深处，努力催生出新的教育模式和方法。互联网的作用不仅仅局限于传统的课件演示、网络课堂和作业、教育管理系统信息化等，而是从&ldquo;育人&rdquo;的根本目的出发，重新考虑如何把互联网作为手段和方法。应该讲，&ldquo;教育互联网&rdquo;和&ldquo;互联网教育&rdquo;具有本质区别。</p>\r\n\r\n<p>有人认为，&ldquo;互联网+教育&rdquo;并不适应中国的教育方式，同时认为，与西方强调优先激发学生学习兴趣的&ldquo;引&rdquo;的教育方式相比，中国强调优先把知识传递给学生的&ldquo;授&rdquo;的教育方式具有很大的优势，有必要强化中国在这方面的教育优势，其实这是一种误区，因为从效果看，&ldquo;授&rdquo;只在基础知识传输上有优势，而在激发学生创造思维上并无优势。以自由学习为特征的&ldquo;互联网+教育&rdquo;毫无疑问会打破中国的这种模式。夯实学生的基础知识固然重要，但是激发学生的学习热情、保持永远的学习激情则更为重要。</p>\r\n\r\n<p><strong>发展的关键</strong></p>\r\n\r\n<p>传统学校和老师如何适应信息领域的新技术和新应用，是决定&ldquo;互联网+教育&rdquo;能否进入正轨的首要问题。毫无疑问，互联网正在逐步瓦解传统的教育体系。作为教育网络中的结点，学校特别是大学和民间培训机构面临巨大的不确定性。学生从无法选择老师到近乎可以从全世界找到自己喜欢的老师，&ldquo;互联网+教育&rdquo;将会&ldquo;消灭&rdquo;大多数平庸的老师。国外甚至有人断言：&ldquo;未来全球只需要三所大学：哈佛大学、耶鲁大学和牛津大学。&rdquo;本质上讲，教育互联网领域的这种&ldquo;马太效应&rdquo;是一种社会进步的表现，它可以从教育领域解放更多的人力去从事其他有益工作。学校和老师必须以互联网的意识和心态去平和面对现实。</p>\r\n\r\n<p>&ldquo;互联网+教育&rdquo;如何吸引全社会资源投入其中并形成良性循环也至关重要。互联网信息近乎零成本扩散和传递的属性，使得互联网教育难以像传统培训机构那样依靠教室的物理实体来限制知识&ldquo;外泄&rdquo;，从而实现重复授课并获利。目前，即便是全球最有名的美国Udacity、Coursera和edX等三大MOOC也没有找到合适的商业模式，从事互联网教育的企业如何实现持续盈利成为当前难以破解的难题，而作为我国的互联网教育企业，像、学堂在线、华文慕课等，如何持续创新，也是&ldquo;互联网+教育&rdquo;能否实现可持续发展的关键。解决这一问题，还需要从互联网本身的逻辑去剖析。回看互联网的发展历史，成功的互联网企业从来就没有直接依靠&ldquo;出售&rdquo;信息或者提供信息&ldquo;通道&rdquo;获利的，谷歌、雅虎、亚马逊如此，百度、网易、阿里巴巴、腾讯也是如此，他们都是采取所谓&ldquo;羊毛出在狗身上&rdquo;的策略，以免费聚人气，再在人气上做文章。&ldquo;互联网+教育&rdquo;或者教育的互联网化，要想实现快速且可持续发展，就不能从传统教育方式中找寻答案，而是应从互联网思维的角度去探索未来。</p>\r\n', '', '', '', 'published', '23', '0', '1', '0', '0', '0', '1', '1434020134', '1483925953', '1', '1.');
-INSERT INTO `article` VALUES ('14', '精品资源共享课程与MOOC的碰撞', '3', '||', '数字化阅读服务团队', '', '1434020145', '<p><span style=\"font-size:16px\"><strong>精品资源共享课程建设背景</strong></span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>由国家教育部主导、全国高等院校广泛参与的精品课程建设，到现在已经有十多年了。作为开放教育资源运动的一部分，我国的精品课程建设取得了较为明显的成效。精品课程量多面广，吸引了众多教师和学生的关注，为推动教学改革创新及优质资源共享做出了贡献。但是，精品课程在建设中也逐渐显现出了课程资源不丰富、课程共享性不强、网站开发更新不足、师生交互性不够等问题。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&ldquo;十二五&rdquo;期间，教育部提出将精品课程转型升级为精品资源共享课程。精品资源共享课程是精品课程的继承和发展，是在原精品课程建设成果的基础上优化结构、转型升级。大学英语作为一门重点的全国通用公共基础课程，其资源建设和共享的需求甚为迫切。在总结前期精品课程建设经验和教训的基础上，建设大学英语精品资源共享课程，对于巩固大学英语精品课程建设成果、推动大学英语教学的改革创新和转型发展有着重要的作用。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:16px\"><strong>精品资源共享课程与</strong><strong>MOOC</strong><strong>的比较</strong></span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>精品资源共享课程与MOOC的建设目标是相似的，都是为学习者提供优质的课程资源，建设具有完善教学环节的在线课程，促进教育教学观念的转变和教学方法的变革与创新，服务学习型社会建设，但两者在以下四个方面有着一些差异。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>1.</strong><strong>教学资源</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>我国精品资源共享课程以大量的基础课和专业课为重点，以课程资源系统、丰富和适合网络传播为基本要求，经过国家、省、校三级建设，形成普通本科教育、高等职业教育、网络教育等多层次、多类型的优质课程教学资源共建共享体系，为高校师生和社会学习者提供优质课程教学资源。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>MOOC是一个国际性的教育平台，国内外众多知名大学的加入，使得它吸收了不同国家、不同语言和不同文化背景的课程，课程内容覆盖了从自然科学到人文科学的众多学科。MOOC打破了学校的&ldquo;围墙&rdquo;，甚至是国家的&ldquo;围墙&rdquo;，让优质的教育资源不受时间和空间限制，为学习者提供给一个更为丰富和便捷的知识仓库。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>2.</strong><strong>教学规模</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>精品资源共享课程是以高校教师和学生为服务主体，同时面向社会学习者开放。但国家精品课程资源中心发布的统计数据显示，虽然近几年注册使用精品课程的人数在不断上升，但相对于全国高校师生总数而言，使用人数相当少，社会学习者注册和使用率就更低了。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>而MOOC以其大规模著称，如2011年美国斯坦福大学的《人工智能导论》课程，吸引了来自全球的16万名学生注册学习。MOOC还具有开放性强和组织灵活的特点，它的授课对象非常广泛，从学生到工人、农民、公司职员或退休人员，凡是想学习的都可以参与到MOOC中，根据自己的学习兴趣和时间来进行学习。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>3.</strong><strong>教学设计</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>精品资源共享课程采用自主学习和教师指导教与学相结合的模式。学习者经由课程导学系统进入各教学单元的学习，通过阅读电子教案或课件、观看教学视频进行课程学习，再通过作业系统进行练习，最后还可以通过考试系统进行自测。但是，很多课程的教学视频往往是教师的课堂教学实况录像，时间较长，重点不突出，容易使学习者失去学习积极性。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>MOOC与以往的网络公开课不同，不再仅仅是视频授课，而是实现了教学课程的全程参与。在MOOC这个平台上，学习者可以完成上课、做作业、分享观点、参加考试、获得分数、甚至是拿到证书的整个过程。MOOC中的视频一般只有10分钟左右，知识点更细化，既符合了学习者的最佳注意力时长，又能帮助学习者抓住学习重点。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>4.</strong><strong>互动交流与评价</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>精品资源共享课程的互动交流模块或答疑模块，经常设在每个课程网站的首页，主要采用BBS在线问答或电子邮件的方式，学习者在学习中有疑难，可以观看前人留下的讨论发言帖、也可以自己发帖提出问题，或是按网站提供的地址给教师发送电子邮件。但这些交流和答疑方式，存在提问和回答时间的延误，有一定的局限性，不能进行畅通的沟通，不能及时解决学习者的疑难问题，会影响学习者的学习积极性和主动性。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>MOOC则提供了方便的交流平台，在每个视频的旁边都设有对应的讨论区，学习者在学习过程中遇到问题，可以随时在讨论区提出问题，与其他学习者一起讨论解决问题，或是得到授课教师或助教的解答。MOOC还结合运用机器判分和学习者互评的方式，对学习者的课程学习情况、作业完成情况和课程最终考试进行评价，学习者可以及时了解自己的知识学习和掌握情况。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>对于&nbsp;MOOC&nbsp;而言，平台和课程都是必不可少的组成部分。平台问题可以选择入住，比如coursera、华文慕课、学堂在线等；平台搭建也可以选择慕课等平台搭建服务商。而就内容而言，无论是精品资源共享课程还是MOOC课程，都是极为有利于我们更新教育教学观念，探索新的建设与使用模式。</p>\r\n', '', '', '', 'published', '43', '0', '1', '0', '0', '0', '1', '1434020212', '1483436339', '1', '1.');
+INSERT INTO `article` VALUES ('14', '精品资源共享课程与MOOC的碰撞', '3', '||', '数字化阅读服务团队', '', '1434020145', '<p><span style=\"font-size:16px\"><strong>精品资源共享课程建设背景</strong></span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>由国家教育部主导、全国高等院校广泛参与的精品课程建设，到现在已经有十多年了。作为开放教育资源运动的一部分，我国的精品课程建设取得了较为明显的成效。精品课程量多面广，吸引了众多教师和学生的关注，为推动教学改革创新及优质资源共享做出了贡献。但是，精品课程在建设中也逐渐显现出了课程资源不丰富、课程共享性不强、网站开发更新不足、师生交互性不够等问题。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&ldquo;十二五&rdquo;期间，教育部提出将精品课程转型升级为精品资源共享课程。精品资源共享课程是精品课程的继承和发展，是在原精品课程建设成果的基础上优化结构、转型升级。大学英语作为一门重点的全国通用公共基础课程，其资源建设和共享的需求甚为迫切。在总结前期精品课程建设经验和教训的基础上，建设大学英语精品资源共享课程，对于巩固大学英语精品课程建设成果、推动大学英语教学的改革创新和转型发展有着重要的作用。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:16px\"><strong>精品资源共享课程与</strong><strong>MOOC</strong><strong>的比较</strong></span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>精品资源共享课程与MOOC的建设目标是相似的，都是为学习者提供优质的课程资源，建设具有完善教学环节的在线课程，促进教育教学观念的转变和教学方法的变革与创新，服务学习型社会建设，但两者在以下四个方面有着一些差异。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>1.</strong><strong>教学资源</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>我国精品资源共享课程以大量的基础课和专业课为重点，以课程资源系统、丰富和适合网络传播为基本要求，经过国家、省、校三级建设，形成普通本科教育、高等职业教育、网络教育等多层次、多类型的优质课程教学资源共建共享体系，为高校师生和社会学习者提供优质课程教学资源。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>MOOC是一个国际性的教育平台，国内外众多知名大学的加入，使得它吸收了不同国家、不同语言和不同文化背景的课程，课程内容覆盖了从自然科学到人文科学的众多学科。MOOC打破了学校的&ldquo;围墙&rdquo;，甚至是国家的&ldquo;围墙&rdquo;，让优质的教育资源不受时间和空间限制，为学习者提供给一个更为丰富和便捷的知识仓库。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>2.</strong><strong>教学规模</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>精品资源共享课程是以高校教师和学生为服务主体，同时面向社会学习者开放。但国家精品课程资源中心发布的统计数据显示，虽然近几年注册使用精品课程的人数在不断上升，但相对于全国高校师生总数而言，使用人数相当少，社会学习者注册和使用率就更低了。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>而MOOC以其大规模著称，如2011年美国斯坦福大学的《人工智能导论》课程，吸引了来自全球的16万名学生注册学习。MOOC还具有开放性强和组织灵活的特点，它的授课对象非常广泛，从学生到工人、农民、公司职员或退休人员，凡是想学习的都可以参与到MOOC中，根据自己的学习兴趣和时间来进行学习。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>3.</strong><strong>教学设计</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>精品资源共享课程采用自主学习和教师指导教与学相结合的模式。学习者经由课程导学系统进入各教学单元的学习，通过阅读电子教案或课件、观看教学视频进行课程学习，再通过作业系统进行练习，最后还可以通过考试系统进行自测。但是，很多课程的教学视频往往是教师的课堂教学实况录像，时间较长，重点不突出，容易使学习者失去学习积极性。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>MOOC与以往的网络公开课不同，不再仅仅是视频授课，而是实现了教学课程的全程参与。在MOOC这个平台上，学习者可以完成上课、做作业、分享观点、参加考试、获得分数、甚至是拿到证书的整个过程。MOOC中的视频一般只有10分钟左右，知识点更细化，既符合了学习者的最佳注意力时长，又能帮助学习者抓住学习重点。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>4.</strong><strong>互动交流与评价</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>精品资源共享课程的互动交流模块或答疑模块，经常设在每个课程网站的首页，主要采用BBS在线问答或电子邮件的方式，学习者在学习中有疑难，可以观看前人留下的讨论发言帖、也可以自己发帖提出问题，或是按网站提供的地址给教师发送电子邮件。但这些交流和答疑方式，存在提问和回答时间的延误，有一定的局限性，不能进行畅通的沟通，不能及时解决学习者的疑难问题，会影响学习者的学习积极性和主动性。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>MOOC则提供了方便的交流平台，在每个视频的旁边都设有对应的讨论区，学习者在学习过程中遇到问题，可以随时在讨论区提出问题，与其他学习者一起讨论解决问题，或是得到授课教师或助教的解答。MOOC还结合运用机器判分和学习者互评的方式，对学习者的课程学习情况、作业完成情况和课程最终考试进行评价，学习者可以及时了解自己的知识学习和掌握情况。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>对于&nbsp;MOOC&nbsp;而言，平台和课程都是必不可少的组成部分。平台问题可以选择入住，比如coursera、华文慕课、学堂在线等；平台搭建也可以选择慕课等平台搭建服务商。而就内容而言，无论是精品资源共享课程还是MOOC课程，都是极为有利于我们更新教育教学观念，探索新的建设与使用模式。</p>\r\n', '', '', '', 'published', '44', '0', '1', '0', '0', '0', '1', '1434020212', '1489479364', '1', '1.');
 INSERT INTO `article` VALUES ('15', '世界那么大，后台那么新，教你如何不迷失~', '1', '||', '', '', '1434020236', '<div>\r\n<div>\r\n<p><span style=\"font-size:16px\">为了让整个网校后台能够更加便捷的进行管理，我们在本次的1.0版本中对后台进行了</span><span style=\"font-size:20px\"><span style=\"color:rgb(51, 204, 153)\"><strong>全面升级</strong></span></span><span style=\"font-size:16px\">，重新梳理调整了一些菜单和功能的位置。具体的调整内容有如下五点：</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong><span style=\"font-size:20px\"><span style=\"color:rgb(51, 204, 153)\">一、</span>调整</span></strong><span style=\"font-size:16px\">了一级导航，更为简洁清晰。</span></p>\r\n\r\n<ol>\r\n	<li><span style=\"font-size:16px\">&ldquo;班级&rdquo;整合到了&ldquo;课程&rdquo;下；</span></li>\r\n	<li><span style=\"font-size:16px\">&ldquo;应用&rdquo;整合到了新的&ldquo;教育云&rdquo;下；</span></li>\r\n	<li><span style=\"font-size:16px\">&ldquo;内容&rdquo;、&ldquo;小组&rdquo;整合到了新的&ldquo;运营&rdquo;菜单下。</span></li>\r\n</ol>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:20px\"><span style=\"color:rgb(51, 204, 153)\"><strong>二、</strong></span><strong>统一</strong></span><span style=\"font-size:16px\">菜单功能组织逻辑，<em><strong>设置就只管设置，运营就只管运营</strong></em>，区分内容运营和功能设置。</span></p>\r\n\r\n<ol>\r\n	<li><span style=\"font-size:16px\">所有功能设置都放置于&ldquo;系统&rdquo;菜单下；</span></li>\r\n	<li><span style=\"font-size:16px\">跟教育云相关的都放置于&ldquo;教育云&rdquo;菜单下；</span></li>\r\n	<li><span style=\"font-size:16px\">所有内容运营的功能（包括内容条目、记录、统计、推荐、公告等）都放置于&ldquo;用户&rdquo;、&ldquo;课程&rdquo;、&ldquo;运营&rdquo;等菜单下。</span></li>\r\n</ol>\r\n\r\n<p><span style=\"font-size:16px\">这样整理后，将功能根据职责来区分更容易理解，更方便管理员找到相关的功能，同时也为以后的功能扩展、权限系统打下了基础。</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:20px\"><span style=\"color:rgb(51, 204, 153)\"><strong>三、</strong></span><strong>梳理</strong></span><span style=\"font-size:16px\">一些二级导航，进行了调整，逻辑上更为清晰，功能更容易查找。</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:20px\"><strong><span style=\"color:rgb(51, 204, 153)\">四、</span>新增&ldquo;常用功能</strong></span><span style=\"font-size:16px\"><span style=\"font-size:20px\"><strong>&rdquo;</strong></span>的便捷设置。只要把某个功能页面添加到&ldquo;常用功能&rdquo;，您就可以在后台任何位置快速跳转到相关的页面，省却了繁琐的路径记忆和多次点击。</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong><span style=\"font-size:20px\"><span style=\"color:rgb(51, 204, 153)\">五、</span>新增&ldquo;网校公告</span></strong><span style=\"font-size:16px\"><strong><span style=\"font-size:20px\">&rdquo;</span></strong>，发布的公告将显示在网校首页顶部导航下，支持超链接，支持展示多个公告，让您能够把一些重要信息方便的通知到所有访问网站的用户。</span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:20px\"><strong><span style=\"color:rgb(51, 204, 153)\">六、</span></strong>新版后台结构图</span></p>\r\n\r\n<p><strong><span style=\"font-size:16px\">1、管理后台</span></strong></p>\r\n\r\n<p><img alt=\"\" src=\"http://www.qiqiuyu.com/files/default/2015/04-22/1029222c9e0f533740.png?5.3.2\" /></p>\r\n\r\n<p><span style=\"font-size:16px\"><strong>2、用户</strong></span></p>\r\n\r\n<p><img alt=\"\" src=\"http://www.qiqiuyu.com/files/default/2015/04-22/1030582f08d6268490.png?5.3.2\" /></p>\r\n\r\n<p><span style=\"font-size:16px\"><strong>3、课程</strong></span></p>\r\n\r\n<p><img alt=\"\" src=\"http://www.qiqiuyu.com/files/default/2015/04-22/103111fad3f4250730.png?5.3.2\" /></p>\r\n\r\n<p><span style=\"font-size:16px\"><strong>4、运营</strong></span></p>\r\n\r\n<p><img alt=\"\" src=\"http://www.qiqiuyu.com/files/default/2015/04-22/1031280ac6d8012190.png?5.3.2\" /></p>\r\n\r\n<p><span style=\"font-size:16px\"><strong>5、订单</strong></span></p>\r\n\r\n<p><img alt=\"\" src=\"http://www.qiqiuyu.com/files/default/2015/04-22/103140cba6bd607883.png?5.3.2\" /></p>\r\n\r\n<p><span style=\"font-size:16px\"><strong>6、账务</strong></span></p>\r\n\r\n<p><img alt=\"\" src=\"http://www.qiqiuyu.com/files/default/2015/04-22/103608852126780909.png?5.3.2\" /></p>\r\n\r\n<p><span style=\"font-size:16px\"><strong>7、教育云</strong></span></p>\r\n\r\n<p><img alt=\"\" src=\"http://www.qiqiuyu.com/files/default/2015/04-22/103625949bbf602788.png?5.3.2\" /></p>\r\n\r\n<p><span style=\"font-size:16px\"><strong>8、系统</strong></span></p>\r\n\r\n<p><img alt=\"\" src=\"http://www.qiqiuyu.com/files/default/2015/04-22/103642a10ce0253586.png?5.3.2\" /></p>\r\n\r\n<p>&nbsp;</p>\r\n</div>\r\n\r\n<div>&nbsp;</div>\r\n</div>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<div>&nbsp;分享到</div>\r\n\r\n<div>&nbsp;</div>\r\n', '', '', 'http://www.qiqiuyu.com/files/default/2015/04-22/1029222c9e0f533740.png?5.3.2', 'published', '51', '0', '0', '1', '0', '0', '1', '1434020304', '1484539198', '1', '1.');
 
 -- ----------------------------
--- Table structure for `article_category`
+-- Table structure for article_category
 -- ----------------------------
 DROP TABLE IF EXISTS `article_category`;
 CREATE TABLE `article_category` (
@@ -139,7 +139,7 @@ INSERT INTO `article_category` VALUES ('2', '推荐资讯', 'recommend', '10', '
 INSERT INTO `article_category` VALUES ('3', '同言资讯', 'tongyan', '0', '1', '', '', '', '1', '0', '1432287805');
 
 -- ----------------------------
--- Table structure for `article_like`
+-- Table structure for article_like
 -- ----------------------------
 DROP TABLE IF EXISTS `article_like`;
 CREATE TABLE `article_like` (
@@ -156,7 +156,7 @@ CREATE TABLE `article_like` (
 INSERT INTO `article_like` VALUES ('1', '1', '1', '1434020560');
 
 -- ----------------------------
--- Table structure for `batch_notification`
+-- Table structure for batch_notification
 -- ----------------------------
 DROP TABLE IF EXISTS `batch_notification`;
 CREATE TABLE `batch_notification` (
@@ -178,7 +178,7 @@ CREATE TABLE `batch_notification` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `blacklist`
+-- Table structure for blacklist
 -- ----------------------------
 DROP TABLE IF EXISTS `blacklist`;
 CREATE TABLE `blacklist` (
@@ -194,7 +194,7 @@ CREATE TABLE `blacklist` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `block`
+-- Table structure for block
 -- ----------------------------
 DROP TABLE IF EXISTS `block`;
 CREATE TABLE `block` (
@@ -224,7 +224,7 @@ INSERT INTO `block` VALUES ('10', '1', '			<div class=\"swiper-slide swiper-hidd
 INSERT INTO `block` VALUES ('11', '1', '<section class=\"feature-banner\" style=\"background: #e2133a\">\n		<a href=\"/#?6.17.0\" target=\"_blank\">\n			<img class=\"img-responsive\" src=\"/themes/jianmo/img/banner_poster.jpg?6.17.0\" alt=\"图片１的描述\">\n		</a>\n	</section>', 'jianmo:advertisement_banner', '{\"middleImg\":[{\"src\":\"\\/themes\\/jianmo\\/img\\/banner_poster.jpg\",\"alt\":\"\\u56fe\\u7247\\uff11\\u7684\\u63cf\\u8ff0\",\"href\":\"#\",\"target\":\"_blank\"}],\"middleBackground\":[{\"value\":\"#e2133a\"}]}', '1462093327', '1462093327', '1', '8');
 
 -- ----------------------------
--- Table structure for `block_history`
+-- Table structure for block_history
 -- ----------------------------
 DROP TABLE IF EXISTS `block_history`;
 CREATE TABLE `block_history` (
@@ -356,7 +356,7 @@ INSERT INTO `block_history` VALUES ('112', '9', null, '{\"firstColumnText\":[{\"
 INSERT INTO `block_history` VALUES ('113', '9', null, '{\"firstColumnText\":[{\"value\":\"\\u5173\\u4e8e\\u6211\\u4eec\"}],\"firstColumnLinks\":[{\"value\":\"\\u5173\\u4e8e\\u540c\\u8a00\",\"href\":\"http:\\/\\/www.kmbdqn.com\",\"target\":\"_blank\"},{\"value\":\"\\u7ba1\\u7406\\u56e2\\u961f\",\"href\":\"http:\\/\\/www.kmbdqn.com\",\"target\":\"_blank\"},{\"value\":\"\\u540c\\u8a00\\u52a8\\u6001\",\"href\":\"http:\\/\\/www.kmbdqn.com\",\"target\":\"_blank\"},{\"value\":\"\\u798f\\u5229\\u5f85\\u9047\",\"href\":\"http:\\/\\/www.kmbdqn.com\",\"target\":\"_self\"},{\"value\":\"\\u62db\\u8058\\u4fe1\\u606f\",\"href\":\"http:\\/\\/www.kmbdqn.com\",\"target\":\"_self\"}],\"secondColumnText\":[{\"value\":\"\\u670d\\u52a1\\u4fdd\\u969c\"}],\"secondColumnLinks\":[{\"value\":\"\\u8d44\\u8d28\\u8ba4\\u8bc1\",\"href\":\"http:\\/\\/www.kmbdqn.com\",\"target\":\"_blank\"},{\"value\":\"\\u7ba1\\u7406\\u670d\\u52a1\",\"href\":\"http:\\/\\/www.kmbdqn.com\",\"target\":\"_blank\"},{\"value\":\"\\u8bd5\\u542c\\u8bfe\\u7a0b\",\"href\":\"http:\\/\\/www.kmbdqn.com\",\"target\":\"_blank\"},{\"value\":\"\\u65e0\\u5fe7\\u9000\\u6b3e\",\"href\":\"http:\\/\\/www.kmbdqn.com\",\"target\":\"_self\"}],\"thirdColumnText\":[{\"value\":\"\\u5173\\u6ce8\\u6211\\u4eec\"}],\"thirdColumnLinks\":[{\"value\":\"\\u8054\\u7cfb\\u6211\\u4eec\",\"href\":\"http:\\/\\/www.kmbdqn.com\",\"target\":\"_self\"},{\"value\":\"\\u5173\\u6ce8\\u5fae\\u4fe1\",\"href\":\"http:\\/\\/www.kmbdqn.com\",\"target\":\"_blank\"}],\"fourthColumnText\":[{\"value\":\"\\u670d\\u52a1\\u652f\\u6301\"}],\"fourthColumnLinks\":[{\"value\":\"\\u5b66\\u4e60\\u8d44\\u8baf\",\"href\":\"http:\\/\\/www.kmbdqn.com\",\"target\":\"_blank\"},{\"value\":\"\\u5728\\u7ebf\\u8d44\\u8baf\",\"href\":\"http:\\/\\/www.kmbdqn.com\",\"target\":\"_blank\"},{\"value\":\"\\u610f\\u89c1\\u53cd\\u9988\",\"href\":\"http:\\/\\/www.kmbdqn.com\",\"target\":\"_self\"},{\"value\":\"\\u673a\\u6784\\u5165\\u4f4f\",\"href\":\"http:\\/\\/www.kmbdqn.com\",\"target\":\"_self\"}],\"fifthColumnText\":[{\"value\":\"\\u8054\\u7cfb\\u6211\\u4eec\"}],\"fifthColumnLinks\":[{\"value\":\"\\u8054\\u7cfb\\u6211\\u4eec\",\"href\":\"http:\\/\\/www.kmbdqn.com\",\"target\":\"_blank\"}],\"bottomLogo\":[{\"src\":\"\\/files\\/system\\/block_picture_1484805596.jpg\",\"alt\":\"\\u5efa\\u8bae\\u56fe\\u7247\\u5927\\u5c0f\\u4e3a233*64\",\"href\":\"http:\\/\\/www.kmbdqn.com\",\"background\":\"\",\"target\":\"_blank\"}],\"weibo\":[{\"value\":\"\\u5fae\\u535a\\u9996\\u9875\",\"href\":\"http:\\/\\/weibo.com\\/kmbdqn\",\"target\":\"_blank\"}],\"weixin\":[{\"src\":\"\\/files\\/system\\/block_picture_1481255249.jpg\",\"target\":\"_self\"}],\"apple\":[{\"src\":\"\\/files\\/system\\/block_picture_1481255267.jpg\",\"target\":\"_self\"}],\"android\":[{\"src\":\"\\/files\\/system\\/block_picture_1481255279.jpg\",\"target\":\"_self\"}]}', '\n<div class=\"col-md-8 footer-main clearfix\">\n  <div class=\"link-item \">\n  <h3>关于我们</h3>\n  <ul>\n          <li>\n        <a href=\"http://www.kmbdqn.com\" target=\"_blank\">关于同言</a>\n      </li>\n          <li>\n        <a href=\"http://www.kmbdqn.com\" target=\"_blank\">管理团队</a>\n      </li>\n          <li>\n        <a href=\"http://www.kmbdqn.com\" target=\"_blank\">同言动态</a>\n      </li>\n          <li>\n        <a href=\"http://www.kmbdqn.com\" target=\"_self\">福利待遇</a>\n      </li>\n          <li>\n        <a href=\"http://www.kmbdqn.com\" target=\"_self\">招聘信息</a>\n      </li>\n      </ul>\n</div>\n\n  <div class=\"link-item \">\n  <h3>服务保障</h3>\n  <ul>\n          <li>\n        <a href=\"http://www.kmbdqn.com\" target=\"_blank\">资质认证</a>\n      </li>\n          <li>\n        <a href=\"http://www.kmbdqn.com\" target=\"_blank\">管理服务</a>\n      </li>\n          <li>\n        <a href=\"http://www.kmbdqn.com\" target=\"_blank\">试听课程</a>\n      </li>\n          <li>\n        <a href=\"http://www.kmbdqn.com\" target=\"_self\">无忧退款</a>\n      </li>\n      </ul>\n</div>\n\n  <div class=\"link-item \">\n  <h3>关注我们</h3>\n  <ul>\n          <li>\n        <a href=\"http://www.kmbdqn.com\" target=\"_self\">联系我们</a>\n      </li>\n          <li>\n        <a href=\"http://www.kmbdqn.com\" target=\"_blank\">关注微信</a>\n      </li>\n      </ul>\n</div>\n\n  <div class=\"link-item hidden-xs\">\n  <h3>服务支持</h3>\n  <ul>\n          <li>\n        <a href=\"http://www.kmbdqn.com\" target=\"_blank\">学习资讯</a>\n      </li>\n          <li>\n        <a href=\"http://www.kmbdqn.com\" target=\"_blank\">在线资讯</a>\n      </li>\n          <li>\n        <a href=\"http://www.kmbdqn.com\" target=\"_self\">意见反馈</a>\n      </li>\n          <li>\n        <a href=\"http://www.kmbdqn.com\" target=\"_self\">机构入住</a>\n      </li>\n      </ul>\n</div>\n\n  <div class=\"link-item hidden-xs\">\n  <h3>联系我们</h3>\n  <ul>\n          <li>\n        <a href=\"http://www.kmbdqn.com\" target=\"_blank\">联系我们</a>\n      </li>\n      </ul>\n</div>\n\n</div>\n\n<div class=\"col-md-4 footer-logo hidden-sm hidden-xs\">\n  <a class=\"\" href=\"http://www.kmbdqn.com\" target=\"_blank\"><img src=\"/files/system/block_picture_1484805596.jpg?7.2.9\" alt=\"建议图片大小为233*64\"></a>\n  <div class=\"footer-sns\">\n        <a href=\"http://weibo.com/kmbdqn\" target=\"_blank\"><i class=\"es-icon es-icon-weibo\"></i></a>\n            <a class=\"qrcode-popover top\">\n      <i class=\"es-icon es-icon-weixin\"></i>\n      <div class=\"qrcode-content\">\n        <img src=\"/files/system/block_picture_1481255249.jpg?7.2.9\" alt=\"\">  \n      </div>\n    </a>\n            <a class=\"qrcode-popover top\">\n      <i class=\"es-icon es-icon-apple\"></i>\n      <div class=\"qrcode-content\">\n        <img src=\"/files/system/block_picture_1481255267.jpg?7.2.9\" alt=\"\"> \n      </div>\n    </a>\n            <a class=\"qrcode-popover top\">\n      <i class=\"es-icon es-icon-android\"></i>\n      <div class=\"qrcode-content\">\n        <img src=\"/files/system/block_picture_1481255279.jpg?7.2.9\" alt=\"\"> \n      </div>\n    </a>\n      </div>\n</div>\n\n\n', '1', '1484805607');
 
 -- ----------------------------
--- Table structure for `block_template`
+-- Table structure for block_template
 -- ----------------------------
 DROP TABLE IF EXISTS `block_template`;
 CREATE TABLE `block_template` (
@@ -391,7 +391,7 @@ INSERT INTO `block_template` VALUES ('7', '直播频道 - 首页 - 头部轮播�
 INSERT INTO `block_template` VALUES ('8', '简墨主题：中部广告', 'template', null, '@theme/jianmo/block/advertisement_banner.template.html.twig', null, '<section class=\"feature-banner\" style=\"background: #e2133a\">\n		<a href=\"/#?6.17.0\" target=\"_blank\">\n			<img class=\"img-responsive\" src=\"/themes/jianmo/img/banner_poster.jpg?6.17.0\" alt=\"图片１的描述\">\n		</a>\n	</section>', '{\"middleImg\":[{\"src\":\"\\/themes\\/jianmo\\/img\\/banner_poster.jpg\",\"alt\":\"\\u56fe\\u7247\\uff11\\u7684\\u63cf\\u8ff0\",\"href\":\"#\",\"target\":\"_blank\"}],\"middleBackground\":[{\"value\":\"#e2133a\"}]}', 'jianmo:advertisement_banner', '{\"title\":\"\\u7b80\\u58a8\\u4e3b\\u9898\\uff1a\\u4e2d\\u90e8\\u5e7f\\u544a\",\"category\":\"jianmo\",\"templateName\":\"@theme\\/jianmo\\/block\\/advertisement_banner.template.html.twig\",\"items\":{\"middleImg\":{\"title\":\"\\u5e7f\\u544a\\u56fe\\u7247\",\"desc\":\"\\u5efa\\u8bae\\u56fe\\u7247\\u5927\\u5c0f\\u4e3a\\u5bbd1920px\\u9ad8 400px\",\"count\":\"1\",\"type\":\"imglink\",\"default\":[{\"src\":\"\\/themes\\/jianmo\\/img\\/banner_poster.jpg\",\"alt\":\"\\u56fe\\u7247\\uff11\\u7684\\u63cf\\u8ff0\",\"href\":\"#\",\"target\":\"_blank\"}]},\"middleBackground\":{\"title\":\"\\u80cc\\u666f\\u586b\\u5145\\u8272\",\"desc\":\"\\u586b\\u5199\\u989c\\u8272\\u503c,\\u4f8b\\u5982#ffffff\",\"count\":\"1\",\"type\":\"text\",\"default\":[{\"value\":\"#e2133a\"}]}}}', '', 'jianmo', '1462093327', '1462093327');
 
 -- ----------------------------
--- Table structure for `cache`
+-- Table structure for cache
 -- ----------------------------
 DROP TABLE IF EXISTS `cache`;
 CREATE TABLE `cache` (
@@ -412,7 +412,7 @@ CREATE TABLE `cache` (
 INSERT INTO `cache` VALUES ('53', 'settings', 0x613A33333A7B733A32303A2264656661756C742D6D656E755F68696464656E73223B733A363A22613A303A7B7D223B733A31353A2264656661756C742D7061796D656E74223B733A3238373A22613A383A7B733A373A22656E61626C6564223B733A313A2231223B733A31363A2264697361626C65645F6D657373616765223B733A34383A22E5B09AE69CAAE5BC80E590AFE694AFE4BB98E6A8A1E59D97EFBC8CE697A0E6B395E8B4ADE4B9B0E8AFBEE7A88BE38082223B733A31343A22616C697061795F656E61626C6564223B733A313A2230223B733A31313A22616C697061795F74797065223B733A363A22646972656374223B733A31303A22616C697061795F6B6579223B733A303A22223B733A31333A22616C697061795F736563726574223B733A303A22223B733A31343A22616C697061795F6163636F756E74223B733A303A22223B733A31393A22636C6F73655F74726164655F656E61626C6564223B733A313A2230223B7D223B733A31333A2264656661756C742D67726F7570223B733A36353A22613A323A7B733A31303A2267726F75705F73686F77223B733A313A2231223B733A31363A2274687265616454696D655F72616E6765223B733A323A223330223B7D223B733A31373A2264656661756C742D636C617373726F6F6D223B733A35383A22613A323A7B733A343A226E616D65223B733A363A22E5ADA6E6A0A1223B733A31323A22646973636F756E745F627579223B733A313A2231223B7D223B733A31353A2264656661756C742D61727469636C65223B733A36313A22613A323A7B733A343A226E616D65223B733A31323A22E8B584E8AEAFE9A291E98193223B733A383A22706167654E756D73223B733A323A223130223B7D223B733A31333A2264656661756C742D6573426172223B733A32383A22613A313A7B733A373A22656E61626C6564223B733A313A2231223B7D223B733A31373A2264656661756C742D7175657374696F6E73223B733A35373A22613A313A7B733A32373A227465737470617065725F616E73776572735F73686F775F6D6F6465223B733A393A227375626D6974746564223B7D223B733A31343A2264656661756C742D6D61696C6572223B733A3234393A22613A383A7B733A373A22656E61626C6564223B733A313A2230223B733A343A22686F7374223B733A31383A22736D74702E65786D61696C2E71712E636F6D223B733A343A22706F7274223B733A323A223235223B733A383A22757365726E616D65223B733A31373A22782E77616E67406B6D6264716E2E636F6D223B733A383A2270617373776F7264223B733A303A22223B733A343A2266726F6D223B733A31373A22782E77616E67406B6D6264716E2E636F6D223B733A343A226E616D65223B733A31323A22E7BD91E7BB9CE8AFBEE5A082223B733A32303A22656D61696C2D73657474696E672D737461747573223B733A303A22223B7D223B733A32303A2264656661756C742D757365725F64656661756C74223B733A33353A22613A313A7B733A393A22757365725F6E616D65223B733A363A22E5ADA6E59198223B7D223B733A31323A2264656661756C742D61757468223B733A313431313A22613A31393A7B733A31333A2272656769737465725F6D6F6465223B733A353A22656D61696C223B733A31333A22656D61696C5F656E61626C6564223B733A363A22636C6F736564223B733A31323A2273657474696E675F74696D65223B693A313432393737383731303B733A32323A22656D61696C5F61637469766174696F6E5F7469746C65223B733A33333A22E8AFB7E6BF80E6B4BBE682A8E79A847B7B736974656E616D657D7DE8B4A6E58FB7223B733A32313A22656D61696C5F61637469766174696F6E5F626F6479223B733A3338303A2248692C207B7B6E69636B6E616D657D7D0D0A0D0AE6ACA2E8BF8EE58AA0E585A57B7B736974656E616D657D7D210D0A0D0AE8AFB7E782B9E587BBE4B88BE99DA2E79A84E993BEE68EA5E5AE8CE68890E6B3A8E5868CEFBC9A0D0A0D0A7B7B76657269667975726C7D7D0D0A0D0AE5A682E69E9CE4BBA5E4B88AE993BEE68EA5E697A0E6B395E782B9E587BBEFBC8CE8AFB7E5B086E4B88AE99DA2E79A84E59CB0E59D80E5A48DE588B6E588B0E4BDA0E79A84E6B58FE8A788E599A828E5A682494529E79A84E59CB0E59D80E6A08FE4B8ADE68993E5BC80EFBC8CE8AFA5E993BEE68EA5E59CB0E59D803234E5B08FE697B6E58685E68993E5BC80E69C89E69588E380820D0A0D0AE6849FE8B0A2E5AFB97B7B736974656E616D657D7DE79A84E694AFE68C81EFBC810D0A0D0A7B7B736974656E616D657D7D207B7B7369746575726C7D7D0D0A0D0A28E8BF99E698AFE4B880E5B081E887AAE58AA8E4BAA7E7949FE79A84656D61696CEFBC8CE8AFB7E58BBFE59B9EE5A48DE3808229223B733A31353A2277656C636F6D655F656E61626C6564223B733A363A226F70656E6564223B733A31343A2277656C636F6D655F73656E646572223B733A353A2261646D696E223B733A31353A2277656C636F6D655F6D6574686F6473223B613A303A7B7D733A31333A2277656C636F6D655F7469746C65223B733A32343A22E6ACA2E8BF8EE58AA0E585A57B7B736974656E616D657D7D223B733A31323A2277656C636F6D655F626F6479223B733A3133383A22E682A8E5A5BD7B7B6E69636B6E616D657D7DEFBC8CE68891E698AF7B7B736974656E616D657D7DE79A84E7AEA1E79086E59198EFBC8CE6ACA2E8BF8EE58AA0E585A57B7B736974656E616D657D7DEFBC8CE7A59DE682A8E5ADA6E4B9A0E68489E5BFABE38082E5A682E69C89E997AEE9A298EFBC8CE99A8FE697B6E4B88EE68891E88194E7B3BBE38082223B733A31303A22757365725F7465726D73223B733A363A226F70656E6564223B733A31353A22757365725F7465726D735F626F6479223B733A39303A223C703EE58FAFE59CA8E38090E7B3BBE7BB9FE38091EFBC8DE38090E794A8E688B7E8AEBEE7BDAEE38091EFBC8DE38090E6B3A8E5868CE38091E4B8ADE4BFAEE694B9E69C8DE58AA1E69DA1E4BBB6E8AEBEE7BDAE3C2F703E0D0A223B733A31353A22636170746368615F656E61626C6564223B693A313B733A31393A2272656769737465725F70726F74656374697665223B733A333A226C6F77223B733A31363A226E69636B6E616D655F656E61626C6564223B693A303B733A31323A226176617461725F616C657274223B733A343A226E6F6E65223B733A31323A227265676973746572536F7274223B613A313A7B693A303B733A353A22656D61696C223B7D733A32323A2272656769737465724669656C644E616D654172726179223B613A373A7B693A303B733A353A22656D61696C223B693A343B733A383A22747275656E616D65223B693A353B733A363A226D6F62696C65223B693A363B733A363A22696463617264223B693A373B733A363A2267656E646572223B693A383B733A333A226A6F62223B693A393B733A373A22636F6D70616E79223B7D733A31303A225F636C6F75645F736D73223B733A303A22223B7D223B733A31383A2264656661756C742D6C6F67696E5F62696E64223B733A3832303A22613A32363A7B733A31313A226C6F67696E5F6C696D6974223B733A313A2231223B733A373A22656E61626C6564223B733A313A2230223B733A32323A2274656D706F726172795F6C6F636B5F656E61626C6564223B733A313A2231223B733A32383A2274656D706F726172795F6C6F636B5F616C6C6F7765645F74696D6573223B733A313A2235223B733A33313A2269705F74656D706F726172795F6C6F636B5F616C6C6F7765645F74696D6573223B733A323A223230223B733A32323A2274656D706F726172795F6C6F636B5F6D696E75746573223B733A323A223230223B733A31333A22776569626F5F656E61626C6564223B733A313A2230223B733A393A22776569626F5F6B6579223B733A303A22223B733A31323A22776569626F5F736563726574223B733A303A22223B733A32323A22776569626F5F7365745F66696C6C5F6163636F756E74223B733A313A2230223B733A31303A2271715F656E61626C6564223B733A313A2230223B733A363A2271715F6B6579223B733A303A22223B733A393A2271715F736563726574223B733A303A22223B733A31393A2271715F7365745F66696C6C5F6163636F756E74223B733A313A2230223B733A31343A2272656E72656E5F656E61626C6564223B733A313A2230223B733A31303A2272656E72656E5F6B6579223B733A303A22223B733A31333A2272656E72656E5F736563726574223B733A303A22223B733A32333A2272656E72656E5F7365745F66696C6C5F6163636F756E74223B733A313A2230223B733A31373A2277656978696E7765625F656E61626C6564223B733A313A2230223B733A31333A2277656978696E7765625F6B6579223B733A303A22223B733A31363A2277656978696E7765625F736563726574223B733A303A22223B733A32363A2277656978696E7765625F7365745F66696C6C5F6163636F756E74223B733A313A2230223B733A31373A2277656978696E6D6F625F656E61626C6564223B733A313A2230223B733A31333A2277656978696E6D6F625F6B6579223B733A303A22223B733A31363A2277656978696E6D6F625F736563726574223B733A303A22223B733A31313A227665726966795F636F6465223B733A303A22223B7D223B733A33303A2264656661756C742D6F7065726174696F6E5F636F757273655F6772696473223B733A33373A22613A313A7B733A393A22636F75727365496473223B733A383A22312C32302C33302C223B7D223B733A31333A2264656661756C742D7468656D65223B733A3233323A22613A383A7B733A343A22636F6465223B733A363A226A69616E6D6F223B733A343A226E616D65223B733A363A22E7AE80E5A2A8223B733A363A22617574686F72223B733A31333A22456475536F686FE5AE98E696B9223B733A373A2276657273696F6E223B733A353A22312E302E30223B733A31353A2273757070726F745F76657273696F6E223B733A363A22362E302E302B223B733A343A2264617465223B733A383A22323031352D362D31223B733A353A227468756D62223B733A31333A22696D672F7468656D652E6A7067223B733A333A22757269223B733A363A226A69616E6D6F223B7D223B733A32343A2264656661756C742D6F7065726174696F6E5F6D6F62696C65223B733A3636333A22613A32303A7B733A31323A2262616E6E6572436C69636B31223B733A313A2231223B733A31303A2262616E6E657255726C31223B733A32333A22687474703A2F2F7777772E716971697579752E636F6D2F223B733A32313A2262616E6E65724A756D70546F436F75727365496431223B733A313A2220223B733A373A2262616E6E657231223B733A37363A22687474703A2F2F656475736F686F2D64656D6F2E62302E7570616979756E2E636F6D2F66696C65732F73797374656D2F6D6F62696C655F70696374757265313434313532373239362E706E67223B733A31323A2262616E6E6572436C69636B32223B733A313A2230223B733A31303A2262616E6E657255726C32223B733A303A22223B733A32313A2262616E6E65724A756D70546F436F75727365496432223B733A313A2220223B733A373A2262616E6E657232223B733A303A22223B733A31323A2262616E6E6572436C69636B33223B733A313A2230223B733A31303A2262616E6E657255726C33223B733A303A22223B733A32313A2262616E6E65724A756D70546F436F75727365496433223B733A313A2220223B733A373A2262616E6E657233223B733A303A22223B733A31323A2262616E6E6572436C69636B34223B733A313A2230223B733A31303A2262616E6E657255726C34223B733A303A22223B733A32313A2262616E6E65724A756D70546F436F75727365496434223B733A313A2220223B733A373A2262616E6E657234223B733A303A22223B733A31323A2262616E6E6572436C69636B35223B733A313A2230223B733A31303A2262616E6E657255726C35223B733A303A22223B733A32313A2262616E6E65724A756D70546F436F75727365496435223B733A313A2220223B733A373A2262616E6E657235223B733A303A22223B7D223B733A31343A2264656661756C742D6D6F62696C65223B733A3636333A22613A32303A7B733A31323A2262616E6E6572436C69636B31223B733A313A2231223B733A31303A2262616E6E657255726C31223B733A32333A22687474703A2F2F7777772E716971697579752E636F6D2F223B733A32313A2262616E6E65724A756D70546F436F75727365496431223B733A313A2220223B733A373A2262616E6E657231223B733A37363A22687474703A2F2F656475736F686F2D64656D6F2E62302E7570616979756E2E636F6D2F66696C65732F73797374656D2F6D6F62696C655F70696374757265313434313532373239362E706E67223B733A31323A2262616E6E6572436C69636B32223B733A313A2230223B733A31303A2262616E6E657255726C32223B733A303A22223B733A32313A2262616E6E65724A756D70546F436F75727365496432223B733A313A2220223B733A373A2262616E6E657232223B733A303A22223B733A31323A2262616E6E6572436C69636B33223B733A313A2230223B733A31303A2262616E6E657255726C33223B733A303A22223B733A32313A2262616E6E65724A756D70546F436F75727365496433223B733A313A2220223B733A373A2262616E6E657233223B733A303A22223B733A31323A2262616E6E6572436C69636B34223B733A313A2230223B733A31303A2262616E6E657255726C34223B733A303A22223B733A32313A2262616E6E65724A756D70546F436F75727365496434223B733A313A2220223B733A373A2262616E6E657234223B733A303A22223B733A31323A2262616E6E6572436C69636B35223B733A313A2230223B733A31303A2262616E6E657255726C35223B733A303A22223B733A32313A2262616E6E65724A756D70546F436F75727365496435223B733A313A2220223B733A373A2262616E6E657235223B733A303A22223B7D223B733A31343A2264656661756C742D726566756E64223B733A3431373A22613A343A7B733A31333A226D6178526566756E6444617973223B693A31303B733A31373A226170706C794E6F74696669636174696F6E223B733A3130373A22E682A8E5A5BDEFBC8CE682A8E98080E6ACBEE79A847B7B6974656D7D7DEFBC8CE7AEA1E79086E59198E5B7B2E694B6E588B0E682A8E79A84E98080E6ACBEE794B3E8AFB7EFBC8CE8AFB7E88090E5BF83E7AD89E5BE85E98080E6ACBEE5AEA1E6A0B8E7BB93E69E9CE38082223B733A31393A22737563636573734E6F74696669636174696F6E223B733A38323A22E682A8E5A5BDEFBC8CE682A8E794B3E8AFB7E98080E6ACBEE79A847B7B6974656D7D7D20E5AEA1E6A0B8E9809AE8BF87EFBC8CE5B086E4B8BAE682A8E98080E6ACBE7B7B616D6F756E747D7DE58583E38082223B733A31383A226661696C65644E6F74696669636174696F6E223B733A39333A22E682A8E5A5BDEFBC8CE682A8E794B3E8AFB7E98080E6ACBEE79A847B7B6974656D7D7D20E5AEA1E6A0B8E69CAAE9809AE8BF87EFBC8CE8AFB7E4B88EE7AEA1E79086E59198E5868DE58D8FE59586E8A7A3E586B3E7BAA0E7BAB7E38082223B7D223B733A32323A2264656661756C742D706F73745F6E756D5F72756C6573223B733A3231313A22613A313A7B733A353A2272756C6573223B613A323A7B733A363A22746872656164223B613A313A7B733A31343A22666976654D756E69746552756C65223B613A323A7B733A383A22696E74657276616C223B693A3330303B733A373A22706F73744E756D223B693A3130303B7D7D733A31373A227468726561644C6F67696E656455736572223B613A313A7B733A31343A22666976654D756E69746552756C65223B613A323A7B733A383A22696E74657276616C223B693A3330303B733A373A22706F73744E756D223B693A35303B7D7D7D7D223B733A31323A2264656661756C742D73697465223B733A3439323A22613A31343A7B733A343A226E616D65223B733A31323A22E5908CE8A880E59CA8E7BABF223B733A363A22736C6F67616E223B733A34323A22E59CA8E7BABFE69599E882B2E5ADA6E4B9A0E58A9FE883BDE5AE8CE5A487E79A84E7BD91E6A0A1EFBC81223B733A333A2275726C223B733A303A22223B733A343A2266696C65223B733A303A22223B733A343A226C6F676F223B733A34363A2266696C65732F73797374656D2F323031372F30312D31382F3039323035353735383161663537353930392E6A7067223B733A373A2266617669636F6E223B733A34363A2266696C65732F73797374656D2F323031362F31322D30312F3039333631316232353832663437323531372E6A7067223B733A31323A2273656F5F6B6579776F726473223B733A32353A22E59CA8E7BABFE69599E882B22CE59CA8E7BABFE69599E5ADA6223B733A31353A2273656F5F6465736372697074696F6E223B733A303A22223B733A31323A226D61737465725F656D61696C223B733A303A22223B733A393A22636F70797269676874223B733A303A22223B733A333A22696370223B733A303A22223B733A393A22616E616C7974696373223B733A303A22223B733A363A22737461747573223B733A343A226F70656E223B733A31313A22636C6F7365645F6E6F7465223B733A303A22223B7D223B733A31353A2264656661756C742D636F6E73756C74223B733A3937353A22613A393A7B733A373A22656E61626C6564223B733A313A2231223B733A353A22636F6C6F72223B733A373A2264656661756C74223B733A323A227171223B613A313A7B693A303B613A333A7B733A343A226E616D65223B733A393A22E5AEA2E69C8DE4B880223B733A363A226E756D626572223B733A393A22313233343536373839223B733A333A2275726C223B733A38313A22687474703A2F2F7770612E622E71712E636F6D2F6367692F7770612E7068703F6C6E3D31266B65793D587A67774D4441794D7A67324D46387A4E7A45774D7A46664F4441774D44497A4F445977587A4A66223B7D7D733A373A22717167726F7570223B613A313A7B693A303B613A333A7B733A343A226E616D65223B733A393A22E5AE98E696B9E7BEA4223B733A363A226E756D626572223B733A31313A223133313233313233313233223B733A333A2275726C223B733A3233343A223C61207461726765743D225F626C616E6B2220687265663D22687474703A2F2F7777772E71712E636F6D2F7770612F71756E7770613F69646B65793D66626434336439356135643165626330626263613962303739386330663665646135353363386664376631356631666564636566396163663634326439653330223E3C696D6720626F726465723D223022207372633D22687474703A2F2F7075622E69647171696D672E636F6D2F7770612F696D616765732F67726F75702E706E672220616C743D22E5AE98E696B93131E7BEA422207469746C653D22E5AE98E696B93131E7BEA4223E3C2F613E223B7D7D733A383A22776F726B74696D65223B733A31323A22393A3030202D2031383A3030223B733A353A2270686F6E65223B613A333A7B693A303B613A323A7B733A343A226E616D65223B733A32373A22585858E7BD91E7BB9CE7A791E68A80E69C89E99990E585ACE58FB8223B733A363A226E756D626572223B733A31333A22303837312D3238303232333536223B7D693A313B613A323A7B733A343A226E616D65223B733A32373A22585858E7BD91E7BB9CE7A791E68A80E69C89E99990E585ACE58FB8223B733A363A226E756D626572223B733A31333A22303837312D3238303232333537223B7D693A323B613A323A7B733A343A226E616D65223B733A32343A22585858E7BD91E7BB9CE58C97E4BAACE58886E585ACE58FB8223B733A363A226E756D626572223B733A31313A223138383134383831393939223B7D7D733A343A2266696C65223B733A303A22223B733A31303A2277656263686174555249223B733A303A22223B733A353A22656D61696C223B733A31383A2231323332343332353433354051512E636F6D223B7D223B733A32323A2264656661756C742D636F757273655F64656661756C74223B733A36323A22613A323A7B733A31323A22636861707465725F6E616D65223B733A333A22E7ABA0223B733A393A22706172745F6E616D65223B733A333A22E88A82223B7D223B733A31353A2264656661756C742D64656661756C74223B733A39313A22613A333A7B733A393A22757365725F6E616D65223B733A363A22E5ADA6E59198223B733A31323A22636861707465725F6E616D65223B733A333A22E7ABA0223B733A393A22706172745F6E616D65223B733A333A22E88A82223B7D223B733A31393A2264656661756C742D6C6976652D636F75727365223B733A37343A22613A323A7B733A31393A226C6976655F636F757273655F656E61626C6564223B733A313A2231223B733A32313A226C6976655F73747564656E745F6361706163697479223B693A303B7D223B733A31343A2264656661756C742D636F75727365223B733A3831393A22613A32323A7B733A32333A2277656C636F6D655F6D6573736167655F656E61626C6564223B733A313A2231223B733A32303A2277656C636F6D655F6D6573736167655F626F6479223B733A34313A227B7B6E69636B6E616D657D7D2CE6ACA2E8BF8EE58AA0E585A5E8AFBEE7A88B7B7B636F757273657D7D223B733A32303A22746561636865725F6D6F646966795F7072696365223B733A313A2231223B733A32303A22746561636865725F7365617263685F6F72646572223B733A313A2231223B733A32323A22746561636865725F6D616E6167655F73747564656E74223B733A313A2231223B733A32323A22746561636865725F6578706F72745F73747564656E74223B733A313A2231223B733A32323A2273747564656E745F646F776E6C6F61645F6D65646961223B733A313A2230223B733A32333A226578706C6F72655F64656661756C745F6F726465724279223B733A363A226C6174657374223B733A32343A22667265655F636F757273655F6E6F6C6F67696E5F76696577223B733A313A2231223B733A31343A2272656C61746564436F7572736573223B733A313A2231223B733A31323A22636F75727365735072696365223B733A313A2230223B733A32313A22616C6C6F77416E6F6E796D6F757350726576696577223B733A313A2231223B733A31323A22636F70795F656E61626C6564223B733A313A2230223B733A32313A22746573747061706572436F70795F656E61626C6564223B733A313A2230223B733A32323A22637573746F6D5F636861707465725F656E61626C6564223B733A313A2231223B733A32343A2273686F775F73747564656E745F6E756D5F656E61626C6564223B733A313A2231223B733A31323A22636861707465725F6E616D65223B733A333A22E7ABA0223B733A393A22706172745F6E616D65223B733A333A22E88A82223B733A31343A2275736572696E666F4669656C6473223B613A303A7B7D733A32323A2275736572696E666F4669656C644E616D654172726179223B613A303A7B7D733A31393A226C6976655F636F757273655F656E61626C6564223B733A313A2231223B733A32313A226C6976655F73747564656E745F6361706163697479223B693A303B7D223B733A31343A2264656661756C742D696E76697465223B733A33363A22613A313A7B733A31383A226765745F636F75706F6E5F73657474696E67223B693A313B7D223B733A32303A2264656661756C742D757365725F706172746E6572223B733A3132323A22613A343A7B733A343A226D6F6465223B733A373A2264656661756C74223B733A31363A226E69636B6E616D655F656E61626C6564223B733A313A2231223B733A31323A226176617461725F616C657274223B733A353A22636C6F7365223B733A31323A22656D61696C5F66696C746572223B733A303A22223B7D223B733A31333A2264656661756C742D6D61676963223B733A39313A22613A333A7B733A31383A226578706F72745F616C6C6F775F636F756E74223B693A3130303030303B733A31323A226578706F72745F6C696D6974223B693A31303030303B733A31303A22656E61626C655F6F7267223B693A303B7D223B733A31373A2264656661756C742D636C6F75645F736D73223B733A33363A22613A313A7B733A31333A2273797374656D5F72656D696E64223B733A323A226F6E223B7D223B733A31353A2264656661756C742D73746F72616765223B733A3636303A22613A31373A7B733A31313A2275706C6F61645F6D6F6465223B733A353A226C6F63616C223B733A31323A22636C6F75645F6275636B6574223B733A303A22223B733A31333A22766964656F5F7175616C697479223B733A333A226C6F77223B733A31393A22766964656F5F617564696F5F7175616C697479223B733A333A226C6F77223B733A31353A22766964656F5F77617465726D61726B223B733A313A2230223B733A32313A22766964656F5F77617465726D61726B5F696D616765223B733A303A22223B733A32373A22766964656F5F656D6265645F77617465726D61726B5F696D616765223B733A303A22223B733A32343A22766964656F5F77617465726D61726B5F706F736974696F6E223B733A383A22746F707269676874223B733A31373A22766964656F5F66696E6765727072696E74223B733A313A2230223B733A31323A22766964656F5F686561646572223B4E3B733A31363A22636C6F75645F6170695F736572766572223B733A32323A22687474703A2F2F6170692E656475736F686F2E6E6574223B733A32303A22636C6F75645F6170695F7475695F736572766572223B733A303A22223B733A32323A22636C6F75645F6170695F6576656E745F736572766572223B733A303A22223B733A32313A22656E61626C655F706C61796261636B5F7261746573223B693A303B733A31363A22636C6F75645F6163636573735F6B6579223B733A33323A2239573442377756396934464C6339346C775938664163706C63614E6943384E4D223B733A31363A22636C6F75645F7365637265745F6B6579223B733A33323A2235526E636F6A6D476E32727A6277564976335935666E727378654B396E785773223B733A31373A22636C6F75645F6B65795F6170706C696564223B693A313B7D223B733A32333A2264656661756C742D5F6170705F6C6173745F636865636B223B733A31333A22693A313438343030393138393B223B733A31373A2264656661756C742D646576656C6F706572223B733A3236323A22613A383A7B733A353A226465627567223B693A303B733A31313A226170705F6170695F75726C223B733A303A22223B733A31363A22636C6F75645F6170695F736572766572223B733A32323A22687474703A2F2F6170692E656475736F686F2E6E6574223B733A32303A22636C6F75645F6170695F7475695F736572766572223B733A303A22223B733A32323A22636C6F75645F6170695F6576656E745F736572766572223B733A303A22223B733A31333A22636C6F75645F73646B5F63646E223B733A303A22223B733A31333A22686C735F656E63727970746564223B733A313A2231223B733A31353A22776974686F75745F6E6574776F726B223B733A313A2230223B7D223B733A33343A2264656661756C742D63726F6E7461625F6E6578745F65786563757465645F74696D65223B733A31333A22693A313437373336363531303B223B733A32303A2264656661756C742D636C6F75645F736561726368223B733A35383A22613A323A7B733A31343A227365617263685F656E61626C6564223B693A303B733A363A22737461747573223B733A363A22636C6F736564223B7D223B733A31343A2264656661756C742D6170705F696D223B733A34343A22613A323A7B733A373A22656E61626C6564223B693A303B733A363A22636F6E764E6F223B733A303A22223B7D223B7D, '1', '0', '1488182770');
 
 -- ----------------------------
--- Table structure for `card`
+-- Table structure for card
 -- ----------------------------
 DROP TABLE IF EXISTS `card`;
 CREATE TABLE `card` (
@@ -432,7 +432,7 @@ CREATE TABLE `card` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `cash_account`
+-- Table structure for cash_account
 -- ----------------------------
 DROP TABLE IF EXISTS `cash_account`;
 CREATE TABLE `cash_account` (
@@ -454,7 +454,7 @@ INSERT INTO `cash_account` VALUES ('5', '1', '0.00');
 INSERT INTO `cash_account` VALUES ('6', '15', '0.00');
 
 -- ----------------------------
--- Table structure for `cash_change`
+-- Table structure for cash_change
 -- ----------------------------
 DROP TABLE IF EXISTS `cash_change`;
 CREATE TABLE `cash_change` (
@@ -469,7 +469,7 @@ CREATE TABLE `cash_change` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `cash_flow`
+-- Table structure for cash_flow
 -- ----------------------------
 DROP TABLE IF EXISTS `cash_flow`;
 CREATE TABLE `cash_flow` (
@@ -496,7 +496,7 @@ CREATE TABLE `cash_flow` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `cash_orders`
+-- Table structure for cash_orders
 -- ----------------------------
 DROP TABLE IF EXISTS `cash_orders`;
 CREATE TABLE `cash_orders` (
@@ -521,7 +521,7 @@ CREATE TABLE `cash_orders` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `cash_orders_log`
+-- Table structure for cash_orders_log
 -- ----------------------------
 DROP TABLE IF EXISTS `cash_orders_log`;
 CREATE TABLE `cash_orders_log` (
@@ -541,7 +541,7 @@ CREATE TABLE `cash_orders_log` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `category`
+-- Table structure for category
 -- ----------------------------
 DROP TABLE IF EXISTS `category`;
 CREATE TABLE `category` (
@@ -571,7 +571,7 @@ INSERT INTO `category` VALUES ('5', 'teacher', '教师', '', '', '20', '1', '1',
 INSERT INTO `category` VALUES ('6', 'student', '学员', '', '', '30', '1', '1', '本分类介绍学员如何在网校学习和交流。', '1', '1.');
 
 -- ----------------------------
--- Table structure for `category_group`
+-- Table structure for category_group
 -- ----------------------------
 DROP TABLE IF EXISTS `category_group`;
 CREATE TABLE `category_group` (
@@ -588,7 +588,7 @@ CREATE TABLE `category_group` (
 INSERT INTO `category_group` VALUES ('1', 'course', '分类', '3');
 
 -- ----------------------------
--- Table structure for `city`
+-- Table structure for city
 -- ----------------------------
 DROP TABLE IF EXISTS `city`;
 CREATE TABLE `city` (
@@ -995,7 +995,7 @@ INSERT INTO `city` VALUES ('390', '1', '33', '澳门特别行政区');
 INSERT INTO `city` VALUES ('391', '1', '34', '香港特别行政区');
 
 -- ----------------------------
--- Table structure for `classroom`
+-- Table structure for classroom
 -- ----------------------------
 DROP TABLE IF EXISTS `classroom`;
 CREATE TABLE `classroom` (
@@ -1047,7 +1047,7 @@ INSERT INTO `classroom` VALUES ('3', '测试学校三', 'published', '<p>学校�
 INSERT INTO `classroom` VALUES ('4', '测试学校四', 'published', '<p>学校（学习圈子）是自主研发的国内首个提供了系统化学习、个性化学习、学习目标管理、学习过程跟踪管理的一整套强大的互动学习功能。</p>\r\n\r\n<p>目前在线教育的问题：</p>\r\n\r\n<p>现在很多在线学习的网站和产品，仅仅是提供了视频观看、做题、问答等简单的学习功能，但是我们知道想要真正学好某个东西，其实并没有那么简单。除了课程内容以外，学习还需要引导、需要指导和帮助，学习还会有惰性，需要很好的督促和激励。通过对大量用户、大量在线教育网站的深入调研，不断总结分析和探索，设计研发了学校这一具有极大创新性的学习功能，很好的解决了上述问题。</p>\r\n\r\n<p>学校希望帮助网校运营者解决</p>\r\n\r\n<p>1. 帮助学员更好的进行系统化学习</p>\r\n\r\n<p>首先，学校是一群人围绕一个较长远的学习目标共同学习的地方。学校由一系列课程组成，这些课程是老师根据某个教学目标挑选加入的，课程之间存在逻辑关系和先后次序。当然，课程也并不是只能用于一个学校，同一门课程（例如某个基础课）是可以加入到多个学校的。</p>\r\n\r\n<p>其次，学校提供了学习计划。学习计划由老师制订。对于学校中的这么多课程，老师可以它们划分为几个阶段，每个阶段有一个阶段性的学习目标，会包含若干课时、考试、作业、直播答疑等。对于这每一个学习任务，老师可以设定它的［建议学习时长］，这样下来每个阶段就都会有一个学习时长，整个系列课程就有了总的学习时长。老师可以设置学员必须按照顺序来学习，如果某个任务没有完成，则不能进行下一任务的学习，这样整个学习过程就安排的环环相扣、井井有条了。学校有了学习计划以后，学员可以加入到学习计划中，加入时设定自己预计可用的［学习时间］，这样一个个性化的学习计划就自动生成了。有了学习计划，学员就能很清楚的知道自己当下应该学习什么，当前的进度是快了还是慢了，另外还有学力排行榜的展示以激励学习。为了更好的激励学习，后期还会加入学习积分/等级的概念。对于老师来说，他可以随时掌握每个学员的学习进度、学习速度，以便进行督促或是鼓励。对于学习过程中的作业、考试等任务，老师需要及时批改以保证学员的顺利学习。</p>\r\n\r\n<p>2. 强化教学服务，跟课程相比学员能够获得更好的教学服务</p>\r\n\r\n<p>为了在学校中提供更好的教学服务，需要有更多的人参与到学校管理中来，因此我们定义了三种角色：班主任、任课老师、助教。班主任主要负责管理整个学校的各项事务，课程老师可以制订学习计划、批改作业/试卷、回答问题、发起组织学校活动，助教则可以批改作业/试卷、回答问题、发起活动，助教可由本班学员担任。</p>\r\n\r\n<p>学校中固化了教学服务特色，包括：学习计划指导、试卷24小时阅卷点评、作业24小时批改、提问必答、一对一在线答疑、学校活动、就业指导。老师可以根据实际情况选择学校所能提供的服务内容，其中的学习计划、试卷阅卷点评、作业批改、提问回答、学校活动都可以在线完成。</p>\r\n\r\n<p>3. 强调互动学习，学员在互帮互助中提升学习效果</p>\r\n\r\n<p>和一群目标一致、乐于分享的人们在一起学习，不但能极大提升学习效果，同时也让学习不再枯燥。学员可以在学校里面提问/回答问题、发起讨论/参与讨论、分享笔记/笔记点赞，此外，学员还可以报名参加学校活动。活动是由老师发起组织的，可以是线上的也可以是线下的，通过组织活动，可以明显提升学员的活跃度和黏度。</p>\r\n\r\n<p>4. 提倡在互动中完成软性营销</p>\r\n\r\n<p>在当学员对学校、课程的情况不怎么了解的时候，就想要学员购买学校是不合理的。因此我们引入了旁听生的概念，学员可以先以旁听生的身份加入到学校，跟老师、学员进行互动讨论、提问咨询，当然也可以预览一部分课程，当他对整个学校有了一定的了解以后，再决定是否需要购买加入。</p>\r\n\r\n<p>5. 支持封闭型学习的学校，满足O2O运营的需要</p>\r\n\r\n<p>有些学校采用的是线下招生、线上学习的模式，所以我们推出了相应的功能设置。老师把学校设置为封闭后，普通学员就不能加入这类学校了，然后老师通过学员导入功能来设置学员，这样学员就可正常学习了。</p>\r\n', '3', null, '0.00', '0', 'public://course/2016/12-06/19015751def4540414.jpg', 'public://course/2016/12-06/19015751633d177826.jpg', 'public://course/2016/12-06/19015750e9a4967012.jpg', '5', '[\"1\"]', null, '0', '0', '4', '6', '15', '0', '0', '0', '5', '2', '0.00', '1434013443', '[\"homeworkReview\",\"testpaperReview\",\"teacherAnswer\",\"liveAnswer\",\"event\",\"workAdvise\"]', '0', '1', '1', '1441527932', '100', '1', '1', '1', '1.');
 
 -- ----------------------------
--- Table structure for `classroom_courses`
+-- Table structure for classroom_courses
 -- ----------------------------
 DROP TABLE IF EXISTS `classroom_courses`;
 CREATE TABLE `classroom_courses` (
@@ -1076,7 +1076,7 @@ INSERT INTO `classroom_courses` VALUES ('17', '4', '29', '7', '5', '0');
 INSERT INTO `classroom_courses` VALUES ('18', '3', '30', '2', '3', '0');
 
 -- ----------------------------
--- Table structure for `classroom_member`
+-- Table structure for classroom_member
 -- ----------------------------
 DROP TABLE IF EXISTS `classroom_member`;
 CREATE TABLE `classroom_member` (
@@ -1107,7 +1107,7 @@ INSERT INTO `classroom_member` VALUES ('9', '4', '7', '48', '0', '0', '0', '0', 
 INSERT INTO `classroom_member` VALUES ('10', '4', '12', '49', '0', '0', '0', '0', '', '|student|', '1435654760');
 
 -- ----------------------------
--- Table structure for `classroom_review`
+-- Table structure for classroom_review
 -- ----------------------------
 DROP TABLE IF EXISTS `classroom_review`;
 CREATE TABLE `classroom_review` (
@@ -1131,7 +1131,7 @@ INSERT INTO `classroom_review` VALUES ('1', '5', '4', '', '希望你能学有所
 INSERT INTO `classroom_review` VALUES ('2', '7', '4', '', '该班级关于产品介绍很完善，是必学班。', '5', '1435654889', '0', null, null);
 
 -- ----------------------------
--- Table structure for `cloud_app`
+-- Table structure for cloud_app
 -- ----------------------------
 DROP TABLE IF EXISTS `cloud_app`;
 CREATE TABLE `cloud_app` (
@@ -1159,7 +1159,7 @@ CREATE TABLE `cloud_app` (
 INSERT INTO `cloud_app` VALUES ('1', '主系统', 'MAIN', 'plugin', '<p>主系统</p>\r\n', 'MAIN/MAIN_icon.png', '1.0', '1.0', '1', '官方', '1429266860', '1477366514', '1.0', 'up');
 
 -- ----------------------------
--- Table structure for `cloud_app_logs`
+-- Table structure for cloud_app_logs
 -- ----------------------------
 DROP TABLE IF EXISTS `cloud_app_logs`;
 CREATE TABLE `cloud_app_logs` (
@@ -1184,7 +1184,7 @@ CREATE TABLE `cloud_app_logs` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `cloud_data`
+-- Table structure for cloud_data
 -- ----------------------------
 DROP TABLE IF EXISTS `cloud_data`;
 CREATE TABLE `cloud_data` (
@@ -1203,7 +1203,7 @@ CREATE TABLE `cloud_data` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `comment`
+-- Table structure for comment
 -- ----------------------------
 DROP TABLE IF EXISTS `comment`;
 CREATE TABLE `comment` (
@@ -1222,7 +1222,7 @@ CREATE TABLE `comment` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `content`
+-- Table structure for content
 -- ----------------------------
 DROP TABLE IF EXISTS `content`;
 CREATE TABLE `content` (
@@ -1265,7 +1265,7 @@ INSERT INTO `content` VALUES ('1', '关于我们', 'richeditor', 'page', 'aboutu
 INSERT INTO `content` VALUES ('2', '帮助', 'richeditor', 'page', 'help', null, '<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:18px\">除了提供领先的在线教育平台产品，还从更多方面帮助用户做在线教育：</span></p>\r\n\r\n<p><strong>产品及服务介绍：</strong></p>\r\n\r\n<p><strong>&nbsp; &nbsp; 官网:<u><a href=\"http://www.edusoho.com/\">http://www.kmbdqn.com/</a></u></strong></p>\r\n\r\n<p><strong>课程制作及维护</strong></p>\r\n\r\n<p>&nbsp; &nbsp; 录制及制作，请与销售联系。</p>\r\n\r\n<p><strong>在线教育行业资讯</strong></p>\r\n\r\n<p><strong>&nbsp; <u>&nbsp;<a href=\"http://www.qiqiuyu.com/article/category/news\">&nbsp;http://www.kmbdqn.com/article/category/news</a></u></strong></p>\r\n\r\n<p><strong>网校运营知识</strong></p>\r\n\r\n<p>&nbsp; &nbsp; 网校运营课程:<strong><u><a href=\"http://www.qiqiuyu.com/course/explore/operation\">http://www.kmbdqn.com/course/explore/operation</a></u></strong></p>\r\n\r\n<p><strong>系统二次开发与开发者</strong></p>\r\n\r\n<ul>\r\n	<li>开放平台官网：<strong><u><a href=\"http://open.edusoho.com/\">http://open.kmbdqn.com/</a></u></strong></li>\r\n	<li>开发者社区：<a href=\"http://www.qiqiuyu.com/group/5\"><u><strong>http://www.kmbdqn.com/group/5</strong></u></a></li>\r\n	<li>开发课程：<u><strong><a href=\"http://www.qiqiuyu.com/course/explore/developer\">http://www.kmbdqn.com/course/explore/developer</a></strong></u></li>\r\n</ul>\r\n\r\n<div><strong>使用</strong></div>\r\n\r\n<div>&nbsp; &nbsp; 使用课程:<strong><a href=\"http://www.qiqiuyu.com/course/explore/developer\">http://www.kmbdqn.com/course/explore/fuction</a></strong></div>\r\n\r\n<div><strong>反馈社区</strong></div>\r\n\r\n<div><strong>&nbsp; &nbsp;&nbsp;</strong>建议小组:<strong><a href=\"http://www.qiqiuyu.com/course/explore/developer\">http://www.kmbdqn.com/group/4</a></strong></div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div>关注微信，了解最新的产品及活动消息！</div>\r\n\r\n<p>&nbsp;</p>\r\n', '', 'default', 'published', '0', null, '0', '0', '0', '0', '1', null, null, null, null, null, null, null, null, null, null, '1429260383', '1429260383');
 
 -- ----------------------------
--- Table structure for `coupon`
+-- Table structure for coupon
 -- ----------------------------
 DROP TABLE IF EXISTS `coupon`;
 CREATE TABLE `coupon` (
@@ -1291,7 +1291,7 @@ CREATE TABLE `coupon` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `course`
+-- Table structure for course
 -- ----------------------------
 DROP TABLE IF EXISTS `course`;
 CREATE TABLE `course` (
@@ -1359,7 +1359,7 @@ CREATE TABLE `course` (
   `populationClassify` int(11) DEFAULT '0' COMMENT '人群分类(0,初中生;1,高中生;2.大学生;3.职场人员)',
   PRIMARY KEY (`id`),
   KEY `updatedTime` (`updatedTime`)
-) ENGINE=MyISAM AUTO_INCREMENT=43 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of course
@@ -1371,36 +1371,37 @@ INSERT INTO `course` VALUES ('4', '基本设置测试十四', '如何登入管�
 INSERT INTO `course` VALUES ('5', '教育云接入测试十三', '', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '3', '0', '0', '0', '0', '3', '|5|', 'public://course/2016/12-06/183852cf15a4309503.jpg', 'public://course/2016/12-06/183852cea749355635.jpg', 'public://course/2016/12-06/183852ce3e56726897.jpg', '<p>介绍教育云接入的流程及相关事项</p>\n', '|1|', '|熟悉接入教育云流程|', '|开源版用户|', '1', '40', '1434593017', '0', '0', '', '0', '87', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1432179555', '1481280693', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '2', '0');
 INSERT INTO `course` VALUES ('6', '产品特色测试十二', '', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '10', '0', '0', '0', '0', '3', '', 'public://course/2016/12-06/183418adbbb5330956.jpg', 'public://course/2016/12-06/183418ace4f1935604.jpg', 'public://course/2016/12-06/183418ab7d1d427961.jpg', '', '|1|', '', '|教师|管理员|校长|', '1', '70', '1434593034', '0', '0', '', '3', '458', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1432260324', '1481280665', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '1', '1');
 INSERT INTO `course` VALUES ('7', '学校功能介绍测试十一', '', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '1', '0', '0', '0', '0', '3', '', 'public://course/2016/12-06/1828088dee35545677.jpg', 'public://course/2016/12-06/1828088d58d5974116.jpg', 'public://course/2016/12-06/1828088c61c8011546.jpg', '<p>在进行直播授课或者录制课程之前，我们需要准备相关的硬件和软件。主要包括摄像设备、电脑、麦克风、录屏软件等。</p>\n\n<p>本课程针对不同的状况，推荐了数套方案。</p>\n', '|1|', '|了解进行直播或录播所需设备|', '|校长|老师|', '1', '110', '1434593056', '0', '0', '', '2', '109', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1432887979', '1481280632', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '2', '2');
-INSERT INTO `course` VALUES ('8', '定制开发测试十', '', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '1', '0', '0', '0', '0', '3', '', 'public://course/2016/12-06/182254ecf00a691940.jpg', 'public://course/2016/12-06/182254eca2f5428244.jpg', 'public://course/2016/12-06/182254ec4ff2240777.jpg', '<p><strong>一、官方模版定制</strong></p>\n\n<p><strong>二、官方功能定制</strong></p>\n\n<p><strong>三、官方代码维护</strong></p>\n\n<p><strong>四、APP定制</strong></p>\n\n<p><strong>五、自主二次开发</strong></p>\n', '|1|', '|了解定制开发服务|', '|网校管理员|', '1', '100', '1434593050', '0', '0', '', '1', '544', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1432888238', '1481280605', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '3', '3');
+INSERT INTO `course` VALUES ('8', '定制开发测试十', '', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '1', '0', '0', '0', '0', '3', '', 'public://course/2016/12-06/182254ecf00a691940.jpg', 'public://course/2016/12-06/182254eca2f5428244.jpg', 'public://course/2016/12-06/182254ec4ff2240777.jpg', '<p><strong>一、官方模版定制</strong></p>\n\n<p><strong>二、官方功能定制</strong></p>\n\n<p><strong>三、官方代码维护</strong></p>\n\n<p><strong>四、APP定制</strong></p>\n\n<p><strong>五、自主二次开发</strong></p>\n', '|1|', '|了解定制开发服务|', '|网校管理员|', '1', '100', '1434593050', '0', '0', '', '1', '545', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1432888238', '1489476115', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '3', '3');
 INSERT INTO `course` VALUES ('9', '经典测试九', '', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '1', '0', '0', '0', '0', '3', '', 'public://course/2016/12-06/170310ee146c884215.jpg', 'public://course/2016/12-06/170310edbb88706966.jpg', 'public://course/2016/12-06/170310ed5464969341.jpg', '', '|1|', null, null, '1', '90', '1434593044', '0', '0', '', '1', '91', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1432888289', '1481280577', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '2', '0');
-INSERT INTO `course` VALUES ('10', '区别测试八', '本课程为示例课程！', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '1', '0', '0', '0', '0', '3', '', 'public://course/2016/12-06/17000776c1aa492704.jpg', 'public://course/2016/12-06/170007767c38715611.jpg', 'public://course/2016/12-06/17000776394a017917.jpg', '', '|1|', null, null, '1', '80', '1434593039', '0', '0', '', '1', '151', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1432888692', '1484797977', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '3', '1');
+INSERT INTO `course` VALUES ('10', '区别测试八', '本课程为示例课程！', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '1', '0', '0', '0', '0', '3', '', 'public://course/2016/12-06/17000776c1aa492704.jpg', 'public://course/2016/12-06/170007767c38715611.jpg', 'public://course/2016/12-06/17000776394a017917.jpg', '', '|1|', null, null, '1', '80', '1434593039', '0', '0', '', '1', '157', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1432888692', '1491201585', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '3', '1');
 INSERT INTO `course` VALUES ('11', '技术服务测试七', '', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '1', '0', '0', '0', '0', '3', '', 'public://course/2016/12-06/1658008d969c842586.jpg', 'public://course/2016/12-06/1658008d5972969734.jpg', 'public://course/2016/12-06/1658008d1ad7548605.jpg', '<p>全新直播节目：《E周在线教育》低调上线！<br />\r\n在线教育那么热，各种资讯那么多，你怎么看？官方怎么看？咱们每周聊一聊！<br />\r\nES新功能是什么？怎么用？看课程太累？直播来教你！</p>\r\n\r\n<p> </p>\r\n\r\n<p>每周二，来E周在线教育：<a href=\"http://www.baidu.com/course/426\" target=\"_blank\">http://www.baidu.com/course/426</a></p>\r\n\r\n<p> </p>\r\n', '|1|', '|了解在线教育圈内那些事儿|提高网校运营能力| 加深对在线教育理解|', '|教育工作者|在线教育工作者|', '1', '120', '1434593061', '0', '0', '', '1', '139', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1432888820', '1481280521', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '2', '2');
-INSERT INTO `course` VALUES ('12', '网校运营指南测试六', '', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '1', '0', '0', '0', '0', '4', '', 'public://course/2016/12-06/1655379296d3851886.jpg', 'public://course/2016/12-06/1655379256ca597030.jpg', 'public://course/2016/12-06/1655379218fd755099.jpg', '', '|1|', null, null, '1', '60', '1434593028', '0', '0', '', '1', '138', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1432888980', '1484539916', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '3', '3');
-INSERT INTO `course` VALUES ('13', '上传测试三', '', 'published', '1', '0', 'normal', '0', '3.00', '3.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '2', '0', '0', '0', '0', '2', '', 'public://course/2016/12-06/164553103c57300240.jpg', 'public://course/2016/12-06/1645520f40c0574760.jpg', 'public://course/2016/12-06/1645520f0350665811.jpg', '', '|1|', '', '', '0', '0', '0', '0', '0', '', '0', '20', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1434015826', '1484803378', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '2', '0');
+INSERT INTO `course` VALUES ('12', '网校运营指南测试六', '', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '1', '0', '0', '0', '0', '4', '', 'public://course/2016/12-06/1655379296d3851886.jpg', 'public://course/2016/12-06/1655379256ca597030.jpg', 'public://course/2016/12-06/1655379218fd755099.jpg', '', '|1|', null, null, '1', '60', '1434593028', '0', '0', '', '1', '145', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1432888980', '1491199187', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '3', '3');
+INSERT INTO `course` VALUES ('13', '上传测试三', '', 'published', '1', '0', 'normal', '0', '3.00', '3.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '2', '0', '0', '0', '0', '2', '', 'public://course/2016/12-06/164553103c57300240.jpg', 'public://course/2016/12-06/1645520f40c0574760.jpg', 'public://course/2016/12-06/1645520f0350665811.jpg', '', '|1|', '', '', '0', '0', '0', '0', '0', '', '0', '28', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1434015826', '1491197499', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '2', '0');
 INSERT INTO `course` VALUES ('41', '2313213', '', 'draft', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '0', '0', '0', '0', '0', '0', '', '', '', '', '', '|1|', null, null, '0', '0', '0', '0', '0', '', '0', '0', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1481766427', '1481766427', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '3', '1');
 INSERT INTO `course` VALUES ('14', '课时测试四？', '本课程为示例课程！', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '1', '0', '0', '0', '0', '3', '', 'public://course/2016/12-06/165215fc9f79055813.jpg', 'public://course/2016/12-06/165215fc62b3148925.jpg', 'public://course/2016/12-06/165215fc2351250525.jpg', '', '|1|', '', '', '0', '0', '0', '0', '0', '', '0', '4', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1434015826', '1481280433', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '2', '2');
 INSERT INTO `course` VALUES ('15', '特色功能--学校测试五', '本课程为示例课程！', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '1', '0', '0', '0', '0', '3', '', 'public://course/2016/12-06/165347b9c085792978.jpg', 'public://course/2016/12-06/165347b9852c366917.jpg', 'public://course/2016/12-06/165347b945ea237883.jpg', '', '|1|', '', '', '0', '0', '0', '0', '0', '', '0', '2', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1434015826', '1483409680', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '1', '3');
-INSERT INTO `course` VALUES ('18', '开启网校之路测试二', '如何登入管理后台？如何设置网站基本信息？', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '10', '0', '0', '0', '0', '1', '|2|', 'public://course/2016/12-06/1504535e1f01466195.jpg', 'public://course/2016/12-06/1504535dc08a888671.jpg', 'public://course/2016/12-06/1504535d70df198376.jpg', '<p>从购买网校系统到最终运营网校，一般会经历如下事项：</p>\r\n\r\n<p>一、域名备案</p>\r\n\r\n<p>二、系统操作帮助</p>\r\n\r\n<p>三、备案成功后的域名解析工作</p>\r\n\r\n<p>本课程即详细讲解各个事项中需要注意的细节，为了让您快速上手网校，避免各种各样的问题，请认真查看。</p>\r\n\r\n<p><strong>注意：</strong>域名备案周期一般需要20天，在此期间内官方提供二级域名，用户在域名备案期间可使用二级域名登录自己的网校，添加课程和内容。</p>\r\n\r\n<p> </p>\r\n\r\n<p><strong>快速通道：</strong></p>\r\n\r\n<p>如您已购买套餐，熟悉域名备案、解析相关事项，并且您的域名已备案，则从购买套餐三日内，即可通过您的域名访问网校，向外运营网校。</p>\r\n\r\n<p> </p>\r\n\r\n<p>如有问题或建议，可直接在相应课时或课程讨论组提问，客服会在24小时内回复。</p>\r\n', '|1|', '|快速运营网校|避免可能的问题|了解网校运营流程|', '|初学者|', '0', '0', '0', '0', '0', '', '0', '8', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1434015840', '1483324453', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '1', '0');
-INSERT INTO `course` VALUES ('19', '教育云及私有云方案测试一', '', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '2', '0', '0', '0', '0', '4', '', 'public://course/2016/12-06/150344068c15106133.jpg', 'public://course/2016/12-06/1503440642b9169943.jpg', 'public://course/2016/12-06/15034405f739366204.jpg', '', '|1|', '', '', '0', '0', '0', '0', '0', '', '0', '46', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1434535059', '1482213274', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '2', '1');
+INSERT INTO `course` VALUES ('18', '开启网校之路测试二', '如何登入管理后台？如何设置网站基本信息？', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '10', '0', '0', '0', '0', '1', '|2|', 'public://course/2016/12-06/1504535e1f01466195.jpg', 'public://course/2016/12-06/1504535dc08a888671.jpg', 'public://course/2016/12-06/1504535d70df198376.jpg', '<p>从购买网校系统到最终运营网校，一般会经历如下事项：</p>\r\n\r\n<p>一、域名备案</p>\r\n\r\n<p>二、系统操作帮助</p>\r\n\r\n<p>三、备案成功后的域名解析工作</p>\r\n\r\n<p>本课程即详细讲解各个事项中需要注意的细节，为了让您快速上手网校，避免各种各样的问题，请认真查看。</p>\r\n\r\n<p><strong>注意：</strong>域名备案周期一般需要20天，在此期间内官方提供二级域名，用户在域名备案期间可使用二级域名登录自己的网校，添加课程和内容。</p>\r\n\r\n<p> </p>\r\n\r\n<p><strong>快速通道：</strong></p>\r\n\r\n<p>如您已购买套餐，熟悉域名备案、解析相关事项，并且您的域名已备案，则从购买套餐三日内，即可通过您的域名访问网校，向外运营网校。</p>\r\n\r\n<p> </p>\r\n\r\n<p>如有问题或建议，可直接在相应课时或课程讨论组提问，客服会在24小时内回复。</p>\r\n', '|1|', '|快速运营网校|避免可能的问题|了解网校运营流程|', '|初学者|', '0', '0', '0', '0', '0', '', '0', '9', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1434015840', '1491183798', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '1', '0');
+INSERT INTO `course` VALUES ('19', '教育云及私有云方案测试一', '', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '1', '0', '0', '0', '0', '4', '', 'public://course/2016/12-06/150344068c15106133.jpg', 'public://course/2016/12-06/1503440642b9169943.jpg', 'public://course/2016/12-06/15034405f739366204.jpg', '', '|1|', '', '', '0', '0', '0', '0', '0', '', '0', '55', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1434535059', '1491193312', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '2', '1');
 INSERT INTO `course` VALUES ('20', '教育云服务介绍', '什么是教育云？', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '7', '0', '0', '0', '0', '3', '|5|', 'public://course/2016/12-08/1355280827d1761144.jpg', 'public://course/2016/12-08/13552807ecac935222.jpg', 'public://course/2016/12-08/13552807b477629412.jpg', '<p>    教育云服务是基于开放云平台，面向用户提供的搭建网校相关的云服务。包括云主机、教育云视频、云直播、云应用等。</p>\r\n\r\n<p><span style=\"color:rgb(51,204,153);\"><strong>云主机：</strong></span></p>\r\n\r\n<p>商业用户可以免费获赠云主机；</p>\r\n\r\n<p>主机性能可以随网校规模扩展升级。</p>\r\n\r\n<p><span style=\"color:rgb(51,204,153);\"><strong>云视频：</strong></span></p>\r\n\r\n<p>EduSoho云视频专为在线教育设计；</p>\r\n\r\n<p>有效保护教育机构课程视频版权。</p>\r\n\r\n<p><span style=\"color:rgb(51,204,153);\"><strong>云直播：</strong></span></p>\r\n\r\n<p>点开网页即可参与在线直播；</p>\r\n\r\n<p>在线视频、音频交流，PPT、文档在线分享。</p>\r\n\r\n<p><span style=\"color:rgb(51,204,153);\"><strong>云应用：</strong></span></p>\r\n\r\n<p>云集全国开发者，开发在线教育专属应用；</p>\r\n\r\n<p>后台一键下载安装，网校功能无限扩展。</p>\r\n\r\n<p><span style=\"color:rgb(51,204,153);\"><strong>云短信：</strong></span></p>\r\n\r\n<p>云集全国开发者，开发在线教育专属应用；</p>\r\n\r\n<p>后台一键下载安装，网校功能无限扩展。</p>\r\n', '|1|', '|了解什么是教育云|', '|用户|网校校长|', '0', '0', '0', '0', '3', '', '0', '13', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1434535070', '1481176530', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '3', '2');
 INSERT INTO `course` VALUES ('21', '教育云接入教程', '', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '3', '0', '0', '0', '0', '3', '|5|', 'public://course/2016/12-08/13574048ffc9562132.jpg', 'public://course/2016/12-08/13574048c0f6219798.jpg', 'public://course/2016/12-08/1357404883b6708701.jpg', '<p>介绍教育云接入的流程及相关事项</p>\n', '|1|', '|熟悉接入教育云流程|', '|开源版用户|', '0', '0', '0', '0', '5', '', '0', '10', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1434535070', '1481176662', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '2', '3');
 INSERT INTO `course` VALUES ('22', '网校基本设置', '如何登入管理后台？如何设置网站基本信息？', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '10', '0', '0', '0', '0', '4', '|2|', 'http://edusoho-demo.b0.upaiyun.com/files/default/2015/06-16/114942652b7d659082.jpg', 'http://edusoho-demo.b0.upaiyun.com/files/default/2015/06-16/114942651c6f507022.jpg', 'http://edusoho-demo.b0.upaiyun.com/files/default/2015/06-16/114942646b86261415.jpg', '<p>从购买网校系统到最终运营网校，一般会经历如下事项：</p>\r\n\r\n<p>一、域名备案</p>\r\n\r\n<p>二、系统操作帮助</p>\r\n\r\n<p>三、备案成功后的域名解析工作</p>\r\n\r\n<p>本课程即详细讲解各个事项中需要注意的细节，为了让您快速上手网校，避免各种各样的问题，请认真查看。</p>\r\n\r\n<p><strong>注意：</strong>域名备案周期一般需要20天，在此期间内官方提供二级域名，用户在域名备案期间可使用二级域名登录自己的网校，添加课程和内容。</p>\r\n\r\n<p> </p>\r\n\r\n<p><strong>快速通道：</strong></p>\r\n\r\n<p>如您已购买套餐，熟悉域名备案、解析相关事项，并且您的域名已备案，则从购买套餐三日内，即可通过您的域名访问网校，向外运营网校。</p>\r\n\r\n<p> </p>\r\n\r\n<p>如有问题或建议，可直接在相应课时或课程讨论组提问，客服会在24小时内回复。</p>\r\n', '|1|', '|快速运营网校|避免可能的问题|了解网校运营流程|', '|初学者|', '0', '0', '0', '0', '4', '', '0', '633', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1434535145', '1467925283', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '3', '0');
 INSERT INTO `course` VALUES ('23', '课程发布指南', '如何创建和发布课程？如何使用题库？如何使用教学资料库？', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '24', '0', '0', '0', '0', '5', '|3|4|', 'http://edusoho-demo.b0.upaiyun.com/files/default/2015/06-12/172500cecc44809373.jpg', 'http://edusoho-demo.b0.upaiyun.com/files/default/2015/06-12/172500cebfdf004785.jpg', 'http://edusoho-demo.b0.upaiyun.com/files/default/2015/06-12/172500ceb250316766.jpg', '<p>本课程意在指导用户快速了解如何创建一个具有吸引力的课程，本课不仅介绍了功能的使用，更讲解了如何更好的使用这些功能和指导方法，相信是你熟悉课程创建步骤的最佳学习材料。</p>\n', '|1|', '|了解课程编辑相关功能|了解题库系统的使用|了解教学资料库的使用|能够为学员创造体验很好的课程|', '|网校教师|', '0', '0', '0', '0', '1', '', '0', '10', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1434535150', '1484718776', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '2', '1');
 INSERT INTO `course` VALUES ('24', '定制开发', '', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '1', '0', '0', '0', '0', '2', '', 'public://course/2016/12-08/134359f57484631561.jpg', 'public://course/2016/12-08/134359f53e65458737.jpg', 'public://course/2016/12-08/134359f50a90138305.jpg', '<p><strong>一、官方模版定制</strong></p>\n\n<p><strong>二、官方功能定制</strong></p>\n\n<p><strong>三、官方代码维护</strong></p>\n\n<p><strong>四、APP定制</strong></p>\n\n<p><strong>五、自主二次开发</strong></p>\n', '|1|', '|了解定制开发服务|', '|网校管理员|', '0', '0', '0', '0', '8', '', '5', '17', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1434535206', '1481175840', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '1', '2');
-INSERT INTO `course` VALUES ('25', '经典案例', '', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '1', '0', '0', '0', '0', '4', '', 'public://course/2016/12-08/134619bb6ce6789824.jpg', 'public://course/2016/12-08/134619bb08b3628337.jpg', 'public://course/2016/12-08/134619ba9923368973.jpg', '', '|1|', '', '', '0', '0', '0', '0', '9', '', '4', '15', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1434535206', '1484809648', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '1', '3');
-INSERT INTO `course` VALUES ('26', '开源版和商业版的区别', '本课程为示例课程！', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '1', '0', '0', '0', '0', '4', '', 'public://course/2016/12-08/135126e78155818170.jpg', 'public://course/2016/12-08/135126e73b5a259071.jpg', 'public://course/2016/12-08/135126e6ff09718819.jpg', '', '|1|', '', '', '0', '0', '0', '0', '10', '', '4', '30', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1434535206', '1484813889', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '1', '0');
+INSERT INTO `course` VALUES ('25', '经典案例', '', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '1', '0', '0', '0', '0', '4', '', 'public://course/2016/12-08/134619bb6ce6789824.jpg', 'public://course/2016/12-08/134619bb08b3628337.jpg', 'public://course/2016/12-08/134619ba9923368973.jpg', '', '|1|', '', '', '0', '0', '0', '0', '9', '', '4', '20', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1434535206', '1491206162', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '1', '3');
+INSERT INTO `course` VALUES ('26', '开源版和商业版的区别', '本课程为示例课程！', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '1', '0', '0', '0', '0', '4', '', 'public://course/2016/12-08/135126e78155818170.jpg', 'public://course/2016/12-08/135126e73b5a259071.jpg', 'public://course/2016/12-08/135126e6ff09718819.jpg', '', '|1|', '', '', '0', '0', '0', '0', '10', '', '4', '31', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1434535206', '1489475608', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '1', '0');
 INSERT INTO `course` VALUES ('27', '技术服务套餐', '', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '1', '0', '0', '0', '0', '2', '', 'public://course/2016/12-08/13532333c2d1577126.jpg', 'public://course/2016/12-08/1353233387c4585182.jpg', 'public://course/2016/12-08/135323334cdd107144.jpg', '<p>全新直播节目：《E周在线教育》低调上线！<br />\r\n在线教育那么热，各种资讯那么多，你怎么看？官方怎么看？咱们每周聊一聊！<br />\r\nES新功能是什么？怎么用？看课程太累？直播来教你！</p>\r\n\r\n<p> </p>\r\n\r\n<p>每周二，来E周在线教育：<a href=\"http://www.baidu.com/course/426\" target=\"_blank\">http://www.baidu.com/course/426</a></p>\r\n\r\n<p> </p>\r\n', '|1|', '|了解在线教育圈内那些事儿|提高网校运营能力| 加深对在线教育理解|', '|教育工作者|在线教育工作者|', '0', '0', '0', '0', '11', '', '4', '14', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1434535206', '1484798710', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '1', '1');
-INSERT INTO `course` VALUES ('28', '产品特色', '', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '10', '0', '5', '1', '0', '3', '', 'public://course/2016/12-08/133429538caa766283.jpg', 'public://course/2016/12-08/133429533172141376.jpg', 'public://course/2016/12-08/133429529223837688.jpg', '', '|1|', '', '|教师|管理员|校长|', '0', '0', '0', '0', '6', '', '5', '23', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1434535220', '1484809818', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '1', '2');
-INSERT INTO `course` VALUES ('29', '班级功能介绍', '', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '1', '0', '0', '0', '0', '2', '', 'public://course/2016/12-08/133638674bfe553355.jpg', 'public://course/2016/12-08/1336386712f4866206.jpg', 'public://course/2016/12-08/13363866d370176488.jpg', '<p>在进行直播授课或者录制课程之前，我们需要准备相关的硬件和软件。主要包括摄像设备、电脑、麦克风、录屏软件等。</p>\n\n<p>本课程针对不同的状况，推荐了数套方案。</p>\n', '|1|', '|了解进行直播或录播所需设备|', '|校长|老师|', '0', '0', '0', '0', '7', '', '4', '15', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1434535220', '1484543315', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '2', '3');
-INSERT INTO `course` VALUES ('30', '学员在网校', '注册、登陆、设置、学习、交流', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '10', '0', '0', '0', '0', '6', '', 'http://edusoho-demo.b0.upaiyun.com/files/default/2015/06-12/172635bdd4ca661701.jpg', 'http://edusoho-demo.b0.upaiyun.com/files/default/2015/06-12/172635bdc41d559384.jpg', 'http://edusoho-demo.b0.upaiyun.com/files/default/2015/06-12/172635bd8f08749848.jpg', '<p>以学员身份学会如何使用网络课堂中的各种功能</p>\r\n', '|1|', '|了解学员功能|', '|网校学员|', '0', '0', '0', '0', '2', '', '0', '18', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1434535309', '1484810852', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '3', '1');
+INSERT INTO `course` VALUES ('28', '产品特色', '', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '10', '0', '5', '1', '0', '3', '', 'public://course/2016/12-08/133429538caa766283.jpg', 'public://course/2016/12-08/133429533172141376.jpg', 'public://course/2016/12-08/133429529223837688.jpg', '', '|1|', '', '|教师|管理员|校长|', '0', '0', '0', '0', '6', '', '5', '25', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1434535220', '1491205597', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '1', '2');
+INSERT INTO `course` VALUES ('29', '班级功能介绍', '', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '1', '0', '0', '0', '0', '2', '', 'public://course/2016/12-08/133638674bfe553355.jpg', 'public://course/2016/12-08/1336386712f4866206.jpg', 'public://course/2016/12-08/13363866d370176488.jpg', '<p>在进行直播授课或者录制课程之前，我们需要准备相关的硬件和软件。主要包括摄像设备、电脑、麦克风、录屏软件等。</p>\n\n<p>本课程针对不同的状况，推荐了数套方案。</p>\n', '|1|', '|了解进行直播或录播所需设备|', '|校长|老师|', '0', '0', '0', '0', '7', '', '4', '21', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1434535220', '1491207068', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '2', '3');
+INSERT INTO `course` VALUES ('30', '学员在网校', '注册、登陆、设置、学习、交流', 'published', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '10', '0', '0', '0', '0', '6', '', 'http://edusoho-demo.b0.upaiyun.com/files/default/2015/06-12/172635bdd4ca661701.jpg', 'http://edusoho-demo.b0.upaiyun.com/files/default/2015/06-12/172635bdc41d559384.jpg', 'http://edusoho-demo.b0.upaiyun.com/files/default/2015/06-12/172635bd8f08749848.jpg', '<p>以学员身份学会如何使用网络课堂中的各种功能</p>\r\n', '|1|', '|了解学员功能|', '|网校学员|', '0', '0', '0', '0', '2', '', '0', '27', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1434535309', '1491205706', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '3', '1');
 INSERT INTO `course` VALUES ('32', '视频上传不了或者视频过大不能上传', '', 'closed', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '1', '0', '0', '0', '0', '2', '', 'http://edusoho-demo.b0.upaiyun.com/files/default/2015/05-29/163518626554675382.jpg', 'http://edusoho-demo.b0.upaiyun.com/files/default/2015/05-29/163518625788981698.jpg', 'http://edusoho-demo.b0.upaiyun.com/files/default/2015/05-29/1635186228f1588381.jpg', '', '|1|', '', '', '0', '0', '0', '0', '13', '', '0', '0', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1477301558', '1477302017', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '2', '2');
 INSERT INTO `course` VALUES ('33', '怎么能让游客也可以预览网校的免费课时？', '本课程为示例课程！', 'closed', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '1', '0', '0', '0', '0', '3', '', 'http://edusoho-demo.b0.upaiyun.com/files/default/2015/05-29/16384776c9c5799600.jpg', 'http://edusoho-demo.b0.upaiyun.com/files/default/2015/05-29/16384776bced159311.jpg', 'http://edusoho-demo.b0.upaiyun.com/files/default/2015/05-29/163847766245344959.jpg', '', '|1|', '', '', '0', '0', '0', '0', '14', '', '0', '0', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1477301597', '1477302017', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '3', '3');
 INSERT INTO `course` VALUES ('36', '开启网校之路', '如何登入管理后台？如何设置网站基本信息？', 'closed', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '10', '0', '0', '0', '0', '1', '|2|', 'http://edusoho-demo.b0.upaiyun.com/files/default/2015/05-21/1027462309ef791029.jpg', 'http://edusoho-demo.b0.upaiyun.com/files/default/2015/05-21/10274622d419386856.jpg', 'http://edusoho-demo.b0.upaiyun.com/files/default/2015/05-21/102746228ebd740228.jpg', '<p>从购买网校系统到最终运营网校，一般会经历如下事项：</p>\r\n\r\n<p>一、域名备案</p>\r\n\r\n<p>二、系统操作帮助</p>\r\n\r\n<p>三、备案成功后的域名解析工作</p>\r\n\r\n<p>本课程即详细讲解各个事项中需要注意的细节，为了让您快速上手网校，避免各种各样的问题，请认真查看。</p>\r\n\r\n<p><strong>注意：</strong>域名备案周期一般需要20天，在此期间内官方提供二级域名，用户在域名备案期间可使用二级域名登录自己的网校，添加课程和内容。</p>\r\n\r\n<p> </p>\r\n\r\n<p><strong>快速通道：</strong></p>\r\n\r\n<p>如您已购买套餐，熟悉域名备案、解析相关事项，并且您的域名已备案，则从购买套餐三日内，即可通过您的域名访问网校，向外运营网校。</p>\r\n\r\n<p> </p>\r\n\r\n<p>如有问题或建议，可直接在相应课时或课程讨论组提问，客服会在24小时内回复。</p>\r\n', '|1|', '|快速运营网校|避免可能的问题|了解网校运营流程|', '|初学者|', '0', '0', '0', '0', '18', '', '0', '0', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1477301597', '1477302017', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '1', '0');
 INSERT INTO `course` VALUES ('37', '教育云及私有云方案', '', 'closed', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '1', '0', '0', '0', '0', '4', '', 'public://course/2016/12-08/13313687d0e7122452.jpg', 'public://course/2016/12-08/1331368793cf059197.jpg', 'public://course/2016/12-08/133136875161166332.jpg', '', '|1|', '', '', '0', '0', '0', '0', '19', '', '0', '0', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1477301598', '1481175097', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '2', '0');
 INSERT INTO `course` VALUES ('38', '特色功能--班级', '本课程为示例课程！', 'closed', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '1', '0', '0', '0', '0', '3', '', 'http://edusoho-demo.b0.upaiyun.com/files/default/2015/06-02/14523753b268289153.jpg', 'http://edusoho-demo.b0.upaiyun.com/files/default/2015/06-02/14523753a776241590.jpg', 'http://edusoho-demo.b0.upaiyun.com/files/default/2015/06-02/14523753843e698918.jpg', '', '|1|', '', '', '0', '0', '0', '0', '15', '', '0', '0', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1477301612', '1481174858', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, '3', '1');
+INSERT INTO `course` VALUES ('43', '003', '', 'draft', '1', '0', 'normal', '0', '0.00', '0.00', '0.00', '0.00', 'none', '0', 'opened', 'none', '0.00', '0', '0', '0', '0', '0', '0', '', '', '', '', '', '|1|', null, null, '0', '0', '0', '0', '0', '', '0', '0', '0', '1', '0', '10.00', 'none', '0', '0', 'single', '1', '1489477060', '1489477060', '0', '0', '0', '0', '100', '0', '0', '1', '1.', null, null, '0');
 
 -- ----------------------------
--- Table structure for `course_announcement`
+-- Table structure for course_announcement
 -- ----------------------------
 DROP TABLE IF EXISTS `course_announcement`;
 CREATE TABLE `course_announcement` (
@@ -1418,7 +1419,7 @@ CREATE TABLE `course_announcement` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `course_chapter`
+-- Table structure for course_chapter
 -- ----------------------------
 DROP TABLE IF EXISTS `course_chapter`;
 CREATE TABLE `course_chapter` (
@@ -1496,7 +1497,7 @@ INSERT INTO `course_chapter` VALUES ('92', '36', 'chapter', '0', '1', '1', '系�
 INSERT INTO `course_chapter` VALUES ('93', '36', 'chapter', '0', '2', '11', '域名备案与上线域名', '1477301597', '44');
 
 -- ----------------------------
--- Table structure for `course_draft`
+-- Table structure for course_draft
 -- ----------------------------
 DROP TABLE IF EXISTS `course_draft`;
 CREATE TABLE `course_draft` (
@@ -1540,7 +1541,7 @@ INSERT INTO `course_draft` VALUES ('201', '教育云视频', '', '3', '<p>&nbsp;
 INSERT INTO `course_draft` VALUES ('202', '管理后台入口', '', '19', '<p>&nbsp;</p>\n\n<p><strong><span style=\"font-size:16px\">如何进入网校后台：</span></strong></p>\n\n<p>1、登陆网站账户后，在网站首页地址后加 /admin ，管理员/超级管理员权限的账户即可看到后台页面。</p>\n\n<p>2、点击网校顶部导航处的你的用户名后，点击【管理后台】即可进入后台。</p>\n\n<p>&nbsp;</p>\n\n<p><img alt=\"\" src=\"http://exam.edusoho.cn/files/course/2015/06-11/133549513f66448161.png?6.0.2\" /></p>\n', '1', '142', '1481007114');
 
 -- ----------------------------
--- Table structure for `course_favorite`
+-- Table structure for course_favorite
 -- ----------------------------
 DROP TABLE IF EXISTS `course_favorite`;
 CREATE TABLE `course_favorite` (
@@ -1558,7 +1559,7 @@ CREATE TABLE `course_favorite` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `course_lesson`
+-- Table structure for course_lesson
 -- ----------------------------
 DROP TABLE IF EXISTS `course_lesson`;
 CREATE TABLE `course_lesson` (
@@ -1775,12 +1776,11 @@ INSERT INTO `course_lesson` VALUES ('258', '36', '92', '9', '10', '0', 'publishe
 INSERT INTO `course_lesson` VALUES ('259', '36', '93', '10', '12', '0', 'published', '域名备案概览', '', null, 'text', '<p>用户若要开设一个网校，需要一个<strong>EduSoho网校系统</strong>+<strong>一个独立域名</strong>，学员通过域名访问您的EduSoho网校系统。</p>\r\n\r\n<p>现在您已经购买了<strong>EduSoho网校系统及技术维护服务</strong>，您只需要去购买一个域名并备案，您的学员就能通过网络访问您的网校，学习您的课程。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:24px\">备案域名：</span></p>\r\n\r\n<p><span style=\"font-size:24px\"><span style=\"font-size:14px\"><strong>一、域名</strong><strong>备案条件：</strong></span></span></p>\r\n\r\n<ol>\r\n	<li>网站服务器在中国大陆购买或租用；</li>\r\n	<li>域名在中国大陆购买。</li>\r\n</ol>\r\n\r\n<p><strong>二、如果您使用我公司提供的云服务器，则可根据以下方式备案。</strong></p>\r\n\r\n<ul>\r\n	<li>阿里云主机可在此备案<a href=\"http://www.aliyun.com/act/webbaindex.html\" target=\"_blank\"><span style=\"color:rgb(255, 165, 0)\">http://www.aliyun.com/act/webbaindex.html</span></a></li>\r\n	<li>UCloud主机可查看<a href=\"http://www.ucloud.cn/product/uicp_main\" target=\"_blank\"><span style=\"color:rgb(255, 165, 0)\">http://www.ucloud.cn/product/uicp_main</span></a></li>\r\n</ul>\r\n\r\n<p><strong>三、域名备案成功后：</strong></p>\r\n\r\n<ol>\r\n	<li>客户需要登陆域名管理后台（域名提供商处），绑定服务器IP与您的网校域名（俗称添加A记录,为了方便可添加 xxx.com &amp;&nbsp;<span style=\"color:rgb(229, 51, 51)\"><strong>www</strong></span>.xxx.com）；</li>\r\n	<li>客户通知客服，域名已绑定（添加A记录），技术人员做相应处理，即可通过网校域名访问网校。</li>\r\n</ol>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>附：</strong></p>\r\n\r\n<p>阿里云新备案步骤：<a href=\"http://help.aliyun.com/guide?spm=5176.386621.1.13.R4wbQQ&amp;helpId=875\" target=\"_blank\"><span style=\"color:rgb(255, 165, 0)\">首次备案指南</span></a></p>\r\n\r\n<p>阿里云转备案步骤：</p>\r\n\r\n<p>1.注册并登录：<a href=\"http://www.aliyun.com/act/webbaindex.html\"><span style=\"color:rgb(255, 165, 0)\">http://www.aliyun.com/act/webbaindex.html</span></a></p>\r\n\r\n<p>2.查看帮助：<a href=\"http://help.aliyun.com/view/13445870.html\"><span style=\"color:rgb(255, 165, 0)\">http://help.aliyun.com/view/13445870.html</span></a></p>\r\n\r\n<p>3.选择产品「<strong>阿里云主机</strong>」</p>\r\n\r\n<p>4.<strong>IP</strong>和<strong>备案服务号</strong>请联系客服获取</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n', '0', '0', '0', '', '', '', '0', '0', null, '0', '0', '0', '0', '0', '0', '0', 'ungenerated', '0', '0', '1', '1477301597', '1477301597', '131', 'normal', '0');
 INSERT INTO `course_lesson` VALUES ('260', '37', '0', '1', '1', '0', 'published', '管理后台入口', '', null, 'text', '<p>&nbsp;</p>\r\n\r\n<p><strong><span style=\"font-size:16px\">如何进入网校后台：</span></strong></p>\r\n\r\n<p>1、登陆网站账户后，在网站首页地址后加 /admin ，管理员/超级管理员权限的账户即可看到后台页面。</p>\r\n\r\n<p>2、点击网校顶部导航处的你的用户名后，点击【管理后台】即可进入后台。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><img alt=\"\" src=\"http://exam.edusoho.cn/files/course/2015/06-11/133549513f66448161.png?6.0.2\" /></p>\r\n', '0', '0', '0', '', '', '', '0', '0', null, '0', '0', '0', '0', '0', '0', '0', 'ungenerated', '0', '0', '1', '1477301598', '1477301598', '142', 'normal', '0');
 INSERT INTO `course_lesson` VALUES ('261', '38', '0', '1', '1', '0', 'published', '班级模块说明', '', null, 'text', '<p>班级（学习圈子）是EduSoho自主研发的国内首个提供了系统化学习、个性化学习、学习目标管理、学习过程跟踪管理的一整套强大的互动学习功能。</p>\r\n\r\n<p><strong>目前在线教育的问题：</strong></p>\r\n\r\n<p>现在很多在线学习的网站和产品，仅仅是提供了视频观看、做题、问答等简单的学习功能，但是我们知道想要真正学好某个东西，其实并没有那么简单。除了课程内容以外，学习还需要引导、需要指导和帮助，学习还会有惰性，需要很好的督促和激励。EduSoho通过对大量用户、大量在线教育网站的深入调研，不断总结分析和探索，设计研发了班级这一具有极大创新性的学习功能，很好的解决了上述问题。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>班级希望帮助网校运营者解决</p>\r\n\r\n<p><strong>1. </strong><strong>帮助学员更好的进行系统化学习</strong></p>\r\n\r\n<p>首先，班级是一群人围绕一个较长远的学习目标共同学习的地方。班级由一系列课程组成，这些课程是老师根据某个教学目标挑选加入的，课程之间存在逻辑关系和先后次序。当然，课程也并不是只能用于一个班级，同一门课程（例如某个基础课）是可以加入到多个班级的。</p>\r\n\r\n<p>其次，班级提供了学习计划。学习计划由老师制订。对于班级中的这么多课程，老师可以它们划分为几个阶段，每个阶段有一个阶段性的学习目标，会包含若干课时、考试、作业、直播答疑等。对于这每一个学习任务，老师可以设定它的［建议学习时长］，这样下来每个阶段就都会有一个学习时长，整个系列课程就有了总的学习时长。老师可以设置学员必须按照顺序来学习，如果某个任务没有完成，则不能进行下一任务的学习，这样整个学习过程就安排的环环相扣、井井有条了。班级有了学习计划以后，学员可以加入到学习计划中，加入时设定自己预计可用的［学习时间］，这样一个个性化的学习计划就自动生成了。有了学习计划，学员就能很清楚的知道自己当下应该学习什么，当前的进度是快了还是慢了，另外还有学力排行榜的展示以激励学习。为了更好的激励学习，后期还会加入学习积分/等级的概念。对于老师来说，他可以随时掌握每个学员的学习进度、学习速度，以便进行督促或是鼓励。对于学习过程中的作业、考试等任务，老师需要及时批改以保证学员的顺利学习。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>2. </strong><strong>强化教学服务，跟课程相比学员能够获得更好的教学服务</strong></p>\r\n\r\n<p>为了在班级中提供更好的教学服务，需要有更多的人参与到班级管理中来，因此我们定义了三种角色：班主任、任课老师、助教。班主任主要负责管理整个班级的各项事务，课程老师可以制订学习计划、批改作业/试卷、回答问题、发起组织班级活动，助教则可以批改作业/试卷、回答问题、发起活动，助教可由本班学员担任。</p>\r\n\r\n<p>班级中固化了教学服务特色，包括：学习计划指导、试卷24小时阅卷点评、作业24小时批改、提问必答、一对一在线答疑、班级活动、就业指导。老师可以根据实际情况选择班级所能提供的服务内容，其中的学习计划、试卷阅卷点评、作业批改、提问回答、班级活动都可以在线完成。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>3. </strong><strong>强调互动学习，学员在互帮互助中提升学习效果</strong></p>\r\n\r\n<p>和一群目标一致、乐于分享的人们在一起学习，不但能极大提升学习效果，同时也让学习不再枯燥。学员可以在班级里面提问/回答问题、发起讨论/参与讨论、分享笔记/笔记点赞，此外，学员还可以报名参加班级活动。活动是由老师发起组织的，可以是线上的也可以是线下的，通过组织活动，可以明显提升学员的活跃度和黏度。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>4. </strong><strong>提倡在互动中完成软性营销</strong></p>\r\n\r\n<p>在当学员对班级、课程的情况不怎么了解的时候，就想要学员购买班级是不合理的。因此我们引入了旁听生的概念，学员可以先以旁听生的身份加入到班级，跟老师、学员进行互动讨论、提问咨询，当然也可以预览一部分课程，当他对整个班级有了一定的了解以后，再决定是否需要购买加入。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>5. </strong><strong>支持封闭型学习的班级，满足O2O运营的需要</strong></p>\r\n\r\n<p>有些班级采用的是线下招生、线上学习的模式，所以我们推出了相应的功能设置。老师把班级设置为封闭后，普通学员就不能加入这类班级了，然后老师通过学员导入功能来设置学员，这样学员就可正常学习了。</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n', '0', '0', '0', '', '', '', '0', '0', null, '0', '0', '0', '0', '0', '0', '0', 'ungenerated', '0', '0', '1', '1477301612', '1477301612', '87', 'normal', '0');
-INSERT INTO `course_lesson` VALUES ('265', '19', '0', '2', '2', '1', 'published', '测试视频一', '测试哦', null, 'video', '', '0', '0', '23', 'self', '大话西游经典搞笑片段  爱你一万年永远不改变-国语高清_自定义转码_480x360.MP4', '', '0', '0', '82', '0', '0', '0', '0', '0', '0', '0', 'ungenerated', '0', '0', '1', '1481094694', '1481261652', '0', 'normal', '0');
 INSERT INTO `course_lesson` VALUES ('271', '40', '0', '1', '1', '0', 'published', '测试收费', '1', null, 'video', '', '0', '0', '17', 'self', '第二季北大青鸟校园行宣传片 V2.0_自定义转码_480x360.MP4', '', '0', '0', '120', '0', '0', '0', '0', '0', '0', '0', 'ungenerated', '0', '0', '1', '1481698515', '1481698515', '0', 'normal', '0');
 INSERT INTO `course_lesson` VALUES ('270', '13', '0', '2', '2', '0', 'published', '测试二', '123', null, 'video', '', '0', '0', '20', 'self', '第二季北大青鸟校园行宣传片 V2.0_自定义转码_480x360.MP4', '', '0', '0', '120', '0', '0', '0', '0', '0', '0', '0', 'ungenerated', '0', '0', '1', '1481698064', '1481698071', '0', 'normal', '0');
 
 -- ----------------------------
--- Table structure for `course_lesson_extend`
+-- Table structure for course_lesson_extend
 -- ----------------------------
 DROP TABLE IF EXISTS `course_lesson_extend`;
 CREATE TABLE `course_lesson_extend` (
@@ -1793,13 +1793,12 @@ CREATE TABLE `course_lesson_extend` (
 -- ----------------------------
 -- Records of course_lesson_extend
 -- ----------------------------
-INSERT INTO `course_lesson_extend` VALUES ('265', '19', '0', '0.0');
 INSERT INTO `course_lesson_extend` VALUES ('122', '18', '0', '0.0');
 INSERT INTO `course_lesson_extend` VALUES ('271', '40', '0', '0.0');
 INSERT INTO `course_lesson_extend` VALUES ('270', '13', '0', '0.0');
 
 -- ----------------------------
--- Table structure for `course_lesson_learn`
+-- Table structure for course_lesson_learn
 -- ----------------------------
 DROP TABLE IF EXISTS `course_lesson_learn`;
 CREATE TABLE `course_lesson_learn` (
@@ -2013,11 +2012,10 @@ INSERT INTO `course_lesson_learn` VALUES ('210', '13', '7', '71', 'learning', '1
 INSERT INTO `course_lesson_learn` VALUES ('211', '1', '14', '86', 'learning', '1477300371', '0', '0', '0', '0', 'paused', '0');
 INSERT INTO `course_lesson_learn` VALUES ('212', '1', '15', '87', 'learning', '1477304537', '0', '0', '0', '0', 'paused', '0');
 INSERT INTO `course_lesson_learn` VALUES ('213', '1', '19', '142', 'learning', '1480319996', '0', '120', '0', '0', 'paused', '0');
-INSERT INTO `course_lesson_learn` VALUES ('217', '1', '19', '265', 'finished', '1481094729', '1481170001', '4588', '239', '0', 'paused', '1482213321');
 INSERT INTO `course_lesson_learn` VALUES ('219', '1', '13', '85', 'learning', '1481610957', '0', '0', '0', '0', 'paused', '0');
 
 -- ----------------------------
--- Table structure for `course_lesson_replay`
+-- Table structure for course_lesson_replay
 -- ----------------------------
 DROP TABLE IF EXISTS `course_lesson_replay`;
 CREATE TABLE `course_lesson_replay` (
@@ -2039,7 +2037,7 @@ CREATE TABLE `course_lesson_replay` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `course_lesson_view`
+-- Table structure for course_lesson_view
 -- ----------------------------
 DROP TABLE IF EXISTS `course_lesson_view`;
 CREATE TABLE `course_lesson_view` (
@@ -2109,7 +2107,7 @@ INSERT INTO `course_lesson_view` VALUES ('49', '19', '265', '23', '1', 'video', 
 INSERT INTO `course_lesson_view` VALUES ('50', '19', '265', '23', '1', 'video', 'local', 'self', '1482213301');
 
 -- ----------------------------
--- Table structure for `course_material`
+-- Table structure for course_material
 -- ----------------------------
 DROP TABLE IF EXISTS `course_material`;
 CREATE TABLE `course_material` (
@@ -2141,7 +2139,7 @@ INSERT INTO `course_material` VALUES ('10', '19', '0', '第二季北大青鸟校
 INSERT INTO `course_material` VALUES ('15', '19', '0', '大话西游经典搞笑片段  爱你一万年永远不改变-国语高清_自定义转码_480x360.MP4', '', '', '22', '', '', '6875887', 'courselesson', '1', '1481094673', '0', 'course');
 
 -- ----------------------------
--- Table structure for `course_member`
+-- Table structure for course_member
 -- ----------------------------
 DROP TABLE IF EXISTS `course_member`;
 CREATE TABLE `course_member` (
@@ -2168,7 +2166,7 @@ CREATE TABLE `course_member` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `courseId` (`courseId`,`userId`),
   KEY `courseId_role_createdTime` (`courseId`,`role`,`createdTime`)
-) ENGINE=MyISAM AUTO_INCREMENT=116 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=117 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of course_member
@@ -2232,7 +2230,7 @@ INSERT INTO `course_member` VALUES ('57', '13', '0', 'course', '1', '0', '0', '0
 INSERT INTO `course_member` VALUES ('58', '14', '0', 'course', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '', '1', 'teacher', '0', '0', '1434015826');
 INSERT INTO `course_member` VALUES ('59', '15', '0', 'course', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '', '1', 'teacher', '0', '0', '1434015826');
 INSERT INTO `course_member` VALUES ('62', '18', '0', 'course', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '', '1', 'teacher', '0', '0', '1434015840');
-INSERT INTO `course_member` VALUES ('65', '19', '0', 'course', '1', '0', '0', '0', '1', '0', '0', '0', '0', '0', '', '1', 'teacher', '0', '0', '1434535059');
+INSERT INTO `course_member` VALUES ('65', '19', '0', 'course', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '', '1', 'teacher', '0', '0', '1434535059');
 INSERT INTO `course_member` VALUES ('66', '20', '0', 'course', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '', '1', 'teacher', '0', '0', '1434535070');
 INSERT INTO `course_member` VALUES ('67', '21', '0', 'course', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '', '1', 'teacher', '0', '0', '1434535070');
 INSERT INTO `course_member` VALUES ('68', '22', '0', 'course', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '', '1', 'teacher', '0', '0', '1434535145');
@@ -2279,9 +2277,10 @@ INSERT INTO `course_member` VALUES ('111', '37', '0', 'course', '1', '0', '0', '
 INSERT INTO `course_member` VALUES ('112', '38', '0', 'course', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '', '1', 'teacher', '0', '0', '1477301612');
 INSERT INTO `course_member` VALUES ('114', '40', '0', 'course', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '', '1', 'teacher', '0', '0', '1481698457');
 INSERT INTO `course_member` VALUES ('115', '41', '0', 'course', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '', '1', 'teacher', '0', '0', '1481766427');
+INSERT INTO `course_member` VALUES ('116', '43', '0', 'course', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '', '1', 'teacher', '0', '0', '1489477060');
 
 -- ----------------------------
--- Table structure for `course_note`
+-- Table structure for course_note
 -- ----------------------------
 DROP TABLE IF EXISTS `course_note`;
 CREATE TABLE `course_note` (
@@ -2305,7 +2304,7 @@ INSERT INTO `course_note` VALUES ('1', '1', '4', '43', '<p>网校后台入口，
 INSERT INTO `course_note` VALUES ('2', '1', '2', '30', '<p>如何登陆网校后台？</p>\n\n<p>后台地址：网站首页地址后加  /admin</p>\n\n<p>或者点击你的昵称，点击【管理后台】</p>', '51', '0', '1', '1433993369', '1433993429');
 
 -- ----------------------------
--- Table structure for `course_note_like`
+-- Table structure for course_note_like
 -- ----------------------------
 DROP TABLE IF EXISTS `course_note_like`;
 CREATE TABLE `course_note_like` (
@@ -2321,7 +2320,7 @@ CREATE TABLE `course_note_like` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `course_review`
+-- Table structure for course_review
 -- ----------------------------
 DROP TABLE IF EXISTS `course_review`;
 CREATE TABLE `course_review` (
@@ -2345,7 +2344,7 @@ CREATE TABLE `course_review` (
 INSERT INTO `course_review` VALUES ('1', '1', '28', '', '该门课程很好!', '5', '0', '1484721187', '0', null, '{\"learnedNum\":\"0\",\"lessonNum\":\"10\"}');
 
 -- ----------------------------
--- Table structure for `course_thread`
+-- Table structure for course_thread
 -- ----------------------------
 DROP TABLE IF EXISTS `course_thread`;
 CREATE TABLE `course_thread` (
@@ -2382,7 +2381,7 @@ INSERT INTO `course_thread` VALUES ('5', '6', '0', '1', 'discussion', '0', '0', 
 INSERT INTO `course_thread` VALUES ('6', '1', '4', '1', 'question', '0', '0', '0', '0', '创建的课程不可以删除吗？', '<p><span style=\"color:rgb(102,102,102);\">目前在系统中，已发布的课程不能删除，未发布的课程可以删除。我们知道此设置带来的不便，这是班级功能发布之后出于系统的稳定性考虑做的决定，后期可能会进行调整。</span></p>', '0', '0', '0', '1', '1434009775', '1434009775', '1434009775');
 
 -- ----------------------------
--- Table structure for `course_thread_post`
+-- Table structure for course_thread_post
 -- ----------------------------
 DROP TABLE IF EXISTS `course_thread_post`;
 CREATE TABLE `course_thread_post` (
@@ -2402,7 +2401,7 @@ CREATE TABLE `course_thread_post` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `crontab_job`
+-- Table structure for crontab_job
 -- ----------------------------
 DROP TABLE IF EXISTS `crontab_job`;
 CREATE TABLE `crontab_job` (
@@ -2425,11 +2424,11 @@ CREATE TABLE `crontab_job` (
 -- ----------------------------
 -- Records of crontab_job
 -- ----------------------------
-INSERT INTO `crontab_job` VALUES ('3', 'CancelOrderJob', 'everyhour', '0', 'Topxia\\Service\\Order\\Job\\CancelOrderJob', '', '', '0', '0', '1488422697', '1488419097', '0', '0');
-INSERT INTO `crontab_job` VALUES ('4', 'DeleteExpiredTokenJob', 'everyhour', '0', 'Topxia\\Service\\User\\Job\\DeleteExpiredTokenJob', '', '', '0', '0', '1488422751', '1488419151', '0', '0');
+INSERT INTO `crontab_job` VALUES ('3', 'CancelOrderJob', 'everyhour', '0', 'Topxia\\Service\\Order\\Job\\CancelOrderJob', '', '', '0', '0', '1491563548', '1491559948', '0', '0');
+INSERT INTO `crontab_job` VALUES ('4', 'DeleteExpiredTokenJob', 'everyhour', '0', 'Topxia\\Service\\User\\Job\\DeleteExpiredTokenJob', '', '', '0', '0', '1491563532', '1491559932', '0', '0');
 
 -- ----------------------------
--- Table structure for `crowd_classification`
+-- Table structure for crowd_classification
 -- ----------------------------
 DROP TABLE IF EXISTS `crowd_classification`;
 CREATE TABLE `crowd_classification` (
@@ -2458,7 +2457,7 @@ CREATE TABLE `crowd_classification` (
 INSERT INTO `crowd_classification` VALUES ('1', '泰国商会大学', '', '1940-01-01', null, '', '', '泰国曼谷城市中心(中国大使馆旁)', '', '', '', '', '', '', '/files/system/2016/12-25/201310643da5297549.jpg?7.2.9', '泰国商会大学是泰国高等教育机构里最早成立的非营利私立大学，是一所实力强大的综合性大学。其前身是泰国商会于1940年创办的位于曼谷市中心商会大院的商业学院。1984年该校获泰国教育部的批准，更名为泰国商会大学。学校拥有教职工近1000人，全日制在校生近20000人。');
 
 -- ----------------------------
--- Table structure for `dictionary`
+-- Table structure for dictionary
 -- ----------------------------
 DROP TABLE IF EXISTS `dictionary`;
 CREATE TABLE `dictionary` (
@@ -2474,7 +2473,7 @@ CREATE TABLE `dictionary` (
 INSERT INTO `dictionary` VALUES ('1', '退学原因', 'refund_reason');
 
 -- ----------------------------
--- Table structure for `dictionary_item`
+-- Table structure for dictionary_item
 -- ----------------------------
 DROP TABLE IF EXISTS `dictionary_item`;
 CREATE TABLE `dictionary_item` (
@@ -2495,7 +2494,7 @@ INSERT INTO `dictionary_item` VALUES ('1', 'refund_reason', null, '课程内容�
 INSERT INTO `dictionary_item` VALUES ('2', 'refund_reason', null, '老师服务态度不好', '0', '0', '0');
 
 -- ----------------------------
--- Table structure for `discovery_column`
+-- Table structure for discovery_column
 -- ----------------------------
 DROP TABLE IF EXISTS `discovery_column`;
 CREATE TABLE `discovery_column` (
@@ -2516,7 +2515,7 @@ CREATE TABLE `discovery_column` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `file`
+-- Table structure for file
 -- ----------------------------
 DROP TABLE IF EXISTS `file`;
 CREATE TABLE `file` (
@@ -3036,7 +3035,7 @@ INSERT INTO `file` VALUES ('894', '7', '15', 'public://tmp/2017/01-17/185110e71e
 INSERT INTO `file` VALUES ('895', '8', '1', 'public://system/2017/01-18/0920557581af575909.jpg', '', '24355', '0', '1484702455', null);
 
 -- ----------------------------
--- Table structure for `file_group`
+-- Table structure for file_group
 -- ----------------------------
 DROP TABLE IF EXISTS `file_group`;
 CREATE TABLE `file_group` (
@@ -3063,7 +3062,7 @@ INSERT INTO `file_group` VALUES ('10', '编辑区', 'block', '1');
 INSERT INTO `file_group` VALUES ('11', '班级', 'classroom', '1');
 
 -- ----------------------------
--- Table structure for `file_used`
+-- Table structure for file_used
 -- ----------------------------
 DROP TABLE IF EXISTS `file_used`;
 CREATE TABLE `file_used` (
@@ -3084,7 +3083,7 @@ CREATE TABLE `file_used` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `friend`
+-- Table structure for friend
 -- ----------------------------
 DROP TABLE IF EXISTS `friend`;
 CREATE TABLE `friend` (
@@ -3103,7 +3102,7 @@ INSERT INTO `friend` VALUES ('1', '9', '5', '0', '1433229237');
 INSERT INTO `friend` VALUES ('2', '1', '2', '0', '1434020230');
 
 -- ----------------------------
--- Table structure for `groups`
+-- Table structure for groups
 -- ----------------------------
 DROP TABLE IF EXISTS `groups`;
 CREATE TABLE `groups` (
@@ -3132,7 +3131,7 @@ INSERT INTO `groups` VALUES ('5', '网站课程动态', '<p><strong>EduSoho系�
 INSERT INTO `groups` VALUES ('6', '教务处', '<p><strong>EduSoho系统下如何解决学生答疑问题？</strong></p>\n\n<p><strong>网站中提供三种方式进行答疑：</strong></p>\n\n<p><strong>1、每个课程和班级都有一个讨论区，讨论区可以给教师提问题，系统会提醒老师解答问题；也可以发普通话题与同学们互动；</strong></p>\n\n<p><strong>2、网站首页的客服系统：QQ、QQ群、电话、邮箱、微信等方式都可以答疑。客服设置在【管理后台】-【系统】-【站点设置】-【客服设置】；</strong></p>\n\n<p><strong>3、小组功能，小组功能可以说是将课程和班级独立出来，但功能又不限于课程，可以与全站所有用户交流，更广泛，比较适合组建兴趣圈子和组织活动。</strong></p>\n', 'http://edusoho-demo.b0.upaiyun.com/files/default/2015/06-10/155352086968275687.jpg', '', 'open', '1', '0', '0', '1', '1433922825');
 
 -- ----------------------------
--- Table structure for `groups_member`
+-- Table structure for groups_member
 -- ----------------------------
 DROP TABLE IF EXISTS `groups_member`;
 CREATE TABLE `groups_member` (
@@ -3165,7 +3164,7 @@ INSERT INTO `groups_member` VALUES ('13', '1', '2', 'member', '0', '1', '1435195
 INSERT INTO `groups_member` VALUES ('14', '1', '7', 'member', '0', '1', '1436160124');
 
 -- ----------------------------
--- Table structure for `groups_thread`
+-- Table structure for groups_thread
 -- ----------------------------
 DROP TABLE IF EXISTS `groups_thread`;
 CREATE TABLE `groups_thread` (
@@ -3215,7 +3214,7 @@ INSERT INTO `groups_thread` VALUES ('20', '如何接入QQ、微博等第三方�
 INSERT INTO `groups_thread` VALUES ('21', '主题底部链接在什么地方修改？', '<p><span style=\"color:rgb(97,97,97);\">可以在【管理后台】-【运营】-【编辑区设置】中修改主题的底部链接。</span></p>\n', '0', '0', '0', '0', '1', '7', '1436160371', '0', 'open', '23', '0', 'default', '1481168762');
 
 -- ----------------------------
--- Table structure for `groups_thread_collect`
+-- Table structure for groups_thread_collect
 -- ----------------------------
 DROP TABLE IF EXISTS `groups_thread_collect`;
 CREATE TABLE `groups_thread_collect` (
@@ -3231,7 +3230,7 @@ CREATE TABLE `groups_thread_collect` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `groups_thread_goods`
+-- Table structure for groups_thread_goods
 -- ----------------------------
 DROP TABLE IF EXISTS `groups_thread_goods`;
 CREATE TABLE `groups_thread_goods` (
@@ -3254,7 +3253,7 @@ CREATE TABLE `groups_thread_goods` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `groups_thread_post`
+-- Table structure for groups_thread_post
 -- ----------------------------
 DROP TABLE IF EXISTS `groups_thread_post`;
 CREATE TABLE `groups_thread_post` (
@@ -3274,7 +3273,7 @@ CREATE TABLE `groups_thread_post` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `groups_thread_trade`
+-- Table structure for groups_thread_trade
 -- ----------------------------
 DROP TABLE IF EXISTS `groups_thread_trade`;
 CREATE TABLE `groups_thread_trade` (
@@ -3291,7 +3290,7 @@ CREATE TABLE `groups_thread_trade` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `im_conversation`
+-- Table structure for im_conversation
 -- ----------------------------
 DROP TABLE IF EXISTS `im_conversation`;
 CREATE TABLE `im_conversation` (
@@ -3314,7 +3313,7 @@ CREATE TABLE `im_conversation` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `im_member`
+-- Table structure for im_member
 -- ----------------------------
 DROP TABLE IF EXISTS `im_member`;
 CREATE TABLE `im_member` (
@@ -3334,7 +3333,7 @@ CREATE TABLE `im_member` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `installed_packages`
+-- Table structure for installed_packages
 -- ----------------------------
 DROP TABLE IF EXISTS `installed_packages`;
 CREATE TABLE `installed_packages` (
@@ -3353,7 +3352,7 @@ CREATE TABLE `installed_packages` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `invite_record`
+-- Table structure for invite_record
 -- ----------------------------
 DROP TABLE IF EXISTS `invite_record`;
 CREATE TABLE `invite_record` (
@@ -3371,7 +3370,7 @@ CREATE TABLE `invite_record` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `ip_blacklist`
+-- Table structure for ip_blacklist
 -- ----------------------------
 DROP TABLE IF EXISTS `ip_blacklist`;
 CREATE TABLE `ip_blacklist` (
@@ -3382,7 +3381,7 @@ CREATE TABLE `ip_blacklist` (
   `expiredTime` int(10) unsigned NOT NULL DEFAULT '0',
   `createdTime` int(10) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ip_blacklist
@@ -3394,7 +3393,7 @@ INSERT INTO `ip_blacklist` VALUES ('5', '111.19.32.198', 'failed', '3', '1475164
 INSERT INTO `ip_blacklist` VALUES ('6', '183.128.154.128', 'failed', '3', '1477301966', '1477300766');
 
 -- ----------------------------
--- Table structure for `keyword`
+-- Table structure for keyword
 -- ----------------------------
 DROP TABLE IF EXISTS `keyword`;
 CREATE TABLE `keyword` (
@@ -3412,7 +3411,7 @@ CREATE TABLE `keyword` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `keyword_banlog`
+-- Table structure for keyword_banlog
 -- ----------------------------
 DROP TABLE IF EXISTS `keyword_banlog`;
 CREATE TABLE `keyword_banlog` (
@@ -3433,7 +3432,7 @@ CREATE TABLE `keyword_banlog` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `level`
+-- Table structure for level
 -- ----------------------------
 DROP TABLE IF EXISTS `level`;
 CREATE TABLE `level` (
@@ -3456,7 +3455,7 @@ INSERT INTO `level` VALUES ('6', '企业管理', '1', '6');
 INSERT INTO `level` VALUES ('7', '测试一', '2', '1');
 
 -- ----------------------------
--- Table structure for `location`
+-- Table structure for location
 -- ----------------------------
 DROP TABLE IF EXISTS `location`;
 CREATE TABLE `location` (
@@ -3472,7 +3471,7 @@ CREATE TABLE `location` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `log`
+-- Table structure for log
 -- ----------------------------
 DROP TABLE IF EXISTS `log`;
 CREATE TABLE `log` (
@@ -3487,7 +3486,7 @@ CREATE TABLE `log` (
   `level` char(10) NOT NULL COMMENT '日志等级',
   PRIMARY KEY (`id`),
   KEY `userId` (`userId`)
-) ENGINE=MyISAM AUTO_INCREMENT=1460 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1554 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of log
@@ -4951,9 +4950,103 @@ INSERT INTO `log` VALUES ('1456', '1', 'crontab', 'job_start', '定时任务(#3)
 INSERT INTO `log` VALUES ('1457', '1', 'crontab', 'job_end', '定时任务(#3)执行结束！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1488262883\",\"latestExecutedTime\":\"1488259283\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1488419097', 'info');
 INSERT INTO `log` VALUES ('1458', '1', 'crontab', 'job_start', '定时任务(#4)开始执行！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1488262896\",\"latestExecutedTime\":\"1488259296\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1488419151', 'info');
 INSERT INTO `log` VALUES ('1459', '1', 'crontab', 'job_end', '定时任务(#4)执行结束！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1488262896\",\"latestExecutedTime\":\"1488259296\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1488419151', 'info');
+INSERT INTO `log` VALUES ('1460', '0', 'crontab', 'job_start', '定时任务(#3)开始执行！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1488422697\",\"latestExecutedTime\":\"1488419097\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1488849082', 'info');
+INSERT INTO `log` VALUES ('1461', '0', 'crontab', 'job_end', '定时任务(#3)执行结束！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1488422697\",\"latestExecutedTime\":\"1488419097\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1488849082', 'info');
+INSERT INTO `log` VALUES ('1462', '1', 'user', 'login_success', '登录成功', '', '::1', '1488849090', 'info');
+INSERT INTO `log` VALUES ('1463', '1', 'crontab', 'job_start', '定时任务(#4)开始执行！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1488422751\",\"latestExecutedTime\":\"1488419151\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1488849105', 'info');
+INSERT INTO `log` VALUES ('1464', '1', 'crontab', 'job_end', '定时任务(#4)执行结束！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1488422751\",\"latestExecutedTime\":\"1488419151\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1488849105', 'info');
+INSERT INTO `log` VALUES ('1465', '1', 'user', 'login_success', '登录成功', '', '::1', '1489396264', 'info');
+INSERT INTO `log` VALUES ('1466', '1', 'crontab', 'job_start', '定时任务(#3)开始执行！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1488852682\",\"latestExecutedTime\":\"1488849082\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1489396281', 'info');
+INSERT INTO `log` VALUES ('1467', '1', 'crontab', 'job_end', '定时任务(#3)执行结束！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1488852682\",\"latestExecutedTime\":\"1488849082\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1489396281', 'info');
+INSERT INTO `log` VALUES ('1468', '1', 'crontab', 'job_start', '定时任务(#4)开始执行！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1488852705\",\"latestExecutedTime\":\"1488849105\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1489396615', 'info');
+INSERT INTO `log` VALUES ('1469', '1', 'crontab', 'job_end', '定时任务(#4)执行结束！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1488852705\",\"latestExecutedTime\":\"1488849105\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1489396615', 'info');
+INSERT INTO `log` VALUES ('1470', '1', 'user', 'login_success', '登录成功', '', '::1', '1489453276', 'info');
+INSERT INTO `log` VALUES ('1471', '1', 'crontab', 'job_start', '定时任务(#3)开始执行！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1489399881\",\"latestExecutedTime\":\"1489396281\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1489453291', 'info');
+INSERT INTO `log` VALUES ('1472', '1', 'crontab', 'job_end', '定时任务(#3)执行结束！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1489399881\",\"latestExecutedTime\":\"1489396281\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1489453291', 'info');
+INSERT INTO `log` VALUES ('1473', '1', 'crontab', 'job_start', '定时任务(#4)开始执行！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1489400215\",\"latestExecutedTime\":\"1489396615\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1489453322', 'info');
+INSERT INTO `log` VALUES ('1474', '1', 'crontab', 'job_end', '定时任务(#4)执行结束！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1489400215\",\"latestExecutedTime\":\"1489396615\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1489453322', 'info');
+INSERT INTO `log` VALUES ('1475', '1', 'user', 'login_success', '登录成功', '', '::1', '1489455775', 'info');
+INSERT INTO `log` VALUES ('1476', '0', 'crontab', 'job_start', '定时任务(#3)开始执行！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1489456891\",\"latestExecutedTime\":\"1489453291\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1489471996', 'info');
+INSERT INTO `log` VALUES ('1477', '0', 'crontab', 'job_end', '定时任务(#3)执行结束！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1489456891\",\"latestExecutedTime\":\"1489453291\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1489471996', 'info');
+INSERT INTO `log` VALUES ('1478', '0', 'crontab', 'job_start', '定时任务(#4)开始执行！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1489456922\",\"latestExecutedTime\":\"1489453322\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1489472044', 'info');
+INSERT INTO `log` VALUES ('1479', '0', 'crontab', 'job_end', '定时任务(#4)执行结束！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1489456922\",\"latestExecutedTime\":\"1489453322\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1489472044', 'info');
+INSERT INTO `log` VALUES ('1480', '1', 'user', 'login_fail', '用户(admin)，连续第1次登录失败', '', '::1', '1489472867', 'info');
+INSERT INTO `log` VALUES ('1481', '1', 'user', 'login_fail', '用户(admin)，连续第2次登录失败', '', '::1', '1489472884', 'info');
+INSERT INTO `log` VALUES ('1482', '1', 'user', 'login_success', '登录成功', '', '::1', '1489472912', 'info');
+INSERT INTO `log` VALUES ('1483', '15', 'user', 'login_success', '登录成功', '', '::1', '1489473815', 'info');
+INSERT INTO `log` VALUES ('1484', '1', 'user', 'login_success', '登录成功', '', '::1', '1489474637', 'info');
+INSERT INTO `log` VALUES ('1485', '1', 'crontab', 'job_start', '定时任务(#3)开始执行！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1489475596\",\"latestExecutedTime\":\"1489471996\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1489475626', 'info');
+INSERT INTO `log` VALUES ('1486', '1', 'crontab', 'job_end', '定时任务(#3)执行结束！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1489475596\",\"latestExecutedTime\":\"1489471996\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1489475626', 'info');
+INSERT INTO `log` VALUES ('1487', '1', 'crontab', 'job_start', '定时任务(#4)开始执行！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1489475644\",\"latestExecutedTime\":\"1489472044\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1489475770', 'info');
+INSERT INTO `log` VALUES ('1488', '1', 'crontab', 'job_end', '定时任务(#4)执行结束！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1489475644\",\"latestExecutedTime\":\"1489472044\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1489475770', 'info');
+INSERT INTO `log` VALUES ('1489', '1', 'course', 'create', '创建课程《003》(#43)', '', '::1', '1489477060', 'info');
+INSERT INTO `log` VALUES ('1490', '1', 'crontab', 'job_start', '定时任务(#3)开始执行！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1489479226\",\"latestExecutedTime\":\"1489475626\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1489479343', 'info');
+INSERT INTO `log` VALUES ('1491', '1', 'crontab', 'job_end', '定时任务(#3)执行结束！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1489479226\",\"latestExecutedTime\":\"1489475626\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1489479343', 'info');
+INSERT INTO `log` VALUES ('1492', '1', 'crontab', 'job_start', '定时任务(#4)开始执行！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1489479370\",\"latestExecutedTime\":\"1489475770\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1489479553', 'info');
+INSERT INTO `log` VALUES ('1493', '1', 'crontab', 'job_end', '定时任务(#4)执行结束！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1489479370\",\"latestExecutedTime\":\"1489475770\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1489479553', 'info');
+INSERT INTO `log` VALUES ('1494', '1', 'user', 'login_success', '登录成功', '', '::1', '1491183117', 'info');
+INSERT INTO `log` VALUES ('1495', '1', 'crontab', 'job_start', '定时任务(#3)开始执行！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1489482943\",\"latestExecutedTime\":\"1489479343\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491183140', 'info');
+INSERT INTO `log` VALUES ('1496', '1', 'crontab', 'job_end', '定时任务(#3)执行结束！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1489482943\",\"latestExecutedTime\":\"1489479343\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491183140', 'info');
+INSERT INTO `log` VALUES ('1497', '1', 'crontab', 'job_start', '定时任务(#4)开始执行！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1489483153\",\"latestExecutedTime\":\"1489479553\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491183210', 'info');
+INSERT INTO `log` VALUES ('1498', '1', 'crontab', 'job_end', '定时任务(#4)执行结束！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1489483153\",\"latestExecutedTime\":\"1489479553\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491183210', 'info');
+INSERT INTO `log` VALUES ('1499', '1', 'course', 'delete_lesson', '删除课程《教育云及私有云方案测试一》(#19)的课时 测试视频一', '', '::1', '1491184679', 'info');
+INSERT INTO `log` VALUES ('1500', '1', 'crontab', 'job_start', '定时任务(#3)开始执行！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491186740\",\"latestExecutedTime\":\"1491183140\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491187222', 'info');
+INSERT INTO `log` VALUES ('1501', '1', 'crontab', 'job_end', '定时任务(#3)执行结束！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491186740\",\"latestExecutedTime\":\"1491183140\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491187222', 'info');
+INSERT INTO `log` VALUES ('1502', '1', 'crontab', 'job_start', '定时任务(#4)开始执行！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491186810\",\"latestExecutedTime\":\"1491183210\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491192277', 'info');
+INSERT INTO `log` VALUES ('1503', '1', 'crontab', 'job_end', '定时任务(#4)执行结束！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491186810\",\"latestExecutedTime\":\"1491183210\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491192277', 'info');
+INSERT INTO `log` VALUES ('1504', '1', 'crontab', 'job_start', '定时任务(#3)开始执行！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491190822\",\"latestExecutedTime\":\"1491187222\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491192814', 'info');
+INSERT INTO `log` VALUES ('1505', '1', 'crontab', 'job_end', '定时任务(#3)执行结束！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491190822\",\"latestExecutedTime\":\"1491187222\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491192814', 'info');
+INSERT INTO `log` VALUES ('1506', '1', 'crontab', 'job_start', '定时任务(#4)开始执行！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491195877\",\"latestExecutedTime\":\"1491192277\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491196086', 'info');
+INSERT INTO `log` VALUES ('1507', '1', 'crontab', 'job_end', '定时任务(#4)执行结束！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491195877\",\"latestExecutedTime\":\"1491192277\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491196086', 'info');
+INSERT INTO `log` VALUES ('1508', '1', 'crontab', 'job_start', '定时任务(#3)开始执行！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491196414\",\"latestExecutedTime\":\"1491192814\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491196821', 'info');
+INSERT INTO `log` VALUES ('1509', '1', 'crontab', 'job_end', '定时任务(#3)执行结束！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491196414\",\"latestExecutedTime\":\"1491192814\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491196821', 'info');
+INSERT INTO `log` VALUES ('1510', '0', 'crontab', 'job_start', '定时任务(#4)开始执行！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491199686\",\"latestExecutedTime\":\"1491196086\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491200165', 'info');
+INSERT INTO `log` VALUES ('1511', '0', 'crontab', 'job_end', '定时任务(#4)执行结束！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491199686\",\"latestExecutedTime\":\"1491196086\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491200165', 'info');
+INSERT INTO `log` VALUES ('1512', '0', 'crontab', 'job_start', '定时任务(#3)开始执行！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491200421\",\"latestExecutedTime\":\"1491196821\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491203482', 'info');
+INSERT INTO `log` VALUES ('1513', '0', 'crontab', 'job_end', '定时任务(#3)执行结束！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491200421\",\"latestExecutedTime\":\"1491196821\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491203482', 'info');
+INSERT INTO `log` VALUES ('1514', '0', 'crontab', 'job_start', '定时任务(#4)开始执行！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491203765\",\"latestExecutedTime\":\"1491200165\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491205552', 'info');
+INSERT INTO `log` VALUES ('1515', '0', 'crontab', 'execute', '执行任务(#4)失败: An exception occurred while executing \'DELETE FROM user_token WHERE expiredTime < ? LIMIT 10000 \' with params [1491205552]:\n\nSQLSTATE[HY000]: General error: 145 Table \'.\\edusoho\\user_token\' is marked as crashed and should be repaired', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491203765\",\"latestExecutedTime\":\"1491200165\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491205553', 'error');
+INSERT INTO `log` VALUES ('1516', '0', 'crontab', 'job_end', '定时任务(#4)执行结束！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491203765\",\"latestExecutedTime\":\"1491200165\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491205553', 'info');
+INSERT INTO `log` VALUES ('1517', '0', 'crontab', 'job_start', '定时任务(#3)开始执行！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491207082\",\"latestExecutedTime\":\"1491203482\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491207454', 'info');
+INSERT INTO `log` VALUES ('1518', '0', 'crontab', 'job_end', '定时任务(#3)执行结束！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491207082\",\"latestExecutedTime\":\"1491203482\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491207454', 'info');
+INSERT INTO `log` VALUES ('1519', '1', 'user', 'login_fail', '用户(admin)，连续第1次登录失败', '', '::1', '1491207458', 'info');
+INSERT INTO `log` VALUES ('1520', '1', 'user', 'login_success', '登录成功', '', '::1', '1491207474', 'info');
+INSERT INTO `log` VALUES ('1521', '1', 'user', 'login_success', '登录成功', '', '::1', '1491213421', 'info');
+INSERT INTO `log` VALUES ('1522', '1', 'crontab', 'job_start', '定时任务(#4)开始执行！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491209153\",\"latestExecutedTime\":\"1491205553\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491214186', 'info');
+INSERT INTO `log` VALUES ('1523', '1', 'crontab', 'execute', '执行任务(#4)失败: An exception occurred while executing \'DELETE FROM user_token WHERE expiredTime < ? LIMIT 10000 \' with params [1491214186]:\n\nSQLSTATE[HY000]: General error: 145 Table \'.\\edusoho\\user_token\' is marked as crashed and should be repaired', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491209153\",\"latestExecutedTime\":\"1491205553\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491214186', 'error');
+INSERT INTO `log` VALUES ('1524', '1', 'crontab', 'job_end', '定时任务(#4)执行结束！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491209153\",\"latestExecutedTime\":\"1491205553\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491214186', 'info');
+INSERT INTO `log` VALUES ('1525', '1', 'crontab', 'job_start', '定时任务(#3)开始执行！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491211054\",\"latestExecutedTime\":\"1491207454\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491214348', 'info');
+INSERT INTO `log` VALUES ('1526', '1', 'crontab', 'job_end', '定时任务(#3)执行结束！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491211054\",\"latestExecutedTime\":\"1491207454\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491214348', 'info');
+INSERT INTO `log` VALUES ('1527', '1', 'user', 'login_success', '登录成功', '', '::1', '1491275094', 'info');
+INSERT INTO `log` VALUES ('1528', '1', 'crontab', 'job_start', '定时任务(#4)开始执行！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491217786\",\"latestExecutedTime\":\"1491214186\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491275112', 'info');
+INSERT INTO `log` VALUES ('1529', '1', 'crontab', 'execute', '执行任务(#4)失败: An exception occurred while executing \'DELETE FROM user_token WHERE expiredTime < ? LIMIT 10000 \' with params [1491275113]:\n\nSQLSTATE[HY000]: General error: 145 Table \'.\\edusoho\\user_token\' is marked as crashed and should be repaired', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491217786\",\"latestExecutedTime\":\"1491214186\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491275113', 'error');
+INSERT INTO `log` VALUES ('1530', '1', 'crontab', 'job_end', '定时任务(#4)执行结束！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491217786\",\"latestExecutedTime\":\"1491214186\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491275113', 'info');
+INSERT INTO `log` VALUES ('1531', '1', 'crontab', 'job_start', '定时任务(#3)开始执行！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491217948\",\"latestExecutedTime\":\"1491214348\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491275196', 'info');
+INSERT INTO `log` VALUES ('1532', '1', 'crontab', 'job_end', '定时任务(#3)执行结束！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491217948\",\"latestExecutedTime\":\"1491214348\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491275196', 'info');
+INSERT INTO `log` VALUES ('1533', '1', 'crontab', 'job_start', '定时任务(#4)开始执行！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491278713\",\"latestExecutedTime\":\"1491275113\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491278812', 'info');
+INSERT INTO `log` VALUES ('1534', '1', 'crontab', 'execute', '执行任务(#4)失败: An exception occurred while executing \'DELETE FROM user_token WHERE expiredTime < ? LIMIT 10000 \' with params [1491278812]:\n\nSQLSTATE[HY000]: General error: 145 Table \'.\\edusoho\\user_token\' is marked as crashed and should be repaired', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491278713\",\"latestExecutedTime\":\"1491275113\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491278812', 'error');
+INSERT INTO `log` VALUES ('1535', '1', 'crontab', 'job_end', '定时任务(#4)执行结束！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491278713\",\"latestExecutedTime\":\"1491275113\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491278812', 'info');
+INSERT INTO `log` VALUES ('1536', '1', 'crontab', 'job_start', '定时任务(#3)开始执行！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491278796\",\"latestExecutedTime\":\"1491275196\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491278847', 'info');
+INSERT INTO `log` VALUES ('1537', '1', 'crontab', 'job_end', '定时任务(#3)执行结束！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491278796\",\"latestExecutedTime\":\"1491275196\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491278847', 'info');
+INSERT INTO `log` VALUES ('1538', '1', 'crontab', 'job_start', '定时任务(#4)开始执行！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491282412\",\"latestExecutedTime\":\"1491278812\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491296834', 'info');
+INSERT INTO `log` VALUES ('1539', '1', 'crontab', 'execute', '执行任务(#4)失败: An exception occurred while executing \'DELETE FROM user_token WHERE expiredTime < ? LIMIT 10000 \' with params [1491296834]:\n\nSQLSTATE[HY000]: General error: 145 Table \'.\\edusoho\\user_token\' is marked as crashed and should be repaired', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491282412\",\"latestExecutedTime\":\"1491278812\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491296834', 'error');
+INSERT INTO `log` VALUES ('1540', '1', 'crontab', 'job_end', '定时任务(#4)执行结束！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491282412\",\"latestExecutedTime\":\"1491278812\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491296834', 'info');
+INSERT INTO `log` VALUES ('1541', '1', 'crontab', 'job_start', '定时任务(#3)开始执行！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491282447\",\"latestExecutedTime\":\"1491278847\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491296851', 'info');
+INSERT INTO `log` VALUES ('1542', '1', 'crontab', 'job_end', '定时任务(#3)执行结束！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491282447\",\"latestExecutedTime\":\"1491278847\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491296851', 'info');
+INSERT INTO `log` VALUES ('1543', '1', 'crontab', 'job_start', '定时任务(#4)开始执行！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491300434\",\"latestExecutedTime\":\"1491296834\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491301348', 'info');
+INSERT INTO `log` VALUES ('1544', '1', 'crontab', 'execute', '执行任务(#4)失败: An exception occurred while executing \'DELETE FROM user_token WHERE expiredTime < ? LIMIT 10000 \' with params [1491301348]:\n\nSQLSTATE[HY000]: General error: 145 Table \'.\\edusoho\\user_token\' is marked as crashed and should be repaired', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491300434\",\"latestExecutedTime\":\"1491296834\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491301348', 'error');
+INSERT INTO `log` VALUES ('1545', '1', 'crontab', 'job_end', '定时任务(#4)执行结束！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491300434\",\"latestExecutedTime\":\"1491296834\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491301348', 'info');
+INSERT INTO `log` VALUES ('1546', '1', 'crontab', 'job_start', '定时任务(#3)开始执行！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491300451\",\"latestExecutedTime\":\"1491296851\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491301368', 'info');
+INSERT INTO `log` VALUES ('1547', '1', 'crontab', 'job_end', '定时任务(#3)执行结束！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491300451\",\"latestExecutedTime\":\"1491296851\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491301368', 'info');
+INSERT INTO `log` VALUES ('1548', '1', 'user', 'login_success', '登录成功', '', '::1', '1491559909', 'info');
+INSERT INTO `log` VALUES ('1549', '1', 'crontab', 'job_start', '定时任务(#4)开始执行！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491304948\",\"latestExecutedTime\":\"1491301348\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491559931', 'info');
+INSERT INTO `log` VALUES ('1550', '1', 'crontab', 'execute', '执行任务(#4)失败: An exception occurred while executing \'DELETE FROM user_token WHERE expiredTime < ? LIMIT 10000 \' with params [1491559932]:\n\nSQLSTATE[HY000]: General error: 145 Table \'.\\edusoho\\user_token\' is marked as crashed and should be repaired', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491304948\",\"latestExecutedTime\":\"1491301348\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491559932', 'error');
+INSERT INTO `log` VALUES ('1551', '1', 'crontab', 'job_end', '定时任务(#4)执行结束！', '{\"id\":\"4\",\"name\":\"DeleteExpiredTokenJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\User\\\\Job\\\\DeleteExpiredTokenJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491304948\",\"latestExecutedTime\":\"1491301348\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491559932', 'info');
+INSERT INTO `log` VALUES ('1552', '1', 'crontab', 'job_start', '定时任务(#3)开始执行！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491304968\",\"latestExecutedTime\":\"1491301368\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491559948', 'info');
+INSERT INTO `log` VALUES ('1553', '1', 'crontab', 'job_end', '定时任务(#3)执行结束！', '{\"id\":\"3\",\"name\":\"CancelOrderJob\",\"cycle\":\"everyhour\",\"cycleTime\":\"0\",\"jobClass\":\"Topxia\\\\Service\\\\Order\\\\Job\\\\CancelOrderJob\",\"jobParams\":null,\"targetType\":\"\",\"targetId\":\"0\",\"executing\":\"0\",\"nextExcutedTime\":\"1491304968\",\"latestExecutedTime\":\"1491301368\",\"creatorId\":\"0\",\"createdTime\":\"0\"}', '::1', '1491559948', 'info');
 
 -- ----------------------------
--- Table structure for `marker`
+-- Table structure for marker
 -- ----------------------------
 DROP TABLE IF EXISTS `marker`;
 CREATE TABLE `marker` (
@@ -4970,7 +5063,7 @@ CREATE TABLE `marker` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `message`
+-- Table structure for message
 -- ----------------------------
 DROP TABLE IF EXISTS `message`;
 CREATE TABLE `message` (
@@ -4988,7 +5081,7 @@ CREATE TABLE `message` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `message_conversation`
+-- Table structure for message_conversation
 -- ----------------------------
 DROP TABLE IF EXISTS `message_conversation`;
 CREATE TABLE `message_conversation` (
@@ -5012,7 +5105,7 @@ CREATE TABLE `message_conversation` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `message_relation`
+-- Table structure for message_relation
 -- ----------------------------
 DROP TABLE IF EXISTS `message_relation`;
 CREATE TABLE `message_relation` (
@@ -5028,7 +5121,7 @@ CREATE TABLE `message_relation` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `migration_versions`
+-- Table structure for migration_versions
 -- ----------------------------
 DROP TABLE IF EXISTS `migration_versions`;
 CREATE TABLE `migration_versions` (
@@ -5041,7 +5134,7 @@ CREATE TABLE `migration_versions` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `mobile_device`
+-- Table structure for mobile_device
 -- ----------------------------
 DROP TABLE IF EXISTS `mobile_device`;
 CREATE TABLE `mobile_device` (
@@ -5059,7 +5152,7 @@ CREATE TABLE `mobile_device` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `navigation`
+-- Table structure for navigation
 -- ----------------------------
 DROP TABLE IF EXISTS `navigation`;
 CREATE TABLE `navigation` (
@@ -5082,7 +5175,6 @@ CREATE TABLE `navigation` (
 -- Records of navigation
 -- ----------------------------
 INSERT INTO `navigation` VALUES ('2', '课程', 'course/explore', '1', '0', '1429260383', '1481255060', 'top', '1', '0', '1', '1.');
-INSERT INTO `navigation` VALUES ('6', '移动端', '/mobile', '13', '0', '1429778181', '1481255060', 'top', '1', '0', '1', '1.');
 INSERT INTO `navigation` VALUES ('8', '资讯', '/article', '7', '0', '1429778251', '1481255060', 'top', '1', '0', '1', '1.');
 INSERT INTO `navigation` VALUES ('11', '全部资讯', '/article', '8', '8', '1432211413', '1481255060', 'top', '1', '0', '1', '1.');
 INSERT INTO `navigation` VALUES ('12', 'BDQN', '/article/category/news', '9', '8', '1432211455', '1481255060', 'top', '1', '0', '1', '1.');
@@ -5094,7 +5186,7 @@ INSERT INTO `navigation` VALUES ('19', '使用帮助', 'course/explore/fuction',
 INSERT INTO `navigation` VALUES ('24', '关于我们', '/page/aboutus', '14', '0', '1434016879', '1481255060', 'top', '1', '0', '1', '1.');
 
 -- ----------------------------
--- Table structure for `notification`
+-- Table structure for notification
 -- ----------------------------
 DROP TABLE IF EXISTS `notification`;
 CREATE TABLE `notification` (
@@ -5159,7 +5251,7 @@ INSERT INTO `notification` VALUES ('45', '1', 'role', '{\"userId\":\"1\",\"userN
 INSERT INTO `notification` VALUES ('46', '15', 'role', '{\"userId\":\"1\",\"userName\":\"admin\",\"role\":\"\\u5b66\\u5458,\\u6559\\u5e08,\\u7ba1\\u7406\\u5458\"}', '0', '1483701361', '0');
 
 -- ----------------------------
--- Table structure for `oauth_access_token`
+-- Table structure for oauth_access_token
 -- ----------------------------
 DROP TABLE IF EXISTS `oauth_access_token`;
 CREATE TABLE `oauth_access_token` (
@@ -5177,7 +5269,7 @@ CREATE TABLE `oauth_access_token` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `oauth_authorization_code`
+-- Table structure for oauth_authorization_code
 -- ----------------------------
 DROP TABLE IF EXISTS `oauth_authorization_code`;
 CREATE TABLE `oauth_authorization_code` (
@@ -5196,7 +5288,7 @@ CREATE TABLE `oauth_authorization_code` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `oauth_client`
+-- Table structure for oauth_client
 -- ----------------------------
 DROP TABLE IF EXISTS `oauth_client`;
 CREATE TABLE `oauth_client` (
@@ -5213,7 +5305,7 @@ CREATE TABLE `oauth_client` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `oauth_client_public_key`
+-- Table structure for oauth_client_public_key
 -- ----------------------------
 DROP TABLE IF EXISTS `oauth_client_public_key`;
 CREATE TABLE `oauth_client_public_key` (
@@ -5228,7 +5320,7 @@ CREATE TABLE `oauth_client_public_key` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `oauth_refresh_token`
+-- Table structure for oauth_refresh_token
 -- ----------------------------
 DROP TABLE IF EXISTS `oauth_refresh_token`;
 CREATE TABLE `oauth_refresh_token` (
@@ -5246,7 +5338,7 @@ CREATE TABLE `oauth_refresh_token` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `oauth_scope`
+-- Table structure for oauth_scope
 -- ----------------------------
 DROP TABLE IF EXISTS `oauth_scope`;
 CREATE TABLE `oauth_scope` (
@@ -5260,7 +5352,7 @@ CREATE TABLE `oauth_scope` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `oauth_user`
+-- Table structure for oauth_user
 -- ----------------------------
 DROP TABLE IF EXISTS `oauth_user`;
 CREATE TABLE `oauth_user` (
@@ -5277,7 +5369,7 @@ CREATE TABLE `oauth_user` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `open_course`
+-- Table structure for open_course
 -- ----------------------------
 DROP TABLE IF EXISTS `open_course`;
 CREATE TABLE `open_course` (
@@ -5315,7 +5407,7 @@ CREATE TABLE `open_course` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `open_course_lesson`
+-- Table structure for open_course_lesson
 -- ----------------------------
 DROP TABLE IF EXISTS `open_course_lesson`;
 CREATE TABLE `open_course_lesson` (
@@ -5365,7 +5457,7 @@ CREATE TABLE `open_course_lesson` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `open_course_member`
+-- Table structure for open_course_member
 -- ----------------------------
 DROP TABLE IF EXISTS `open_course_member`;
 CREATE TABLE `open_course_member` (
@@ -5391,7 +5483,7 @@ CREATE TABLE `open_course_member` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `open_course_recommend`
+-- Table structure for open_course_recommend
 -- ----------------------------
 DROP TABLE IF EXISTS `open_course_recommend`;
 CREATE TABLE `open_course_recommend` (
@@ -5410,7 +5502,7 @@ CREATE TABLE `open_course_recommend` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `orders`
+-- Table structure for orders
 -- ----------------------------
 DROP TABLE IF EXISTS `orders`;
 CREATE TABLE `orders` (
@@ -5500,7 +5592,7 @@ INSERT INTO `orders` VALUES ('49', 'CR2015063016591966296', 'paid', '购买班�
 INSERT INTO `orders` VALUES ('50', 'C2016031608594956008', 'paid', '购买课程《班级功能介绍》', 'course', '7', '0.00', '0.00', '0', '', '0', '10.00', '0', '13', '', '0.00', 'none', '0.00', '1.00', 'RMB', '', '1458089989', null, '', null, '1458089989', null);
 
 -- ----------------------------
--- Table structure for `order_log`
+-- Table structure for order_log
 -- ----------------------------
 DROP TABLE IF EXISTS `order_log`;
 CREATE TABLE `order_log` (
@@ -5621,7 +5713,7 @@ INSERT INTO `order_log` VALUES ('99', '50', 'created', '创建订单', '[]', '13
 INSERT INTO `order_log` VALUES ('100', '50', 'pay_success', '付款成功', '{\"sn\":\"C2016031608594956008\",\"status\":\"success\",\"amount\":\"0.00\",\"paidTime\":1458089989}', '13', '218.92.65.142', '1458089989');
 
 -- ----------------------------
--- Table structure for `order_referer`
+-- Table structure for order_referer
 -- ----------------------------
 DROP TABLE IF EXISTS `order_referer`;
 CREATE TABLE `order_referer` (
@@ -5639,7 +5731,7 @@ CREATE TABLE `order_referer` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `order_referer_log`
+-- Table structure for order_referer_log
 -- ----------------------------
 DROP TABLE IF EXISTS `order_referer_log`;
 CREATE TABLE `order_referer_log` (
@@ -5660,7 +5752,7 @@ CREATE TABLE `order_referer_log` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `order_refund`
+-- Table structure for order_refund
 -- ----------------------------
 DROP TABLE IF EXISTS `order_refund`;
 CREATE TABLE `order_refund` (
@@ -5685,7 +5777,7 @@ CREATE TABLE `order_refund` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `org`
+-- Table structure for org
 -- ----------------------------
 DROP TABLE IF EXISTS `org`;
 CREATE TABLE `org` (
@@ -5712,7 +5804,7 @@ CREATE TABLE `org` (
 INSERT INTO `org` VALUES ('1', '全站', '0', '0', '1', '0', '', 'FullSite', '1.', '1', '1463555406', '0');
 
 -- ----------------------------
--- Table structure for `personal_custom`
+-- Table structure for personal_custom
 -- ----------------------------
 DROP TABLE IF EXISTS `personal_custom`;
 CREATE TABLE `personal_custom` (
@@ -5729,7 +5821,7 @@ CREATE TABLE `personal_custom` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `province`
+-- Table structure for province
 -- ----------------------------
 DROP TABLE IF EXISTS `province`;
 CREATE TABLE `province` (
@@ -5777,7 +5869,7 @@ INSERT INTO `province` VALUES ('33', '澳门特别行政区');
 INSERT INTO `province` VALUES ('34', '香港特别行政区');
 
 -- ----------------------------
--- Table structure for `question`
+-- Table structure for question
 -- ----------------------------
 DROP TABLE IF EXISTS `question`;
 CREATE TABLE `question` (
@@ -5807,7 +5899,7 @@ CREATE TABLE `question` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `question_category`
+-- Table structure for question_category
 -- ----------------------------
 DROP TABLE IF EXISTS `question_category`;
 CREATE TABLE `question_category` (
@@ -5826,7 +5918,7 @@ CREATE TABLE `question_category` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `question_favorite`
+-- Table structure for question_favorite
 -- ----------------------------
 DROP TABLE IF EXISTS `question_favorite`;
 CREATE TABLE `question_favorite` (
@@ -5843,7 +5935,7 @@ CREATE TABLE `question_favorite` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `question_marker`
+-- Table structure for question_marker
 -- ----------------------------
 DROP TABLE IF EXISTS `question_marker`;
 CREATE TABLE `question_marker` (
@@ -5867,7 +5959,7 @@ CREATE TABLE `question_marker` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `question_marker_result`
+-- Table structure for question_marker_result
 -- ----------------------------
 DROP TABLE IF EXISTS `question_marker_result`;
 CREATE TABLE `question_marker_result` (
@@ -5888,7 +5980,7 @@ CREATE TABLE `question_marker_result` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `recent_post_num`
+-- Table structure for recent_post_num
 -- ----------------------------
 DROP TABLE IF EXISTS `recent_post_num`;
 CREATE TABLE `recent_post_num` (
@@ -5906,7 +5998,7 @@ CREATE TABLE `recent_post_num` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `referer_log`
+-- Table structure for referer_log
 -- ----------------------------
 DROP TABLE IF EXISTS `referer_log`;
 CREATE TABLE `referer_log` (
@@ -5932,7 +6024,7 @@ CREATE TABLE `referer_log` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `role`
+-- Table structure for role
 -- ----------------------------
 DROP TABLE IF EXISTS `role`;
 CREATE TABLE `role` (
@@ -5957,7 +6049,7 @@ INSERT INTO `role` VALUES ('5', '学校系统管理员', 'ROLE_SCHOOL_ADMIN', '[
 INSERT INTO `role` VALUES ('6', '学校招生老师', 'ROLE_SCHOOLRECRUIT', '[\"newadmin\",\"newadmin_student\",\"newadmin_enroll_message\",\"newadmin_statistics\",\"newadmin_enrollstat_statistics\"]', '1487033152', '1', '0');
 
 -- ----------------------------
--- Table structure for `schools`
+-- Table structure for schools
 -- ----------------------------
 DROP TABLE IF EXISTS `schools`;
 CREATE TABLE `schools` (
@@ -5991,7 +6083,7 @@ INSERT INTO `schools` VALUES ('3', '广东工业大学', 'Guangdong University o
 INSERT INTO `schools` VALUES ('4', '云南嘉荟教育培训中心', 'KMBDQN', 'BDQN', '私立', '0', '云南省昆明市官渡区春城路银海领域外围16F', '<p>帅</p>\r\n', '<p>帅帅帅</p>\r\n', '', '', 'tmp/2017/01-17/185110e71e28544037.jpg', '25', '296', '1', '0', '1484635187', '1484650275');
 
 -- ----------------------------
--- Table structure for `school_authentication`
+-- Table structure for school_authentication
 -- ----------------------------
 DROP TABLE IF EXISTS `school_authentication`;
 CREATE TABLE `school_authentication` (
@@ -6016,7 +6108,7 @@ INSERT INTO `school_authentication` VALUES ('3', '1', '5678', '456', '789', '123
 INSERT INTO `school_authentication` VALUES ('4', '3', '54t3', 'erth', 'ree', 'ertg', 'erthetry', 'trjrty', 'rtyhryt', '0');
 
 -- ----------------------------
--- Table structure for `session`
+-- Table structure for session
 -- ----------------------------
 DROP TABLE IF EXISTS `session`;
 CREATE TABLE `session` (
@@ -6032,7 +6124,7 @@ CREATE TABLE `session` (
 INSERT INTO `session` VALUES ('94813k9mm0hha1suqgnmb591f7', 'X3NmMl9hdHRyaWJ1dGVzfGE6MDp7fV9zZjJfZmxhc2hlc3xhOjA6e31fc2YyX21ldGF8YTozOntzOjE6InUiO2k6MTQ4MDEzMjAwOTtzOjE6ImMiO2k6MTQ4MDEzMTk2ODtzOjE6ImwiO3M6MToiMCI7fQ==', '1480132010');
 
 -- ----------------------------
--- Table structure for `session2`
+-- Table structure for session2
 -- ----------------------------
 DROP TABLE IF EXISTS `session2`;
 CREATE TABLE `session2` (
@@ -6048,7 +6140,7 @@ CREATE TABLE `session2` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `sessions`
+-- Table structure for sessions
 -- ----------------------------
 DROP TABLE IF EXISTS `sessions`;
 CREATE TABLE `sessions` (
@@ -6063,10 +6155,10 @@ CREATE TABLE `sessions` (
 -- ----------------------------
 -- Records of sessions
 -- ----------------------------
-INSERT INTO `sessions` VALUES (0x6D6B747475696F396438683168336A7662686173707164357537, '1', 0x5F7366325F617474726962757465737C613A323A7B733A373A226C6F67696E4970223B733A333A223A3A31223B733A31343A225F73656375726974795F6D61696E223B733A323535373A22433A36383A2253796D666F6E795C436F6D706F6E656E745C53656375726974795C436F72655C41757468656E7469636174696F6E5C546F6B656E5C52656D656D6265724D65546F6B656E223A323437343A7B613A333A7B693A303B733A33313A227472616E6170657A6B736730676B7734776763636B6F6377306B77736B7367223B693A313B733A343A226D61696E223B693A323B733A323339363A22613A343A7B693A303B433A33313A22546F707869615C536572766963655C557365725C43757272656E7455736572223A313738363A7B613A34343A7B733A323A226964223B733A313A2231223B733A353A22656D61696C223B733A31373A22323838353333303831304071712E636F6D223B733A31343A2276657269666965644D6F62696C65223B733A303A22223B733A383A2270617373776F7264223B733A34343A22533233414F53774B6F41786A5A387138654F2F39566D5948726C4E597A666C6C595657476E456B7337426B3D223B733A343A2273616C74223B733A33313A2233696E34666C6A3531343273346F6B6738676B776334383434733830736B6B223B733A31313A2270617950617373776F7264223B733A303A22223B733A31353A2270617950617373776F726453616C74223B733A303A22223B733A333A22757269223B733A303A22223B733A383A226E69636B6E616D65223B733A353A2261646D696E223B733A353A227469746C65223B733A363A22E4BDA0E78C9C223B733A343A2274616773223B733A303A22223B733A343A2274797065223B733A373A2264656661756C74223B733A353A22706F696E74223B733A313A2230223B733A343A22636F696E223B733A313A2230223B733A383A227363686F6F6C4964223B733A313A2230223B733A31313A22736D616C6C417661746172223B733A34373A227075626C69633A2F2F757365722F323031362F31312D33302F3138313832393538316637393932303132372E6A7067223B733A31323A226D656469756D417661746172223B733A34373A227075626C69633A2F2F757365722F323031362F31312D33302F3138313832393537396662303536363833312E6A7067223B733A31313A226C61726765417661746172223B733A34373A227075626C69633A2F2F757365722F323031362F31312D33302F3138313832393537326132313932373330392E6A7067223B733A31333A22656D61696C5665726966696564223B733A313A2231223B733A353A227365747570223B733A313A2231223B733A353A22726F6C6573223B613A343A7B693A303B733A393A22524F4C455F55534552223B693A313B733A31323A22524F4C455F54454143484552223B693A323B733A31303A22524F4C455F41444D494E223B693A333B733A31363A22524F4C455F53555045525F41444D494E223B7D733A383A2270726F6D6F746564223B733A313A2230223B733A31313A2270726F6D6F746564536571223B733A313A2230223B733A31323A2270726F6D6F74656454696D65223B733A313A2230223B733A363A226C6F636B6564223B733A313A2230223B733A31323A226C6F636B446561646C696E65223B733A313A2230223B733A32393A22636F6E736563757469766550617373776F72644572726F7254696D6573223B733A313A2230223B733A32303A226C61737450617373776F72644661696C54696D65223B733A313A2230223B733A393A226C6F67696E54696D65223B733A31303A2231343838343139303737223B733A373A226C6F67696E4970223B733A333A223A3A31223B733A31343A226C6F67696E53657373696F6E4964223B733A32363A226D6B747475696F396438683168336A7662686173707164357537223B733A31323A22617070726F76616C54696D65223B733A313A2230223B733A31343A22617070726F76616C537461747573223B733A393A22756E617070726F7665223B733A31333A226E65774D6573736167654E756D223B733A313A2230223B733A31383A226E65774E6F74696669636174696F6E4E756D223B733A313A2230223B733A393A22637265617465644970223B733A303A22223B733A363A226C6F63616C65223B4E3B733A31313A226372656174656454696D65223B733A31303A2231343830313333373333223B733A31313A227570646174656454696D65223B733A31303A2231343838343139303738223B733A31303A22696E76697465436F6465223B4E3B733A353A226F72674964223B733A313A2231223B733A373A226F7267436F6465223B733A323A22312E223B733A393A2263757272656E744970223B733A333A223A3A31223B733A333A226F7267223B613A31323A7B733A323A226964223B733A313A2231223B733A343A226E616D65223B733A363A22E585A8E7AB99223B733A383A22706172656E744964223B733A313A2230223B733A31313A226368696C6472656E4E756D223B733A313A2230223B733A353A226465707468223B733A313A2231223B733A333A22736571223B733A313A2230223B733A31313A226465736372697074696F6E223B733A303A22223B733A343A22636F6465223B733A383A2246756C6C53697465223B733A373A226F7267436F6465223B733A323A22312E223B733A31333A2263726561746564557365724964223B733A313A2231223B733A31313A226372656174656454696D65223B733A31303A2231343633353535343036223B733A31303A2275706461746554696D65223B733A313A2230223B7D7D7D693A313B623A313B693A323B613A343A7B693A303B4F3A34313A2253796D666F6E795C436F6D706F6E656E745C53656375726974795C436F72655C526F6C655C526F6C65223A313A7B733A34373A220053796D666F6E795C436F6D706F6E656E745C53656375726974795C436F72655C526F6C655C526F6C6500726F6C65223B733A393A22524F4C455F55534552223B7D693A313B4F3A34313A2253796D666F6E795C436F6D706F6E656E745C53656375726974795C436F72655C526F6C655C526F6C65223A313A7B733A34373A220053796D666F6E795C436F6D706F6E656E745C53656375726974795C436F72655C526F6C655C526F6C6500726F6C65223B733A31323A22524F4C455F54454143484552223B7D693A323B4F3A34313A2253796D666F6E795C436F6D706F6E656E745C53656375726974795C436F72655C526F6C655C526F6C65223A313A7B733A34373A220053796D666F6E795C436F6D706F6E656E745C53656375726974795C436F72655C526F6C655C526F6C6500726F6C65223B733A31303A22524F4C455F41444D494E223B7D693A333B4F3A34313A2253796D666F6E795C436F6D706F6E656E745C53656375726974795C436F72655C526F6C655C526F6C65223A313A7B733A34373A220053796D666F6E795C436F6D706F6E656E745C53656375726974795C436F72655C526F6C655C526F6C6500726F6C65223B733A31363A22524F4C455F53555045525F41444D494E223B7D7D693A333B613A303A7B7D7D223B7D7D223B7D5F7366325F666C61736865737C613A303A7B7D5F7366325F6D6574617C613A333A7B733A313A2275223B693A313438383431393137393B733A313A2263223B693A313438383431393037383B733A313A226C223B733A313A2230223B7D, '1488419179', '86400');
+INSERT INTO `sessions` VALUES (0x35336D623835663561646C336565643273683274683964316E37, '1', 0x5F7366325F617474726962757465737C613A323A7B733A373A226C6F67696E4970223B733A333A223A3A31223B733A31343A225F73656375726974795F6D61696E223B733A323535373A22433A36383A2253796D666F6E795C436F6D706F6E656E745C53656375726974795C436F72655C41757468656E7469636174696F6E5C546F6B656E5C52656D656D6265724D65546F6B656E223A323437343A7B613A333A7B693A303B733A33313A227472616E6170657A6B736730676B7734776763636B6F6377306B77736B7367223B693A313B733A343A226D61696E223B693A323B733A323339363A22613A343A7B693A303B433A33313A22546F707869615C536572766963655C557365725C43757272656E7455736572223A313738363A7B613A34343A7B733A323A226964223B733A313A2231223B733A353A22656D61696C223B733A31373A22323838353333303831304071712E636F6D223B733A31343A2276657269666965644D6F62696C65223B733A303A22223B733A383A2270617373776F7264223B733A34343A22533233414F53774B6F41786A5A387138654F2F39566D5948726C4E597A666C6C595657476E456B7337426B3D223B733A343A2273616C74223B733A33313A2233696E34666C6A3531343273346F6B6738676B776334383434733830736B6B223B733A31313A2270617950617373776F7264223B733A303A22223B733A31353A2270617950617373776F726453616C74223B733A303A22223B733A333A22757269223B733A303A22223B733A383A226E69636B6E616D65223B733A353A2261646D696E223B733A353A227469746C65223B733A363A22E4BDA0E78C9C223B733A343A2274616773223B733A303A22223B733A343A2274797065223B733A373A2264656661756C74223B733A353A22706F696E74223B733A313A2230223B733A343A22636F696E223B733A313A2230223B733A383A227363686F6F6C4964223B733A313A2230223B733A31313A22736D616C6C417661746172223B733A34373A227075626C69633A2F2F757365722F323031362F31312D33302F3138313832393538316637393932303132372E6A7067223B733A31323A226D656469756D417661746172223B733A34373A227075626C69633A2F2F757365722F323031362F31312D33302F3138313832393537396662303536363833312E6A7067223B733A31313A226C61726765417661746172223B733A34373A227075626C69633A2F2F757365722F323031362F31312D33302F3138313832393537326132313932373330392E6A7067223B733A31333A22656D61696C5665726966696564223B733A313A2231223B733A353A227365747570223B733A313A2231223B733A353A22726F6C6573223B613A343A7B693A303B733A393A22524F4C455F55534552223B693A313B733A31323A22524F4C455F54454143484552223B693A323B733A31303A22524F4C455F41444D494E223B693A333B733A31363A22524F4C455F53555045525F41444D494E223B7D733A383A2270726F6D6F746564223B733A313A2230223B733A31313A2270726F6D6F746564536571223B733A313A2230223B733A31323A2270726F6D6F74656454696D65223B733A313A2230223B733A363A226C6F636B6564223B733A313A2230223B733A31323A226C6F636B446561646C696E65223B733A313A2230223B733A32393A22636F6E736563757469766550617373776F72644572726F7254696D6573223B733A313A2230223B733A32303A226C61737450617373776F72644661696C54696D65223B733A313A2230223B733A393A226C6F67696E54696D65223B733A31303A2231343931353539393039223B733A373A226C6F67696E4970223B733A333A223A3A31223B733A31343A226C6F67696E53657373696F6E4964223B733A32363A2235336D623835663561646C336565643273683274683964316E37223B733A31323A22617070726F76616C54696D65223B733A313A2230223B733A31343A22617070726F76616C537461747573223B733A393A22756E617070726F7665223B733A31333A226E65774D6573736167654E756D223B733A313A2230223B733A31383A226E65774E6F74696669636174696F6E4E756D223B733A313A2230223B733A393A22637265617465644970223B733A303A22223B733A363A226C6F63616C65223B4E3B733A31313A226372656174656454696D65223B733A31303A2231343830313333373333223B733A31313A227570646174656454696D65223B733A31303A2231343931353539393039223B733A31303A22696E76697465436F6465223B4E3B733A353A226F72674964223B733A313A2231223B733A373A226F7267436F6465223B733A323A22312E223B733A393A2263757272656E744970223B733A333A223A3A31223B733A333A226F7267223B613A31323A7B733A323A226964223B733A313A2231223B733A343A226E616D65223B733A363A22E585A8E7AB99223B733A383A22706172656E744964223B733A313A2230223B733A31313A226368696C6472656E4E756D223B733A313A2230223B733A353A226465707468223B733A313A2231223B733A333A22736571223B733A313A2230223B733A31313A226465736372697074696F6E223B733A303A22223B733A343A22636F6465223B733A383A2246756C6C53697465223B733A373A226F7267436F6465223B733A323A22312E223B733A31333A2263726561746564557365724964223B733A313A2231223B733A31313A226372656174656454696D65223B733A31303A2231343633353535343036223B733A31303A2275706461746554696D65223B733A313A2230223B7D7D7D693A313B623A313B693A323B613A343A7B693A303B4F3A34313A2253796D666F6E795C436F6D706F6E656E745C53656375726974795C436F72655C526F6C655C526F6C65223A313A7B733A34373A220053796D666F6E795C436F6D706F6E656E745C53656375726974795C436F72655C526F6C655C526F6C6500726F6C65223B733A393A22524F4C455F55534552223B7D693A313B4F3A34313A2253796D666F6E795C436F6D706F6E656E745C53656375726974795C436F72655C526F6C655C526F6C65223A313A7B733A34373A220053796D666F6E795C436F6D706F6E656E745C53656375726974795C436F72655C526F6C655C526F6C6500726F6C65223B733A31323A22524F4C455F54454143484552223B7D693A323B4F3A34313A2253796D666F6E795C436F6D706F6E656E745C53656375726974795C436F72655C526F6C655C526F6C65223A313A7B733A34373A220053796D666F6E795C436F6D706F6E656E745C53656375726974795C436F72655C526F6C655C526F6C6500726F6C65223B733A31303A22524F4C455F41444D494E223B7D693A333B4F3A34313A2253796D666F6E795C436F6D706F6E656E745C53656375726974795C436F72655C526F6C655C526F6C65223A313A7B733A34373A220053796D666F6E795C436F6D706F6E656E745C53656375726974795C436F72655C526F6C655C526F6C6500726F6C65223B733A31363A22524F4C455F53555045525F41444D494E223B7D7D693A333B613A303A7B7D7D223B7D7D223B7D5F7366325F666C61736865737C613A303A7B7D5F7366325F6D6574617C613A333A7B733A313A2275223B693A313439313535393934383B733A313A2263223B693A313439313535393930393B733A313A226C223B733A313A2230223B7D, '1491559948', '86400');
 
 -- ----------------------------
--- Table structure for `setting`
+-- Table structure for setting
 -- ----------------------------
 DROP TABLE IF EXISTS `setting`;
 CREATE TABLE `setting` (
@@ -6116,7 +6208,7 @@ INSERT INTO `setting` VALUES ('877', 'cloud_search', 0x613A323A7B733A31343A22736
 INSERT INTO `setting` VALUES ('878', 'app_im', 0x613A323A7B733A373A22656E61626C6564223B693A303B733A363A22636F6E764E6F223B733A303A22223B7D, 'default');
 
 -- ----------------------------
--- Table structure for `shortcut`
+-- Table structure for shortcut
 -- ----------------------------
 DROP TABLE IF EXISTS `shortcut`;
 CREATE TABLE `shortcut` (
@@ -6133,7 +6225,7 @@ CREATE TABLE `shortcut` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `sign_card`
+-- Table structure for sign_card
 -- ----------------------------
 DROP TABLE IF EXISTS `sign_card`;
 CREATE TABLE `sign_card` (
@@ -6149,7 +6241,7 @@ CREATE TABLE `sign_card` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `sign_target_statistics`
+-- Table structure for sign_target_statistics
 -- ----------------------------
 DROP TABLE IF EXISTS `sign_target_statistics`;
 CREATE TABLE `sign_target_statistics` (
@@ -6168,7 +6260,7 @@ CREATE TABLE `sign_target_statistics` (
 INSERT INTO `sign_target_statistics` VALUES ('1', 'classroom_sign', '4', '1', '20150630', '1435654813');
 
 -- ----------------------------
--- Table structure for `sign_user_log`
+-- Table structure for sign_user_log
 -- ----------------------------
 DROP TABLE IF EXISTS `sign_user_log`;
 CREATE TABLE `sign_user_log` (
@@ -6187,7 +6279,7 @@ CREATE TABLE `sign_user_log` (
 INSERT INTO `sign_user_log` VALUES ('1', '7', 'classroom_sign', '4', '1', '1435654813');
 
 -- ----------------------------
--- Table structure for `sign_user_statistics`
+-- Table structure for sign_user_statistics
 -- ----------------------------
 DROP TABLE IF EXISTS `sign_user_statistics`;
 CREATE TABLE `sign_user_statistics` (
@@ -6206,7 +6298,7 @@ CREATE TABLE `sign_user_statistics` (
 INSERT INTO `sign_user_statistics` VALUES ('1', '7', 'classroom_sign', '4', '1', '1435654813');
 
 -- ----------------------------
--- Table structure for `status`
+-- Table structure for status
 -- ----------------------------
 DROP TABLE IF EXISTS `status`;
 CREATE TABLE `status` (
@@ -6240,7 +6332,7 @@ INSERT INTO `status` VALUES ('8', '1', '19', '0', 'start_learn_lesson', 'lesson'
 INSERT INTO `status` VALUES ('9', '1', '13', '0', 'start_learn_lesson', 'lesson', '85', '', '{\"course\":{\"id\":\"13\",\"title\":\"\\u4e0a\\u4f20\\u6d4b\\u8bd5\\u4e09\",\"picture\":\"public:\\/\\/course\\/2016\\/12-06\\/1645520f40c0574760.jpg\",\"type\":\"normal\",\"rating\":\"0\",\"about\":\"\",\"price\":\"0.00\"},\"lesson\":{\"id\":\"85\",\"number\":\"1\",\"type\":\"text\",\"title\":\"\\u89c6\\u9891\\u4e0a\\u4f20\\u4e0d\\u4e86\\u6216\\u8005\\u89c6\\u9891\\u8fc7\\u5927\\u4e0d\\u80fd\\u4e0a\\u4f20\",\"summary\":\"\"}}', '0', '0', '0', '1481610957');
 
 -- ----------------------------
--- Table structure for `students`
+-- Table structure for students
 -- ----------------------------
 DROP TABLE IF EXISTS `students`;
 CREATE TABLE `students` (
@@ -6299,7 +6391,7 @@ INSERT INTO `students` VALUES ('23', '王五', '3434534', '1488262094', '', '', 
 INSERT INTO `students` VALUES ('24', '王五', '3434534', '1488262094', '', '', '13888050193', '223423534', '', '', '', '', '', '', '0', '8', '0', '3', '1488262094', '0', '0', '0', '0');
 
 -- ----------------------------
--- Table structure for `tag`
+-- Table structure for tag
 -- ----------------------------
 DROP TABLE IF EXISTS `tag`;
 CREATE TABLE `tag` (
@@ -6322,7 +6414,7 @@ INSERT INTO `tag` VALUES ('4', '题库', '1429270366', '1', '1.');
 INSERT INTO `tag` VALUES ('5', '教育云', '1429270378', '1', '1.');
 
 -- ----------------------------
--- Table structure for `task`
+-- Table structure for task
 -- ----------------------------
 DROP TABLE IF EXISTS `task`;
 CREATE TABLE `task` (
@@ -6350,7 +6442,7 @@ CREATE TABLE `task` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `testpaper`
+-- Table structure for testpaper
 -- ----------------------------
 DROP TABLE IF EXISTS `testpaper`;
 CREATE TABLE `testpaper` (
@@ -6378,7 +6470,7 @@ CREATE TABLE `testpaper` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `testpaper_item`
+-- Table structure for testpaper_item
 -- ----------------------------
 DROP TABLE IF EXISTS `testpaper_item`;
 CREATE TABLE `testpaper_item` (
@@ -6398,7 +6490,7 @@ CREATE TABLE `testpaper_item` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `testpaper_item_result`
+-- Table structure for testpaper_item_result
 -- ----------------------------
 DROP TABLE IF EXISTS `testpaper_item_result`;
 CREATE TABLE `testpaper_item_result` (
@@ -6422,7 +6514,7 @@ CREATE TABLE `testpaper_item_result` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `testpaper_result`
+-- Table structure for testpaper_result
 -- ----------------------------
 DROP TABLE IF EXISTS `testpaper_result`;
 CREATE TABLE `testpaper_result` (
@@ -6454,7 +6546,7 @@ CREATE TABLE `testpaper_result` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `theme_config`
+-- Table structure for theme_config
 -- ----------------------------
 DROP TABLE IF EXISTS `theme_config`;
 CREATE TABLE `theme_config` (
@@ -6467,16 +6559,18 @@ CREATE TABLE `theme_config` (
   `createdTime` int(11) NOT NULL DEFAULT '0',
   `updatedUserId` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of theme_config
 -- ----------------------------
-INSERT INTO `theme_config` VALUES ('1', '简墨', '{\r\n    \"maincolor\": \"default\",\r\n    \"navigationcolor\": \"default\",\r\n    \"blocks\": {\r\n        \"left\": [\r\n            {\r\n                \"title\": \"\",\r\n                \"count\": \"12\",\r\n                \"orderBy\": \"latest\",\r\n                \"categoryId\": 0,\r\n                \"code\": \"course-grid-with-condition-index\",\r\n                \"categoryCount\": \"4\",\r\n                \"defaultTitle\": \"网校课程\",\r\n                \"subTitle\": \"\",\r\n                \"defaultSubTitle\": \"精选网校课程，满足你的学习兴趣。\",\r\n                \"id\": \"latestCourse\"\r\n            },\r\n            {\r\n                \"title\": \"\",\r\n                \"count\": \"\",\r\n                \"code\": \"middle-banner\",\r\n                \"defaultTitle\": \"u4e2du90e8banner\",\r\n                \"id\": \"middle-banner\"\r\n            },\r\n            {\r\n                \"title\": \"\",\r\n                \"count\": \"4\",\r\n                \"categoryId\": \"\",\r\n                \"code\": \"recommend-teacher\",\r\n                \"defaultTitle\": \"推荐教师\",\r\n                \"subTitle\": \"\",\r\n                \"defaultSubTitle\": \"名师汇集，保证教学质量与学习效果。\",\r\n                \"id\": \"RecommendTeachers\"\r\n            },\r\n            {\r\n                \"title\": \"\",\r\n                \"count\": \"\",\r\n                \"code\": \"footer-link\",\r\n                \"defaultTitle\": \"底部链接\",\r\n                \"id\": \"footerLink\"\r\n            }\r\n        ]\r\n    },\r\n    \"bottom\": \"simple\"\r\n}', '{\"maincolor\":\"default\",\"navigationcolor\":\"default\",\"blocks\":{\"left\":[{\"title\":\"\",\"count\":\"12\",\"orderBy\":\"latest\",\"categoryId\":0,\"code\":\"course-grid-with-condition-index\",\"categoryCount\":\"4\",\"defaultTitle\":\"\\u7f51\\u6821\\u8bfe\\u7a0b\",\"subTitle\":\"\",\"defaultSubTitle\":\"\\u7cbe\\u9009\\u7f51\\u6821\\u8bfe\\u7a0b\\uff0c\\u6ee1\\u8db3\\u4f60\\u7684\\u5b66\\u4e60\\u5174\\u8da3\\u3002\",\"id\":\"latestCourse\"},{\"title\":\"\",\"count\":\"4\",\"categoryId\":\"\",\"code\":\"live-course\",\"defaultTitle\":\"\\u8fd1\\u671f\\u76f4\\u64ad\",\"subTitle\":\"\",\"defaultSubTitle\":\"\\u5b9e\\u65f6\\u8ddf\\u8e2a\\u76f4\\u64ad\\u8bfe\\u7a0b\\uff0c\\u907f\\u514d\\u8bfe\\u7a0b\\u9057\\u6f0f\\u3002\",\"id\":\"RecentLiveCourses\"},{\"title\":\"\",\"count\":\"\",\"code\":\"middle-banner\",\"defaultTitle\":\"\\u4e2d\\u90e8banner\",\"id\":\"middle-banner\"},{\"title\":\"\",\"count\":\"4\",\"code\":\"recommend-classroom\",\"defaultTitle\":\"\\u63a8\\u8350\\u73ed\\u7ea7\",\"subTitle\":\"\",\"defaultSubTitle\":\"\\u73ed\\u7ea7\\u5316\\u5b66\\u4e60\\u4f53\\u7cfb\\uff0c\\u7ed9\\u4f60\\u66f4\\u591a\\u7684\\u8bfe\\u7a0b\\u76f8\\u5173\\u670d\\u52a1\\u3002\",\"id\":\"RecommendClassrooms\"},{\"title\":\"\",\"count\":\"6\",\"code\":\"groups\",\"defaultTitle\":\"\\u52a8\\u6001\",\"subTitle\":\"\",\"defaultSubTitle\":\"\\u53c2\\u4e0e\\u5c0f\\u7ec4\\uff0c\\u7ed3\\u4ea4\\u66f4\\u591a\\u540c\\u5b66\\uff0c\\u5173\\u6ce8\\u8bfe\\u7a0b\\u52a8\\u6001\\u3002\",\"select1\":\"checked\",\"select2\":\"checked\",\"select3\":\"\",\"select4\":\"\",\"id\":\"hotGroups\"},{\"title\":\"\",\"count\":\"4\",\"categoryId\":\"\",\"code\":\"recommend-teacher\",\"defaultTitle\":\"\\u63a8\\u8350\\u6559\\u5e08\",\"subTitle\":\"\",\"defaultSubTitle\":\"\\u540d\\u5e08\\u6c47\\u96c6\\uff0c\\u4fdd\\u8bc1\\u6559\\u5b66\\u8d28\\u91cf\\u4e0e\\u5b66\\u4e60\\u6548\\u679c\\u3002\",\"id\":\"RecommendTeachers\"},{\"title\":\"\",\"count\":\"\",\"code\":\"footer-link\",\"defaultTitle\":\"\\u5e95\\u90e8\\u94fe\\u63a5\",\"id\":\"footerLink\"}]},\"bottom\":\"simple\"}', null, '1483927766', '1449218369', '1');
+INSERT INTO `theme_config` VALUES ('1', '简墨', '{\r\n    \"maincolor\": \"default\",\r\n    \"navigationcolor\": \"default\",\r\n    \"blocks\": {\r\n        \"left\": [\r\n            {\r\n                \"title\": \"\",\r\n                \"count\": \"12\",\r\n                \"orderBy\": \"latest\",\r\n                \"categoryId\": 0,\r\n                \"code\": \"course-grid-with-condition-index\",\r\n                \"categoryCount\": \"4\",\r\n                \"defaultTitle\": \"网校课程\",\r\n                \"subTitle\": \"\",\r\n                \"defaultSubTitle\": \"精选网校课程，满足你的学习兴趣。\",\r\n                \"id\": \"latestCourse\"\r\n            },\r\n            {\r\n                \"title\": \"\",\r\n                \"count\": \"4\",\r\n                \"code\": \"recommend-classroom\",\r\n                \"defaultTitle\": \"推荐班级\",\r\n                \"subTitle\": \"\",\r\n                \"defaultSubTitle\": \"班级化学习体系，给你更多的课程相关服务。\",\r\n                \"id\": \"RecommendClassrooms\"\r\n            },\r\n            {\r\n                \"title\": \"\",\r\n                \"count\": \"6\",\r\n                \"code\": \"groups\",\r\n                \"defaultTitle\": \"动态\",\r\n                \"subTitle\": \"\",\r\n                \"defaultSubTitle\": \"参与小组，结交更多同学，关注课程\"\r\n            },\r\n            {\r\n                \"title\": \"\",\r\n                \"count\": \"4\",\r\n                \"categoryId\": \"\",\r\n                \"code\": \"recommend-teacher\",\r\n                \"defaultTitle\": \"推荐教师\",\r\n                \"subTitle\": \"\",\r\n                \"defaultSubTitle\": \"名师汇集，保证教学质量与学习效果。\",\r\n                \"id\": \"RecommendTeachers\"\r\n            },\r\n            {\r\n                \"title\": \"\",\r\n                \"count\": \"\",\r\n                \"code\": \"footer-link\",\r\n                \"defaultTitle\": \"底部链接\",\r\n                \"id\": \"footerLink\"\r\n            }\r\n        ]\r\n    },\r\n    \"bottom\": \"simple\"\r\n}', '{\"maincolor\":\"default\",\"navigationcolor\":\"default\",\"blocks\":{\"left\":[{\"title\":\"\",\"count\":\"12\",\"orderBy\":\"latest\",\"categoryId\":0,\"code\":\"course-grid-with-condition-index\",\"categoryCount\":\"4\",\"defaultTitle\":\"\\u7f51\\u6821\\u8bfe\\u7a0b\",\"subTitle\":\"\",\"defaultSubTitle\":\"\\u7cbe\\u9009\\u7f51\\u6821\\u8bfe\\u7a0b\\uff0c\\u6ee1\\u8db3\\u4f60\\u7684\\u5b66\\u4e60\\u5174\\u8da3\\u3002\",\"id\":\"latestCourse\"},{\"title\":\"\",\"count\":\"4\",\"categoryId\":\"\",\"code\":\"live-course\",\"defaultTitle\":\"\\u8fd1\\u671f\\u76f4\\u64ad\",\"subTitle\":\"\",\"defaultSubTitle\":\"\\u5b9e\\u65f6\\u8ddf\\u8e2a\\u76f4\\u64ad\\u8bfe\\u7a0b\\uff0c\\u907f\\u514d\\u8bfe\\u7a0b\\u9057\\u6f0f\\u3002\",\"id\":\"RecentLiveCourses\"},{\"title\":\"\",\"count\":\"\",\"code\":\"middle-banner\",\"defaultTitle\":\"\\u4e2d\\u90e8banner\",\"id\":\"middle-banner\"},{\"title\":\"\",\"count\":\"4\",\"code\":\"recommend-classroom\",\"defaultTitle\":\"\\u63a8\\u8350\\u73ed\\u7ea7\",\"subTitle\":\"\",\"defaultSubTitle\":\"\\u73ed\\u7ea7\\u5316\\u5b66\\u4e60\\u4f53\\u7cfb\\uff0c\\u7ed9\\u4f60\\u66f4\\u591a\\u7684\\u8bfe\\u7a0b\\u76f8\\u5173\\u670d\\u52a1\\u3002\",\"id\":\"RecommendClassrooms\"},{\"title\":\"\",\"count\":\"6\",\"code\":\"groups\",\"defaultTitle\":\"\\u52a8\\u6001\",\"subTitle\":\"\",\"defaultSubTitle\":\"\\u53c2\\u4e0e\\u5c0f\\u7ec4\\uff0c\\u7ed3\\u4ea4\\u66f4\\u591a\\u540c\\u5b66\\uff0c\\u5173\\u6ce8\\u8bfe\\u7a0b\\u52a8\\u6001\\u3002\",\"select1\":\"checked\",\"select2\":\"checked\",\"select3\":\"\",\"select4\":\"\",\"id\":\"hotGroups\"},{\"title\":\"\",\"count\":\"4\",\"categoryId\":\"\",\"code\":\"recommend-teacher\",\"defaultTitle\":\"\\u63a8\\u8350\\u6559\\u5e08\",\"subTitle\":\"\",\"defaultSubTitle\":\"\\u540d\\u5e08\\u6c47\\u96c6\\uff0c\\u4fdd\\u8bc1\\u6559\\u5b66\\u8d28\\u91cf\\u4e0e\\u5b66\\u4e60\\u6548\\u679c\\u3002\",\"id\":\"RecommendTeachers\"},{\"title\":\"\",\"count\":\"\",\"code\":\"footer-link\",\"defaultTitle\":\"\\u5e95\\u90e8\\u94fe\\u63a5\",\"id\":\"footerLink\"}]},\"bottom\":\"simple\"}', null, '1483927766', '1449218369', '1');
+INSERT INTO `theme_config` VALUES ('4', '留做备份的', '{\r\n    \"maincolor\": \"default\",\r\n    \"navigationcolor\": \"default\",\r\n    \"blocks\": {\r\n        \"left\": [\r\n            {\r\n                \"title\": \"\",\r\n                \"count\": \"12\",\r\n                \"orderBy\": \"latest\",\r\n                \"categoryId\": 0,\r\n                \"code\": \"course-grid-with-condition-index\",\r\n                \"categoryCount\": \"4\",\r\n                \"defaultTitle\": \"网校课程\",\r\n                \"subTitle\": \"\",\r\n                \"defaultSubTitle\": \"精选网校课程，满足你的学习兴趣。\",\r\n                \"id\": \"latestCourse\"\r\n            },\r\n            {\r\n                \"title\": \"\",\r\n                \"count\": \"4\",\r\n                \"categoryId\": \"\",\r\n                \"code\": \"live-course\",\r\n                \"defaultTitle\": \"近期直播\",\r\n                \"subTitle\": \"\",\r\n                \"defaultSubTitle\": \"实时跟踪直播课程，避免课程遗漏。\",\r\n                \"id\": \"RecentLiveCourses\"\r\n            },\r\n            {\r\n                \"title\": \"\",\r\n                \"count\": \"\",\r\n                \"code\": \"middle-banner\",\r\n                \"defaultTitle\": \"中部banner\",\r\n                \"id\": \"middle-banner\"\r\n            },\r\n            {\r\n                \"title\": \"\",\r\n                \"count\": \"4\",\r\n                \"code\": \"recommend-classroom\",\r\n                \"defaultTitle\": \"推荐班级\",\r\n                \"subTitle\": \"\",\r\n                \"defaultSubTitle\": \"班级化学习体系，给你更多的课程相关服务。\",\r\n                \"id\": \"RecommendClassrooms\"\r\n            },\r\n            {\r\n                \"title\": \"\",\r\n                \"count\": \"6\",\r\n                \"code\": \"groups\",\r\n                \"defaultTitle\": \"动态\",\r\n                \"subTitle\": \"\",\r\n                \"defaultSubTitle\": \"参与小组，结交更多同学，关注课程\"\r\n            }\r\n        ]\r\n    }\r\n}', null, null, '0', '0', '0');
 INSERT INTO `theme_config` VALUES ('2', '老的原', '{\r\n    \"maincolor\": \"default\",\r\n    \"navigationcolor\": \"default\",\r\n    \"blocks\": {\r\n        \"left\": [\r\n            {\r\n                \"title\": \"\",\r\n                \"count\": \"12\",\r\n                \"orderBy\": \"latest\",\r\n                \"categoryId\": 0,\r\n                \"code\": \"wx-course-grid-with-condition-index\",\r\n                \"categoryCount\": \"4\",\r\n                \"defaultTitle\": \"网校课程\",\r\n                \"subTitle\": \"\",\r\n                \"defaultSubTitle\": \"精选网校课程，满足你的学习兴趣。\",\r\n                \"id\": \"latestCourse\"\r\n            },\r\n            {\r\n                \"title\": \"\",\r\n                \"count\": \"6\",\r\n                \"code\": \"groups\",\r\n                \"defaultTitle\": \"动态\",\r\n                \"subTitle\": \"\",\r\n                \"defaultSubTitle\": \"参与小组，结交更多同学，关注课程动态。\",\r\n                \"select1\": \"checked\",\r\n                \"select2\": \"checked\",\r\n                \"select3\": \"\",\r\n                \"select4\": \"\",\r\n                \"id\": \"hotGroups\"\r\n            },\r\n            {\r\n                \"title\": \"\",\r\n                \"count\": \"4\",\r\n                \"categoryId\": \"\",\r\n                \"code\": \"recommend-teacher\",\r\n                \"defaultTitle\": \"推荐教师\",\r\n                \"subTitle\": \"\",\r\n                \"defaultSubTitle\": \"名师汇集，保证教学质量与学习效果。\",\r\n                \"id\": \"RecommendTeachers\"\r\n            },\r\n            {\r\n                \"title\": \"\",\r\n                \"count\": \"\",\r\n                \"code\": \"footer-link\",\r\n                \"defaultTitle\": \"底部链接\",\r\n                \"id\": \"footerLink\"\r\n            }\r\n        ]\r\n    },\r\n    \"bottom\": \"simple\"\r\n}', '},{\"title\":\"\",\"count\":\"6\",\"code\":\"groups\",\"defaultTitle\":\"\\u52a8\\u6001\",\"subTitle\":\"\",\"defaultSubTitle\":\"\\u53c2\\u4e0e\\u5c0f\\u7ec4\\uff0c\\u7ed3\\u4ea4\\u66f4\\u591a\\u540c\\u5b66\\uff0c\\u5173\\u6ce8\\u8bfe\\u7a0b\\u52a8\\u6001\\u3002\",\"select1\":\"checked\",\"select2\":\"checked\",\"select3\":\"\",\"select4\":\"\",\"id\":\"hotGroups\"},{\"title\":\"\",\"count\":\"4\",\"categoryId\":\"\",\"code\":\"recommend-teacher\",\"defaultTitle\":\"\\u63a8\\u8350\\u6559\\u5e08\",\"subTitle\":\"\",\"defaultSubTitle\":\"\\u540d\\u5e08\\u6c47\\u96c6\\uff0c\\u4fdd\\u8bc1\\u6559\\u5b66\\u8d28\\u91cf\\u4e0e\\u5b66\\u4e60\\u6548\\u679c\\u3002\",\"id\":\"RecommendTeachers\"},{\"title\":\"\",\"count\":\"\",\"code\":\"footer-link\",\"defaultTitle\":\"\\u5e95\\u90e8\\u94fe\\u63a5\",\"id\":\"footerLink\"}]},\"bottom\":\"simple\"}', null, '1481697624', '1449218369', '1');
+INSERT INTO `theme_config` VALUES ('3', ' 4月改的学校首页', '{\r\n    \"maincolor\": \"default\",\r\n    \"navigationcolor\": \"default\",\r\n    \"blocks\": {\r\n        \"left\": [\r\n            {\r\n                \"title\": \"\",\r\n                \"count\": \"12\",\r\n                \"orderBy\": \"latest\",\r\n                \"categoryId\": 0,\r\n                \"code\": \"course-grid-with-condition-index\",\r\n                \"categoryCount\": \"4\",\r\n                \"defaultTitle\": \"网校课程\",\r\n                \"subTitle\": \"\",\r\n                \"defaultSubTitle\": \"精选网校课程，满足你的学习兴趣。\",\r\n                \"id\": \"latestCourse\"\r\n            },\r\n            {\r\n                \"title\": \"\",\r\n                \"count\": \"\",\r\n                \"code\": \"middle-banner\",\r\n                \"defaultTitle\": \"u4e2du90e8banner\",\r\n                \"id\": \"middle-banner\"\r\n            },\r\n            {\r\n                \"title\": \"\",\r\n                \"count\": \"4\",\r\n                \"categoryId\": \"\",\r\n                \"code\": \"recommend-teacher\",\r\n                \"defaultTitle\": \"推荐教师\",\r\n                \"subTitle\": \"\",\r\n                \"defaultSubTitle\": \"名师汇集，保证教学质量与学习效果。\",\r\n                \"id\": \"RecommendTeachers\"\r\n            },\r\n            {\r\n                \"title\": \"\",\r\n                \"count\": \"\",\r\n                \"code\": \"footer-link\",\r\n                \"defaultTitle\": \"底部链接\",\r\n                \"id\": \"footerLink\"\r\n            }\r\n        ]\r\n    },\r\n    \"bottom\": \"simple\"\r\n}', '{\"maincolor\":\"default\",\"navigationcolor\":\"default\",\"blocks\":{\"left\":[{\"title\":\"\",\"count\":\"12\",\"orderBy\":\"latest\",\"categoryId\":0,\"code\":\"course-grid-with-condition-index\",\"categoryCount\":\"4\",\"defaultTitle\":\"\\u7f51\\u6821\\u8bfe\\u7a0b\",\"subTitle\":\"\",\"defaultSubTitle\":\"\\u7cbe\\u9009\\u7f51\\u6821\\u8bfe\\u7a0b\\uff0c\\u6ee1\\u8db3\\u4f60\\u7684\\u5b66\\u4e60\\u5174\\u8da3\\u3002\",\"id\":\"latestCourse\"},{\"title\":\"\",\"count\":\"4\",\"categoryId\":\"\",\"code\":\"live-course\",\"defaultTitle\":\"\\u8fd1\\u671f\\u76f4\\u64ad\",\"subTitle\":\"\",\"defaultSubTitle\":\"\\u5b9e\\u65f6\\u8ddf\\u8e2a\\u76f4\\u64ad\\u8bfe\\u7a0b\\uff0c\\u907f\\u514d\\u8bfe\\u7a0b\\u9057\\u6f0f\\u3002\",\"id\":\"RecentLiveCourses\"},{\"title\":\"\",\"count\":\"\",\"code\":\"middle-banner\",\"defaultTitle\":\"\\u4e2d\\u90e8banner\",\"id\":\"middle-banner\"},{\"title\":\"\",\"count\":\"4\",\"code\":\"recommend-classroom\",\"defaultTitle\":\"\\u63a8\\u8350\\u73ed\\u7ea7\",\"subTitle\":\"\",\"defaultSubTitle\":\"\\u73ed\\u7ea7\\u5316\\u5b66\\u4e60\\u4f53\\u7cfb\\uff0c\\u7ed9\\u4f60\\u66f4\\u591a\\u7684\\u8bfe\\u7a0b\\u76f8\\u5173\\u670d\\u52a1\\u3002\",\"id\":\"RecommendClassrooms\"},{\"title\":\"\",\"count\":\"6\",\"code\":\"groups\",\"defaultTitle\":\"\\u52a8\\u6001\",\"subTitle\":\"\",\"defaultSubTitle\":\"\\u53c2\\u4e0e\\u5c0f\\u7ec4\\uff0c\\u7ed3\\u4ea4\\u66f4\\u591a\\u540c\\u5b66\\uff0c\\u5173\\u6ce8\\u8bfe\\u7a0b\\u52a8\\u6001\\u3002\",\"select1\":\"checked\",\"select2\":\"checked\",\"select3\":\"\",\"select4\":\"\",\"id\":\"hotGroups\"},{\"title\":\"\",\"count\":\"4\",\"categoryId\":\"\",\"code\":\"recommend-teacher\",\"defaultTitle\":\"\\u63a8\\u8350\\u6559\\u5e08\",\"subTitle\":\"\",\"defaultSubTitle\":\"\\u540d\\u5e08\\u6c47\\u96c6\\uff0c\\u4fdd\\u8bc1\\u6559\\u5b66\\u8d28\\u91cf\\u4e0e\\u5b66\\u4e60\\u6548\\u679c\\u3002\",\"id\":\"RecommendTeachers\"},{\"title\":\"\",\"count\":\"\",\"code\":\"footer-link\",\"defaultTitle\":\"\\u5e95\\u90e8\\u94fe\\u63a5\",\"id\":\"footerLink\"}]},\"bottom\":\"simple\"}', null, '1483927766', '1449218369', '1');
 
 -- ----------------------------
--- Table structure for `thread`
+-- Table structure for thread
 -- ----------------------------
 DROP TABLE IF EXISTS `thread`;
 CREATE TABLE `thread` (
@@ -6515,7 +6609,7 @@ CREATE TABLE `thread` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `thread_member`
+-- Table structure for thread_member
 -- ----------------------------
 DROP TABLE IF EXISTS `thread_member`;
 CREATE TABLE `thread_member` (
@@ -6534,7 +6628,7 @@ CREATE TABLE `thread_member` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `thread_post`
+-- Table structure for thread_post
 -- ----------------------------
 DROP TABLE IF EXISTS `thread_post`;
 CREATE TABLE `thread_post` (
@@ -6560,7 +6654,7 @@ INSERT INTO `thread_post` VALUES ('1', '0', '资讯频道名称和每页资讯�
 INSERT INTO `thread_post` VALUES ('2', '0', '每篇资讯的最下方，都可以点赞和分享哦，分享是一种精神~', '0', '[]', '1', '0', '0', '0', 'article', '1', '1434020591');
 
 -- ----------------------------
--- Table structure for `thread_vote`
+-- Table structure for thread_vote
 -- ----------------------------
 DROP TABLE IF EXISTS `thread_vote`;
 CREATE TABLE `thread_vote` (
@@ -6579,7 +6673,7 @@ CREATE TABLE `thread_vote` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `upgrade_logs`
+-- Table structure for upgrade_logs
 -- ----------------------------
 DROP TABLE IF EXISTS `upgrade_logs`;
 CREATE TABLE `upgrade_logs` (
@@ -6606,7 +6700,7 @@ CREATE TABLE `upgrade_logs` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `upgrade_notice`
+-- Table structure for upgrade_notice
 -- ----------------------------
 DROP TABLE IF EXISTS `upgrade_notice`;
 CREATE TABLE `upgrade_notice` (
@@ -6624,7 +6718,7 @@ CREATE TABLE `upgrade_notice` (
 INSERT INTO `upgrade_notice` VALUES ('1', '1', 'MAIN', '7.0.0', '1470190293');
 
 -- ----------------------------
--- Table structure for `upload_files`
+-- Table structure for upload_files
 -- ----------------------------
 DROP TABLE IF EXISTS `upload_files`;
 CREATE TABLE `upload_files` (
@@ -6666,7 +6760,7 @@ CREATE TABLE `upload_files` (
 INSERT INTO `upload_files` VALUES ('22', '0', 'courselesson/19/20161207031109-cy38sn.MP4', '19', 'courselesson', null, '大话西游经典搞笑片段  爱你一万年永远不改变-国语高清_自定义转码_480x360.MP4', 'MP4', '6875887', '', '0', null, 'ok', 'ch-courselesson/19/20161207031109-cy38sn.MP4', 'none', null, null, null, 'video', 'local', '0', '0', '1', '1', '1481094672', '1', '1481094672');
 
 -- ----------------------------
--- Table structure for `upload_files_collection`
+-- Table structure for upload_files_collection
 -- ----------------------------
 DROP TABLE IF EXISTS `upload_files_collection`;
 CREATE TABLE `upload_files_collection` (
@@ -6683,7 +6777,7 @@ CREATE TABLE `upload_files_collection` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `upload_files_share`
+-- Table structure for upload_files_share
 -- ----------------------------
 DROP TABLE IF EXISTS `upload_files_share`;
 CREATE TABLE `upload_files_share` (
@@ -6701,7 +6795,7 @@ CREATE TABLE `upload_files_share` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `upload_files_share_history`
+-- Table structure for upload_files_share_history
 -- ----------------------------
 DROP TABLE IF EXISTS `upload_files_share_history`;
 CREATE TABLE `upload_files_share_history` (
@@ -6718,7 +6812,7 @@ CREATE TABLE `upload_files_share_history` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `upload_files_tag`
+-- Table structure for upload_files_tag
 -- ----------------------------
 DROP TABLE IF EXISTS `upload_files_tag`;
 CREATE TABLE `upload_files_tag` (
@@ -6733,7 +6827,7 @@ CREATE TABLE `upload_files_tag` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `upload_file_inits`
+-- Table structure for upload_file_inits
 -- ----------------------------
 DROP TABLE IF EXISTS `upload_file_inits`;
 CREATE TABLE `upload_file_inits` (
@@ -6770,7 +6864,7 @@ INSERT INTO `upload_file_inits` VALUES ('15', '0', 'ok', 'courselesson/6/2015812
 INSERT INTO `upload_file_inits` VALUES ('22', '0', 'ok', 'courselesson/19/20161207031109-cy38sn.MP4', '19', 'courselesson', '大话西游经典搞笑片段  爱你一万年永远不改变-国语高清_自定义转码_480x360.MP4', 'MP4', '6875887', '', '0', 'ch-courselesson/19/20161207031109-cy38sn.MP4', 'none', null, null, 'video', 'local', null, '1', '1481094672', '1', '1481094669');
 
 -- ----------------------------
--- Table structure for `user`
+-- Table structure for user
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
@@ -6825,11 +6919,11 @@ CREATE TABLE `user` (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', '2885330810@qq.com', '', 'S23AOSwKoAxjZ8q8eO/9VmYHrlNYzfllYVWGnEks7Bk=', '3in4flj5142s4okg8gkwc4844s80skk', '', '', '', 'admin', '你猜', '', 'default', '0', '0', '0', 'public://user/2016/11-30/181829581f79920127.jpg', 'public://user/2016/11-30/181829579fb0566831.jpg', 'public://user/2016/11-30/181829572a21927309.jpg', '1', '1', '|ROLE_USER|ROLE_TEACHER|ROLE_ADMIN|ROLE_SUPER_ADMIN|', '0', '0', '0', '0', '0', '0', '0', '1488419077', '::1', 'mkttuio9d8h1h3jvbhaspqd5u7', '0', 'unapprove', '0', '0', '', null, '1480133733', '1488419078', null, '1', '1.');
+INSERT INTO `user` VALUES ('1', '2885330810@qq.com', '', 'S23AOSwKoAxjZ8q8eO/9VmYHrlNYzfllYVWGnEks7Bk=', '3in4flj5142s4okg8gkwc4844s80skk', '', '', '', 'admin', '你猜', '', 'default', '0', '0', '0', 'public://user/2016/11-30/181829581f79920127.jpg', 'public://user/2016/11-30/181829579fb0566831.jpg', 'public://user/2016/11-30/181829572a21927309.jpg', '1', '1', '|ROLE_USER|ROLE_TEACHER|ROLE_ADMIN|ROLE_SUPER_ADMIN|', '0', '0', '0', '0', '0', '0', '0', '1491559909', '::1', '53mb85f5adl3eed2sh2th9d1n7', '0', 'unapprove', '0', '0', '', null, '1480133733', '1491559909', null, '1', '1.');
 INSERT INTO `user` VALUES ('2', 'kmbdqn@126.com', '', 'S7+3LWn3V2/teoSF0UmKkRP5p8hEo50HPYIpwzbvqPY=', 'l755xjbyxe8888ss8gcs8wkcgkgks4w', '', '', '', 'WangOu', '校长', '', 'default', '0', '0', '0', 'public://user/2016/11-30/184918e6f859482690.jpg', 'public://user/2016/11-30/184918e6adf0458497.jpg', 'public://user/2016/11-30/184918e660d6517151.jpg', '0', '1', '|ROLE_TEACHER|ROLE_USER|', '1', '0', '1432256876', '0', '0', '0', '0', '1437536926', '115.199.252.203', '03rdvr1n9thth6lo3u9gtp75b4', '0', 'unapprove', '0', '6', '183.128.152.168', null, '1429775806', '1481167202', null, '1', '1.');
 INSERT INTO `user` VALUES ('3', 'kmbdqn1@126.com', '', '6P03Z6tUavBelcY51vGfORXx0M61Td3ECCbkcmu0yLY=', '45zec0teza4g008kscc4o4g80wsogok', '', '', '', 'WangKai', '技术部教学主任', '', 'default', '0', '0', '0', 'public://user/2016/11-30/184810acce5f387233.jpg', 'public://user/2016/11-30/184810ac8ec1203166.jpg', 'public://user/2016/11-30/184810ac4160438687.jpg', '0', '1', '|ROLE_TEACHER|ROLE_USER|', '1', '0', '1432256878', '0', '0', '0', '0', '1432516188', '115.199.255.52', 'q4g3h8das3re00cbclddeenpc5', '0', 'unapprove', '0', '0', '183.128.152.168', null, '1429775845', '1480502929', null, '1', '1.');
 INSERT INTO `user` VALUES ('4', 'kmbdqn2@126.com', '', '0DWsPTHZjobj0iLkMirc+bp7UuuoxAXBLko2SsP0jg8=', 'k1lshv7hrfkg804488gcwsgwc0ckco4', '', '', '', 'MoYong', 'XX网络联合创始人、副总经理—Yong.M（牟勇）', '', 'default', '0', '0', '0', 'public://user/2016/12-01/102516c0c4a6223965.jpg', 'public://user/2016/12-01/102516c08d61574628.jpg', 'public://user/2016/12-01/102516c04f99995713.jpg', '0', '1', '|ROLE_USER|ROLE_TEACHER|', '1', '0', '0', '0', '0', '0', '0', '1432519224', '115.199.255.52', '91sfr421hi8g6tgpp8k3idlgb0', '0', 'unapprove', '0', '1', '183.128.152.168', null, '1429775893', '1480559198', null, '1', '1.');
-INSERT INTO `user` VALUES ('15', '119584828@qq.com', '', 'R7ySb1Wo7L5bf2v3xVufDB4hiNpdOqdDO22x4HVf6cs=', '1z3q5ajz9ukg0go88k4cssw0ws4c0g', '', '', '', 'testone', '你猜', '', 'web_email', '0', '0', '4', 'public://user/2017/01-12/1913106106b7274707.jpg', 'public://user/2017/01-12/19131060a44a883456.jpg', 'public://user/2017/01-12/19131060347a455555.jpg', '0', '1', '|ROLE_USER|ROLE_TEACHER|ROLE_ADMIN|', '0', '0', '0', '0', '0', '0', '0', '1484701691', '::1', '04bf5vhullbinj4i6hs3vvo2r7', '0', 'unapprove', '0', '1', '::1', null, '1481617170', '1484701692', null, '1', '1.');
+INSERT INTO `user` VALUES ('15', '119584828@qq.com', '', 'R7ySb1Wo7L5bf2v3xVufDB4hiNpdOqdDO22x4HVf6cs=', '1z3q5ajz9ukg0go88k4cssw0ws4c0g', '', '', '', 'testone', '你猜', '', 'web_email', '0', '0', '4', 'public://user/2017/01-12/1913106106b7274707.jpg', 'public://user/2017/01-12/19131060a44a883456.jpg', 'public://user/2017/01-12/19131060347a455555.jpg', '0', '1', '|ROLE_USER|ROLE_TEACHER|ROLE_ADMIN|', '0', '0', '0', '0', '0', '0', '0', '1489473815', '::1', 'mrsk86rlc98jqv5llqaufqp630', '0', 'unapprove', '0', '1', '::1', null, '1481617170', '1489473815', null, '1', '1.');
 INSERT INTO `user` VALUES ('5', 'kmbdqn3@126.com', '', 'N22j1p0SruvDVGNxkzslMH3H7hqsEbsM3POP+G33ZxA=', 'ku0gtu3i2bk4coco8g8kw0o8w800ccs', '', '', '', 'LiuTao', '产品总监', '', 'default', '0', '0', '0', 'public://user/2016/11-30/184650acb659590130.jpg', 'public://user/2016/11-30/184650abe6c0190022.jpg', 'public://user/2016/11-30/184650a969c1516155.jpg', '0', '1', '|ROLE_USER|ROLE_TEACHER|', '1', '0', '1432282660', '0', '0', '0', '0', '1435654646', '125.120.209.3', 'luuce4sr6natmhv6g67v6j3694', '0', 'unapprove', '0', '2', '183.128.152.168', null, '1429775930', '1480503514', null, '1', '1.');
 INSERT INTO `user` VALUES ('6', 'kmbdqn4@126.com', '', 'sv6nO2NVkjdFUaVvMwRt4VjF/HJWcgExflRg0HD86W8=', 'mqm524ip2c08o0kwgo84gs4okgokc08', '', '', '', 'HuGe', 'XX网络联合创始人', '', 'default', '0', '0', '0', 'public://user/2016/11-30/184308c16b64332680.jpg', 'public://user/2016/11-30/184308c12341011072.jpg', 'public://user/2016/11-30/184308c0ceca173491.jpg', '0', '1', '|ROLE_USER|ROLE_TEACHER|', '1', '0', '1434588927', '0', '0', '0', '0', '1432515836', '115.199.255.52', 'm6pd2de22ljhr9qihgui5s93s3', '0', 'unapprove', '0', '1', '183.128.152.168', null, '1429775979', '1480503072', null, '1', '1.');
 INSERT INTO `user` VALUES ('7', 'kmbdqn5@126.com', '', 'IxpBaFoIJ1dIDUj9i/9gGsGwIe6F+IpbQiiFj0bsweU=', '2yqkli0as78k8o0kc0w8ko4gks4ws4c', '', '', '', 'Cloudy', '', '', 'default', '0', '0', '0', 'http://edusoho-demo.b0.upaiyun.com/files/default/2015/06-17/182519f916c5251118.jpg', 'http://edusoho-demo.b0.upaiyun.com/files/default/2015/06-17/182519f90b02808538.jpg', 'http://edusoho-demo.b0.upaiyun.com/files/default/2015/06-17/182519f8dd9f699133.jpg', '0', '1', '|ROLE_USER|', '0', '0', '0', '0', '0', '0', '0', '1436160088', '115.199.252.25', 'ivmmcbhudjg2vanag77dk47ta3', '0', 'unapprove', '0', '1', '183.128.152.168', null, '1429776471', '1429776471', null, '1', '1.');
@@ -6843,7 +6937,7 @@ INSERT INTO `user` VALUES ('16', '469139570@qq.com', '', 'oWM/NnIzJh5JbCTdCo9Yh0
 INSERT INTO `user` VALUES ('18', '123456456@qq.com', '', 'i8zu8es7/i7hyHP5XZjbmN5kS0wN05WMFYtepUQO2XA=', 'dobp669aj14c4ss4w80kw0kogsscwcs', '', '', '', 'testthree', '', '', 'web_email', '0', '0', '0', '', '', '', '0', '1', '|ROLE_USER|', '0', '0', '0', '0', '0', '0', '0', '1484619115', '::1', '37kdq4cjm90s3rij30r28i9n16', '0', 'unapprove', '0', '0', '::1', null, '1484619041', '1484619115', null, '1', '1.');
 
 -- ----------------------------
--- Table structure for `user_approval`
+-- Table structure for user_approval
 -- ----------------------------
 DROP TABLE IF EXISTS `user_approval`;
 CREATE TABLE `user_approval` (
@@ -6865,7 +6959,7 @@ CREATE TABLE `user_approval` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `user_bind`
+-- Table structure for user_bind
 -- ----------------------------
 DROP TABLE IF EXISTS `user_bind`;
 CREATE TABLE `user_bind` (
@@ -6887,7 +6981,7 @@ CREATE TABLE `user_bind` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `user_field`
+-- Table structure for user_field
 -- ----------------------------
 DROP TABLE IF EXISTS `user_field`;
 CREATE TABLE `user_field` (
@@ -6905,7 +6999,7 @@ CREATE TABLE `user_field` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `user_fortune_log`
+-- Table structure for user_fortune_log
 -- ----------------------------
 DROP TABLE IF EXISTS `user_fortune_log`;
 CREATE TABLE `user_fortune_log` (
@@ -6924,7 +7018,7 @@ CREATE TABLE `user_fortune_log` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `user_pay_agreement`
+-- Table structure for user_pay_agreement
 -- ----------------------------
 DROP TABLE IF EXISTS `user_pay_agreement`;
 CREATE TABLE `user_pay_agreement` (
@@ -6946,7 +7040,7 @@ CREATE TABLE `user_pay_agreement` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `user_profile`
+-- Table structure for user_profile
 -- ----------------------------
 DROP TABLE IF EXISTS `user_profile`;
 CREATE TABLE `user_profile` (
@@ -7041,7 +7135,7 @@ INSERT INTO `user_profile` VALUES ('16', '', '', 'secret', '', null, '', '', '',
 INSERT INTO `user_profile` VALUES ('18', '', '', 'secret', '', null, '', '', '', null, null, '', '', '', '', '', '', '', '0', '0', '0', '', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', null, '', '', '', '', '', '1');
 
 -- ----------------------------
--- Table structure for `user_secure_question`
+-- Table structure for user_secure_question
 -- ----------------------------
 DROP TABLE IF EXISTS `user_secure_question`;
 CREATE TABLE `user_secure_question` (
@@ -7059,7 +7153,7 @@ CREATE TABLE `user_secure_question` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `user_token`
+-- Table structure for user_token
 -- ----------------------------
 DROP TABLE IF EXISTS `user_token`;
 CREATE TABLE `user_token` (
@@ -7074,8 +7168,14 @@ CREATE TABLE `user_token` (
   `createdTime` int(10) unsigned NOT NULL COMMENT 'TOKEN创建时间',
   PRIMARY KEY (`id`),
   UNIQUE KEY `token` (`token`(60))
-) ENGINE=MyISAM AUTO_INCREMENT=65 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=71 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_token
 -- ----------------------------
+INSERT INTO `user_token` VALUES ('65', 'VxZp0xTeN9FuRu7qOP17GhZe8TVbWckf', '0', 'qrcode', 'a:2:{s:3:\"url\";s:26:\"http://localhost/course/12\";s:6:\"appUrl\";s:47:\"http://localhost/mapi_v2/mobile/main#/course/12\";}', '1', '1', '1491202637', '1491199037');
+INSERT INTO `user_token` VALUES ('66', '48iypc6GCQIwudefM4KaE1Gm4y5rQKoB', '0', 'qrcode', 'a:2:{s:3:\"url\";s:26:\"http://localhost/course/12\";s:6:\"appUrl\";s:47:\"http://localhost/mapi_v2/mobile/main#/course/12\";}', '1', '1', '1491202642', '1491199042');
+INSERT INTO `user_token` VALUES ('67', 'Yw9wA0asQ0BERk575eUSz7RWQ2Y3uNVf', '0', 'qrcode', 'a:2:{s:3:\"url\";s:26:\"http://localhost/course/12\";s:6:\"appUrl\";s:47:\"http://localhost/mapi_v2/mobile/main#/course/12\";}', '1', '1', '1491202643', '1491199043');
+INSERT INTO `user_token` VALUES ('68', 'KpBtbYxfwjXE7UdIkOU7LuGAxBbrxb3t', '0', 'qrcode', 'a:2:{s:3:\"url\";s:26:\"http://localhost/course/12\";s:6:\"appUrl\";s:47:\"http://localhost/mapi_v2/mobile/main#/course/12\";}', '1', '1', '1491202643', '1491199043');
+INSERT INTO `user_token` VALUES ('69', 'lVpXFMowRb8dVOqAgQGmk8s6qAF25gGW', '0', 'qrcode', 'a:2:{s:3:\"url\";s:26:\"http://localhost/course/12\";s:6:\"appUrl\";s:47:\"http://localhost/mapi_v2/mobile/main#/course/12\";}', '1', '1', '1491202644', '1491199044');
+INSERT INTO `user_token` VALUES ('70', 'qsUxLQ3QTuF5XIpsi7QpQf7E3GAFaw6O', '0', 'qrcode', 'a:2:{s:3:\"url\";s:26:\"http://localhost/course/10\";s:6:\"appUrl\";s:47:\"http://localhost/mapi_v2/mobile/main#/course/10\";}', '1', '1', '1491204288', '1491200688');

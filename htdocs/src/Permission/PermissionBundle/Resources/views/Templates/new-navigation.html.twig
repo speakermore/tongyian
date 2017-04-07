@@ -4,7 +4,7 @@
   {% if menu|default(null) %}
     {% set rootMenu = menu|parent_permission.code|parent_permission %}
   {% else %}
-    {% set rootMenu = permission('admin') %}
+    {% set rootMenu = permission('newadmin') %}
   {% endif %}
 
   <ul class="nav navbar-nav">

@@ -84,6 +84,10 @@ class CourseServiceImpl extends BaseService implements CourseService
         }
     }
 
+     public function getSchoolIdByCourseId($courseId){
+         return $this->getCourseDao()->getSchoolIdByCourseId($courseId);
+     }
+
     public function findLessonsByIds(array $ids)
     {
         $lessons = $this->getLessonDao()->findLessonsByIds($ids);

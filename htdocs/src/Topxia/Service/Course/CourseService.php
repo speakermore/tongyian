@@ -15,6 +15,8 @@ interface CourseService
 
     public function getCourse($id);
 
+    public function getSchoolIdByCourseId($courseId);
+
     public function findCoursesBySchoolId($schoolId);
 
     public function findCoursesByPopulationClassify($id);
