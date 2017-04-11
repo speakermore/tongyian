@@ -569,6 +569,14 @@ class BackgroundController extends BaseController
     {
         $user = $this -> getCurrentUser();
         $id = $user -> getSchoolId();
+        $roles = array();
+        $roles = $user['roles'];
+        $flag = 1;
+        if (in_array('ROLE_SCHOOL_ADMIN', $roles) || in_array('ROLE_SCHOOLRECRUIT', $roles)) {
+            $flag = 1;
+        }else if(in_array('ROLE_TRAIN_ADMIN', $roles) || in_array('ROLE_TRAINRECRUIT', $roles)){
+            $flag = 2;
+        }
 
         if ($request->getMethod() == 'POST') {
             $school = $request->request->get('schools');
@@ -594,6 +602,11 @@ class BackgroundController extends BaseController
         
          //学校
         $school = $this->getSchoolsService()->getSchool($id);
+        if ($school['institutionsType'] == 0) {
+            $flag = 1;
+        }else if($school['institutionsType'] == 1){
+            $flag = 2;
+        }
         if($school['province_id'] != null && $school['city_id'] != null){
             //省份
             $province = $this->getProvinceService()->getProvince($school['province_id']);
@@ -612,7 +625,8 @@ class BackgroundController extends BaseController
             'provinces' => $provinces,
             'citys' => $citys,
             'schools' => $school,
-            'user' => $user
+            'user' => $user,
+            'flag' => $flag
             ));
         }else{
              return $this->render('TopxiaAdminBundle:Background:school/registersc-add.html.twig', array(
@@ -621,7 +635,8 @@ class BackgroundController extends BaseController
             'provinces' => $provinces,
             'citys' => $citys,
             'schools' => $school,
-            'user' => $user
+            'user' => $user,
+            'flag' => $flag
             ));
         }
        

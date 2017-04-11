@@ -9,15 +9,15 @@ class StudentsController extends BaseController
     {
          if ($request->getMethod() == 'POST') {
             $student = $request->request->get('student');
-            $value = $request->request->get('reportedCourse');
-            if (!empty($value)) {
-                foreach ($value as $key => $va) {
-                    $student['reportedCourse'] = (int)$va;
-                    $this->getStudentsService()->addStudent($student['school_id'], $student);
-                }
-            }
+            // $value = $request->request->get('reportedCourse');
+            // if (!empty($value)) {
+            //     foreach ($value as $key => $va) {
+            //         $student['reportedCourse'] = (int)$va;
+            //         $this->getStudentsService()->addStudent($student['school_id'], $student);
+            //     }
+            // }
             //$birthday = date("Y-m-d", $student['birthday']);
-          
+            $this->getStudentsService()->addStudent($student['school_id'], $student);
             $this->setFlashMessage('success', $this->getServiceKernel()->trans('基础信息保存成功。'));
              
             return $this->redirect($this->generateUrl('homepage'));
@@ -28,11 +28,17 @@ class StudentsController extends BaseController
         if ($user->isLogin()) {
              $school = $this->getSchoolsService()->getSchool($id);
              /*查询招生老师*/
-             $teacher = $this->getUserService()->findUserBySchoolId($id);
-             if($teacher == null)
-             {
-                 /*查询所有学校招生老师*/
-                 $teacher = $this->getUserService()->findUserBySchoolId(0);
+            //  $teacher = $this->getUserService()->findUserBySchoolId($id);
+            //  if($teacher == null)
+            //  {
+            //      /*查询所有学校招生老师*/
+            //      $teacher = $this->getUserService()->findUserBySchoolId(0);
+            //  }
+             $flag = 1;
+             if(null != $school['institutionsType'] && $school['institutionsType'] == 0){
+                $flag = 1;
+             }else if(null != $school['institutionsType'] && $school['institutionsType'] == 1){
+                $flag = 2;
              }
              $userId = $user['id'];
              $userProfile = $this->getUserService()->getUserProfile($userId);
@@ -44,6 +50,7 @@ class StudentsController extends BaseController
              $arguments['count'] = 12;
              $arguments['categoryId'] = 0;
              $arguments['school_id'] = $id; 
+             /*课程*/
              $courses = $this->getCourseService()->searchCourses($conditions,'latest', 0, $arguments['count']);
 
              //$course = $this->getCoursesService()->findCoursesBySchoolId($id);
@@ -53,10 +60,11 @@ class StudentsController extends BaseController
             return $this->render('TopxiaWebBundle:Student:add-student.html.twig', array(
                 'school_id' => $id,
                 'school' => $school,
-                'teacher' => $teacher,
+                // 'teacher' => $teacher,
                 'courses' => $courses,
                 'userProfile' => $userProfile,
-                'user' => $user
+                'user' => $user,
+                'flag' => $flag
                 ));
         }else{
             return $this->redirect($this->generateUrl('login_background'));

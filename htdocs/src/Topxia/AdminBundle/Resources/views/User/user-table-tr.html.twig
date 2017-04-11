@@ -6,7 +6,6 @@
     {% if user.locked %}
       <label class="label label-danger">{{'禁'|trans}}</label>
     {% endif %}
-
     <br>
     <span class="text-muted text-sm">
       {% for role in user.roles %}

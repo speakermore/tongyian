@@ -1,15 +1,15 @@
-{% extends 'TopxiaAdminBundle::layout.html.twig' %}
+{% extends 'TopxiaAdminBundle::new-layout.html.twig' %}
 
-{% set menu = 'admin_course_manage' %}
+{% set menu = 'newadmin_coursesc' %}
 
-{% set script_controller = 'course/manage' %}
+{% set script_controller = 'course/newManage' %}
 
 {% block main %}
-  {% include 'TopxiaAdminBundle:Course:tab.html.twig' %}
+  {% include 'TopxiaAdminBundle:Course:newTab.html.twig' %}
   <br>
   <div class="well well-sm mtl">
     <form id="message-search-form" class="form-inline" action="" method="get" novalidate>
-      {% include 'OrgBundle:Org:org-tree-select.html.twig' with {orgCode: app.request.get('orgCode'), modal: 'list'} %}
+      {#{% include 'OrgBundle:Org:neworg-tree-select.html.twig' with {orgCode: app.request.get('orgCode'), modal: 'list'} %}#}
 
       <div class="form-group">
         <select style="max-width:150px;" class="form-control" name="categoryId">
@@ -36,8 +36,9 @@
         <input class="form-control" type="text" placeholder="{{'创建者'|trans}}" name="creator" value="{{ app.request.get('creator') }}">
       </div>
       <button class="btn btn-primary">{{'搜索'|trans}}</button>
-
-      {% include 'TopxiaAdminBundle:Widget:tooltip-widget.html.twig' with { icon: 'glyphicon-question-sign', content: '课程说明Tooltip'|trans|raw, placement: 'left'} %}
+      {#手动添加的按钮#}
+      <a class="btn btn-success btn-sm" href="/course/create" target="blank">创建课程</a>
+      {#{% include 'TopxiaAdminBundle:Widget:tooltip-widget.html.twig' with { icon: 'glyphicon-question-sign', content: '课程说明Tooltip'|trans|raw, placement: 'left'} %}#}
     </form>
   </div>
 
@@ -71,7 +72,7 @@
     {% for course in courses %}
       {% set user = users[course.userId]|default(null) %}
       {% set category = categories[course.categoryId]|default(null) %}
-      {% include 'TopxiaAdminBundle:Course:tr.html.twig' %}
+      {% include 'TopxiaAdminBundle:Course:newTr.html.twig' %}
     {% else %}
       <tr>
         <td colspan="20">
@@ -81,7 +82,7 @@
     {% endfor %}
     </tbody>
   </table>
-  {% include 'OrgBundle:Org:batch-update-org-btn.html.twig' with {module:'course', formId:'course-table'} %}
+  {#{% include 'OrgBundle:Org:batch-update-org-btn.html.twig' with {module:'course', formId:'course-table'} %}#}
   {{ admin_macro.paginator(paginator) }}
 
 {% endblock %}

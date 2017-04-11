@@ -5,7 +5,6 @@
 {% block body %}
     
     <form id="add-wxstu-form" role="form" class="form-horizontal" method="post" action="{{ url('student_add', {id:school.id}) }}">
-
     <div class="form-group">
         <label class="col-md-5 control-label">添加学生报名信息</label>
         <div class="col-md-7 controls radios">
@@ -13,6 +12,7 @@
         </div>
     </div>
     {{ web_macro.flash_messages() }}
+    {% if flag == 1 %}
     <div class="form-group">
         <label class="col-md-2 control-label">{{'姓名'|trans}}</label>
         <div class="col-md-7 controls radios">
@@ -142,7 +142,7 @@
     </div>
 
     {#推荐老师#}
-    <div class="form-group form-forIam-group form-notStudent-group">
+    {#<div class="form-group form-forIam-group form-notStudent-group">
         <label class="col-md-2 control-label">{{'推荐老师'|trans}}</label>
         <div class="col-md-7 controls">
             <select id="student_recommendTeacher" name="student[recommendTeacher]" class="form-control" data-widget-cid="widget-2" >
@@ -164,6 +164,154 @@
         </select>
             <div class="help-block" style="display:none;"></div>
         </div>
+    </div>#}
+
+    {#所报学校#}
+    <div class="form-group form-forIam-group form-notStudent-group">
+        <label class="col-md-2 control-label">{{'所报学校'|trans}}</label>
+        <div class="col-md-7 controls">
+            <input type="text" id="student_reportedSchool" name="student[reportedSchool]" class="form-control" readonly="true" value="{{ school.chineseName|default('') }}"
+            />
+            <div class="help-block" style="display:none;"></div>
+        </div>
+    </div>
+    <style>
+        input[type="checkbox"] {
+            margin-top: -6px;
+        }
+    </style>
+    {#所报课程#}
+    <div class="form-group form-forIam-group form-notStudent-group">
+        <label class="col-md-2 control-label">{{'所报课程'|trans}}</label>
+    
+
+        
+    {#原来的多选框#}
+    {#{% for cou in courses %}
+    <div class="form-group form-forIam-group form-notStudent-group">
+        <label class="col-md-2"></label>
+        <div class="col-md-1 controls">
+            <input type="checkbox" id="student_reportedCourse" name="reportedCourse[]" class="form-control my-margin-top-0" value="{{ cou.id|default('') }}" />
+            <div class="help-block" style="display:none;"></div>
+        </div>
+        <label class="col-md-8"> {{ cou.title|default('')}} </label>
+    </div>
+    {% endfor %}#}
+
+    {#现在换下拉框单选#}
+            <select id="student_reportedCourse" name="student_reportedCourse" class="form-control" data-widget-cid="widget-2" >
+            {% if courses %}
+                {% for cour in courses %}
+                    <option value="{{ cour.id }}">
+                            {{ cour.title|default('') }}
+                    </option>
+                {% endfor %}
+            {% else %}
+                <option value="0">
+                    {{'无'|trans}}
+                </option>
+            {% endif %}
+            </select>
+    </div>
+    {#<div class="help-block" style="display:none;"></div>#}
+
+    {% elseif flag == 2 %}
+    <div class="form-group">
+        <label class="col-md-2 control-label">{{'姓名'|trans}}</label>
+        <div class="col-md-7 controls radios">
+            <input type="text" id="student_name" name="student[name]" class="form-control" value="{{ userProfile.truename|default('') }}"
+            />
+            <div class="help-block" style="display:none;"></div>
+        </div>
+    </div>
+
+    {#民族#}
+    <div class="form-group form-forIam-group form-notStudent-group">
+        <label class="col-md-2 control-label">{{'民族'|trans}}</label>
+        <div class="col-md-7 controls">
+            <input type="text" id="student_nation" name="student[nation]" class="form-control" value="{{ userProfile.nation|default('') }}"
+            />
+            <div class="help-block" style="display:none;"></div>
+        </div>
+    </div>
+
+    {#生日#}
+    <div class="form-group form-forIam-group form-notStudent-group">
+        <label class="col-md-2 control-label">{{'生日'|trans}}</label>
+        <div class="col-md-7 controls">
+            <input type="text" id="datetimepicker" name="student[birthday]" class="date" value="{{ userProfile.birthday is empty ? "
+                " : userProfile.birthday|date("Y-m-d ") }}" data-date-format="yyyy-mm-dd" /> {{ '格式为yyyy-mm-dd' }}
+            <div class="help-block" style="display:none;"></div>
+        </div>
+    </div>
+
+    {#身高#}
+    <div class="form-group form-forIam-group form-notStudent-group">
+        <label class="col-md-2 control-label">{{'身高'|trans}}</label>
+        <div class="col-md-7 controls">
+            <input type="text" id="student_height" name="student[height]" class="form-control" value="{{ userProfile.height|default('') }}"
+            />
+            <div class="help-block" style="display:none;"></div>
+        </div>
+    </div>
+
+    {#体重#}
+    <div class="form-group form-forIam-group form-notStudent-group">
+        <label class="col-md-2 control-label">{{'体重'|trans}}</label>
+        <div class="col-md-7 controls">
+            <input type="text" id="student_weight" name="student[weight]" class="form-control" value="{{ userProfile.weight|default('') }}"
+            />
+            <div class="help-block" style="display:none;"></div>
+        </div>
+    </div>
+
+    {#联系方式#}
+    <div class="form-group form-forIam-group form-notStudent-group">
+        <label class="col-md-2 control-label">{{'联系方式'|trans}}</label>
+        <div class="col-md-7 controls">
+            <input type="text" id="student_phone" name="student[phone]" class="form-control" value="{{ userProfile.mobile|default('') }}"
+            />
+            <div class="help-block" style="display:none;"></div>
+        </div>
+    </div>
+
+    {#身份证号码#}
+    <div class="form-group form-forIam-group form-notStudent-group">
+        <label class="col-md-2 control-label">{{'身份证号码'|trans}}</label>
+        <div class="col-md-7 controls">
+            <input type="text" id="student_IDcards" name="student[IDcards]" class="form-control" value="{{ userProfile.idcard|default('') }}"
+            />
+            <div class="help-block" style="display:none;"></div>
+        </div>
+    </div>
+
+    {#地址#}
+    <div class="form-group form-forIam-group form-notStudent-group">
+        <label class="col-md-2 control-label">{{'地址'|trans}}</label>
+        <div class="col-md-7 controls">
+            <input type="text" id="student_address" name="student[address]" class="form-control" value="" />
+            <div class="help-block" style="display:none;"></div>
+        </div>
+    </div>
+
+    {#监护人姓名#}
+    <div class="form-group form-forIam-group form-notStudent-group">
+        <label class="col-md-2 control-label">{{'监护人姓名'|trans}}</label>
+        <div class="col-md-7 controls">
+            <input type="text" id="student_guardianName" name="student[guardianName]" class="form-control" value="{{ userProfile.guardianName|default('') }}"
+            />
+            <div class="help-block" style="display:none;"></div>
+        </div>
+    </div>
+
+    {#监护人联系方式#}
+    <div class="form-group form-forIam-group form-notStudent-group">
+        <label class="col-md-2 control-label">{{'监护人电话'|trans}}</label>
+        <div class="col-md-7 controls">
+            <input type="text" id="student_guardianPhone" name="student[guardianPhone]" class="form-control" value="{{ userProfile.guardianPhone|default('') }}"
+            />
+            <div class="help-block" style="display:none;"></div>
+        </div>
     </div>
 
     {#所报学校#}
@@ -183,23 +331,25 @@
     {#所报课程#}
     <div class="form-group form-forIam-group form-notStudent-group">
         <label class="col-md-2 control-label">{{'所报课程'|trans}}</label>
+    
+
+    {#现在换下拉框单选#}
+            <select id="student_reportedCourse" name="student_reportedCourse" class="form-control" data-widget-cid="widget-2" >
+            {% if courses %}        
+                {% for cour in courses %}
+                    <option value="{{ cour.id }}">
+                            {{ cour.title|default('') }}
+                    </option>
+                {% endfor %}
+            {% else %}
+                <option value="0">
+                    {{'无'|trans}}
+                </option>
+            {% endif %}
+            </select>
+    {#<div class="help-block" style="display:none;"></div>#} 
     </div>
-
-    {% if courses %}
-    {% for cou in courses %}
-    <div class="form-group form-forIam-group form-notStudent-group">
-        <label class="col-md-2"></label>
-        <div class="col-md-1 controls">
-            <input type="checkbox" id="student_reportedCourse" name="reportedCourse[]" class="form-control my-margin-top-0" value="{{ cou.id|default('') }}" />
-            <div class="help-block" style="display:none;"></div>
-        </div>
-        <label class="col-md-8"> {{ cou.title|default('')}} </label>
-    </div>
-    {% endfor %}
-    {% endif %}
-
-    {#<div class="help-block" style="display:none;"></div>#}
-
+    {% endif %} 
     <div class="row">
         <div class="col-md-7 col-md-offset-2">
             <button id="wxstu-save-btn" data-submiting-text="{{'正在保存'|trans}}" type="submit" class="btn btn-primary">{{'保存'|trans}}</button>

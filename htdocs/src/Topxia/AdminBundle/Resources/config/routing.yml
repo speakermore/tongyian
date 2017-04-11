@@ -1975,9 +1975,16 @@ newadmin_messagesc:
     defaults: { _controller: TopxiaAdminBundle:Background:messagesc }
     permissions: [newadmin_messagesc_school]
 
-newadmin_coursesc:
+#首页课程分类#
+admin_coursesc:
     pattern:  /coursesc
     defaults: { _controller: TopxiaAdminBundle:Background:coursesc }
+    permissions: [admin_coursesc_manager]
+
+#新的学校课程#
+newadmin_coursesc:
+    pattern:  /course/{filter}/newIndex
+    defaults: { _controller: TopxiaAdminBundle:Course:newIndex, filter:'normal' }
     permissions: [newadmin_coursesc_manager]
 
 newadmin_articlesc:

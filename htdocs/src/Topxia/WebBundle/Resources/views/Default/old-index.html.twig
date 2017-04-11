@@ -94,7 +94,7 @@
 				
 				<div class="row">
 					<div class="col-md-12">
-						{#<form action="#" class="form-horizontal" rola="form">
+						<form action="#" class="form-horizontal" rola="form">
 							<div class="form-group">
 								<div class="input-group">
 									<select class="form-control">
@@ -105,7 +105,7 @@
 									</select>
 								</div>
 							</div>
-						</form>#}
+						</form>
 					</div>
 				</div>
 				<div class="row">
@@ -144,27 +144,27 @@
 								<ol class="dropdown-menu">
 							{% if loop.last %}
 								{% if level.level - preLevel.level  == 1 %}
-									<li>{{ level.name|default('') }}</li>	
+									<li>{{ level.name|default('') }}123</li>	
 									</dl></li>
 								{% elseif level.level - preLevel.level  == 2 %}
-									<li>{{ level.name|default('') }}</li>
+									<li>{{ level.name|default('') }}456</li>
 									</ol></li>
 									</ol></li>
 								{% endif %}
 							{% endif %}
 							{% set preLevel = level %}
 						{% elseif preLevel.level == level.level %}
-							<li>{{ preLevel.name|default('') }}</li>
+							<li><a href="#F2">{{ preLevel.name|default('') }}</a></li>
 							{% if loop.last %}
-								<li>{{ level.name|default('') }}</li>
+								<li><a href="#F3">{{ level.name|default('')}}</a></li>
 							{% endif %}
 							{% set preLevel = level %}
 						{% elseif preLevel.level > level.level and preLevel.level - level.level == 1 %}
-							<li>{{ preLevel.name|default('') }}</li>
+							<li><a href="#F1">{{ preLevel.name|default('') }}</a></li>
 							</ol></li>
 							{% set preLevel = level %}
 						{% elseif preLevel.level > level.level and preLevel.level - level.level == 2 %}
-							<li>{{ preLevel.name|default('') }}</li>
+							<li>{{ preLevel.name|default('') }}543</li>
 							</ol></li>
 							</ol></li>
 							{% set preLevel = level %}
@@ -346,7 +346,7 @@
 					</script>
 					<div id="educational-list" class="col-md-12 shadow down-10">
 						<div class="row">
-						<header class="col-md-1">学历文凭</header>
+						<header class="col-md-1" id="F1">学历文凭</header>
 						{% for pcCourses in PCcourses %}
 						<ul class="col-md-2">
 							<li class="down-10"><a class="link-dark" href="{{ path('course_show', {id:pcCourses.id}) }}" target="_blank">{{ lazy_img(filepath(pcCourses.middlePicture, 'course.png'), 'img-responsive', pcCourses.title) }}</a></li>
@@ -374,7 +374,7 @@
 					</div>
 					<div id="educational-list" class="col-md-12 shadow down-10">
 						<div class="row">
-						<header class="col-md-1">出国留学</header>
+						<header class="col-md-1" id="F2">出国留学</header>
 						{% for saCourses in SAcourses %}
 						<ul class="col-md-2">
 							<li class="down-10"><a class="link-dark" href="{{ path('course_show', {id:saCourses.id}) }}" target="_blank">{{ lazy_img(filepath(saCourses.middlePicture, 'course.png'), 'img-responsive', saCourses.title) }}</a></li>
@@ -402,7 +402,7 @@
 					</div>
 					<div id="educational-list" class="col-md-12 shadow down-10">
 						<div class="row">
-						<header class="col-md-1">才艺专长</header>
+						<header class="col-md-1" id="F3">才艺专长</header>
 						{% for vsCourses in VScourses %}
 						<ul class="col-md-2">
 							<li class="down-10"><a class="link-dark" href="{{ path('course_show', {id:vsCourses.id}) }}" target="_blank">{{ lazy_img(filepath(vsCourses.middlePicture, 'course.png'), 'img-responsive', vsCourses.title) }}</a></li>

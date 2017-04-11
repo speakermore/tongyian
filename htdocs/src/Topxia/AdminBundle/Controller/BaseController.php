@@ -27,7 +27,7 @@ class BaseController extends WebBaseController
      */
     protected function fillOrgCode($conditions){
 
-        if($this->setting('magic.enable_org')){
+         if($this->setting('magic.enable_org')){
              if( !isset($conditions['orgCode'])){
                 $conditions['likeOrgCode'] =  $this->getCurrentUser()->getSelectOrgCode();
              }else{

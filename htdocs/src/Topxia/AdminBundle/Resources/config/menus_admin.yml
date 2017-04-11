@@ -622,6 +622,10 @@ admin:
                         #admin_setting_theme:
                         #    name: 主题
                          #   disable: true
+                        admin_coursesc_manager:
+                            name: 首页课程分类
+                            router_name: admin_coursesc   
+                            disable: true
                         admin_setting_mailer:
                             name: 邮件服务器设置
                             disable: true

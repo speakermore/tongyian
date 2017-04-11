@@ -105,11 +105,13 @@ newadmin:
                             name: 认证管理
                             disable: true
                 newadmin_coursesc_manager:
-                    name: 课程信息管理
+                    name: 课程管理
                     children:
                         newadmin_coursesc:
-                            name: 课程信息管理
+                            name: 课程管理
                             disable: true
+                            # group: btn
+                            # blank: true
                 newadmin_articlesc_manager:
                     name: 文章管理
                     children:
