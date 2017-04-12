@@ -13,7 +13,10 @@
             <div class="help-block" style="display:none;"></div>
 </div>
 </div>
-{{ web_macro.flash_messages() }} 
+{{ web_macro.flash_messages() }}
+
+{% if flag == 1 %}
+
 {#民办非企业登记证书#}
 <div class="form-group">
     <label class="col-md-2 control-label">{{'民办非企业登记证书'|trans}}</label>
@@ -87,6 +90,7 @@
 </div>
 </div>
 
+{% elseif flag == 2 %}
 {#营业执照#}
 <div class="form-group form-forIam-group form-notStudent-group">
     <label class="col-md-2 control-label">{{'营业执照'|trans}}</label>
@@ -99,6 +103,7 @@
 </div>
 </div>
 
+{% endif %}
 {#<div class="row">
     <div class="col-md-7 col-md-offset-2">
         <button id="schoolAuth-update-btn" data-submiting-text="{{'正在更新'|trans}}" type="submit" class="btn btn-primary">{{'更新'|trans}}</button>

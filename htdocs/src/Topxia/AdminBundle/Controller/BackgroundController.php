@@ -602,9 +602,9 @@ class BackgroundController extends BaseController
         
          //学校
         $school = $this->getSchoolsService()->getSchool($id);
-        if ($school['institutionsType'] == 0) {
+        if ($school['institutionsType'] == "0") {
             $flag = 1;
-        }else if($school['institutionsType'] == 1){
+        }else if($school['institutionsType'] == "1"){
             $flag = 2;
         }
         if($school['province_id'] != null && $school['city_id'] != null){
@@ -646,6 +646,7 @@ class BackgroundController extends BaseController
     {
         $user = $this->getCurrentUser();
         $id = $user->getSchoolId();
+       
         // if ($request->getMethod() == 'POST') {
         //     $schoolAuth = $request->request->get('schoolAuth');
 
@@ -667,22 +668,35 @@ class BackgroundController extends BaseController
              
         //     return $this->redirect($this->generateUrl('homepage'));
         // }
-
+        $flag = 1;
         $schoolAuth = $this->getSchoolAuthService()->getSchoolAuthBySchoolId($id);
-        // if($schoolAuth != null){
-        //      return $this->render('TopxiaAdminBundle:Background:school/authentication.html.html.twig', array(
+         if(null != $id){
+             $school = $this->getSchoolsService()->getSchool($id);
+        }else if(null != $schoolAuth['school_id']){
+             $school = $this->getSchoolsService()->getSchool($schoolAuth['school_id']);
+        }
+        if(null != $school['institutionsType'] && $school['institutionsType'] == 0){
+            $flag = 1;
+        }else if(null != $school['institutionsType'] && $school['institutionsType'] == 0){
+            $flag = 2;
+        }
+        if($schoolAuth != null){
+             return $this->render('TopxiaAdminBundle:Background:school/authentication.html.html.twig', array(
+                'schoolAuth' => $schoolAuth,
+                'school_id'  => $schoolAuth['school_id'],
+                'flag' => $flag
+            ));
+        }else{
+             return $this->render('TopxiaAdminBundle:Background:school/authentication-add.html.twig', array(
+                'school_id' => $id,
+                // 'user' => $user,
+                'flag' => $flag
+                ));
+        }
+        //  return $this->render('TopxiaAdminBundle:Background:school/authentication.html.twig', array(
         //         'schoolAuth' => $schoolAuth,
         //         'school_id'  => $schoolAuth['school_id']
         //     ));
-        // }else{
-        //      return $this->render('TopxiaAdminBundle:Background:school/authentication-add.html.twig', array(
-        //         'school_id' => $id 
-        //         ));
-        // }
-         return $this->render('TopxiaAdminBundle:Background:school/authentication.html.twig', array(
-                'schoolAuth' => $schoolAuth,
-                'school_id'  => $schoolAuth['school_id']
-            ));
     }
 
     public function messagescAction(Request $request)
