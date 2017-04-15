@@ -335,6 +335,8 @@ class CourseController extends CourseBaseController
     {
         list($course, $member) = $this->buildCourseLayoutData($request, $id);
         $school_id = $this->getCourseService()->getSchoolIdByCourseId($course['id']);
+        $school = $this->getSchoolsService()->getSchool((int)$school_id);
+        $logo = $school['logo'];
         if ($course['parentId']) {
             $classroom = $this->getClassroomService()->findClassroomByCourseId($course['id']);
 
@@ -356,12 +358,13 @@ class CourseController extends CourseBaseController
 
         $items = $this->getCourseService()->getCourseItems($course['id']);
         //课程数组里加上学校id
-        $course['school_id'] = $school_id;
+        $course['school_id'] = (int)$school_id;
 
         return $this->render("TopxiaWebBundle:Course:{$course['type']}-show.html.twig", array(
             'course' => $course,
             'member' => $member,
-            'items'  => $items
+            'items'  => $items,
+            'logo'   => $logo
         ));
     }
 
@@ -965,6 +968,11 @@ class CourseController extends CourseBaseController
     protected function getOrderService()
     {
         return $this->getServiceKernel()->createService('Order.OrderService');
+    }
+
+    protected function getSchoolsService()
+    {
+        return $this->getServiceKernel()->createService('Schools.SchoolsService');
     }
 
 }

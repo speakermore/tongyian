@@ -21,7 +21,7 @@ class DefaultController extends BaseController
         //学校0,培训机构1
         //$school = $this->getSchoolsService()->findAll(0);
 
-        //课程分类
+        //首页课程分类
         $list = $this->getLevelService()->findAll();
 
         //学校推荐
@@ -62,7 +62,7 @@ class DefaultController extends BaseController
         $paginator = new Paginator(
             $this->get('request'),
             $this->getUserService()->searchUserCount($conditions),
-            6
+            4
         );
         //$teachersCount = $this->getUserService()->searchUserCount($conditions);
         $teachers = $this->getUserService()->searchUsers(
@@ -109,13 +109,32 @@ class DefaultController extends BaseController
     {
         //$aa = $id;
         $user = $this->getCurrentUser();
+        
 
         if (!empty($user['id'])) {
             $this->getBatchNotificationService()->checkoutBatchNotification($user['id']);
         }
 
         $friendlyLinks = $this->getNavigationService()->getOpenedNavigationsTreeByType('friendlyLink');
-        return $this->render('TopxiaWebBundle:Default:index.html.twig', array('friendlyLinks' => $friendlyLinks, 'school_id' => $id));
+        $school = $this->getSchoolsService()->getSchool($id);
+        $logo = $school['logo'];
+        $imgsOne = array(
+            'src'  => $school['largePicture'],
+            'background' => "green",
+            'href' => $school['url']
+        );
+        $imgsTwo = array(
+            'src'  => $school['largePicture'],
+            'background' => "blue",
+            'href' => $school['url']
+        );
+        $imgsThree = array(
+            'src'  => $school['largePicture'],
+            'background' => "red",
+            'href' => $school['url']
+        );
+        $images = array($imgsOne,$imgsTwo,$imgsThree);
+        return $this->render('TopxiaWebBundle:Default:index.html.twig', array('friendlyLinks' => $friendlyLinks, 'school_id' => $id, 'logo' => $logo, 'imgsOne' => $imgsOne));
     }
 
     public function addSchoolAction(Request $request, $id)

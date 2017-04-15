@@ -16,8 +16,29 @@
 {% set consultDisplay = true %}
 
 {% block full_content %}
-    {% cache 'jianmo/home/top/banner' 600 %}
+   {% cache 'jianmo/home/top/banner' 600 %}
       {{ block_show('jianmo:home_top_banner') }}
+      <div class="swiper-wrapper">
+          <div class="swiper-slide swiper-hidden" style="background: #46c47b;">
+            <div >
+              <a href="http://www.baidu.com" target="_blank" ><img class="img-responsive" src="../files/{{ imgsOne.src }}">
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-hidden" style="background: #109afb;">
+            <div >
+              <a href="http://www.baidu.com" target="_blank" ><img class="img-responsive" src="../files/{{ imgsOne.src }}">
+              </a>
+            </div>
+          </div>
+        <div class="swiper-slide swiper-hidden" style="background: #109afb;">
+            <div >
+              <a href="http://www.baidu.com" target="_blank" ><img class="img-responsive" src="../files/{{ imgsOne.src }}">
+              </a>
+            </div>
+          </div>
+        </div>
+  <div class="swiper-pager"></div>
     {% endcache %}
     {% for config in themeConfig.blocks.left|default([]) %}
 

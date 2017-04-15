@@ -19,11 +19,17 @@
       </div>
     </div>
     <a href="{{ path('homepage') }}" class="navbar-brand">
-      {% if setting('site.logo') %}
+    {% if logo is defined %}
+     <img src="{{ filepath(logo, 'avatar.png') }}" />
+    {% else %}
+     <img src="{{ filepath('../' ~ setting('site.logo'),'') }}"> 
+    {% endif %}
+    {#学校LOGO#}
+      {#{% if setting('site.logo') %}
         <img src="{{ filepath('../' ~ setting('site.logo'),'') }}">
       {% else %}
         {{ setting('site.name', 'KMBDQN') }}
-      {% endif %}
+      {% endif %}#}
     </a>
   </div>
   <nav class="collapse navbar-collapse">

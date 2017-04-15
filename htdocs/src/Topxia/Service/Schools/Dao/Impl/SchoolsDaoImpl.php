@@ -28,7 +28,7 @@ class SchoolsDaoImpl extends BaseDao implements SchoolsDao
     /*首页加载根据最新的时间显示6所学校或机构*/
     public function findSchoolByNewTime()
     { 
-        $sql = "SELECT id,largePicture FROM {$this->table} ORDER BY createTime DESC LIMIT 6";
+        $sql = "SELECT id,largePicture FROM {$this->table} ORDER BY createTime DESC LIMIT 4";
         return $this->getConnection()->fetchAll($sql) ? : array();
     }
 
@@ -37,7 +37,7 @@ class SchoolsDaoImpl extends BaseDao implements SchoolsDao
     {
         $that = $this;
         return $this->fetchCached("city_id:{$city_id}", $city_id, function ($city_id) use ($that) {
-            $sql = "SELECT * FROM {$this->table} WHERE city_id = ? LIMIT 6";
+            $sql = "SELECT * FROM {$this->table} WHERE city_id = ? LIMIT 4";
             return $this->getConnection()->fetchAll($sql, array($city_id)) ? : array();
         }
         );
