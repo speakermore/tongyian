@@ -221,6 +221,7 @@ class ArticleDaoImpl extends BaseDao implements ArticleDao
             unset($conditions['orgCode']);
         }
 
+
         $builder = $this->createDynamicQueryBuilder($conditions)
             ->from($this->table, 'article')
             ->andWhere('status = :status')
@@ -237,7 +238,8 @@ class ArticleDaoImpl extends BaseDao implements ArticleDao
             ->andWhere('orgCode LIKE :likeOrgCode')
             ->andWhere('id != :idNotEqual')
             ->andWhere('thumb != :thumbNotEqual')
-            ->andWhere('orgCode = :orgCode');
+            ->andWhere('orgCode = :orgCode')
+            ->andWhere('school_id = :school_id');
 
         return $builder;
     }

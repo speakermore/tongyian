@@ -29,8 +29,7 @@
   {% endif %}
   <!-- Bootstrap -->
 
-	<link href="assets/css/mouyong_index.css" rel="stylesheet" />
-  <link href="assets/css/carousel.css" rel="stylesheet">
+	
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -57,6 +56,7 @@
     {% set currentTheme = current_theme() %}
     {% include 'TopxiaWebBundle:Default:stylesheet.html.twig' with {config: currentTheme, isEditColor: isEditColor|default(false)} %}
 
+  
   {% endblock %}
 
   <!--[if lt IE 9]>
@@ -65,6 +65,8 @@
   <![endif]-->
 
   {% block head_scripts %}{% endblock %}
+  <link href="assets/css/mouyong_index.css" rel="stylesheet" />
+  <link href="assets/css/carousel.css" rel="stylesheet">
 
 </head>
 <body {% if bodyClass|default('') %}class="{{ bodyClass }}"{% endif %}>

@@ -53,6 +53,18 @@ class SchoolsDaoImpl extends BaseDao implements SchoolsDao
         );
     }
 
+    public function getSchoolByCName($CName)
+    {
+        $that = $this;
+
+        return $this->fetchCached("CName:{$CName}", $CName, function ($CName) use ($that) {
+            $sql = "SELECT * FROM {$that->getTable()} WHERE chineseName = ? LIMIT 1";
+            return $that->getConnection()->fetchAssoc($sql, array($CName));
+        }
+
+        );
+    }
+
     public function addSchool($school)
     {
         $affected = $this->getConnection()->insert($this->table, $school);

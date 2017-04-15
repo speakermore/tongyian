@@ -4,6 +4,10 @@
 				margin:0px;
 				padding:0px;
 			}
+			/***频道分栏左边框的颜色****/
+			blockquote{
+				border-left-color: #d50f03;
+			}
 			li{
 				/*取消li前面的图标*/
 				list-style: none;
@@ -13,7 +17,7 @@
 				/*取消em的斜体*/
 				font-style: normal;
 			}
-			img{max-width:100%;max-height:100%}
+			.link-dark img{width:100%;height:100%;}
 			/**************通用样式**********************/
 			.flex-box{
 				/*水平flex父级*/
@@ -54,6 +58,14 @@
 			.font-color-white{
 				color:white;
 			}
+			/*图片外边框*/
+			.thumbnail{
+				margin: 6px;
+			}
+			ul.thumbnail:hover{
+				box-shadow: 0px 10px 20px #e7e9e8;
+				border-color:#888; 
+			}
 			/****************自定义样式***********************/
 			
 			#course-menu{
@@ -76,13 +88,13 @@
 				align-self: flex-end;
 			}
 			#course-nav i{
-				margin-left: 20px;
+				margin-left: 40px;
 			}
 			#course-menu div:last-of-type{
 				align-self: flex-end;
 			}
 			#digset-list{
-				border: 2px solid black;
+				/*border: 2px solid black;*/
 				font-size: 22px;
 				margin-top: 5px;
 				padding:10px 20px 10px 20px;
@@ -91,20 +103,24 @@
 			#digset-list dt{
 				margin-top: 10px;
 			}
-			.tongyan-title1{
-				/*调整标题文本字体大小*/
+			/*调整标题文本字体大小*/
+			/*.tongyan-title1{
 				font-size:22px;
+			}*/
+			h3.tongyan-title1{
+				margin-bottom: 30px;
 			}
 			.tongyan-title1 strong{
 				/*调整头两个字的颜色*/
 				color:#e83227;
+				
 			}
 			#tongyan-info ul{
 				padding-left:28px ;
 			}
 			#tongyan-info ul li{
 				/*每条资讯的前部小方块*/
-				list-style-type: square ;
+				margin-top: 3%;
 				color:#e83227;
 			}
 			#tongyan-info ul li span{
@@ -113,16 +129,19 @@
 			}
 			#tongyan-info ul li:first-of-type{
 				/*每个资讯块的第一条小标题的样式*/
-				list-style-image: url("../img/index/diamond.jpg");
-				font-size: 20px;
-				padding-bottom:5px;
+				/*list-style-image: url("../img/index/diamond.jpg");*/
+				list-style: none;
+				border-left: 3px solid #d50f03;
+				font-size: 18px;
+				padding-left: 10px;
+				margin-left:-5px;
+				/*padding-bottom:5px;*/
+				margin-bottom: 7%;
 				color:black;
 			}
 			
 			.channel-header{
 				/*每个频道的头部样式*/
-				background-color: #f7f7f7;
-				border-bottom: 3px solid #d2d2d2;
 				text-align: center;
 				padding-top: 20px;
 				padding-bottom:10px;
@@ -171,7 +190,14 @@
 				text-align: center;
 				font-size: 40px;
 			}
+			.text-success{
+				color:#e83227;
+			}
 			/*通用样式*/
+			.teacher-img{
+				text-align: center;
+				margin-top: 5px;
+			}
 			.flex-box{
 				display: flex;
 			}
@@ -179,6 +205,10 @@
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
+			}
+			.home-channel-block{
+				width:20%;
+				margin-left: 3%;  
 			}
 			.shadow{
 				box-shadow: 3px 3px 6px #f5f5f5;
@@ -194,6 +224,4 @@
 			}
 			.black{
 				color:#000000;
-			}
-			
-			
+			}		

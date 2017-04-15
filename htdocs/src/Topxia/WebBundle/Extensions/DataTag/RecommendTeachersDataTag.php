@@ -19,11 +19,22 @@ class RecommendTeachersDataTag extends CourseBaseDataTag implements DataTag
     public function getData(array $arguments)
     {
         $this->checkCount($arguments);
-        $conditions = array(
+        $conditions = array();
+        if (!empty($arguments['school_id'])) {
+            //$conditions['school_id']      = (int) $arguments['school_id'];
+            $conditions = array(
+            'roles'     => 'ROLE_TEACHER',
+            'promoted'  => '1',
+            'locked'    => 0,
+            'school_id' => (int) $arguments['school_id']
+            );
+        }else{
+             $conditions = array(
             'roles'    => 'ROLE_TEACHER',
             'promoted' => '1',
             'locked'   => 0
-        );
+            );
+        }
 
         $users = $this->getUserService()->searchUsers($conditions, array(
             'promoted', 'DESC',

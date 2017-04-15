@@ -107,10 +107,8 @@ class DefaultController extends BaseController
 
     public function forwardIndexAction(Request $request, $id)
     {
-        //$aa = $id;
         $user = $this->getCurrentUser();
         
-
         if (!empty($user['id'])) {
             $this->getBatchNotificationService()->checkoutBatchNotification($user['id']);
         }

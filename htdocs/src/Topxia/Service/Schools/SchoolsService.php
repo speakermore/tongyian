@@ -13,6 +13,8 @@ interface SchoolsService
 
     public function getSchool($id);
 
+    public function getSchoolByCName($CName);
+
     public function addSchool($id, $fields);
 
     public function deleteSchool($id);

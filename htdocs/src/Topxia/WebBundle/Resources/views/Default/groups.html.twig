@@ -69,7 +69,9 @@
             </ul>
             {% endif %}
             <ul class="index-new-article {% if not featuredArticles|default(false) %}full{% endif %}">
-              {% set articles = data('LatestArticles',{'count':5}) %}
+            {#原模板部分#}
+              {#{% set articles = data('LatestArticles',{'count':5}) %}#}
+              {% set articles = data('LatestArticles',{'school_id':school_id,'count':5}) %}
               {% if articles %}
                 {% for article in articles %}
                   <li class="{% if loop.index == 5 %}last{% endif %} clearfix"><i class="es-icon es-icon-dot color-primary mrs"></i><a class="link-dark" href="{{ path('article_detail', {id:article.id}) }}" title="{{ article.title }}">{{ article.title }}</a> <span class="date">{{ article.createdTime|smart_time }}</span></li>
@@ -120,7 +122,7 @@
       </div>
       {#{% endif %}#}
       {#{% if config.select4 =='checked'%}#}
-      <div class="col-md-6">
+      {#<div class="col-md-6">
         <div class="panel panel-default index-dynamic">
           <div class="panel-heading">
             <h3 class="panel-title">
@@ -148,7 +150,7 @@
             {% endfor %}
           </div>
         </div>
-      </div>
+      </div>#}
       {#{% endif %}#}
     </div>
   </div>

@@ -38,13 +38,17 @@ student_update:
     pattern:  /update/student/{id}
     defaults: { _controller: TopxiaWebBundle:Students:updateStudent }
 
+school_add:
+    pattern:  /add/school
+    defaults: { _controller: TopxiaWebBundle:SchoolAuth:addSchool }
+
 schoolAuth_add:
     pattern:  /add/schoolAuth/{id}
-    defaults: { _controller: TopxiaWebBundle:schoolAuth:addSchoolAuth }
+    defaults: { _controller: TopxiaWebBundle:SchoolAuth:addSchoolAuth }
 
 schoolAuth_update:
     pattern:  /update/schoolAuth/{id}
-    defaults: { _controller: TopxiaWebBundle:schoolAuth:updateSchoolAuth }
+    defaults: { _controller: TopxiaWebBundle:SchoolAuth:updateSchoolAuth }
 
 login_background:
     pattern:  /login/background

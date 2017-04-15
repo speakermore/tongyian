@@ -80,7 +80,7 @@
    <div class="container">
    		<header class="row">
 			<div class="col-md-3"><img src="assets/img/index/tongyanglogo.jpg" /></div>
-			{#<div class="col-md-4 down-10">
+			<div class="col-md-offset-4 down-10">
 				<form action="#" class="form-inline" role="form">
 					<div class="form-group">
 						<div class="input-group">
@@ -89,7 +89,7 @@
 						</div>
 					</div>
 				</form>
-			</div>#}
+			</div>
 			<div class="col-md-offset-10">
 				
 				<div class="row">
@@ -125,7 +125,7 @@
 			</div>
 		</header>
 		<div id="course-digest">
-				<div id="course-menu" class="row shadow">
+				<div id="course-menu" class="row ">
 					<div id="course-digest-title" class="col-md-3 background-red">
 						
 						<a id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="#">
@@ -158,6 +158,7 @@
 							{% if loop.last %}
 								<li><a href="#F3">{{ level.name|default('')}}</a></li>
 							{% endif %}
+
 							{% set preLevel = level %}
 						{% elseif preLevel.level > level.level and preLevel.level - level.level == 1 %}
 							<li><a href="#F1">{{ preLevel.name|default('') }}</a></li>
@@ -193,10 +194,10 @@
 						<i class="glyphicon glyphicon-list-alt">文章资讯</i>
 						<i class="glyphicon glyphicon-gift">学校分类</i>
 					</div>
-					<div class="col-md-offset-3"><img src="assets/img/index/customer-course.jpg" />定制课程</div>
+					<div class="col-md-offset-2"><img src="assets/img/index/customer-course.jpg" />定制课程</div>
 			</div>
 				
-				<div id="course-adv" class="row shadow down-10 dropdown">
+				<div id="course-adv" class="row  down-10 dropdown">
 					<div class="col-md-12">
 					<div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
@@ -248,10 +249,10 @@
     </div><!-- /.carousel -->
 	</div>
 				</div>
-				<div id="tongyan-policy" class="row down-10 shadow">
+				<div id="tongyan-policy" class="row down-10 ">
 				<div class="col-md-6"><img src="assets/img/index/mywords.jpg" /></div>
 				<div id="tongyan-info" class="col-md-6">
-					<div class="tongyan-title1"><strong>文章</strong>资讯→</div>
+					<h3 class="tongyan-title1"><strong>文章</strong>资讯→</h3>
 					<div class="row">
 					<ul type="square" class="col-md-4">
 						<li>学校资讯</li>
@@ -275,55 +276,144 @@
 				</div>
 			</div>
 				<article id="tongyan-recommend" class="row down-10">
-					<header class="col-md-12 channel-header shadow">
+					<header class="col-md-12 channel-header">
 						<em>同言推荐</em>
 						<em>Recommend</em>
 					</header>
-					<div id="tongyan-recommend-list" class="col-md-12 shadow down-10" >
-						<div class="tongyan-title1"><strong>课程</strong>推荐→</div>
-						<div class="row">
+					<div id="tongyan-recommend-list" class="col-md-12 down-10" >
+						<blockquote class="tongyan-title1"><strong>课程</strong>推荐→</blockquote>
+						<div class="course-list">
+						<ul class="row">
+							
 						{% for dfCourses in DFcourses %}
-						<ul class="col-md-2">
-							<li><a class="link-dark" href="{{ path('course_show', {id:dfCourses.id}) }}" target="_blank">{{ lazy_img(filepath(dfCourses.middlePicture, 'course.png'), 'img-responsive', dfCourses.title) }}</a></li>
-							<li class="bolder"><a class="link-dark" href="{{ path('course_show', {id:dfCourses.id}) }}" target="_blank">{{ dfCourses.title|default('') }}</a></li>
-							<li class="grey">{{ dfCourses.chineseName|default('') }}</li>
-							<li class="grey"><a class="link-dark" href="{{ path('course_show', {id:dfCourses.id}) }}" target="_blank"><i class="glyphicon glyphicon-time"></i>{{ dfCourses.subtitle|default('') }}</a></li>
-							{#<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>#}
-						</ul>
+						
+						{% if loop.index<=4 %}
+						<li>
+						<div class="col-lg-3 col-md-4 col-xs-6">
+						<div class="course-item">
+							<div class="course-img">
+								<a href="{{ path('course_show', {id:dfCourses.id}) }}" target="_blank">
+									{{ lazy_img(filepath(dfCourses.middlePicture, 'course.png'), 'img-responsive', dfCourses.title) }}
+								</a>
+							</div>
+							<div class="course-info">
+								<div class="title">
+									<a class="link-dark" href="{{ path('course_show', {id:dfCourses.id}) }}" target="_blank">
+										{{ dfCourses.title|default('') }}&nbsp;|&nbsp;{{ dfCourses.chineseName|default('') }}
+									</a>
+								</div>
+								<div class="metas clearfix">
+									<span class="num"><i class="es-icon es-icon-people"></i>8</span>
+									<span class="comment"><i class="es-icon es-icon-textsms"></i>0</span>
+									<span class="course-price-widget">
+										<span class="price">
+											<span class="text-success">免费咨询</span>  
+										</span>
+									</span>
+								</div>
+							</div>
+						</div>
+						</div>
+						</li>
+						{% endif %}
+						{#<ul class="col-md-3 thumbnail home-channel-block">
+							<li><a class="link-dark" href="{{ path('course_show', {id:dfCourses.id}) }}" target="_blank"></a></li>
+							<li class="bolder"><a class="link-dark" href="" target="_blank"></a></li>
+							<li class="grey"></li>
+							<li class="grey"><a class="link-dark" href="{{ path('course_show', {id:dfCourses.id}) }}" target="_blank"><i class="glyphicon glyphicon-time"></i>
+							{% set subtitle=dfCourses.subtitle %}
+							{% if subtitle|length>10 %}
+								{{ subtitle[:10] }}...
+							{% else %}
+								{{ subtitle|default('') }}
+							{% endif %}
+							</a></li>
+							<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+						</ul>#}
 						{% endfor %}
+						</ul>
 						</div>
 					</div>
 				</article>
 				<article id="tongyan-school-recommend" class="row down-10">
-					<div id="tongyan-recommend-list" class="col-md-12 shadow down-10" >
-					<div class="col-md-12 tongyan-title1"><strong>名校</strong>推荐→</div>
-				
+					<div id="tongyan-recommend-list" class="col-md-12 down-10" >
+					<blockquote class="tongyan-title1"><strong>名校</strong>推荐→</blockquote>
+					<div class="course-list">
 					<div class="row">
 					{% for schools in Schools %}
-						<ul class="col-md-2">
+						<div class="col-lg-3 col-md-4 col-xs-6">
+						<div class="course-item">
+							<div class="course-img">
+								<a href="{{ path('homepage_forward_school', {id:schools.id}) }}" target="_blank">
+									{{ lazy_img(filepath(schools.largePicture, 'school.png'), 'img-responsive', schools.id|default('')) }}
+								</a>
+							</div>
+						</div>
+						</div>
+						{#<ul class="col-md-3 thumbnail home-channel-block">
 						<li><a class="link-dark" href="{{ path('homepage_forward_school', {id:schools.id}) }}">{{ lazy_img(filepath(schools.largePicture, 'course.png'), 'img-responsive', schools.id|default('')) }}</a></li>
-						</ul>
+						</ul>#}
 					{% endfor %}
 					</div>
 					</div>
 				</article>
 				<article id="tongyan-teacher-recommend" class="row down-10">
-				<div id="tongyan-recommend-list" class="col-md-12 shadow down-10" >
-				<div class="col-md-12 tongyan-title1"><strong>名师</strong>推荐→</div>
+				<div id="tongyan-recommend-list" class="col-md-12  down-10" >
+				<blockquote class="tongyan-title1"><strong>名师</strong>推荐→</blockquote>
+				<div class="course-list">
 				<div class="row">
 					{% for teachers in Teachers %}
-					<ul class="col-md-2">
-						<li><a class="link-dark" href="{{ path('user_show', {id:teachers.id}) }}">{{ lazy_img(filepath(teachers.mediumAvatar, 'course.png'), 'img-responsive', teachers.title|default('')) }}</a></li>
+					<div class="col-lg-3 col-md-4 col-xs-6">
+						<div class="course-item">
+							<div class="course-img teacher-img">
+								<a href="{{ path('user_show', {id:teachers.id}) }}" target="_blank">
+									{{ lazy_img(filepath(teachers.mediumAvatar, 'course.png'), 'img-circle', teachers.title|default('')) }}
+								</a>
+							</div>
+							<div class="course-info">
+								<div class="title">
+									<a class="link-dark" href="{{ path('user_show', {id:teachers.id}) }}" target="_blank">
+										{% set subtitle=teachers.title %}
+										{% if subtitle|length>10 %}
+											{{ subtitle[:10] }}...
+										{% else %}
+											{{ subtitle|default('') }}
+										{% endif %}
+									</a>
+								</div>
+								<div class="metas clearfix">
+									<span class="num"><i class="es-icon es-icon-people"></i>8</span>
+									<span class="comment"><i class="es-icon es-icon-textsms"></i>0</span>
+									<span class="course-price-widget">
+										<span class="price">
+											<span class="text-success">免费咨询</span>  
+										</span>
+									</span>
+								</div>
+							</div>
+						</div>
+						</div>
+					{#<ul class="col-md-2 thumbnail home-channel-block">
+						<li><a class="link-dark" href="{{ path('user_show', {id:teachers.id}) }}">{{ lazy_img(filepath(teachers.mediumAvatar, 'course.png'), 'img-circle', teachers.title|default('')) }}</a></li>
 						<li class="grey"><a class="link-dark" href="{{ path('user_show', {id:teachers.id}) }}"><em class="black">{{ teachers.nickname|default('') }}</em>&nbsp;</a></li>
-						<li class="grey"><a class="link-dark" href="{{ path('user_show', {id:teachers.id}) }}"><i class="glyphicon glyphicon-time"></i>{{ teachers.title|default('') }}</a></li>
-						{#<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>#}
-					</ul>
+						<li class="grey"><a class="link-dark" href="{{ path('user_show', {id:teachers.id}) }}"><i class="glyphicon glyphicon-time"></i>
+						{% set subtitle=teachers.title %}
+						{% if subtitle|length>10 %}
+							{{ subtitle[:10] }}...
+						{% else %}
+							{{ subtitle|default('') }}
+						{% endif %}
+						</a></li>
+						<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>
+					</ul>#}
 					{% endfor %}
+				</div>
+				</div>
 				</div>
 				</div>
 				</article>
 				<article id="your-choice" class="row down-10">
-					<header class="col-md-12 channel-header shadow">
+					<header class="col-md-12 channel-header">
 						<em>你来选择</em>
 						<em>Choice</em>
 					</header>
@@ -344,74 +434,257 @@
 							}
 						}
 					</script>
-					<div id="educational-list" class="col-md-12 shadow down-10">
+					<div id="educational-list" class="col-md-12 down-10">
+						
+						<blockquote  id="F1">学历文凭</blockquote>
+						<div class="course-list">
 						<div class="row">
-						<header class="col-md-1" id="F1">学历文凭</header>
 						{% for pcCourses in PCcourses %}
-						<ul class="col-md-2">
+						<div class="col-lg-3 col-md-4 col-xs-6">
+						<div class="course-item">
+							<div class="course-img">
+								<a href="{{ path('course_show', {id:pcCourses.id}) }}" target="_blank">
+									{{ lazy_img(filepath(pcCourses.middlePicture, 'course.png'), 'img-responsive', pcCourses.title) }}
+								</a>
+							</div>
+							<div class="course-info">
+								<div class="title">
+									<a class="link-dark" href="{{ path('course_show', {id:pcCourses.id}) }}" target="_blank">
+										{{ pcCourses.title|default('') }}&nbsp;|&nbsp;{{ pcCourses.chineseName|default('') }}
+									</a>
+								</div>
+								<div class="metas clearfix">
+									<span class="num"><i class="es-icon es-icon-people"></i>8</span>
+									<span class="comment"><i class="es-icon es-icon-textsms"></i>0</span>
+									<span class="course-price-widget">
+										<span class="price">
+											<span class="text-success">免费咨询</span>  
+										</span>
+									</span>
+								</div>
+							</div>
+						</div>
+						</div>
+						{#<ul class="col-md-3 thumbnail home-channel-block">
 							<li class="down-10"><a class="link-dark" href="{{ path('course_show', {id:pcCourses.id}) }}" target="_blank">{{ lazy_img(filepath(pcCourses.middlePicture, 'course.png'), 'img-responsive', pcCourses.title) }}</a></li>
 							<li class="bolder"><a class="link-dark" href="{{ path('course_show', {id:pcCourses.id}) }}" target="_blank">{{ pcCourses.title|default('') }}</a></li>
 							<li class="grey">{{ pcCourses.chineseName|default('') }}</li>
-							<li class="grey"><i class="glyphicon glyphicon-time"></i><a class="link-dark" href="{{ path('course_show', {id:pcCourses.id}) }}" target="_blank">{{ pcCourses.subtitle|default('') }}</a></li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i><a class="link-dark" href="{{ path('course_show', {id:pcCourses.id}) }}" target="_blank">
+							
+							{% set subtitle=pcCourses.subtitle %}
+							{% if subtitle|length>10 %}
+								{{ subtitle[:10] }}...
+							{% else %}
+								{{ subtitle|default('') }}
+							{% endif %}
+							</a></li>
 							<!--<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>-->
-						</ul>
+						
+						</ul>#}
 						{% endfor %}
 						</div>
+						</div>
 					</div>
-					<div id="educational-list" class="col-md-12 shadow down-10">
+					<div id="educational-list" class="col-md-12  down-10">
+						
+						<blockquote >职业技能</blockquote>
+						<div class="course-list">
 						<div class="row">
-						<header class="col-md-1">职业技能</header>
 						{% for vsCourses in VScourses %}
-						<ul class="col-md-2">
+						<div class="col-lg-3 col-md-4 col-xs-6">
+						<div class="course-item">
+							<div class="course-img">
+								<a href="{{ path('course_show', {id:vsCourses.id}) }}" target="_blank">
+									{{ lazy_img(filepath(vsCourses.middlePicture, 'course.png'), 'img-responsive', vsCourses.title) }}
+								</a>
+							</div>
+							<div class="course-info">
+								<div class="title">
+									<a class="link-dark" href="{{ path('course_show', {id:vsCourses.id}) }}" target="_blank">
+										{{ vsCourses.title|default('') }}&nbsp;|&nbsp;{{ vsCourses.chineseName|default('') }}
+									</a>
+								</div>
+								<div class="metas clearfix">
+									<span class="num"><i class="es-icon es-icon-people"></i>8</span>
+									<span class="comment"><i class="es-icon es-icon-textsms"></i>0</span>
+									<span class="course-price-widget">
+										<span class="price">
+											<span class="text-success">免费咨询</span>  
+										</span>
+									</span>
+								</div>
+							</div>
+						</div>
+						</div>
+						{#<ul class="col-md-3 thumbnail home-channel-block">
 							<li class="down-10"><a class="link-dark" href="{{ path('course_show', {id:vsCourses.id}) }}" target="_blank">{{ lazy_img(filepath(vsCourses.middlePicture, 'course.png'), 'img-responsive', vsCourses.title) }}</a></li>
 							<li class="bolder"><a class="link-dark" href="{{ path('course_show', {id:vsCourses.id}) }}" target="_blank">{{ vsCourses.title|default('') }}</a></li>
 							<li class="grey">{{ vsCourses.chineseName|default('') }}</li>
-							<li class="grey"><i class="glyphicon glyphicon-time"></i><a class="link-dark" href="{{ path('course_show', {id:vsCourses.id}) }}" target="_blank">{{ vsCourses.subtitle|default('') }}</a></li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i><a class="link-dark" href="{{ path('course_show', {id:vsCourses.id}) }}" target="_blank">
+							{% set subtitle=vsCourses.subtitle %}
+							{% if subtitle|length>10 %}
+								{{ subtitle[:10] }}...
+							{% else %}
+								{{ subtitle|default('') }}
+							{% endif %}
+							</a></li>
 							<!--<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>-->
-						</ul>
+						</ul>#}
 						{% endfor %}
 						</div>
+						</div>
 					</div>
-					<div id="educational-list" class="col-md-12 shadow down-10">
+					<div id="educational-list" class="col-md-12  down-10">
+						
+						<blockquote id="F2">出国留学</blockquote>
+						<div class="course-list">
 						<div class="row">
-						<header class="col-md-1" id="F2">出国留学</header>
 						{% for saCourses in SAcourses %}
-						<ul class="col-md-2">
+						<div class="col-lg-3 col-md-4 col-xs-6">
+						<div class="course-item">
+							<div class="course-img">
+								<a href="{{ path('course_show', {id:saCourses.id}) }}" target="_blank">
+									{{ lazy_img(filepath(saCourses.middlePicture, 'course.png'), 'img-responsive', saCourses.title) }}
+								</a>
+							</div>
+							<div class="course-info">
+								<div class="title">
+									<a class="link-dark" href="{{ path('course_show', {id:saCourses.id}) }}" target="_blank">
+										{{ saCourses.title|default('') }}&nbsp;|&nbsp;{{ saCourses.chineseName|default('') }}
+									</a>
+								</div>
+								<div class="metas clearfix">
+									<span class="num"><i class="es-icon es-icon-people"></i>8</span>
+									<span class="comment"><i class="es-icon es-icon-textsms"></i>0</span>
+									<span class="course-price-widget">
+										<span class="price">
+											<span class="text-success">免费咨询</span>  
+										</span>
+									</span>
+								</div>
+							</div>
+						</div>
+						</div>
+						{#<ul class="col-md-3 thumbnail home-channel-block">
 							<li class="down-10"><a class="link-dark" href="{{ path('course_show', {id:saCourses.id}) }}" target="_blank">{{ lazy_img(filepath(saCourses.middlePicture, 'course.png'), 'img-responsive', saCourses.title) }}</a></li>
 							<li class="bolder"><a class="link-dark" href="{{ path('course_show', {id:saCourses.id}) }}" target="_blank">{{ saCourses.title|default('') }}</a></li>
 							<li class="grey">{{ saCourses.chineseName|default('') }}</li>
-							<li class="grey"><i class="glyphicon glyphicon-time"></i><a class="link-dark" href="{{ path('course_show', {id:saCourses.id}) }}" target="_blank">{{ saCourses.subtitle|default('') }}</a></li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i><a class="link-dark" href="{{ path('course_show', {id:saCourses.id}) }}" target="_blank">
+							
+							
+							{% set subtitle=saCourses.subtitle %}
+							{% if subtitle|length>10 %}
+								{{ subtitle[:10] }}...
+							{% else %}
+								{{ subtitle|default('') }}
+							{% endif %}
+							</a></li>
 							<!--<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>-->
-						</ul>
+						</ul>#}
 						{% endfor %}
 						</div>
+						</div>
 					</div>
-					<div id="educational-list" class="col-md-12 shadow down-10">
+					<div id="educational-list" class="col-md-12  down-10">
+						
+						<blockquote>课外辅导</blockquote>
+						<div class="course-list">
 						<div class="row">
-						<header class="col-md-1">课外辅导</header>
 					    {% for tuCourses in Tucourses %}
-						<ul class="col-md-2">
+						<div class="col-lg-3 col-md-4 col-xs-6">
+						<div class="course-item">
+							<div class="course-img">
+								<a href="{{ path('course_show', {id:tuCourses.id}) }}" target="_blank">
+									{{ lazy_img(filepath(tuCourses.middlePicture, 'course.png'), 'img-responsive', tuCourses.title) }}
+								</a>
+							</div>
+							<div class="course-info">
+								<div class="title">
+									<a class="link-dark" href="{{ path('course_show', {id:tuCourses.id}) }}" target="_blank">
+										{{ tuCourses.title|default('') }}&nbsp;|&nbsp;{{ tuCourses.chineseName|default('') }}
+									</a>
+								</div>
+								<div class="metas clearfix">
+									<span class="num"><i class="es-icon es-icon-people"></i>8</span>
+									<span class="comment"><i class="es-icon es-icon-textsms"></i>0</span>
+									<span class="course-price-widget">
+										<span class="price">
+											<span class="text-success">免费咨询</span>  
+										</span>
+									</span>
+								</div>
+							</div>
+						</div>
+						</div>
+						{#<ul class="col-md-3 thumbnail home-channel-block">
 							<li class="down-10"><a class="link-dark" href="{{ path('course_show', {id:tuCourses.id}) }}" target="_blank">{{ lazy_img(filepath(tuCourses.middlePicture, 'course.png'), 'img-responsive', tuCourses.title) }}</a></li>
 							<li class="bolder"><a class="link-dark" href="{{ path('course_show', {id:tuCourses.id}) }}" target="_blank">{{ tuCourses.title|default('') }}</a></li>
 							<li class="grey">{{ tuCourses.chineseName|default('') }}</li>
-							<li class="grey"><i class="glyphicon glyphicon-time"></i><a class="link-dark" href="{{ path('course_show', {id:tuCourses.id}) }}" target="_blank">{{ tuCourses.subtitle|default('') }}</a></li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i><a class="link-dark" href="{{ path('course_show', {id:tuCourses.id}) }}" target="_blank">
+							{% set subtitle=tuCourses.subtitle %}
+							{% if subtitle|length>10 %}
+								{{ subtitle[:10] }}...
+							{% else %}
+								{{ subtitle|default('') }}
+							{% endif %}
+							
+							</a></li>
 							<!--<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>-->
-						</ul>
+						</ul>#}
 						{% endfor %}
 						</div>
+						</div>
 					</div>
-					<div id="educational-list" class="col-md-12 shadow down-10">
+					<div id="educational-list" class="col-md-12  down-10">
+						
+						<blockquote id="F3">才艺专长</blockquote>
+						<div class="course-list">
 						<div class="row">
-						<header class="col-md-1" id="F3">才艺专长</header>
 						{% for vsCourses in VScourses %}
-						<ul class="col-md-2">
-							<li class="down-10"><a class="link-dark" href="{{ path('course_show', {id:vsCourses.id}) }}" target="_blank">{{ lazy_img(filepath(vsCourses.middlePicture, 'course.png'), 'img-responsive', vsCourses.title) }}</a></li>
+						<div class="col-lg-3 col-md-4 col-xs-6">
+						<div class="course-item">
+							<div class="course-img">
+								<a href="{{ path('course_show', {id:vsCourses.id}) }}" target="_blank">
+									{{ lazy_img(filepath(vsCourses.middlePicture, 'course.png'), 'img-responsive', vsCourses.title) }}
+								</a>
+							</div>
+							<div class="course-info">
+								<div class="title">
+									<a class="link-dark" href="{{ path('course_show', {id:vsCourses.id}) }}" target="_blank">
+										{{ vsCourses.title|default('') }}&nbsp;|&nbsp;{{ vsCourses.chineseName|default('') }}
+									</a>
+								</div>
+								<div class="metas clearfix">
+									<span class="num"><i class="es-icon es-icon-people"></i>8</span>
+									<span class="comment"><i class="es-icon es-icon-textsms"></i>0</span>
+									<span class="course-price-widget">
+										<span class="price">
+											<span class="text-success">免费咨询</span>  
+										</span>
+									</span>
+								</div>
+							</div>
+						</div>
+						</div>
+						{#{% if loop.index<=4 %}
+						<ul class="col-md-3 thumbnail home-channel-block">
+							<li class="down-10">
+							<a class="link-dark" href="{{ path('course_show', {id:vsCourses.id}) }}" target="_blank">{{ lazy_img(filepath(vsCourses.middlePicture, 'course.png'), 'img-responsive', vsCourses.title) }}</a></li>
 							<li class="bolder"><a class="link-dark" href="{{ path('course_show', {id:vsCourses.id}) }}" target="_blank">{{ vsCourses.title|default('') }}</a></li>
 							<li class="grey">{{ vsCourses.chineseName|default('') }}</li>
-							<li class="grey"><i class="glyphicon glyphicon-time"></i><a class="link-dark" href="{{ path('course_show', {id:vsCourses.id}) }}" target="_blank">{{ vsCourses.subtitle|default('') }}</a></li>
+							<li class="grey"><i class="glyphicon glyphicon-time"></i><a class="link-dark" href="{{ path('course_show', {id:vsCourses.id}) }}" target="_blank">
+							{% set subtitle=vsCourses.subtitle %}
+							{% if subtitle|length>10 %}
+								{{ subtitle[:10] }}...
+							{% else %}
+								{{ subtitle|default('') }}
+							{% endif %}
+							</a></li>
 							<!--<li class="red" style="font-size: 18px;" ><i class="glyphicon glyphicon-heart-empty"></i>免费咨询</li>-->
 						</ul>
+						{% endif %}#}
 						{% endfor %}
+						</div>
 						</div>
 					</div>
 				</article>
@@ -439,8 +712,8 @@
     }); // end ready
     </script>#}
 	
+	
   </body>
 </html>
  
 {% endblock %}
-

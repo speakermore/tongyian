@@ -2936,7 +2936,7 @@ select:-webkit-autofill {
   color: #e50011 !important;
 }
 .text-success {
-  color: #70d445 !important;
+  color: #70d445 ;
 }
 .text-info {
   color: #2db7f5 !important;

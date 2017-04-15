@@ -13,6 +13,8 @@ interface SchoolsDao
 
     public function getSchool($id);
 
+    public function getSchoolByCName($CName);
+
     public function addSchool($school);
 
     public function deleteSchool($id);

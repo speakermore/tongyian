@@ -247,6 +247,7 @@ class UserDaoImpl extends BaseDao implements UserDao
             ->andWhere('id NOT IN ( :excludeIds )')
             ->andWhere('orgCode LIKE :likeOrgCode')
             ->andWhere('orgCode = :orgCode')
+            ->andWhere('schoolId = :school_id')
         ;
 
         if (array_key_exists('hasVerifiedMobile', $conditions)) {

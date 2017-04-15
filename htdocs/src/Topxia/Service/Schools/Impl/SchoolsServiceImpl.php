@@ -36,6 +36,11 @@ class SchoolsServiceImpl extends BaseService implements SchoolsService
         return $this->getSchoolsDao()->getSchool($id);
     }
 
+    public function getSchoolByCName($CName)
+    {
+        return $this->getSchoolsDao()->getSchoolByCName($CName);
+    }
+
      /*添加学生信息*/
     public function addSchool($id, $fields)
     {
