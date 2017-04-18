@@ -2,17 +2,17 @@
 
 {% set modal_class = 'modal-lg' %}
 
-{% block title %}{{'上传学校图片'|trans}}{% endblock %}
+{% block title %}{{'上传收费许可证或收费项目公示'|trans}}{% endblock %}
 {% block body %}
 
-  <form id="school-Sch-form" class="form-horizontal" method="post" enctype="multipart/form-data" action="{{ path('newadmin_school_uploadSch', {id: school.id}) }}">
+  <form id="school-Per-form" class="form-horizontal" method="post" enctype="multipart/form-data" action="{{ path('school_uploadPer', {id: schoolAuth.school_id}) }}">
 
     {{ web_macro.flash_messages() }}
 
     <div class="form-group">
       <div class="col-md-2 control-label"><b>{{'当前图片'|trans}}</b></div>
       <div class="controls col-md-8 controls">
-      	<img src="{{ filepath(school.logo, 'avatar.png') }}">
+      	<img src="{{ filepath(schoolAuth.permitOrProject, 'avatar.png') }}">
       </div>
     </div>
 
@@ -27,10 +27,10 @@
     <div class="form-group">
       <div class="col-md-2 control-label"></div>
       <div class="controls col-md-8 controls">
-        <a id="upload-pic-sch-btn" 
+        <a id="upload-pic-per-btn" 
         class="btn btn-primary"
         data-upload-token="{{ upload_token('tmp', 'image') }}"
-        data-goto-url="{{ path('newadmin_school_uploadSch_crop', {id: school.id}) }}"
+        data-goto-url="{{ path('school_uploadPer_crop', {id: schoolAuth.school_id}) }}"
         >{{'上传新图片'|trans}}</a>
         
       </div>
@@ -43,5 +43,5 @@
 
 {% block footer %}
   <button type="button" class="btn btn-link pull-right" data-dismiss="modal">{{'关闭'|trans}}</button>
-  <script>app.load('school/upload-picSch')</script>
+  <script>app.load('schools/upload-authPer')</script>
 {% endblock %}

@@ -394,10 +394,10 @@ admin:
                             name: 邀请管理
                             disable: true
                             router_name: admin_invite
-                        admin_operation_invite_coupon:
-                            name: 奖励查询
-                            disable: true
-                            router_name: admin_invite_coupon
+                        # admin_operation_invite_coupon:
+                        #     name: 奖励查询
+                        #     disable: true
+                        #     router_name: admin_invite_coupon
                 admin_announcement:
                     name: '网站公告管理'
                     group: 2
@@ -445,26 +445,26 @@ admin:
                             disable: true
                             router_params:
                                 type: page
-                admin_operation_mobile:
-                    name: '移动端内容管理'
-                    group: 2
-                    children:
-                        admin_operation_mobile_banner_manage:
-                            name: 轮播图设置
-                            disable: true
-                            router_name: admin_operation_mobile
-                        admin_operation_mobile_select_manage:
-                            name: 每周精选设置
-                            disable: true
-                            router_name: admin_operation_mobile_select
-                        admin_discovery_column_index:
-                            name: '发现页栏目管理'
-                            disable: true
-                            children:
-                                admin_discovery_column_create:
-                                    name: '添加栏目'
-                                    group: topBtn
-                                    mode: modal
+                # admin_operation_mobile:
+                #     name: '移动端内容管理'
+                #     group: 2
+                #     children:
+                #         admin_operation_mobile_banner_manage:
+                #             name: 轮播图设置
+                #             disable: true
+                #             router_name: admin_operation_mobile
+                #         admin_operation_mobile_select_manage:
+                #             name: 每周精选设置
+                #             disable: true
+                #             router_name: admin_operation_mobile_select
+                #         admin_discovery_column_index:
+                #             name: '发现页栏目管理'
+                #             disable: true
+                #             children:
+                #                 admin_discovery_column_create:
+                #                     name: '添加栏目'
+                #                     group: topBtn
+                #                     mode: modal
                 admin_operation_analysis_register:
                     name: 数据统计
                     group: 3
@@ -476,51 +476,51 @@ admin:
                                 tab: trend
                                 analysisDateType: register
                             router_name: admin_operation_analysis_register
-        admin_order:
-            name: 订单
-            children:
-                admin_course_order_manage:
-                    name: 课程订单
-                    children:
-                        admin_course_order:
-                            name: 课程订单
-                            router_name: admin_course_order_manage
-                            disable: true
-                admin_coin_order_manange:
-                    name: 虚拟币订单
-                    children:
-                        admin_coin_orders:
-                            name: 虚拟币订单
-                            disable: true
-        admin_finance:
-            name: 账务
-            children:
-                admin_bills:
-                    name: 账单管理
-                    children:
-                        admin_bill:
-                            name: 现金账单
-                            disable: true
-                        admin_coin_records:
-                            name: 虚拟币账单
-                            disable: true
-                admin_coin_user:
-                    name: 虚拟币管理
-                    children:
-                        admin_coin_user_records:
-                            name: 记录
-                            disable: true
-                            router_name: admin_coin_user_records
-                admin_course_refunds:
-                    name: 课程退款管理
-                    children:
-                        admin_course_refunds_manage:
-                            name: 课程退款管理
-                            disable: true
-                            router_name: admin_order_refunds
-                            router_params:
-                                targetType: course
-                                status: created
+        # admin_order:
+        #     name: 订单
+        #     children:
+        #         admin_course_order_manage:
+        #             name: 课程订单
+        #             children:
+        #                 admin_course_order:
+        #                     name: 课程订单
+        #                     router_name: admin_course_order_manage
+        #                     disable: true
+        #         admin_coin_order_manange:
+        #             name: 虚拟币订单
+        #             children:
+        #                 admin_coin_orders:
+        #                     name: 虚拟币订单
+        #                     disable: true
+        # admin_finance:
+        #     name: 账务
+        #     children:
+        #         admin_bills:
+        #             name: 账单管理
+        #             children:
+        #                 admin_bill:
+        #                     name: 现金账单
+        #                     disable: true
+        #                 admin_coin_records:
+        #                     name: 虚拟币账单
+        #                     disable: true
+        #         admin_coin_user:
+        #             name: 虚拟币管理
+        #             children:
+        #                 admin_coin_user_records:
+        #                     name: 记录
+        #                     disable: true
+        #                     router_name: admin_coin_user_records
+        #         admin_course_refunds:
+        #             name: 课程退款管理
+        #             children:
+        #                 admin_course_refunds_manage:
+        #                     name: 课程退款管理
+        #                     disable: true
+        #                     router_name: admin_order_refunds
+        #                     router_params:
+        #                         targetType: course
+        #                         status: created
         #admin_app:
             #name: 教育云
             #visable: (not (setting('copyright.thirdCopyright', false) == 1) and not is_without_network()) #第三方授权和无网情况下不显示教育云
@@ -704,27 +704,27 @@ admin:
                         #admin_invite_set:
                           #  name: '邀请码设置'
                           #  disable: true
-                admin_setting_finance:
-                    name: 账务设置
-                    children:
-                        admin_payment:
-                            name: 支付
-                            disable: true
-                            router_name: admin_setting_payment
-                        admin_coin_settings:
-                            name: 虚拟币
-                            disable: true
-                            router_name: admin_coin_settings
-                        admin_setting_refund:
-                            name: 退款
-                            disable: true
-                admin_setting_mobile:
-                    name: 移动端设置
-                    children:
-                        admin_setting_mobile_settings:
-                            name: 移动端设置
-                            disable: true
-                            router_name: admin_setting_mobile
+                # admin_setting_finance:
+                #     name: 账务设置
+                #     children:
+                #         admin_payment:
+                #             name: 支付
+                #             disable: true
+                #             router_name: admin_setting_payment
+                #         admin_coin_settings:
+                #             name: 虚拟币
+                #             disable: true
+                #             router_name: admin_coin_settings
+                #         admin_setting_refund:
+                #             name: 退款
+                #             disable: true
+                # admin_setting_mobile:
+                #     name: 移动端设置
+                #     children:
+                #         admin_setting_mobile_settings:
+                #             name: 移动端设置
+                #             disable: true
+                #             router_name: admin_setting_mobile
                 admin_optimize:
                     name: 系统优化
                     group: 2
@@ -757,14 +757,14 @@ admin:
                             name: 发帖限制设置
                             disable: true
                             router_name: admin_setting_post_num_rules
-                admin_report_status:
-                    name: 系统自检
-                    group: 2
-                    children:
-                        admin_report_status_list:
-                            name: 系统自检
-                            disable: true
-                            router_name: admin_report_status
+                # admin_report_status:
+                #     name: 系统自检
+                #     group: 2
+                #     children:
+                #         admin_report_status_list:
+                #             name: 系统自检
+                #             disable: true
+                #             router_name: admin_report_status
                 admin_logs:
                     name: 系统日志
                     group: 2
@@ -879,76 +879,76 @@ web:
                                 side_nav: course_manage_order
                             router_params:
                                 id: (course.id)
-        #classroom_manage:
-          #  name: 班级管理
+        # classroom_manage:
+        #    name: 班级管理
         #    children:
-           #     classroom_manage_settings:
-          #          name: 班级设置
-           #         children:
-           #             classroom_manage_set_info:
-            #                name: 基本信息
-              #              data: 
-           #                     side_nav: base
-                   #         router_params:
-              #                  id: (classroom.id)
-                #        classroom_manage_set_price:
-               #             name: 价格设置
-                 #           data: 
-              #                  side_nav: price
-              #              router_params:
-            #                    id: (classroom.id)
-             #           classroom_manage_set_picture:
-             #               name: 封面设置
-            #                data: 
-              #                  side_nav: picture
-               #             router_params:
-              #                  id: (classroom.id)
-            #            classroom_manage_service:
-            #                name: 服务设置
-          #                  data: 
-              #                  side_nav: service
-            #                router_params:
-            #                    id: (classroom.id)
-           #             classroom_manage_headteacher:
-          #                  name: 班主任设置
-            #                data: 
-             #                   side_nav: headTeacher
-             #               router_params:
-           #                     id: (classroom.id)
-            #            classroom_manage_teachers:
-            #                name: 教师设置
-          #                  data: 
-            #                    side_nav: teachers
-          #                  router_params:
-            #                    id: (classroom.id)
-          #              classroom_manage_assistants:
-           #                 name: 助教设置
-          #                  data: 
-           #                     side_nav: assistants
-          #                  router_params:
-         #                       id: (classroom.id)
+        #        classroom_manage_settings:
+        #            name: 班级设置
+        #            children:
+        #                classroom_manage_set_info:
+        #                    name: 基本信息
+        #                    data: 
+        #                        side_nav: base
+        #                    router_params:
+        #                        id: (classroom.id)
+        #                classroom_manage_set_price:
+        #                    name: 价格设置
+        #                    data: 
+        #                        side_nav: price
+        #                    router_params:
+        #                        id: (classroom.id)
+        #                classroom_manage_set_picture:
+        #                    name: 封面设置
+        #                    data: 
+        #                        side_nav: picture
+        #                    router_params:
+        #                        id: (classroom.id)
+        #                classroom_manage_service:
+        #                    name: 服务设置
+        #                    data: 
+        #                        side_nav: service
+        #                    router_params:
+        #                        id: (classroom.id)
+        #                classroom_manage_headteacher:
+        #                    name: 班主任设置
+        #                    data: 
+        #                        side_nav: headTeacher
+        #                    router_params:
+        #                        id: (classroom.id)
+        #                classroom_manage_teachers:
+        #                    name: 教师设置
+        #                    data: 
+        #                        side_nav: teachers
+        #                    router_params:
+        #                        id: (classroom.id)
+        #                classroom_manage_assistants:
+        #                    name: 助教设置
+        #                    data: 
+        #                        side_nav: assistants
+        #                    router_params:
+        #                        id: (classroom.id)
         #        classroom_manage_content:
-            #        name: 班级管理
-           #         children:
-           #             classroom_manage_courses:
-           #                 name: 课程管理
-          #                  visable: (canManage)
+        #            name: 班级管理
+        #            children:
+        #                classroom_manage_courses:
+        #                    name: 课程管理
+        #                    visable: (canManage)
         #                    data:
-         #                       side_nav: courses
-          #                  router_params:
-         #                       id: (classroom.id)
-          #              classroom_manage_students:
-           #                 name: 学员管理
-          #                  visable: (canManage)
-          #                  data:
+        #                        side_nav: courses
+        #                    router_params:
+        #                        id: (classroom.id)
+        #                classroom_manage_students:
+        #                    name: 学员管理
+        #                    visable: (canManage)
+        #                    data:
         #                        side_nav: students
-          #                  router_params:
-          #                      id: (classroom.id)
-          #              classroom_manage_testpaper:
-           #                 name: 试卷批阅
-           #                 visable: (canHandle)
-           #                 data:
-            #                    side_nav: testpaper-check
-            #               router_params:
-            #                    id: (classroom.id)
-            #                    status: reviewing
+        #                    router_params:
+        #                        id: (classroom.id)
+        #                classroom_manage_testpaper:
+        #                    name: 试卷批阅
+        #                    visable: (canHandle)
+        #                    data:
+        #                        side_nav: testpaper-check
+        #                   router_params:
+        #                        id: (classroom.id)
+        #                        status: reviewing

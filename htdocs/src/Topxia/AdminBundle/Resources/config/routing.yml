@@ -1992,6 +1992,20 @@ newadmin_articlesc:
     defaults: { _controller: TopxiaAdminBundle:Background:articlesc }
     permissions: [newadmin_articlesc_manager]
 
+# admin_article_create:
+#     pattern:  /article/create/{type}
+#     defaults: { _controller: TopxiaAdminBundle:Article:create }
+
+newadmin_article_create:
+    pattern:  /newarticle/create
+    defaults: { _controller: TopxiaAdminBundle:Background:articlescCreate }
+    permissions: [newadmin_articlesc_manager]
+
+newadmin_article_edit:
+    pattern:  /newarticle/{id}/edit
+    defaults: { _controller: TopxiaAdminBundle:Background:articlescEdit }
+    permissions: [newadmin_articlesc_manager]
+
 #统计#
 newadmin_schoolst:
     pattern:  /schoolst

@@ -1,42 +1,42 @@
-#admin_classroom:
-  #  name: 学校管理
-   # parent: admin_course
- #   before: admin_course_thread
- #   children:
-   #     admin_classroom_manage:
-  #          name: 学校管理
-  #          router_name: admin_classroom
-    #        children:
-   #             admin_classroom_content_manage:
-  #                  name: 管理学校
-   #                 router_name: classroom_manage
-   #                 group: btn
-   #                 router_params:
-    #                    id: (classroom.id)
-    #                blank: true
-   #             admin_classroom_create:
-    #                name: 创建学校
-   #                 group: topBtn
-    #                blank: true
-  #              admin_classroom_cancel_recommend:
-   #                 name: 取消推荐
-    #                mode: none
-    #                class: cancel-recommend-classroom
-   #                 icon: 'glyphicon glyphicon-hand-right'
-    #                group: groupButton
-   #                 router_params:
-   #                     id: (classroom.id)
-   #                     ref: classroomList
-   #                 visable: ( classroom.recommended )
-   #             admin_classroom_set_recommend:
-  #                  name: 推荐学校
-  #                  mode: modal
-  #                  icon: 'glyphicon glyphicon-hand-up'
-  #                  group: groupButton
- #                   router_params:
-   #                     id: (classroom.id)
-  #                      ref: classroomList
-   #                 visable: ( not classroom.recommended )
+# admin_classroom:
+#    name: 学校管理
+#    parent: admin_course
+#    before: admin_course_thread
+#    children:
+#        admin_classroom_manage:
+#            name: 学校管理
+#            router_name: admin_classroom
+#            children:
+#                admin_classroom_content_manage:
+#                    name: 管理学校
+#                    router_name: classroom_manage
+#                    group: btn
+#                    router_params:
+#                        id: (classroom.id)
+#                    blank: true
+#                admin_classroom_create:
+#                    name: 创建学校
+#                    group: topBtn
+#                    blank: true
+#                admin_classroom_cancel_recommend:
+#                    name: 取消推荐
+#                    mode: none
+#                    class: cancel-recommend-classroom
+#                    icon: 'glyphicon glyphicon-hand-right'
+#                    group: groupButton
+#                    router_params:
+#                        id: (classroom.id)
+#                        ref: classroomList
+#                    visable: ( classroom.recommended )
+#                admin_classroom_set_recommend:
+#                    name: 推荐学校
+#                    mode: modal
+#                    icon: 'glyphicon glyphicon-hand-up'
+#                    group: groupButton
+#                    router_params:
+#                        id: (classroom.id)
+#                        ref: classroomList
+#                    visable: ( not classroom.recommended )
 #                 admin_classroom_close:
 #                     name: 关闭学校
 #                     mode: none

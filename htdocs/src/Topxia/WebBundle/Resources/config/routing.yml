@@ -2444,3 +2444,68 @@ importer_index:
 #esbar_my_history:
 #    pattern:  /esbar/my/history
 #    defaults: { _controller: TopxiaWebBundle:EsBar/EsBar:history}
+
+#学校认证上传路由#
+school_uploadCer:
+    pattern:  /school/{id}/uploadCer
+    defaults: { _controller: TopxiaWebBundle:SchoolAuth:uploadCer }
+
+school_uploadCer_crop:
+    pattern:  /school/{id}/uploadCer/crop
+    defaults: { _controller: TopxiaWebBundle:SchoolAuth:uploadCerCrop }
+
+school_uploadLis:
+    pattern:  /school/{id}/uploadLis
+    defaults: { _controller: TopxiaWebBundle:SchoolAuth:uploadLis }
+
+school_uploadLis_crop:
+    pattern:  /school/{id}/uploadLis/crop
+    defaults: { _controller: TopxiaWebBundle:SchoolAuth:uploadLisCrop }
+
+school_uploadPer:
+    pattern:  /school/{id}/uploadPer
+    defaults: { _controller: TopxiaWebBundle:SchoolAuth:uploadPer }
+
+school_uploadPer_crop:
+    pattern:  /school/{id}/uploadPer/crop
+    defaults: { _controller: TopxiaWebBundle:SchoolAuth:uploadPerCrop }
+
+school_uploadAnn:
+    pattern:  /school/{id}/uploadAnn
+    defaults: { _controller: TopxiaWebBundle:SchoolAuth:uploadAnn }
+
+school_uploadAnn_crop:
+    pattern:  /school/{id}/uploadAnn/crop
+    defaults: { _controller: TopxiaWebBundle:SchoolAuth:uploadAnnCrop }
+
+school_uploadApp:
+    pattern:  /school/{id}/uploadApp
+    defaults: { _controller: TopxiaWebBundle:SchoolAuth:uploadApp }
+
+school_uploadApp_crop:
+    pattern:  /school/{id}/uploadApp/crop
+    defaults: { _controller: TopxiaWebBundle:SchoolAuth:uploadAppCrop }
+
+school_uploadBus:
+    pattern:  /school/{id}/uploadBus
+    defaults: { _controller: TopxiaWebBundle:SchoolAuth:uploadBus }
+
+school_uploadBus_crop:
+    pattern:  /school/{id}/uploadBus/crop
+    defaults: { _controller: TopxiaWebBundle:SchoolAuth:uploadBusCrop }
+
+school_uploadSpe:
+    pattern:  /school/{id}/uploadSpe
+    defaults: { _controller: TopxiaWebBundle:SchoolAuth:uploadSpe }
+
+school_uploadSpe_crop:
+    pattern:  /school/{id}/uploadSpe/crop
+    defaults: { _controller: TopxiaWebBundle:SchoolAuth:uploadSpeCrop }
+
+school_uploadSch:
+    pattern:  /school/{id}/uploadSch
+    defaults: { _controller: TopxiaWebBundle:SchoolAuth:uploadSch }
+
+school_uploadSch_crop:
+    pattern:  /school/{id}/uploadSch/crop
+    defaults: { _controller: TopxiaWebBundle:SchoolAuth:uploadSchCrop }

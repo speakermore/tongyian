@@ -81,11 +81,11 @@
    		<header class="row">
 			<div class="col-md-3"><img src="assets/img/index/tongyanglogo.jpg" /></div>
 			<div class="col-md-offset-4 down-10">
-				<form action="#" class="form-inline" role="form">
+				<form action="{{ path('search') }}" method="get" class="form-inline" role="form">
 					<div class="form-group">
 						<div class="input-group">
-							<input class="form-control" type="text" placeholder="Search.." autocomplete="off"  />
-							<div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
+							<input class="form-control" type="text" placeholder="Search.." autocomplete="off"  name="q"/>
+							<div class="input-group-addon"><button class="glyphicon glyphicon-search"></button></div>
 						</div>
 					</div>
 				</form>

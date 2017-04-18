@@ -2,10 +2,10 @@
 
 {% set modal_class = 'modal-lg' %}
 
-{% block title %}{{'上传学校图片'|trans}}{% endblock %}
+{% block title %}{{'上传LOGO图片'|trans}}{% endblock %}
 {% block body %}
 
-  <form id="school-Sch-form" class="form-horizontal" method="post" enctype="multipart/form-data" action="{{ path('newadmin_school_uploadSch', {id: school.id}) }}">
+  <form id="school-sch-form" class="form-horizontal" method="post" enctype="multipart/form-data" action="{{ path('school_uploadSch', {id: school.id}) }}">
 
     {{ web_macro.flash_messages() }}
 
@@ -30,7 +30,7 @@
         <a id="upload-pic-sch-btn" 
         class="btn btn-primary"
         data-upload-token="{{ upload_token('tmp', 'image') }}"
-        data-goto-url="{{ path('newadmin_school_uploadSch_crop', {id: school.id}) }}"
+        data-goto-url="{{ path('school_uploadSch_crop', {id: school.id}) }}"
         >{{'上传新图片'|trans}}</a>
         
       </div>
@@ -43,5 +43,5 @@
 
 {% block footer %}
   <button type="button" class="btn btn-link pull-right" data-dismiss="modal">{{'关闭'|trans}}</button>
-  <script>app.load('school/upload-picSch')</script>
+  <script>app.load('schools/upload-picSch')</script>
 {% endblock %}

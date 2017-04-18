@@ -114,6 +114,268 @@ class SchoolAuthController extends BaseController
             ));
     }
 
+     //学校上传图片功能区域
+    /*上传图片区域*/
+    public function uploadCerAction(Request $request, $id)
+    {  
+        $schoolAuth = $this->getSchoolAuthService()->getSchoolAuthBySchoolId($id);
+        if(null == $schoolAuth){
+            $sa = array(
+                'school_id' => $id
+            );
+            $schoolAuth = $this->getSchoolAuthService()->addSchoolAuth($id, $sa);
+        }
+        return $this->render('TopxiaWebBundle:SchoolAuth:upload-authCer.html.twig', array(
+            'schoolAuth' => $schoolAuth
+            ));
+    }
+
+    public function uploadCerCropAction(Request $request, $id)
+    {
+        //$user = $this->getUserService()->getUser($id);
+        //$user = $this->getCurrentUser();
+        $fileId = $request->getSession()->get("fileId");
+        list($pictureUrl, $naturalSize, $scaledSize) = $this->getFileService()->getImgFileMetaInfo($fileId, 700, 300);
+        // if ($request->getMethod() == 'POST') {
+        //     // $options = $request->request->all();
+        //     // $schoolAt = $this->getSchoolAuthService()->getSchoolAuthBySchoolId($school_id);
+        //     // $schoolAuth = array();
+        //     // $schoolAuth['registerCertificate']  = empty($pictureUrl) ? $schoolAt['registerCertificate'] : $pictureUrl;
+        //     // $this->getSchoolAuthService()->updateSchoolAuth($id, $schoolAuth);
+
+        //     // return $this->createJsonResponse(true);
+        //      return $this->redirect($this->generateUrl('newadmin_authentication'));
+        // }
+
+        //list($pictureUrl, $naturalSize, $scaledSize) = $this->getFileService()->getImgFileMetaInfo($fileId, 700, 300);
+        $schoolAuth = $this->getSchoolAuthService()->getSchoolAuthBySchoolId($id);
+        $schoolAuth['registerCertificate'] = empty($pictureUrl) ? $schoolAuth['registerCertificate'] : $pictureUrl;
+        $this->getSchoolAuthService()->updateSchoolAuth($schoolAuth['id'], $schoolAuth);
+        
+        return $this->render('TopxiaWebBundle:SchoolAuth:upload-authCer-crop.html.twig', array(
+            'pictureUrl'  => $pictureUrl,
+            'naturalSize' => $naturalSize,
+            'scaledSize'  => $scaledSize,
+            'school_id'   => $id
+        ));
+    }
+
+    public function uploadLisAction(Request $request, $id)
+    {  
+        $schoolAuth = $this->getSchoolAuthService()->getSchoolAuthBySchoolId($id);
+        if(null == $schoolAuth){
+            $sa = array(
+                'school_id' => $id
+            );
+            $schoolAuth = $this->getSchoolAuthService()->addSchoolAuth($id, $sa);
+        }
+        return $this->render('TopxiaWebBundle:SchoolAuth:upload-authLis.html.twig', array(
+            'schoolAuth' => $schoolAuth
+            ));
+    }
+
+    public function uploadLisCropAction(Request $request, $id)
+    {
+        $fileId = $request->getSession()->get("fileId");
+        list($pictureUrl, $naturalSize, $scaledSize) = $this->getFileService()->getImgFileMetaInfo($fileId, 700, 300);
+        $schoolAuth = $this->getSchoolAuthService()->getSchoolAuthBySchoolId($id);
+        $schoolAuth['licenseForSchool']  =  empty($pictureUrl) ? $schoolAuth['licenseForSchool'] : $pictureUrl ;
+        $this->getSchoolAuthService()->updateSchoolAuth($schoolAuth['id'], $schoolAuth);
+        
+        return $this->render('TopxiaWebBundle:SchoolAuth:upload-authLis-crop.html.twig', array(
+            'pictureUrl'  => $pictureUrl,
+            'naturalSize' => $naturalSize,
+            'scaledSize'  => $scaledSize,
+            'school_id'   => $id
+        ));
+    }
+
+    public function uploadPerAction(Request $request, $id)
+    {  
+        $schoolAuth = $this->getSchoolAuthService()->getSchoolAuthBySchoolId($id);
+        if(null == $schoolAuth){
+            $sa = array(
+                'school_id' => $id
+            );
+            $schoolAuth = $this->getSchoolAuthService()->addSchoolAuth($id, $sa);
+        }
+        return $this->render('TopxiaWebBundle:SchoolAuth:upload-authPer.html.twig', array(
+            'schoolAuth' => $schoolAuth
+            ));
+    }
+
+    public function uploadPerCropAction(Request $request, $id)
+    {
+        $fileId = $request->getSession()->get("fileId");
+        list($pictureUrl, $naturalSize, $scaledSize) = $this->getFileService()->getImgFileMetaInfo($fileId, 700, 300);
+        $schoolAuth = $this->getSchoolAuthService()->getSchoolAuthBySchoolId($id);
+        $schoolAuth['permitOrProject']  =  empty($pictureUrl) ? $schoolAuth['permitOrProject'] : $pictureUrl ;
+        $this->getSchoolAuthService()->updateSchoolAuth($schoolAuth['id'], $schoolAuth);
+        
+        return $this->render('TopxiaWebBundle:SchoolAuth:upload-authPer-crop.html.twig', array(
+            'pictureUrl'  => $pictureUrl,
+            'naturalSize' => $naturalSize,
+            'scaledSize'  => $scaledSize,
+            'school_id'   => $id
+        ));
+    }
+
+    public function uploadAnnAction(Request $request, $id)
+    {  
+        $schoolAuth = $this->getSchoolAuthService()->getSchoolAuthBySchoolId($id);
+        if(null == $schoolAuth){
+            $sa = array(
+                'school_id' => $id
+            );
+            $schoolAuth = $this->getSchoolAuthService()->addSchoolAuth($id, $sa);
+        }
+        return $this->render('TopxiaWebBundle:SchoolAuth:upload-authAnn.html.twig', array(
+            'schoolAuth' => $schoolAuth
+            ));
+    }
+
+    public function uploadAnnCropAction(Request $request, $id)
+    {
+      
+        $fileId = $request->getSession()->get("fileId");
+        list($pictureUrl, $naturalSize, $scaledSize) = $this->getFileService()->getImgFileMetaInfo($fileId, 700, 300);
+        $schoolAuth = $this->getSchoolAuthService()->getSchoolAuthBySchoolId($id);
+        $schoolAuth['annuaInspection']  =  empty($pictureUrl) ? $schoolAuth['annuaInspection'] : $pictureUrl ;
+        $this->getSchoolAuthService()->updateSchoolAuth($schoolAuth['id'], $schoolAuth);
+        
+        return $this->render('TopxiaWebBundle:SchoolAuth:upload-authAnn-crop.html.twig', array(
+            'pictureUrl'  => $pictureUrl,
+            'naturalSize' => $naturalSize,
+            'scaledSize'  => $scaledSize,
+            'school_id'   => $id
+        ));
+    }
+
+    public function uploadAppAction(Request $request, $id)
+    {  
+        $schoolAuth = $this->getSchoolAuthService()->getSchoolAuthBySchoolId($id);
+        if(null == $schoolAuth){
+            $sa = array(
+                'school_id' => $id
+            );
+            $schoolAuth = $this->getSchoolAuthService()->addSchoolAuth($id, $sa);
+        }
+        return $this->render('TopxiaWebBundle:SchoolAuth:upload-authApp.html.twig', array(
+            'schoolAuth' => $schoolAuth
+            ));
+    }
+
+    public function uploadAppCropAction(Request $request, $id)
+    {
+      
+        $fileId = $request->getSession()->get("fileId");
+        list($pictureUrl, $naturalSize, $scaledSize) = $this->getFileService()->getImgFileMetaInfo($fileId, 700, 300);
+        $schoolAuth = $this->getSchoolAuthService()->getSchoolAuthBySchoolId($id);
+        $schoolAuth['approvalForm']  =  empty($pictureUrl) ? $schoolAuth['approvalForm'] : $pictureUrl ;
+        $this->getSchoolAuthService()->updateSchoolAuth($schoolAuth['id'], $schoolAuth);
+        
+        return $this->render('TopxiaWebBundle:SchoolAuth:upload-authApp-crop.html.twig', array(
+            'pictureUrl'  => $pictureUrl,
+            'naturalSize' => $naturalSize,
+            'scaledSize'  => $scaledSize,
+            'school_id'   => $id
+        ));
+    }
+
+    public function uploadBusAction(Request $request, $id)
+    {  
+        $schoolAuth = $this->getSchoolAuthService()->getSchoolAuthBySchoolId($id);
+        if(null == $schoolAuth){
+            $sa = array(
+                'school_id' => $id
+            );
+            $schoolAuth = $this->getSchoolAuthService()->addSchoolAuth($id, $sa);
+        }
+        return $this->render('TopxiaWebBundle:SchoolAuth:upload-authBus.html.twig', array(
+            'schoolAuth' => $schoolAuth
+            ));
+    }
+
+    public function uploadBusCropAction(Request $request, $id)
+    {
+      
+        $fileId = $request->getSession()->get("fileId");
+        list($pictureUrl, $naturalSize, $scaledSize) = $this->getFileService()->getImgFileMetaInfo($fileId, 700, 300);
+        $schoolAuth = $this->getSchoolAuthService()->getSchoolAuthBySchoolId($id);
+        $schoolAuth['businessLicense']  =  empty($pictureUrl) ? $schoolAuth['businessLicense'] : $pictureUrl ;
+        $this->getSchoolAuthService()->updateSchoolAuth($schoolAuth['id'], $schoolAuth);
+        
+        return $this->render('TopxiaWebBundle:SchoolAuth:upload-authBus-crop.html.twig', array(
+            'pictureUrl'  => $pictureUrl,
+            'naturalSize' => $naturalSize,
+            'scaledSize'  => $scaledSize,
+            'school_id'   => $id
+        ));
+    }
+
+    public function uploadSpeAction(Request $request, $id)
+    {  
+        $schoolAuth = $this->getSchoolAuthService()->getSchoolAuthBySchoolId($id);
+        if(null == $schoolAuth){
+            $sa = array(
+                'school_id' => $id
+            );
+            $schoolAuth = $this->getSchoolAuthService()->addSchoolAuth($id, $sa);
+        }
+        return $this->render('TopxiaWebBundle:SchoolAuth:upload-authSpe.html.twig', array(
+            'schoolAuth' => $schoolAuth
+            ));
+    }
+
+    public function uploadSpeCropAction(Request $request, $id)
+    {
+      
+        $fileId = $request->getSession()->get("fileId");
+        list($pictureUrl, $naturalSize, $scaledSize) = $this->getFileService()->getImgFileMetaInfo($fileId, 700, 300);
+        $schoolAuth = $this->getSchoolAuthService()->getSchoolAuthBySchoolId($id);
+        $schoolAuth['specialProfessional']  =  empty($pictureUrl) ? $schoolAuth['specialProfessional'] : $pictureUrl ;
+        $this->getSchoolAuthService()->updateSchoolAuth($schoolAuth['id'], $schoolAuth);
+        
+        return $this->render('TopxiaWebBundle:SchoolAuth:upload-authSpe-crop.html.twig', array(
+            'pictureUrl'  => $pictureUrl,
+            'naturalSize' => $naturalSize,
+            'scaledSize'  => $scaledSize,
+            'school_id'   => $id
+        ));
+    }
+
+
+    public function uploadSchAction(Request $request, $id)
+    {  
+        //学校
+        $school = $this->getSchoolsService()->getSchool($id);
+        return $this->render('TopxiaWebBundle:SchoolAuth:upload-picSch.html.twig', array(
+            'school' => $school
+            ));
+    }
+
+    public function uploadSchCropAction(Request $request, $id)
+    {
+        $school = $this->getSchoolsService()->getSchool($id);
+        $fileId = $request->getSession()->get("fileId");
+        list($pictureUrl, $naturalSize, $scaledSize) = $this->getFileService()->getImgFileMetaInfo($fileId, 700, 300);
+        //$school = $this->getSchoolsService()->getSchool($school_id);
+        $school['logo']  =  empty($pictureUrl) ? $school['logo'] : $pictureUrl ;
+        $school = $this->getSchoolsService()->updateSchool($id, $school);
+        
+        return $this->render('TopxiaWebBundle:SchoolAuth:upload-picSch-crop.html.twig', array(
+            'pictureUrl'  => $pictureUrl,
+            'naturalSize' => $naturalSize,
+            'scaledSize'  => $scaledSize,
+            'school_id'   => $id
+        ));
+    }
+
+    protected function getFileService()
+    {
+        return $this->getServiceKernel()->createService('Content.FileService');
+    }
+
     protected function getUserService()
     {
         return $this->getServiceKernel()->createService('User.UserService');

@@ -117,7 +117,7 @@ newadmin:
                     children:
                         newadmin_articlesc:
                             name: 文章管理
-                            disable: true
+                            disable: true        
         newadmin_statistics:
             name: 统计
             children:

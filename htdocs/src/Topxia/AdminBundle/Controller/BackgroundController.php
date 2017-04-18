@@ -20,7 +20,8 @@ class BackgroundController extends BaseController
             'roles'           => '',
             'keywordType'     => '',
             'keyword'         => '',
-            'keywordUserType' => ''
+            'keywordUserType' => '',
+            'school_id'        => $user['schoolId']
         );
 
         $conditions = array_merge($conditions, $fields);
@@ -681,7 +682,7 @@ class BackgroundController extends BaseController
             $flag = 2;
         }
         if($schoolAuth != null){
-             return $this->render('TopxiaAdminBundle:Background:school/authentication.html.html.twig', array(
+             return $this->render('TopxiaAdminBundle:Background:school/authentication.html.twig', array(
                 'schoolAuth' => $schoolAuth,
                 'school_id'  => $schoolAuth['school_id'],
                 'flag' => $flag
@@ -772,10 +773,104 @@ class BackgroundController extends BaseController
             ));
     }
 
+    // 文章资讯
     public function articlescAction(Request $request)
     {
+        $user   = $this->getCurrentUser();
+       
+        $conditions = $request->query->all();
+
+        $categoryId = 0;
+
+        if (!empty($conditions['categoryId'])) {
+            $conditions['includeChildren'] = true;
+            $categoryId                    = $conditions['categoryId'];
+        }
+
+        $conditions = $this->fillOrgCode($conditions);
+
+        $conditions['school_id'] = $user['schoolId'];
+        $paginator = new Paginator(
+            $request,
+            $this->getArticleService()->searchArticlesCount($conditions),
+            20
+        );
+
+        $articles = $this->getArticleService()->searchArticles(
+            $conditions,
+            'normal',
+            $paginator->getOffsetCount(),
+            $paginator->getPerPageCount()
+        );
+        $categoryIds  = ArrayToolkit::column($articles, 'categoryId');
+        $categories   = $this->getCategoryService()->findCategoriesByIds($categoryIds);
+        $categoryTree = $this->getCategoryService()->getCategoryTree();
         return $this->render('TopxiaAdminBundle:Background:school/articlesc.html.twig', array(
+            'articles'     => $articles,
+            'categories'   => $categories,
+            'paginator'    => $paginator,
+            'categoryTree' => $categoryTree,
+            'categoryId'   => $categoryId
             ));
+    }
+
+    public function articlescCreateAction(Request $request)
+    {
+         if ($request->getMethod() == 'POST') {
+            $formData        = $request->request->all();
+            $article['tags'] = array_filter(explode(',', $formData['tags']));
+
+            $article = $this->getArticleService()->createArticle($formData);
+
+            $attachment = $request->request->get('attachment');
+            $this->getUploadFileService()->createUseFiles($attachment['fileIds'], $article['id'], $attachment['targetType'], $attachment['type']);
+            return $this->redirect($this->generateUrl('admin_article'));
+        }
+
+        $categoryTree = $this->getCategoryService()->getCategoryTree();
+
+        return $this->render('TopxiaAdminBundle:Background:school/article-modal.html.twig', array(
+            'categoryTree' => $categoryTree,
+            'category'     => array('id' => 0, 'parentId' => 0)
+        ));
+    }
+
+    public function articlescEditAction(Request $request, $id)
+    {
+        $article = $this->getArticleService()->getArticle($id);
+
+        if (empty($article)) {
+            throw $this->createNotFoundException($this->getServiceKernel()->trans('文章已删除或者未发布！'));
+        }
+
+        if (empty($article['tagIds'])) {
+            $article['tagIds'] = array();
+        }
+
+        $tags     = $this->getTagService()->findTagsByIds($article['tagIds']);
+        $tagNames = ArrayToolkit::column($tags, 'name');
+
+        $categoryId = $article['categoryId'];
+        $category   = $this->getCategoryService()->getCategory($categoryId);
+
+        $categoryTree = $this->getCategoryService()->getCategoryTree();
+
+        if ($request->getMethod() == 'POST') {
+            $formData = $request->request->all();
+            $article  = $this->getArticleService()->updateArticle($id, $formData);
+
+            $attachment = $request->request->get('attachment');
+
+            $this->getUploadFileService()->createUseFiles($attachment['fileIds'], $article['id'], $attachment['targetType'], $attachment['type']);
+            return $this->redirect($this->generateUrl('admin_article'));
+        }
+
+        return $this->render('TopxiaAdminBundle:Background:school/article-modal.html.twig', array(
+            'article'      => $article,
+            'categoryTree' => $categoryTree,
+            'category'     => $category,
+            'tagNames'     => $tagNames
+        ));
     }
 
     /*5.统计部分*/
@@ -1043,7 +1138,7 @@ class BackgroundController extends BaseController
         $fileId = $request->getSession()->get("fileId");
         list($pictureUrl, $naturalSize, $scaledSize) = $this->getFileService()->getImgFileMetaInfo($fileId, 700, 300);
         $school = $this->getSchoolsService()->getSchool($school_id);
-        $school['largePicture']  =  empty($pictureUrl) ? $school['largePicture'] : $pictureUrl ;
+        $school['logo']  =  empty($pictureUrl) ? $school['logo'] : $pictureUrl ;
         $this->getSchoolsService()->updateSchool($school_id, $school);
         
         return $this->render('TopxiaAdminBundle:Background:school/upload-picSch-crop.html.twig', array(
@@ -1169,6 +1264,27 @@ class BackgroundController extends BaseController
     protected function getLevelService()
     {
         return $this->getServiceKernel()->createService('Level.LevelService');
+    }
+
+    // 文章资讯
+    protected function getArticleService()
+    {
+        return $this->getServiceKernel()->createService('Article.ArticleService');
+    }
+
+    protected function getTagService()
+    {
+        return $this->getServiceKernel()->createService('Taxonomy.TagService');
+    }
+
+    protected function getCategoryService()
+    {
+        return $this->getServiceKernel()->createService('Article.CategoryService');
+    }
+
+    protected function getUploadFileService()
+    {
+        return $this->createService('File.UploadFileService');
     }
 
 }
