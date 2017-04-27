@@ -140,6 +140,10 @@ abstract class BaseController extends Controller
             return $this->generateUrl('homepage');
         }
 
+        if ($targetPath == 'newadmin') {
+            return $this->generateUrl('homepage');
+        }
+
         $url = explode('?', $targetPath);
 
         if ($url[0] == $this->generateUrl('partner_logout', array(), true)) {

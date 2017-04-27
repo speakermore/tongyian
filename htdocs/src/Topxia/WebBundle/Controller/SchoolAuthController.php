@@ -9,8 +9,9 @@ class SchoolAuthController extends BaseController
 {
     public function addSchoolAction(Request $request)
     {
+        $userLogin = $this -> getCurrentUser();
         if ($request->getMethod() == 'POST') {
-            $userLogin = $this -> getCurrentUser();
+            //$userLogin = $this -> getCurrentUser();
             $school = $request->request->get('schools');
             $schoolOld = $this->getSchoolsService()->getSchoolByCName($school['chineseName']);
             if(false != $schoolOld){
@@ -18,9 +19,10 @@ class SchoolAuthController extends BaseController
                 return $this->redirect($this->generateUrl('newadmin')); 
             }
             $userName = $request->request->get('userName');
-            if(0 == $userLogin['id']){          
+            if(0 != $userLogin['id']){          
                 $user = $this->getUserService()->getUserByNickname($userName);
                 if(null != $user){
+                    $school['userId'] = $user['id'];
                     $school = $this->getSchoolsService()->addSchool(0, $school);
                     $newUser = $this->getUserService()->getUser($user['id']);
                     $newUser['schoolId'] = $school['id'];
@@ -35,6 +37,7 @@ class SchoolAuthController extends BaseController
                     return $this->redirect($this->generateUrl('register'));
                 }
             }else{
+                 $school['userId'] = $userLogin['id'];
                  $school = $this->getSchoolsService()->addSchool(0, $school);
                  $newUser = $this->getUserService()->getUser($userLogin['id']);
                  $newUser['schoolId'] = $school['id'];
@@ -46,6 +49,10 @@ class SchoolAuthController extends BaseController
                  return $this->redirect($this->generateUrl('schoolAuth_add', array('id' => $school['id'])));
             }
             
+        }
+        //未登录跳转到注册页面
+        if(0 == $userLogin['id']){
+            return $this->redirect($this->generateUrl('register'));   
         }
         $provinces = $this->getProvinceService()->findAll();
 
@@ -364,6 +371,84 @@ class SchoolAuthController extends BaseController
         $school = $this->getSchoolsService()->updateSchool($id, $school);
         
         return $this->render('TopxiaWebBundle:SchoolAuth:upload-picSch-crop.html.twig', array(
+            'pictureUrl'  => $pictureUrl,
+            'naturalSize' => $naturalSize,
+            'scaledSize'  => $scaledSize,
+            'school_id'   => $id
+        ));
+    }
+    
+    public function uploadOneAction(Request $request, $id)
+    {  
+        //学校
+        $school = $this->getSchoolsService()->getSchool($id);
+        return $this->render('TopxiaWebBundle:SchoolAuth:upload-picOne.html.twig', array(
+            'school' => $school
+            ));
+    }
+
+    public function uploadOneCropAction(Request $request, $id)
+    {
+        $school = $this->getSchoolsService()->getSchool($id);
+        $fileId = $request->getSession()->get("fileId");
+        list($pictureUrl, $naturalSize, $scaledSize) = $this->getFileService()->getImgFileMetaInfo($fileId, 700, 300);
+        //$school = $this->getSchoolsService()->getSchool($school_id);
+        $school['smallPicture']  =  empty($pictureUrl) ? $school['smallPicture'] : $pictureUrl ;
+        $school = $this->getSchoolsService()->updateSchool($id, $school);
+        
+        return $this->render('TopxiaWebBundle:SchoolAuth:upload-picOne-crop.html.twig', array(
+            'pictureUrl'  => $pictureUrl,
+            'naturalSize' => $naturalSize,
+            'scaledSize'  => $scaledSize,
+            'school_id'   => $id
+        ));
+    }
+
+    public function uploadTwoAction(Request $request, $id)
+    {  
+        //学校
+        $school = $this->getSchoolsService()->getSchool($id);
+        return $this->render('TopxiaWebBundle:SchoolAuth:upload-picTwo.html.twig', array(
+            'school' => $school
+            ));
+    }
+
+    public function uploadTwoCropAction(Request $request, $id)
+    {
+        $school = $this->getSchoolsService()->getSchool($id);
+        $fileId = $request->getSession()->get("fileId");
+        list($pictureUrl, $naturalSize, $scaledSize) = $this->getFileService()->getImgFileMetaInfo($fileId, 700, 300);
+        //$school = $this->getSchoolsService()->getSchool($school_id);
+        $school['middlePicture']  =  empty($pictureUrl) ? $school['middlePicture'] : $pictureUrl ;
+        $school = $this->getSchoolsService()->updateSchool($id, $school);
+        
+        return $this->render('TopxiaWebBundle:SchoolAuth:upload-picTwo-crop.html.twig', array(
+            'pictureUrl'  => $pictureUrl,
+            'naturalSize' => $naturalSize,
+            'scaledSize'  => $scaledSize,
+            'school_id'   => $id
+        ));
+    }
+
+    public function uploadThreeAction(Request $request, $id)
+    {  
+        //学校
+        $school = $this->getSchoolsService()->getSchool($id);
+        return $this->render('TopxiaWebBundle:SchoolAuth:upload-picThree.html.twig', array(
+            'school' => $school
+            ));
+    }
+
+    public function uploadThreeCropAction(Request $request, $id)
+    {
+        $school = $this->getSchoolsService()->getSchool($id);
+        $fileId = $request->getSession()->get("fileId");
+        list($pictureUrl, $naturalSize, $scaledSize) = $this->getFileService()->getImgFileMetaInfo($fileId, 700, 300);
+        //$school = $this->getSchoolsService()->getSchool($school_id);
+        $school['largePicture']  =  empty($pictureUrl) ? $school['largePicture'] : $pictureUrl ;
+        $school = $this->getSchoolsService()->updateSchool($id, $school);
+        
+        return $this->render('TopxiaWebBundle:SchoolAuth:upload-picThree-crop.html.twig', array(
             'pictureUrl'  => $pictureUrl,
             'naturalSize' => $naturalSize,
             'scaledSize'  => $scaledSize,

@@ -1888,7 +1888,6 @@ admin_cloud_attachment_render:
     permissions: [admin_cloud_attachment_manage]
 
 
-
 #后台管理员路由配置#
 newadmin:
     pattern:  /newadmin
@@ -1970,10 +1969,28 @@ newadmin_authentication:
     defaults: { _controller: TopxiaAdminBundle:Background:authentication }
     permissions: [newadmin_authentication_manager]
 
+#原管理后台添加查看学校和授权用户和封禁学校#
+#原后台学校机构#
 newadmin_messagesc:
     pattern:  /messagesc
     defaults: { _controller: TopxiaAdminBundle:Background:messagesc }
     permissions: [newadmin_messagesc_school]
+
+newadmin_showSchoolAuth:
+    pattern:  /showSchoolAuth/{school_id}
+    defaults: { _controller: TopxiaAdminBundle:Background:showSchoolAuth }
+
+newadmin_showSchoolAuth_crop:
+    pattern:  /showSchoolAuthCrop/{id}/{type}
+    defaults: { _controller: TopxiaAdminBundle:Background:showSchoolAuthCrop }
+
+newadmin_schoolAuthorizeTrue:
+    pattern:  /schoolAuthorizeTrue/{school_id}
+    defaults: { _controller: TopxiaAdminBundle:Background:schoolAuthorizeTrue }
+
+newadmin_schoolAuthorizeFalse:
+    pattern:  /schoolAuthorizeFalse/{school_id}
+    defaults: { _controller: TopxiaAdminBundle:Background:schoolAuthorizeFalse }
 
 #首页课程分类#
 admin_coursesc:

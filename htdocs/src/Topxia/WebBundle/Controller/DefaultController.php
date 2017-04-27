@@ -24,6 +24,9 @@ class DefaultController extends BaseController
         //首页课程分类
         $list = $this->getLevelService()->findAll();
 
+        // 首页缩略图
+        $thumbnails = $this->getThumbnailsService()->findAll();
+
         //学校推荐
         $school = $this->getSchoolsService()->findSchoolByNewTime();
 
@@ -100,6 +103,7 @@ class DefaultController extends BaseController
             'VScourses' => $VScourses,
             'SAcourses' => $SAcourses,
             'Tucourses' => $Tucourses,
+            'thumbnails' => $thumbnails,
             //'crowd_classification' => $crowd_classification
             'friendlyLinks' => $friendlyLinks
             ));
@@ -117,22 +121,29 @@ class DefaultController extends BaseController
         $school = $this->getSchoolsService()->getSchool($id);
         $logo = $school['logo'];
         $imgsOne = array(
-            'src'  => $school['largePicture'],
-            'background' => "green",
+            'src'  => $school['smallPicture'],
+            'background' => "white",
             'href' => $school['url']
         );
         $imgsTwo = array(
-            'src'  => $school['largePicture'],
-            'background' => "blue",
+            'src'  => $school['middlePicture'],
+            'background' => "white",
             'href' => $school['url']
         );
         $imgsThree = array(
             'src'  => $school['largePicture'],
-            'background' => "red",
+            'background' => "white",
             'href' => $school['url']
         );
         $images = array($imgsOne,$imgsTwo,$imgsThree);
-        return $this->render('TopxiaWebBundle:Default:index.html.twig', array('friendlyLinks' => $friendlyLinks, 'school_id' => $id, 'logo' => $logo, 'imgsOne' => $imgsOne));
+        return $this->render('TopxiaWebBundle:Default:index.html.twig', array(
+            'friendlyLinks' => $friendlyLinks, 
+            'school_id' => $id, 
+            'logo' => $logo, 
+            'imgsOne' => $imgsOne,
+            'imgsTwo' => $imgsTwo,
+            'imgsThree' => $imgsThree
+            ));
     }
 
     public function addSchoolAction(Request $request, $id)
@@ -490,5 +501,10 @@ class DefaultController extends BaseController
     protected function getLevelService()
     {
         return $this->getServiceKernel()->createService('Level.LevelService');
+    }
+
+    protected function getThumbnailsService()
+    {
+        return $this->getServiceKernel()->createService('Thumbnails.ThumbnailsService');
     }
 }

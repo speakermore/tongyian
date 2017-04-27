@@ -1911,7 +1911,7 @@ select:-webkit-autofill {
   border-top: none;
 }
 .es-header {
-  background: #212121;
+  background: #fff;
   height: 60px;
   border: none;
   padding: 0 20px;
@@ -1962,7 +1962,7 @@ select:-webkit-autofill {
 .es-header .nav.navbar-nav > li > a {
   padding: 20px 30px;
   line-height: 20px;
-  color: #c1c1c1;
+  color: #000;
   background: none;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -1989,7 +1989,7 @@ select:-webkit-autofill {
 .es-header .nav.navbar-nav > li > a:hover,
 .es-header .nav.navbar-nav > li > a:focus {
   background: none;
-  color: #fff;
+  color: #212121;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;

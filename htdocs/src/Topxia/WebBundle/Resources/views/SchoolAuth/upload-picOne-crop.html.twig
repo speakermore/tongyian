@@ -1,12 +1,14 @@
+
+
 <div class="modal-dialog modal-lg">
   <div class="modal-content">
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-      <h4 class="modal-title">{{'学校图片预览'|trans}}</h4>
+      <h4 class="modal-title">{{'缩略图第一张图片预览'|trans}}</h4>
     </div>
     <div class="modal-body">
 
-      <form id="schoolSch-crop-form" method="post" action="{{ path('newadmin_school_uploadSch_crop', {id: school_id}) }}" >
+      <form id="schoolsch-crop-form" method="post" action="{{ path('school_uploadOne_crop', {id: school_id}) }}" >
        
         <div class="form-group clearfix">
           <div class="col-md-offset-2 col-md-8 controls">

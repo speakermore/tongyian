@@ -19,22 +19,37 @@
    {% cache 'jianmo/home/top/banner' 600 %}
       {{ block_show('jianmo:home_top_banner') }}
       <div class="swiper-wrapper">
-          <div class="swiper-slide swiper-hidden" style="background: #46c47b;">
+          <div class="swiper-slide swiper-hidden" style="background: #fff;">
             <div >
-              <a href="http://www.baidu.com" target="_blank" ><img class="img-responsive" src="../files/{{ logo }}">
+            {% if imgsOne.href %}
+              <a href="{{ path('imgsOne.href') }}" target="_blank" ><img class="img-responsive" src="../files/{{ imgsOne.src }}">
               </a>
+            {% else %}
+              <a href="{{ path('homepage') }}" target="_blank" ><img class="img-responsive" src="../files/{{ imgsOne.src }}">
+              </a>
+            {% endif %}
             </div>
           </div>
-          <div class="swiper-slide swiper-hidden" style="background: #109afb;">
+          <div class="swiper-slide swiper-hidden" style="background: #fff;">
             <div >
-              <a href="http://www.baidu.com" target="_blank" ><img class="img-responsive" src="../files/{{ logo }}">
+            {% if imgsTwo.href %}
+              <a href="{{ path('imgsTwo.href') }}" target="_blank" ><img class="img-responsive" src="../files/{{ imgsTwo.src }}">
               </a>
+            {% else %}
+              <a href="{{ path('homepage') }}" target="_blank" ><img class="img-responsive" src="../files/{{ imgsTwo.src }}">
+              </a>
+            {% endif %}
             </div>
           </div>
-        <div class="swiper-slide swiper-hidden" style="background: #109afb;">
+        <div class="swiper-slide swiper-hidden" style="background: #fff;">
             <div >
-              <a href="http://www.baidu.com" target="_blank" ><img class="img-responsive" src="../files/{{ logo }}">
+            {% if imgsThree.href %}
+              <a href="{{ path('imgsThree.href') }}" target="_blank" ><img class="img-responsive" src="../files/{{ imgsThree.src }}">
               </a>
+            {% else %}
+              <a href="{{ path('homepage') }}" target="_blank" ><img class="img-responsive" src="../files/{{ imgsThree.src }}">
+              </a>
+            {% endif %}
             </div>
           </div>
         </div>

@@ -64,7 +64,7 @@ class SchoolsServiceImpl extends BaseService implements SchoolsService
         $school['schoolAddress']          = empty($fields['schoolAddress']) ? '' : $fields['schoolAddress'];
         $school['province_id']            = empty($fields['province_id']) ? 1 : $fields['province_id'];
         $school['city_id']                = empty($fields['city_id']) ? 1 : $fields['city_id'];
-        $school['status']                 = empty($fields['status']) ? 1 : $fields['status'];
+         $school['status']                = isset($fields['status']) ? $fields['status'] : 1  ;
         $school['smallPicture']           = empty($fields['smallPicture']) ? '' : $fields['smallPicture'];
         $school['middlePicture']          = empty($fields['middlePicture']) ? '' : $fields['middlePicture'];
         $school['largePicture']           = empty($fields['largePicture']) ? '' : $fields['largePicture'];
@@ -97,7 +97,7 @@ class SchoolsServiceImpl extends BaseService implements SchoolsService
     {
         //return $this->getSchoolsDao()->deleteSchool($id);
         $school = $this->getSchoolsDao().getSchool($id);
-        $school['status']                = empty($school['status']) ? 0 : $school['status'];
+        $school['status']                = empty($school['status']) ? 1 : $school['status'];
         return $this->getSchoolsDao()->updateSchool($id, $school);
 
     }
@@ -118,6 +118,7 @@ class SchoolsServiceImpl extends BaseService implements SchoolsService
 
         $school['province_id']            = empty($fields['province_id']) ? 1 : $fields['province_id'];
         $school['city_id']                = empty($fields['city_id']) ? 1 : $fields['city_id'];
+        $school['status']                 = isset($fields['status']) ? $fields['status'] : 1  ;
         $school['updateTime']             = time();
         //$school['status']                = empty($fields['status']) ? 1 : $fields['status'];
         if (!empty($fields['campusHumanities'])) {

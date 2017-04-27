@@ -2509,3 +2509,27 @@ school_uploadSch:
 school_uploadSch_crop:
     pattern:  /school/{id}/uploadSch/crop
     defaults: { _controller: TopxiaWebBundle:SchoolAuth:uploadSchCrop }
+
+school_uploadOne:
+    pattern:  /school/{id}/uploadOne
+    defaults: { _controller: TopxiaWebBundle:SchoolAuth:uploadOne }
+
+school_uploadOne_crop:
+    pattern:  /school/{id}/uploadOne/crop
+    defaults: { _controller: TopxiaWebBundle:SchoolAuth:uploadOneCrop }
+
+school_uploadTwo:
+    pattern:  /school/{id}/uploadTwo
+    defaults: { _controller: TopxiaWebBundle:SchoolAuth:uploadTwo }
+
+school_uploadTwo_crop:
+    pattern:  /school/{id}/uploadTwo/crop
+    defaults: { _controller: TopxiaWebBundle:SchoolAuth:uploadTwoCrop }
+
+school_uploadThree:
+    pattern:  /school/{id}/uploadThree
+    defaults: { _controller: TopxiaWebBundle:SchoolAuth:uploadThree }
+
+school_uploadThree_crop:
+    pattern:  /school/{id}/uploadThree/crop
+    defaults: { _controller: TopxiaWebBundle:SchoolAuth:uploadThreeCrop }

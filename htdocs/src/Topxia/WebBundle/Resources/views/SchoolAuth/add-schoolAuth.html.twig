@@ -26,6 +26,36 @@
 </div>
 </div>
 
+{#第一张缩略图#}
+<div class="form-group">
+    <label class="col-md-2 control-label">{{'第一张缩略图'|trans}}</label>
+    <div class="col-md-7 controls radios">
+        {#<a href="#modal" data-toggle="modal" data-url="{{path('school_uploadSch', {id: user.id})}}" class="btn btn-default btn-sm">查看</a>#}
+        <a href="#modal" data-toggle="modal" data-url="{{ path('school_uploadOne', {id: school_id}) }}" class="btn btn-default btn-sm">查看/上传图片</a>
+        <div class="help-block" style="display:none;"></div>
+</div>
+</div>
+
+{#第二张缩略图#}
+<div class="form-group">
+    <label class="col-md-2 control-label">{{'第二张缩略图'|trans}}</label>
+    <div class="col-md-7 controls radios">
+        {#<a href="#modal" data-toggle="modal" data-url="{{path('school_uploadSch', {id: user.id})}}" class="btn btn-default btn-sm">查看</a>#}
+        <a href="#modal" data-toggle="modal" data-url="{{ path('school_uploadTwo', {id: school_id}) }}" class="btn btn-default btn-sm">查看/上传图片</a>
+        <div class="help-block" style="display:none;"></div>
+</div>
+</div>
+
+{#第三张缩略图#}
+<div class="form-group">
+    <label class="col-md-2 control-label">{{'第三张缩略图'|trans}}</label>
+    <div class="col-md-7 controls radios">
+        {#<a href="#modal" data-toggle="modal" data-url="{{path('school_uploadSch', {id: user.id})}}" class="btn btn-default btn-sm">查看</a>#}
+        <a href="#modal" data-toggle="modal" data-url="{{ path('school_uploadThree', {id: school_id}) }}" class="btn btn-default btn-sm">查看/上传图片</a>
+        <div class="help-block" style="display:none;"></div>
+</div>
+</div>
+
 {% if flag == 1 %}
 
 {#民办非企业登记证书#}

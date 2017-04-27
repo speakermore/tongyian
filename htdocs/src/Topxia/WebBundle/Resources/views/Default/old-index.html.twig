@@ -190,8 +190,8 @@
 					{% endif %}
 					</div>
 					<div id="course-nav" class="col-md-offset-1">
-						<i class="glyphicon glyphicon-home">首页</i>
-						<i class="glyphicon glyphicon-list-alt">文章资讯</i>
+						<i class="glyphicon glyphicon-home"><a href="{{ path('homepage') }}">首页</a></i>
+						<i class="glyphicon glyphicon-list-alt"><a href="#A1">文章资讯</a></i>
 						<i class="glyphicon glyphicon-gift">学校分类</i>
 					</div>
 					<div class="col-md-offset-2"><img src="assets/img/index/customer-course.jpg" />定制课程</div>
@@ -206,7 +206,50 @@
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
       </ol>
+	  {% if thumbnails %}
       <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="first-slide" src="{{ thumbnails[0].onePic }}" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Example headline.</h1>
+              <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+              <p><a class="btn btn-lg btn-primary" href="{{thumbnails[0].oneUrl}}" role="button">Sign up today</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="second-slide" src="{{thumbnails[0].twoPic}}" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Another example headline.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-lg btn-primary" href="{{thumbnails[0].twoUrl}}" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="third-slide" src="{{thumbnails[0].threePic}}" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>One more for good measure.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-lg btn-primary" href="{{thumbnails[0].threeUrl}}" role="button">Browse gallery</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+	{% else %}
+		 <div class="carousel-inner" role="listbox">
         <div class="item active">
           <img class="first-slide" src="assets/img/index/adv1.jpg" alt="First slide">
           <div class="container">
@@ -247,12 +290,13 @@
         <span class="sr-only">Next</span>
       </a>
     </div><!-- /.carousel -->
+	{% endif %}
 	</div>
 				</div>
 				<div id="tongyan-policy" class="row down-10 ">
 				<div class="col-md-6"><img src="assets/img/index/mywords.jpg" /></div>
 				<div id="tongyan-info" class="col-md-6">
-					<h3 class="tongyan-title1"><strong>文章</strong>资讯→</h3>
+					<h3 class="tongyan-title1" id="A1"><strong>文章</strong>资讯→</h3>
 					<div class="row">
 					<ul type="square" class="col-md-4">
 						<li>学校资讯</li>
@@ -345,7 +389,7 @@
 						<div class="course-item">
 							<div class="course-img">
 								<a href="{{ path('homepage_forward_school', {id:schools.id}) }}" target="_blank">
-									{{ lazy_img(filepath(schools.largePicture, 'school.png'), 'img-responsive', schools.id|default('')) }}
+									{{ lazy_img(filepath(schools.logo, 'school.png'), 'img-responsive', schools.id|default('')) }}
 								</a>
 							</div>
 						</div>

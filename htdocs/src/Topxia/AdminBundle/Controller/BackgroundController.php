@@ -700,12 +700,120 @@ class BackgroundController extends BaseController
         //     ));
     }
 
+    // 原后台学校机构
     public function messagescAction(Request $request)
     {
         $schools = $this->getSchoolsService()->findAllByNum(20);
         return $this->render('TopxiaAdminBundle:Background:school/messagesc.html.twig', array(
             'schools' => $schools
             ));
+    }
+
+    // 显示上传图片
+    public function showSchoolAuthAction(Request $request, $school_id)
+    {
+        $user = $this->getCurrentUser();
+        $flag = 1;
+        $schoolAuth = $this->getSchoolAuthService()->getSchoolAuthBySchoolId($school_id);
+        $school = $this->getSchoolsService()->getSchool($school_id);
+        if(null != $school['institutionsType'] && $school['institutionsType'] == 0){
+            $flag = 1;
+        }else if(null != $school['institutionsType'] && $school['institutionsType'] == 1){
+            $flag = 2;
+        }
+
+        // if($schoolAuth != null){
+        //      return $this->render('TopxiaAdminBundle:Background:school/showSchoolAuth.html.twig', array(
+        //         'schoolAuth' => $schoolAuth,
+        //         'school_id'  => $schoolAuth['school_id'],
+        //         'flag' => $flag
+        //     ));
+        // }else{
+        //      return $this->render('TopxiaAdminBundle:Background:school/authentication-add.html.twig', array(
+        //         'school_id' => $id,
+        //         // 'user' => $user,
+        //         'flag' => $flag
+        //         ));
+        // }
+        
+        return $this->render('TopxiaAdminBundle:Background:school/showSchoolAuth.html.twig', array(
+                'schoolAuth' => $schoolAuth,
+                'school_id'  => $schoolAuth['school_id'],
+                'flag' => $flag
+            ));
+    }
+
+    public function showSchoolAuthCropAction(Request $request, $id, $type)
+    {
+        $schoolAuth = $this->getSchoolAuthService()->getSchoolAuthBySchoolId($id);
+        switch ($type) {
+            case "registerCertificate":
+                return $this->render('TopxiaAdminBundle:Background:school/showSchoolAuthCrop.html.twig', array(
+                    'pictureUrl' => $schoolAuth['registerCertificate']
+                    ));
+            case "licenseForSchool":
+                return $this->render('TopxiaAdminBundle:Background:school/showSchoolAuthCrop.html.twig', array(
+                    'pictureUrl' => $schoolAuth['licenseForSchool']
+                    ));
+            case "permitOrProject":
+                return $this->render('TopxiaAdminBundle:Background:school/showSchoolAuthCrop.html.twig', array(
+                    'pictureUrl' => $schoolAuth['permitOrProject']
+                    ));
+            case "annuaInspection":
+                return $this->render('TopxiaAdminBundle:Background:school/showSchoolAuthCrop.html.twig', array(
+                    'pictureUrl' => $schoolAuth['annuaInspection']
+                    ));
+            case "approvalForm":
+                return $this->render('TopxiaAdminBundle:Background:school/showSchoolAuthCrop.html.twig', array(
+                    'pictureUrl' => $schoolAuth['approvalForm']
+                    ));
+            case "specialProfessional":
+                return $this->render('TopxiaAdminBundle:Background:school/showSchoolAuthCrop.html.twig', array(
+                    'pictureUrl' => $schoolAuth['specialProfessional']
+                    ));
+            case "businessLicense":
+                return $this->render('TopxiaAdminBundle:Background:school/showSchoolAuthCrop.html.twig', array(
+                    'pictureUrl' => $schoolAuth['businessLicense']
+                    ));
+            }
+    }
+
+    //授权学校和学校管理员
+    public function schoolAuthorizeTrueAction(Request $request, $school_id)
+    {
+        $school = $this->getSchoolsService()->getSchool($school_id);
+        $user = $this->getUserService()->getUser($school['userId']);
+        if(isset($school) && isset($user)){
+            $school['status'] = "0";
+            $role = array(
+                'ROLE_USER','ROLE_SCHOOL_ADMIN'
+            );
+
+            $user['roles'] = $role;
+            $school = $this->getSchoolsService()->updateSchool($school_id,$school);
+            $this->getUserService()->updateUser($user['id'],$user);
+            $this->setFlashMessage('success', $this->getServiceKernel()->trans('授权学校和学校管理员成功。'));
+            return $this->redirect($this->generateUrl('newadmin_messagesc'));
+        }else{
+            $this->setFlashMessage('error', $this->getServiceKernel()->trans('保存失败，请重试或联系管理员。'));
+            return $this->redirect($this->generateUrl('newadmin_messagesc'));
+        }
+    }
+
+    //封禁学校
+    public function schoolAuthorizeFalseAction(Request $request, $school_id)
+    {
+        $school = $this->getSchoolsService()->getSchool($school_id);
+        $user = $this->getUserService()->getUser($school['userId']);
+        if(isset($school) && isset($user)){
+            $school['status'] = 1;
+            $this->getSchoolsService()->updateSchool($school_id,$school);
+            $this->setFlashMessage('success', $this->getServiceKernel()->trans('封禁学校成功。'));
+            return $this->redirect($this->generateUrl('newadmin_messagesc'));
+        }else{
+            $this->setFlashMessage('error', $this->getServiceKernel()->trans('保存失败，请重试或联系管理员。'));
+            return $this->redirect($this->generateUrl('newadmin_messagesc'));
+        }
     }
 
     public function schoolShowAction(Request $request, $id)

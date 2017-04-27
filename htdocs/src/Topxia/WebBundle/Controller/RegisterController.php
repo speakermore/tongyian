@@ -115,7 +115,7 @@ class RegisterController extends BaseController
             'isRegisterEnabled' => $registerEnable,
             'registerSort'      => array(),
             'inviteUser'        => $inviteUser,
-            '_target_path'      => $this->getTargetPath($request)
+            '_target_path'      => $_target_path
         ));
     }
 
