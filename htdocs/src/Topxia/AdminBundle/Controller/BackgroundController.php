@@ -535,8 +535,42 @@ class BackgroundController extends BaseController
     {
         $school_id = $this->getCurrentUser()->getSchoolId();
         $students = $this->getStudentsService()->findStudents($school_id);
+        for($i = 0; $i < count($students); $i++) {
+             $id = $students[$i]['reportedCourse'];
+             $course = $this->getCourseService()->getCourse($id);
+             $students[$i]['course'] = $course['title'];
+             $students[$i]['price'] = $course['price'];
+        }
+       
         return $this->render('TopxiaAdminBundle:Background:student/enroll.html.twig', array(
             'students' => $students
+            ));
+    }
+
+    // 确认报道功能
+    public function reportAction(Request $request, $id)
+    {
+         if ($request->getMethod() == 'POST') {
+            $pay = $request->request->get('pay');
+            $num = $this->getPayService()->getPayBySms($pay['sms']);
+            if($num != null)
+            {
+                // 状态改为已确认报道
+                $num['status'] = 1;
+                $this->getPayService()->updatePay($num['id'], $num);
+                $this->setFlashMessage('success', $this->getServiceKernel()->trans('学生确认报道成功。'));
+                return $this->redirect($this->generateUrl('newadmin_enroll'));
+            }else
+            {
+                $this->setFlashMessage('success', $this->getServiceKernel()->trans('学生确认报道失败,请检查凭证。'));
+                return $this->redirect($this->generateUrl('newadmin_enroll'));
+            }
+            
+         }
+
+         $pay = $this->getPayService()->getPayByStuId($id);
+         return $this->render('TopxiaAdminBundle:Background:student/report.html.twig', array(
+            'pay' => $pay
             ));
     }
 
@@ -703,6 +737,7 @@ class BackgroundController extends BaseController
     // 原后台学校机构
     public function messagescAction(Request $request)
     {
+        
         $schools = $this->getSchoolsService()->findAllByNum(20);
         return $this->render('TopxiaAdminBundle:Background:school/messagesc.html.twig', array(
             'schools' => $schools
@@ -811,7 +846,7 @@ class BackgroundController extends BaseController
             $this->setFlashMessage('success', $this->getServiceKernel()->trans('封禁学校成功。'));
             return $this->redirect($this->generateUrl('newadmin_messagesc'));
         }else{
-            $this->setFlashMessage('error', $this->getServiceKernel()->trans('保存失败，请重试或联系管理员。'));
+            $this->setFlashMessage('error', $this->getServiceKernel()->trans('封禁失败，请重试或联系管理员。'));
             return $this->redirect($this->generateUrl('newadmin_messagesc'));
         }
     }
@@ -1372,6 +1407,11 @@ class BackgroundController extends BaseController
     protected function getLevelService()
     {
         return $this->getServiceKernel()->createService('Level.LevelService');
+    }
+
+    protected function getPayService()
+    {
+        return $this->getServiceKernel()->createService('Pay.PayService');
     }
 
     // 文章资讯

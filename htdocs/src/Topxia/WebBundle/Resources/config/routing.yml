@@ -2,6 +2,7 @@ homepage:
     pattern:  /
     defaults: { _controller: TopxiaWebBundle:Default:index }
 
+# 跳转学校
 homepage_forward_school:
     pattern: /school/{id}
     defaults: { _controller: TopxiaWebBundle:Default:forwardIndex }
@@ -30,6 +31,7 @@ live_jump:
     pattern: /live/jump
     defaults: { _controller: TopxiaWebBundle:Default:jump }
 
+# 学生和学校添加
 student_add:
     pattern:  /add/student/{id}
     defaults: { _controller: TopxiaWebBundle:Students:addStudent }
@@ -37,6 +39,14 @@ student_add:
 student_update:
     pattern:  /update/student/{id}
     defaults: { _controller: TopxiaWebBundle:Students:updateStudent }
+
+student_pay:
+    pattern:  /pay/student/{id}
+    defaults: { _controller: TopxiaWebBundle:Students:studentPay }
+
+student_pay_suc:
+    pattern:  /paySuc/student/{id}
+    defaults: { _controller: TopxiaWebBundle:Students:studentPaySuc }
 
 school_add:
     pattern:  /add/school

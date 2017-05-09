@@ -1928,6 +1928,10 @@ newadmin_enroll:
     defaults: { _controller: TopxiaAdminBundle:Background:enroll }
     permissions: [newadmin_enroll_message]
 
+newadmin_report:
+    pattern:  /report/{id}
+    defaults: { _controller: TopxiaAdminBundle:Background:report }
+
 newadmin_customization:
     pattern:  /customization
     defaults: { _controller: TopxiaAdminBundle:Background:customization }

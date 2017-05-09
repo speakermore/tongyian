@@ -11,13 +11,6 @@
       {{ student.name|default('') }}
     </td>
   </tr>
-
-  <tr>
-    <th>{{'民族'}}</th>
-    <td>
-      {{ student.nation|default('') }}
-    </td>
-  </tr>
   <tr>
       <th>{{'联系方式'|trans}}</th>
       <td>
@@ -25,19 +18,17 @@
       </td>
   </tr>   
   <tr>
-    <th>{{'学校类别'|trans}}</th>
+    <th>{{'身份证号'|trans}}</th>
     <td>
-        {{ student.type|default('') }}
+      {{ student.IDcards|default('保密')  }}
     </td>
   </tr>
-
-  <tr>
-    <th>{{'生日'|trans}}</th>
+   <tr>
+    <th>{{'地址'}}</th>
     <td>
-      {{ student.birthday|date('Y-m-d ') }}
+      {{ student.address|default('') }}
     </td>
   </tr>
-
   <tr>
     <th>{{'报名时间'|trans}}</th>
     <td> 

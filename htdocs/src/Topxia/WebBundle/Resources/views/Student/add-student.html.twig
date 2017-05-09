@@ -175,15 +175,39 @@
             <div class="help-block" style="display:none;"></div>
         </div>
     </div>
+
+    {#选择支付方式#}
+    <div class="form-group form-forIam-group form-notStudent-group">
+        <label class="col-xs-2 control-label">{{'支付方式'|trans}}</label>
+            <div class="col-md-7 controls">
+                <select id="student_payment" name="payment" class="form-control" data-widget-cid="widget-2" >
+                    <option value="0">
+                        {{'--请选择支付方式--'|trans}}
+                    </option>
+                    <option value="1">
+                        {{'线下支付'|trans}}
+                    </option>
+                    <option value="2">
+                        {{'线上全额缴费'|trans}}
+                    </option>
+                    <option value="3">
+                        {{'线上预交部分定金'|trans}}
+                    </option>
+                </select>
+            </div>
+    {#<div class="help-block" style="display:none;"></div>#} 
+    </div>
+
     <style>
         input[type="checkbox"] {
             margin-top: -6px;
         }
     </style>
+
     {#所报课程#}
     <div class="form-group form-forIam-group form-notStudent-group">
         <label class="col-md-2 control-label">{{'所报课程'|trans}}</label>
-    
+             <div class="col-md-7 controls">
 
         
     {#原来的多选框#}
@@ -199,7 +223,7 @@
     {% endfor %}#}
 
     {#现在换下拉框单选#}
-            <select id="student_reportedCourse" name="student_reportedCourse" class="form-control" data-widget-cid="widget-2" >
+            <select id="student_reportedCourse" name="student[reportedCourse]" class="form-control" data-widget-cid="widget-2" >
             {% if courses %}
                 {% for cour in courses %}
                     <option value="{{ cour.id }}">
@@ -212,6 +236,7 @@
                 </option>
             {% endif %}
             </select>
+            </div>
     </div>
     {#<div class="help-block" style="display:none;"></div>#}
 
@@ -323,6 +348,29 @@
             <div class="help-block" style="display:none;"></div>
         </div>
     </div>
+
+    {#选择支付方式#}
+    <div class="form-group form-forIam-group form-notStudent-group">
+        <label class="col-xs-2 control-label">{{'支付方式'|trans}}</label>
+         <div class="col-md-7 controls">
+            <select id="student_payment" name="payment" class="form-control" data-widget-cid="widget-2" >
+                <option value="0">
+                    {{'--请选择支付方式--'|trans}}
+                </option>
+                <option value="1">
+                    {{'线下支付'|trans}}
+                </option>
+                <option value="2">
+                    {{'线上全额缴费'|trans}}
+                </option>
+                <option value="3">
+                    {{'线上预交部分定金'|trans}}
+                </option>
+            </select>
+        </div>
+    {#<div class="help-block" style="display:none;"></div>#} 
+    </div>
+
     <style>
         input[type="checkbox"] {
             margin-top: -6px;
@@ -331,10 +379,10 @@
     {#所报课程#}
     <div class="form-group form-forIam-group form-notStudent-group">
         <label class="col-md-2 control-label">{{'所报课程'|trans}}</label>
-    
+        <div class="col-md-7 controls">
 
     {#现在换下拉框单选#}
-            <select id="student_reportedCourse" name="student_reportedCourse" class="form-control" data-widget-cid="widget-2" >
+            <select id="student_reportedCourse" name="student[reportedCourse]" class="form-control" data-widget-cid="widget-2" >
             {% if courses %}        
                 {% for cour in courses %}
                     <option value="{{ cour.id }}">
@@ -347,6 +395,7 @@
                 </option>
             {% endif %}
             </select>
+            </div>
     {#<div class="help-block" style="display:none;"></div>#} 
     </div>
     {% endif %} 
