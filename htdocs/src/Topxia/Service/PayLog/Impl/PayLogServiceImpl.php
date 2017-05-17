@@ -37,7 +37,7 @@ class PayLogServiceImpl extends BaseService implements PayLogService
         return $this->getPayLogDao()->findAllPayLog();
     }
 
-    protected function getPayLogDao()
+    public function getPayLogDao()
     {
         return $this->createDao('PayLog.PayLogDao');
     }

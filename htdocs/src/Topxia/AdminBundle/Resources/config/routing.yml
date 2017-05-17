@@ -1980,6 +1980,11 @@ newadmin_messagesc:
     defaults: { _controller: TopxiaAdminBundle:Background:messagesc }
     permissions: [newadmin_messagesc_school]
 
+newadmin_weixinsc:
+    pattern:  /weixinsc
+    defaults: { _controller: TopxiaAdminBundle:Background:weiXinSet }
+    permissions: [newadmin_messagesc_school]
+
 newadmin_showSchoolAuth:
     pattern:  /showSchoolAuth/{school_id}
     defaults: { _controller: TopxiaAdminBundle:Background:showSchoolAuth }

@@ -738,11 +738,29 @@ class BackgroundController extends BaseController
     public function messagescAction(Request $request)
     {
         
-        $schools = $this->getSchoolsService()->findAllByNum(20);
+        $schools = $this->getSchoolsService()->findAllByNum(10);
         return $this->render('TopxiaAdminBundle:Background:school/messagesc.html.twig', array(
             'schools' => $schools
             ));
     }
+
+    // 微信设置页面
+    public function  weiXinSetAction(Request $request)
+    {
+        if ($request->getMethod() == 'POST') {
+            $weixin = $request->request->get("weixin");
+            $this->getWeiXinService()->updateWeiXin($weixin['id'], $weixin);
+
+            $this->setFlashMessage('success', $this->getServiceKernel()->trans('基础信息更新成功。'));
+             
+            return $this->redirect($this->generateUrl('newadmin_weixinsc'));
+        }
+        $weixin = $this->getWeiXinService()->findAllWeiXin();
+        return $this->render('TopxiaAdminBundle:Background:school/weiXinSc.html.twig', array(
+            'weixin' => $weixin[0]
+            ));
+    }
+               
 
     // 显示上传图片
     public function showSchoolAuthAction(Request $request, $school_id)
@@ -1412,6 +1430,11 @@ class BackgroundController extends BaseController
     protected function getPayService()
     {
         return $this->getServiceKernel()->createService('Pay.PayService');
+    }
+
+    protected function getWeiXinService()
+    {
+        return $this->getServiceKernel()->createService('WeiXin.WeiXinService');
     }
 
     // 文章资讯

@@ -4,6 +4,7 @@ namespace Topxia\WebBundle\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Topxia\Common\AuthenticationToolkit;
 use Topxia\Common\SmsToolkit;
+use Topxia\Common\WeiXin\WeiXinToolkit;
 
 class StudentsController extends BaseController
 {
@@ -21,6 +22,7 @@ class StudentsController extends BaseController
             {
                 $student = $request->request->get('student');
                 $payment = $request->request->get('payment');
+                
                 // $value = $request->request->get('reportedCourse');
                 // if (!empty($value)) {
                 //     foreach ($value as $key => $va) {
@@ -30,26 +32,27 @@ class StudentsController extends BaseController
                 // }
                 //$birthday = date("Y-m-d", $student['birthday']);
 
-                $newStudent = $this->getStudentsService()->addStudent($student['school_id'], $student);
-                $course = $this->getCourseService()->getCourse($student['reportedCourse']);
+                // $newStudent = $this->getStudentsService()->addStudent($student['school_id'], $student);
+                // $course = $this->getCourseService()->getCourse($student['reportedCourse']);
                 
 
-                $pay = array(
-                    'student_id'  => $newStudent['id'],
-                    'course_id'   => $course['id'],
-                    'studentName' => $student['name'],
-                    'courseCost'  => $course['price'],
-                    'payment'     => $payment,
-                    'createDate'  => time()
-                );
+                // $pay = array(
+                //     'student_id'  => $newStudent['id'],
+                //     'course_id'   => $course['id'],
+                //     'studentName' => $student['name'],
+                //     'courseCost'  => $course['price'],
+                //     'payment'     => $payment,
+                //     'createDate'  => time()
+                // );
             
-                $pay_log = array(
-                    'student_id'  => $newStudent['id'],
-                    'school_id'   => $student['school_id'],
-                    'user_id'     => $user['id'],
-                    'createDate'  => time()
-                );
-                $this->getPayService()->addPay($pay, $pay_log);
+                // $pay_log = array(
+                //     'student_id'  => $newStudent['id'],
+                //     'school_id'   => $student['school_id'],
+                //     'user_id'     => $user['id'],
+                //     'createDate'  => time()
+                // );
+                // $this->getPayService()->addPay($pay, $pay_log);
+
                 // 释放
                 // $em->flush();
                 // 提交
@@ -75,7 +78,8 @@ class StudentsController extends BaseController
                     return $this->redirect($this->generateUrl('homepage'));
                 break;  
                 case 2:
-                    return $this->redirect($this->generateUrl('student_pay', array('id' => $newStudent['id'])));
+                    // return $this->redirect($this->generateUrl('student_pay', array('id' => $newStudent['id'])));
+                    return $this->redirect($this->generateUrl('student_pay', array('id' => 25)));
                 break;
                 case 3:
                     return $this->redirect($this->generateUrl('student_pay', array('id' => $newStudent['id'])));
@@ -147,17 +151,21 @@ class StudentsController extends BaseController
     {
         if ($request->getMethod() == 'POST') {
              return $this->redirect($this->generateUrl('student_pay_suc', array('id' => $id)));
-         }
-        return $this->render('TopxiaWebBundle:Student:student-pay.html.twig', array(
-                'student_id' => $id
+        }
+        $pay = $this->getPayService()->getPay($id);
+        return $this->render('TopxiaWebBundle:Student:winxin_payList.html.twig', array(
+                'pay' => $pay
                 ));
         
     }
 
     public function studentPaySucAction(Request $request, $id)
     {
-        return $this->render('TopxiaWebBundle:Student:student-pay-success.html.twig', array(
-                'student_id' => $id
+        $ss = $id;
+        $url2 = WeiXinToolkit::initial();
+        return $this->render('TopxiaWebBundle:Student:winxin_paySuc.html.twig', array(
+                'id'   => $id,
+                'url2' => $url2
                 ));
     }
 

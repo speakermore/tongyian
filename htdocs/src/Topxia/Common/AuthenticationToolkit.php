@@ -1,7 +1,7 @@
 <?php
 namespace Topxia\Common;
 
-//header('Content-type:text/html;charset=utf-8');
+// header('Content-type:text/html;charset=utf-8');
 // @author wx
 // 身份验证接口
 class AuthenticationToolkit

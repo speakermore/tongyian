@@ -696,6 +696,46 @@ class Connection implements DriverConnection
         );
     }
 
+     /**
+     * Inserts a table row with specified data.
+     *
+     * Table expression and columns are not escaped and are not safe for user-input.
+     *
+     * @param string $tableExpression The expression of the table to insert data into, quoted or unquoted.
+     * @param array  $data      An associative array containing column-value pairs.
+     * @param array  $types     Types of the inserted data.
+     *
+     * @return integer The number of affected rows.
+     */
+    public function insertNew($tableExpression, array $data, array $types = array())
+    {
+        $this->connect();
+
+        if (empty($data)) {
+            return $this->executeUpdate('INSERT INTO ' . $tableExpression . ' ()' . ' VALUES ()');
+        }
+        $row = 0;
+        try{
+            $row = $this->executeNewUpdate(
+            'INSERT INTO ' . $tableExpression . ' (' . implode(', ', array_keys($data)) . ')' .
+            ' VALUES (' . implode(', ', array_fill(0, count($data), '?')) . ')',
+            array_values($data),
+            is_string(key($types)) ? $this->extractTypeValues($data, $types) : $types
+            );
+            // $row = $this->executeUpdate(
+            // 'commit;'
+            // );
+        }
+        catch(Exception $e)
+        {
+            // $row = $this->executeNewUpdate(
+            // 'rollback;'
+            // );
+        }
+
+        return $row;
+    }
+
     /**
      * Extract ordered type list from two associate key lists of data and types.
      *
@@ -993,6 +1033,63 @@ class Connection implements DriverConnection
                 $result = $this->_conn->exec($query);
             }
         } catch (\Exception $ex) {
+            throw DBALException::driverExceptionDuringQuery($this->_driver, $ex, $query, $this->resolveParams($params, $types));
+        }
+
+        if ($logger) {
+            $logger->stopQuery();
+        }
+
+        return $result;
+    }
+
+     /**
+     * Executes an SQL INSERT/UPDATE/DELETE query with the given parameters
+     * and returns the number of affected rows.
+     *
+     * This method supports PDO binding types as well as DBAL mapping types.
+     *
+     * @param string $query  The SQL query.
+     * @param array  $params The query parameters.
+     * @param array  $types  The parameter types.
+     *
+     * @return integer The number of affected rows.
+     *
+     * @throws \Doctrine\DBAL\DBALException
+     */
+    public function executeNewUpdate($query, array $params = array(), array $types = array())
+    {
+        $this->connect();
+        $dbh = $this->_conn;
+        // 0是不自动,1是自动提交
+        // $dbh->setAttribute(PDO::ATTR_AUTOCOMMIT , 0);
+        //$dbh->beginTransaction();
+        $logger = $this->_config->getSQLLogger();
+        if ($logger) {
+            $logger->startQuery($query, $params, $types);
+        }
+
+        try {
+            
+            if ($params) {
+                list($query, $params, $types) = SQLParserUtils::expandListParameters($query, $params, $types);
+
+                $stmt = $dbh->prepare($query);
+                if ($types) {
+                    $this->_bindTypedValues($stmt, $params, $types);
+                    $stmt->execute();
+                } else {
+                    $stmt->execute($params);
+                }
+                $result = $stmt->rowCount();
+            } else {
+                $result = $dbh->exec($query);
+            }
+            // $result = $this->_conn->exec($query);
+            // $dbh->commit();
+            // $dbh->rollBack();
+        } catch (\Exception $ex) {
+            // $dbh->rollBack();
             throw DBALException::driverExceptionDuringQuery($this->_driver, $ex, $query, $this->resolveParams($params, $types));
         }
 
