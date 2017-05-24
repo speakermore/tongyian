@@ -94,7 +94,19 @@ class DefaultController extends BaseController
 
     public function newIndexAction(Request $request)
     {
-        return $this->render('TopxiaAdminBundle:Default:newindex.html.twig');
+        $user = $this->getCurrentUser();	
+
+        if ($user->isLogin()) {
+            if (in_array('ROLE_SUPER_ADMIN', $user->getRoles())){
+                return $this->redirect($this->generateUrl('admin'));
+            }else if(in_array('ROLE_ADMIN', $user->getRoles()) || in_array('ROLE_SCHOOL_ADMIN', $user->getRoles())){
+                return $this->redirect($this->generateUrl('newadmin'));
+            }else{
+                return $this->redirect($this->generateUrl('homepage'));
+            }
+            
+        }
+        // return $this->render('TopxiaAdminBundle:Default:newindex.html.twig');
     }
 
     public function noticeAction(Request $request)

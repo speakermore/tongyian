@@ -1,9 +1,10 @@
-{% extends 'TopxiaWebBundle:Settings:layout.html.twig' %} 
+{% extends 'TopxiaWebBundle:Settings:layout.html.twig' %}
+
 {% block title %}添加学校{% endblock %} 
 {% block main %} 
 {% block heading %}添加学校{% endblock %} 
 {% block body %}
-
+<script type="text/javascript" src="{{ asset('/../winxin/template/default/statics/js/jquery-1.7.2.min.js')}}"></script>
 <form id="add-schools-form" class="form-horizontal" method="post" action="{{ url('school_add') }}">
     
     <div class="form-group">
@@ -18,7 +19,7 @@
     <label class="col-md-2 control-label">{{'用户注册账号(学校管理员账号)'|trans}}</label>
     <div class="col-md-7 controls radios">
         <input type="text" id="userName" name="userName" class="form-control" data-widget-cid="widget-1" data-explain=""
-            value="{{ userName|default('') }}" /><span>{{'*用户注册账号(学校管理员账号|必填项)'|trans}}<a href="{{ path('register') }}">{{'没有账号|注册'}}</a></span>
+            value="{{ userName|default('') }}" readonly="true" /><span>{{'*用户注册账号(学校管理员账号,如需更换，请'}}<a href="{{ path('logout') }}">{{'注销当前用户'}}</a>{{'并用学校管理员账号重新登录|必填项)'|trans}}<a href="{{ path('register') }}">{{'没有账号|注册'}}</a></span>
         <div class="help-block" style="display:none;"></div>
 </div>
 </div>
@@ -149,6 +150,28 @@
 </form>
 
 </div>
+
+<script>
+    var url = "{{ path('tag_city') }}" + '#';
+    function getSelectVal(){ 
+    $.getJSON(url,{province_id:$("#schools_province_id").val()},function(json){ 
+        var city_id = $("#schools_city_id"); 
+        $("option",city_id).remove(); //清空原有的选项 
+        $.each(json,function(index,array){ 
+            var option = "<option value='"+array['id']+"'>"+array['name']+"</option>"; 
+            city_id.append(option); 
+        }); 
+    }); 
+}
+
+$(function(){ 
+    getSelectVal(); 
+    $("#schools_province_id").change(function(){ 
+        getSelectVal(); 
+    }); 
+});
+
+</script>
 
 {% endblock %} 
 {% endblock %}

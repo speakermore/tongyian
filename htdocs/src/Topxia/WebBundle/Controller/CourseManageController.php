@@ -51,7 +51,11 @@ class CourseManageController extends BaseController
             $this->setFlashMessage('success', $this->getServiceKernel()->trans('课程基本信息已保存！'));
             return $this->redirect($this->generateUrl('course_manage_base', array('id' => $id)));
         }
-
+        $data = array();
+        $level = $this->getNewLevelService()->getTagByLikeName('');
+        // foreach ($level as $tag) {
+        //     $data[] = array('id' => $tag['id'],  'name' => $tag['name'] );
+        // }
         $tags = $this->getTagService()->findTagsByIds($course['tags']);
 
         $default = $this->getSettingService()->get('default', array());
@@ -59,6 +63,7 @@ class CourseManageController extends BaseController
         return $this->render('TopxiaWebBundle:CourseManage:base.html.twig', array(
             'course'  => $course,
             'tags'    => ArrayToolkit::column($tags, 'name'),
+            'datas'   => $level,
             'default' => $default
         ));
     }
@@ -715,5 +720,10 @@ class CourseManageController extends BaseController
     protected function getUserFieldService()
     {
         return $this->getServiceKernel()->createService('User.UserFieldService');
+    }
+
+    protected function getNewLevelService()
+    {
+        return $this->getServiceKernel()->createService('Level.LevelService');
     }
 }

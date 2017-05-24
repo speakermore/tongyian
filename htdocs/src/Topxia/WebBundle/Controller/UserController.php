@@ -43,7 +43,7 @@ class UserController extends BaseController
             return $this->_teachAction($user);
         }
 
-        return $this->_learnAction($user);
+        return $this->_newLearnAction($user);
     }
 
     public function pageShowAction()
@@ -64,7 +64,7 @@ class UserController extends BaseController
         $userProfile['about'] = strip_tags($userProfile['about'], '');
         $userProfile['about'] = preg_replace("/ /", "", $userProfile['about']);
         $user                 = array_merge($user, $userProfile);
-        return $this->_learnAction($user);
+        return $this->_newLearnAction($user);
     }
 
     public function aboutAction(Request $request, $id)
@@ -90,59 +90,75 @@ class UserController extends BaseController
         $userProfile['about'] = strip_tags($userProfile['about'], '');
         $userProfile['about'] = preg_replace("/ /", "", $userProfile['about']);
         $user                 = array_merge($user, $userProfile);
-        $classrooms           = array();
+        // $classrooms           = array();
 
-        $studentClassrooms = $this->getClassroomService()->searchMembers(array('role' => 'student', 'userId' => $user['id']), array('createdTime', 'desc'), 0, PHP_INT_MAX);
-        $auditorClassrooms = $this->getClassroomService()->searchMembers(array('role' => 'auditor', 'userId' => $user['id']), array('createdTime', 'desc'), 0, PHP_INT_MAX);
+        // $studentClassrooms = $this->getClassroomService()->searchMembers(array('role' => 'student', 'userId' => $user['id']), array('createdTime', 'desc'), 0, PHP_INT_MAX);
+        // $auditorClassrooms = $this->getClassroomService()->searchMembers(array('role' => 'auditor', 'userId' => $user['id']), array('createdTime', 'desc'), 0, PHP_INT_MAX);
 
-        $classrooms = array_merge($studentClassrooms, $auditorClassrooms);
+        // $classrooms = array_merge($studentClassrooms, $auditorClassrooms);
 
-        $classroomIds = ArrayToolkit::column($classrooms, 'classroomId');
+        // $classroomIds = ArrayToolkit::column($classrooms, 'classroomId');
 
-        if (!empty($classroomIds)) {
-            $conditions = array(
-                'status'       => 'published',
-                'showable'     => '1',
-                'classroomIds' => $classroomIds
-            );
+        // if (!empty($classroomIds)) {
+        //     $conditions = array(
+        //         'status'       => 'published',
+        //         'showable'     => '1',
+        //         'classroomIds' => $classroomIds
+        //     );
 
-            $paginator = new Paginator(
-                $this->get('request'),
-                $this->getClassroomService()->searchClassroomsCount($conditions),
-                20
-            );
+        //     $paginator = new Paginator(
+        //         $this->get('request'),
+        //         $this->getClassroomService()->searchClassroomsCount($conditions),
+        //         20
+        //     );
 
-            $classrooms = $this->getClassroomService()->searchClassrooms(
-                $conditions,
-                array('createdTime', 'DESC'),
-                $paginator->getOffsetCount(),
-                $paginator->getPerPageCount()
-            );
+        //     $classrooms = $this->getClassroomService()->searchClassrooms(
+        //         $conditions,
+        //         array('createdTime', 'DESC'),
+        //         $paginator->getOffsetCount(),
+        //         $paginator->getPerPageCount()
+        //     );
 
-            foreach ($classrooms as $key => $classroom) {
-                if (empty($classroom['teacherIds'])) {
-                    $classroomTeacherIds = array();
-                } else {
-                    $classroomTeacherIds = $classroom['teacherIds'];
-                }
+        //     foreach ($classrooms as $key => $classroom) {
+        //         if (empty($classroom['teacherIds'])) {
+        //             $classroomTeacherIds = array();
+        //         } else {
+        //             $classroomTeacherIds = $classroom['teacherIds'];
+        //         }
 
-                $teachers                     = $this->getUserService()->findUsersByIds($classroomTeacherIds);
-                $classrooms[$key]['teachers'] = $teachers;
-            }
+        //         $teachers                     = $this->getUserService()->findUsersByIds($classroomTeacherIds);
+        //         $classrooms[$key]['teachers'] = $teachers;
+        //     }
 
-            $members = $this->getClassroomService()->findMembersByUserIdAndClassroomIds($user['id'], $classroomIds);
-        } else {
-            $paginator = new Paginator(
+        //     $members = $this->getClassroomService()->findMembersByUserIdAndClassroomIds($user['id'], $classroomIds);
+        // } else {
+        //     $paginator = new Paginator(
+        //         $this->get('request'),
+        //         0,
+        //         20
+        //     );
+        //     $members = array();
+        // }
+        $student = $this->getStudentsService()->getStudentByUserId($user['id']);
+        $schools = array();
+        $schools[0] = $this->getSchoolsService()->getSchool($student['school_id']);
+        $paginator = new Paginator(
                 $this->get('request'),
                 0,
                 20
             );
-            $members = array();
-        }
+        $members = array();
 
-        return $this->render("TopxiaWebBundle:User:classroom-learning.html.twig", array(
+        // return $this->render("TopxiaWebBundle:User:classroom-learning.html.twig", array(
+        //     'paginator'  => $paginator,
+        //     'classrooms' => $classrooms,
+        //     'members'    => $members,
+        //     'user'       => $user
+        // ));
+
+         return $this->render("TopxiaWebBundle:User:school-learning.html.twig", array(
             'paginator'  => $paginator,
-            'classrooms' => $classrooms,
+            'schools'    => $schools,
             'members'    => $members,
             'user'       => $user
         ));
@@ -563,6 +579,32 @@ class UserController extends BaseController
         ));
     }
 
+    protected function _newLearnAction($user)
+    {
+        $paginator = new Paginator(
+            $this->get('request'),
+            $this->getCourseService()->findUserLearnCourseCountNotInClassroom($user['id']),
+            20
+        );
+
+        // $courses = $this->getCourseService()->findUserLearnCoursesNotInClassroom(
+        //     $user['id'],
+        //     $paginator->getOffsetCount(),
+        //     $paginator->getPerPageCount()
+        // );
+        
+        $student = $this->getStudentsService()->getStudentByUserId($user['id']);
+        $courses = array();
+        $courses[0] = $this->getCourseService()->getCourse($student['reportedCourse']);
+
+        return $this->render('TopxiaWebBundle:User:courses.html.twig', array(
+            'user'      => $user,
+            'courses'   => $courses,
+            'paginator' => $paginator,
+            'type'      => 'learn'
+        ));
+    }
+
     protected function _teachAction($user)
     {
         $conditions = array(
@@ -632,4 +674,15 @@ class UserController extends BaseController
     {
         return $this->getServiceKernel()->createService('Vip:Vip.VipService');
     }
+
+    protected function getStudentsService()
+    {
+        return $this->getServiceKernel()->createService('Students.StudentsService');
+    }
+
+    protected function getSchoolsService()
+    {
+        return $this->getServiceKernel()->createService('Schools.SchoolsService');
+    }
+
 }

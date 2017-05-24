@@ -85,7 +85,12 @@ class StudentsServiceImpl extends BaseService implements StudentsService
 
     public function getStudent($id)
     {
-         return $this->getStudentsDao()->getStudent($id);
+        return $this->getStudentsDao()->getStudent($id);
+    }
+
+    public function getStudentByUserId($id)
+    {
+        return $this->getStudentsDao()->getStudentByUserId($id);
     }
 
     public function findStudents($school_id)

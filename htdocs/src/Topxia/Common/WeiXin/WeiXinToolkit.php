@@ -27,6 +27,7 @@ class WeiXinToolkit
  */
 	
 	static function initial(){
+		//WxPayConfig::init();
 		
 		//$this->$input = new WxPayUnifiedOrder();
 		$notify = new NativePay();
@@ -60,7 +61,7 @@ class WeiXinToolkit
 		
 		$input->SetGoods_tag("test");
 		
-		$input->SetNotify_url("http://");
+		$input->SetNotify_url("http://locallhost/pay/student");
 		
 		$input->SetTrade_type("NATIVE");
 		

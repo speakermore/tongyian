@@ -43,6 +43,13 @@ class LevelDaoImpl extends BaseDao implements LevelDao
         );
     }
 
+    public function getTagByLikeName($name)
+    {
+        $name = "%{$name}%";
+        $sql  = "SELECT * FROM {$this->table} WHERE name LIKE ?";
+        return $this->getConnection()->fetchAll($sql, array($name));
+    }
+
     public function deleteLevel($id, $level)
     {
         $affected = $this->getConnection()->delete($this->table, $level, array('id' => $id));

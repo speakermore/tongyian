@@ -18,7 +18,7 @@
   	{% if 'ROLE_TEACHER' in user.roles %}
 	    <li {% if pageNav == 'teach' %}class="active"{% endif %}><a href="{{ path('user_teach', {id: user.id}) }}">{{'在教课程'|trans}}</a></li>
     {% endif %}
-
+    
     {% if 'ROLE_TEACHER' in user.roles %}
       <li {% if pageNav == 'teaching' %}class="active"{% endif %}><a href="{{ path('user_teaching_classrooms', {id:user.id}) }}">{{'在教%name%'|trans({'%name%':setting('classroom.name')|default('班级'|trans)})}}</a></li>
     {% endif %}

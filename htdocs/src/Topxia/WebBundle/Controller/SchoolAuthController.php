@@ -54,6 +54,7 @@ class SchoolAuthController extends BaseController
         if(0 == $userLogin['id']){
             return $this->redirect($this->generateUrl('register'));   
         }
+        $userName = $userLogin['nickname'];
         $provinces = $this->getProvinceService()->findAll();
 
         $citys = $this->getCityService()->findAll();
@@ -64,7 +65,8 @@ class SchoolAuthController extends BaseController
 
         return $this->render('TopxiaWebBundle:School:add-school.html.twig', array(
             'provinces' => $provinces,
-            'citys'     => $citys
+            'citys'     => $citys,
+            'userName'  => $userName
             ));
     }
 

@@ -36,7 +36,6 @@ student_add:
     pattern:  /add/student/{id}
     defaults: { _controller: TopxiaWebBundle:Students:addStudent }
     
-
 student_update:
     pattern:  /update/student/{id}
     defaults: { _controller: TopxiaWebBundle:Students:updateStudent }
@@ -1392,6 +1391,14 @@ tag_all:
 tag_match:
     pattern: /tag/match_jsonp
     defaults: { _controller: TopxiaWebBundle:Tag:match }
+
+tag_city:
+    pattern: /tag/city_jsonp
+    defaults: { _controller: TopxiaWebBundle:Tag:city }
+
+newTag_match:
+    pattern: /tag/new_match_jsonp
+    defaults: { _controller: TopxiaWebBundle:Tag:newMatch }
 
 tag_show:
     pattern: /tag/{name}

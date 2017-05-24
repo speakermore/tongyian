@@ -54,7 +54,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{{ url('admin') }}">{% if not setting('copyright.owned') %}TongYan{% endif %}{{'管理后台'|trans}}</a>
+        <a class="navbar-brand" href="{{ url('admin') }}">{% if not setting('copyright.owned') %}同言{% endif %}{{'管理后台'|trans}}</a>
       </div>
       <div class="navbar-collapse collapse">
         {% include 'PermissionBundle:Templates:navigation.html.twig' with {parentCode:'admin'} %}

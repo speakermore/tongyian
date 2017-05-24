@@ -78,6 +78,31 @@ class TagController extends BaseController
         return new JsonResponse($data);
     }
 
+    public function cityAction(Request $request)
+    {
+        $data = array();
+        $province_id = $request->query->get('province_id');
+        $callback = $request->query->get('callback');
+        $citys = $this->getCityService()->findCityByProvinceId($province_id);
+        foreach ($citys as $city) {
+            $data[] = array('id' => $city['id'],  'name' => $city['name'] );
+        }
+        return new JsonResponse($data);
+    }
+
+    public function newMatchAction(Request $request)
+    {
+        $data = array();
+        $queryString = $request->query->get('q');
+        $callback = $request->query->get('callback');
+        $tags = $this->getLevelService()->getTagByLikeName($queryString);
+        //$tags = $this->getTagService()->getTagByLikeName($queryString);
+        foreach ($tags as $tag) {
+            $data[] = array('id' => $tag['id'],  'name' => $tag['name'] );
+        }
+        return new JsonResponse($data);
+    }
+
     protected function getTagService()
     {
         return $this->getServiceKernel()->createService('Taxonomy.TagService');
@@ -90,6 +115,21 @@ class TagController extends BaseController
     protected function getSettingService()
     {
         return $this->getServiceKernel()->createService('System.SettingService');
+    }
+
+    protected function getLevelService()
+    {
+        return $this->getServiceKernel()->createService('Level.LevelService');
+    }
+
+    protected function getProvinceService()
+    {
+        return $this->getServiceKernel()->createService('Province.ProvinceService');
+    }
+
+    protected function getCityService()
+    {
+        return $this->getServiceKernel()->createService('City.CityService');
     }
 
 }

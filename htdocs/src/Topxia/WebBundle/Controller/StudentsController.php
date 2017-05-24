@@ -5,6 +5,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Topxia\Common\AuthenticationToolkit;
 use Topxia\Common\SmsToolkit;
 use Topxia\Common\WeiXin\WeiXinToolkit;
+use Topxia\Common\WeiXin\QrcodeToolkit;
 
 class StudentsController extends BaseController
 {
@@ -161,11 +162,15 @@ class StudentsController extends BaseController
 
     public function studentPaySucAction(Request $request, $id)
     {
-        $ss = $id;
-        $url2 = WeiXinToolkit::initial();
+        $pay = $this->getPayService()->getPay($id);
+        $url1 = WeiXinToolkit::initial();
+        //$url2 = QrcodeToolkit::init($url1);
+        //$host = $_SERVER['REMOTE_ADDR'];
         return $this->render('TopxiaWebBundle:Student:winxin_paySuc.html.twig', array(
-                'id'   => $id,
-                'url2' => $url2
+                'pay'   => $pay,
+                'url1' => $url1
+                //'url2' => QrcodeToolkit::init($url1)
+                //'host' => $host
                 ));
     }
 

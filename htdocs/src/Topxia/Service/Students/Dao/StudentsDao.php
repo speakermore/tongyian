@@ -7,6 +7,8 @@ interface StudentsDao
 
   public function getStudent($id);
 
+  public function getStudentByUserId($id);
+
   public function updateStudent($id, $student);
 
   public function deleteStudent($id);

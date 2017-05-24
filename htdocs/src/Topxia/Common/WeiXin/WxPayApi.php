@@ -54,7 +54,9 @@ class WxPayApi
 		
 		$inputObj->SetAppid(WxPayConfig::APPID);//公众账号ID
 		$inputObj->SetMch_id(WxPayConfig::MCHID);//商户号
-		$inputObj->SetSpbill_create_ip($_SERVER['REMOTE_ADDR']);//终端ip	  
+		//$this->parameters["spbill_create_ip"] = gethostbyname($_ENV['COMPUTERNAME']) ;//获取终端ip
+		$inputObj->SetSpbill_create_ip(gethostbyname($_ENV['COMPUTERNAME']));//终端ip	  
+		//$inputObj->SetSpbill_create_ip($_SERVER['REMOTE_ADDR']);//终端ip	  
 		//$inputObj->SetSpbill_create_ip("1.1.1.1");  	    
 		$inputObj->SetNonce_str(self::getNonceStr());//随机字符串
 		
@@ -538,8 +540,8 @@ class WxPayApi
 			curl_setopt($ch,CURLOPT_PROXYPORT, WxPayConfig::CURL_PROXY_PORT);
 		}
 		curl_setopt($ch,CURLOPT_URL, $url);
-		// curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,TRUE);
-		// curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,2);//严格校验
+		//curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,TRUE);
+		//curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,2);//严格校验
 
 		curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,FALSE);
 		curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,FALSE);//严格校验

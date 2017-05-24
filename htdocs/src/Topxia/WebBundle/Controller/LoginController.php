@@ -14,7 +14,7 @@ class LoginController extends BaseController
         if ($user->isLogin()) {
              if (in_array('ROLE_SUPER_ADMIN', $user->getRoles())){
                 return $this->createMessageResponse('info', $this->getServiceKernel()->trans('你已经登录了'), null, 3000, $this->generateUrl('admin'));
-            }
+            }   
             return $this->createMessageResponse('info', $this->getServiceKernel()->trans('你已经登录了'), null, 3000, $this->generateUrl('homepage'));
         }
 

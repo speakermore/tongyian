@@ -43,6 +43,16 @@ class StudentsDaoImpl extends BaseDao implements StudentsDao
         );
     }
 
+    public function getStudentByUserId($id)
+    {
+        $that = $this;
+        return $this->fetchCached("id:{$id}", $id, function ($id) use ($that) {
+            $sql = "SELECT * FROM {$that->getTable()} WHERE userId = ? LIMIT 1";
+            return $that->getConnection()->fetchAssoc($sql, array($id)) ?: null;
+        }
+        );
+    }
+
     public function deleteStudent($id)
     {
         

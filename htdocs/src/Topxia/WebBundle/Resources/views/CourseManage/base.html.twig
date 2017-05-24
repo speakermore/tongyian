@@ -8,6 +8,7 @@
 categoryUrl: path('category_all'),
 tagMatchUrl: path('tag_match'),
 locationUrl: path('location_all'),
+newTagMatchUrl: path('newTag_match'),
 isCoursePublished: course.status,
 } %}
 {% block main %}
@@ -129,9 +130,17 @@ isCoursePublished: course.status,
         <div class="form-group">
           <label class="col-md-2 control-label">{{ '分类'|trans }}</label>
           <div class="col-md-8 controls">
-            <select id="course_categoryId" name="categoryId" required="required"
+          <select id="course_level_id" name="level_id" required="required"
                     class="form-control width-input width-input-large">
-              {{ select_options(category_choices('course'), course.categoryId, '分类'|trans) }}
+            {#<select id="course_categoryId" name="categoryId" required="required"
+                    class="form-control width-input width-input-large">#}
+              {#{{ select_options(category_choices('course'), course.categoryId, '分类'|trans) }}#}
+                      <option value="分类">----分类----</option>
+                      {% if datas %}
+											  {% for data in datas %}
+												  <option value="{{data.id}}">{{ data.name|default('') }}</option>
+											  {% endfor %}
+                      {% endif %}
             </select>
             <div class="help-block" style="display:none;"></div>
           </div>

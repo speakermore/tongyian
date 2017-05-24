@@ -16,7 +16,7 @@ define(function (require, exports, module) {
             $("#maxStudentNum-field").data("liveCapacity", data.capacity);
             if (data.code == 2 || data.code == 1) {
                 $("#live-plugin-url").removeClass("hidden");
-                $("#live-plugin-url").find("a").attr("href", "http://www.edusoho.com/files/liveplugin/live_desktop_" + data.code + ".rar");
+                $("#live-plugin-url").find("a").attr("href", "http://www.bdqn.com/files/liveplugin/live_desktop_" + data.code + ".rar");
             }
         })
 

@@ -12,4 +12,6 @@ interface LevelDao
     public function deleteLevel($id, $level);
 
     public function updateLevel($id, $level);
+
+    public function getTagByLikeName($name);
 }

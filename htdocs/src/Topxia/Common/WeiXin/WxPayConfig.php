@@ -5,8 +5,26 @@ namespace Topxia\Common\WeiXin;
 * @author wx
 */
 
+use Topxia\Service\Common\ServiceKernel;
+
 class WxPayConfig
 {
+	// public function init()
+	// {
+	// 	$wxPayService = ServiceKernel::instance()->createService('WeiXin.WeiXinService');
+	// 	$weiXin = $wxPayService->findAllWeiXin();
+	// 	if($weiXin){
+	// 		define('APPID' ,$weiXin['app_id']);
+	// 		define('MCHID' ,$weiXin['mch_id']);
+	// 		define('KEY' ,$weiXin['wx_key']);
+	// 		define('APPSECRET' ,$weiXin['appSecret']);
+	// 	}else{
+	// 		define('APPID' ,'wx426b3015555a46be');
+	// 		define('MCHID' ,'1900009851');
+	// 		define('KEY' ,'8934e7d15453e97507ef794cf7b0519d');
+	// 		define('APPSECRET' ,'7813490da6f1265e4901ffb80afaa36f');
+	// 	}
+	// }
 	//=======【基本信息设置】=====================================
 	//
 	/**
@@ -25,9 +43,9 @@ class WxPayConfig
 	 * @var string
 	 */
 	const APPID = 'wx426b3015555a46be';
-	const MCHID = '1900009851';
-	const KEY = '8934e7d15453e97507ef794cf7b0519d';
-	const APPSECRET = '7813490da6f1265e4901ffb80afaa36f';
+	 const MCHID = '1900009851';
+	 const KEY = '8934e7d15453e97507ef794cf7b0519d';
+	 const APPSECRET = '7813490da6f1265e4901ffb80afaa36f';
 	
 	//=======【证书路径设置】=====================================
 	/**
